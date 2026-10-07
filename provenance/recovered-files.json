@@ -1,0 +1,3292 @@
+[
+  {
+    "origin": "research/binary-valuation-rank-route-2026-09-05.md",
+    "bytes": 8957,
+    "sha256": "e2898b1b35d68f4fa4c531fe23ca671e9a1e3d36160e2d7e6c8d6f84dba949ea",
+    "published_path": "research/binary-valuation-rank-route-2026-09-05.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/computational-fibers-2026-09-05.md",
+    "bytes": 14090,
+    "sha256": "f9d031082ff550f5bba064dba43139c8bd5f2c860b0170c99096ee6e7a9f1ec8",
+    "published_path": "research/computational-fibers-2026-09-05.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/cycle-packing-attack-2026-09-05.md",
+    "bytes": 17317,
+    "sha256": "3f9f4a27b2bc78e6dfc5b93008ee2914b2caa95fcfd12305c32bca9deb968ea9",
+    "published_path": "research/cycle-packing-attack-2026-09-05.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/cyclotomic-euler-gap-audit-2026-09-05.md",
+    "bytes": 12401,
+    "sha256": "9b417b0bc62d59d9f518b482c41312e9f12d48c02788e53f8d49a050628a8606",
+    "published_path": "research/cyclotomic-euler-gap-audit-2026-09-05.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/dedekind-psi-gap-attack-2026-09-05.md",
+    "bytes": 12127,
+    "sha256": "264536f24a63237d1db9f2a75a4cb210f86560d3e12ed35086a0e5525d022bbd",
+    "published_path": "research/dedekind-psi-gap-attack-2026-09-05.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos-1060-literature-bridge-audit-2026-09-05.md",
+    "bytes": 25194,
+    "sha256": "d51cf0d907d0326599922c5d118e049b1125ea9e27a9bae2bc3ec73b9ef8f60a",
+    "published_path": "research/erdos-1060-literature-bridge-audit-2026-09-05.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos-1060-transition-digraph-literature-addendum-2026-09-05.md",
+    "bytes": 18917,
+    "sha256": "8ccbf89620bc1c5628d055806858e0dea41417a22dec65cee81acb9539e5a2e4",
+    "published_path": "research/erdos-1060-transition-digraph-literature-addendum-2026-09-05.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/Erdos_1060_Proof_Audit.log",
+    "bytes": 28725,
+    "sha256": "4c884a18b3ddada6efc782e0bb3704338de81e028049dfea473a70a62b911e6b",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/Erdos_1060_Proof_Audit.log"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/Erdos_1060_Proof_Audit.out",
+    "bytes": 5086,
+    "sha256": "82f2862d425c4bed944a309a886117097264eb2975db0dbe8390e0ad496dda76",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/Erdos_1060_Proof_Audit.out"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/Erdos_1060_Proof_Audit.pdf",
+    "bytes": 366023,
+    "sha256": "3bad798ec81f4e20c5ff6d3997c444eb65389aa09dfa632c83c7fb04e326b868",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/Erdos_1060_Proof_Audit.pdf"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/Erdos_1060_Proof_Audit.tex",
+    "bytes": 38237,
+    "sha256": "98950966af674fd3028529f784a58d13c71342ec9653d746395c1d9ff4c30f12",
+    "published_path": "research/erdos1060_audit_20260907/Erdos_1060_Proof_Audit.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/README_AUDIT.md",
+    "bytes": 3953,
+    "sha256": "3a5009b58e9551f53a9ed411e5e717e58874275766aa2f217f658c5ca7fac3ac",
+    "published_path": "research/erdos1060_audit_20260907/README_AUDIT.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/agent_reviews/final_transcription_approval.json",
+    "bytes": 1537,
+    "sha256": "816a4cd8ff508cf5b02a1c07d8e2aa17205a7674fd276a2b45be986aa1a4596b",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/agent_reviews/final_transcription_approval.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/agent_reviews/independent_exchange_review.md",
+    "bytes": 11905,
+    "sha256": "69dfeb5a5be20b5df64663cfc8aa015091d1b76aee82280f4985d457505ffeea",
+    "published_path": "research/erdos1060_audit_20260907/agent_reviews/independent_exchange_review.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/agent_reviews/independent_lemma_audit.md",
+    "bytes": 13423,
+    "sha256": "8e6bd4f9b0a3b5a10383f07f65fb04ef05681071bf918c6d086f4dac569f8333",
+    "published_path": "research/erdos1060_audit_20260907/agent_reviews/independent_lemma_audit.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/agent_reviews/literature_review.md",
+    "bytes": 13994,
+    "sha256": "610bba864fa6ceb55a628d1f06a17b16cdeb893e21c9ae26d7e9aef43c5f5b7b",
+    "published_path": "research/erdos1060_audit_20260907/agent_reviews/literature_review.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/agent_reviews/literature_sources/erdos_1959_21.pdf",
+    "bytes": 737059,
+    "sha256": "cf184ed0c872783b3b3c822c5540549ed9540a8dddcf89513f4c8e7a09dbacaf",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/agent_reviews/literature_sources/erdos_1959_21.pdf"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/agent_reviews/literature_sources/guy_B_sample.pdf",
+    "bytes": 724120,
+    "sha256": "89c96c3f630308a564ae0783bd2974a017fa315032568415714e0994c1e1d88f",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/agent_reviews/literature_sources/guy_B_sample.pdf"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/agent_reviews/literature_sources/pongsriiam_2023.pdf",
+    "bytes": 303778,
+    "sha256": "c2091a9ca19c640741ced4841253d167cfd726b9bb1b2e2743c878e996c16d9d",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/agent_reviews/literature_sources/pongsriiam_2023.pdf"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/agent_reviews/literature_sources/source_manifest_20260907.json",
+    "bytes": 992,
+    "sha256": "ea7e1cee7c11194e4b0ca9320924684c922a9610c7a9a8cc4d81c7d45e348228",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/agent_reviews/literature_sources/source_manifest_20260907.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/agent_reviews/literature_sources/yamada_multiplicative_structures.pdf",
+    "bytes": 187889,
+    "sha256": "aaf5b72faaf21def04b08e1910f82af4b61c575be063dbf282fb0124a04a0c68",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/agent_reviews/literature_sources/yamada_multiplicative_structures.pdf"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/agent_reviews/three_base_classification_second_review.md",
+    "bytes": 6058,
+    "sha256": "bb22126cc3088530c7ec85b899841f897e49436e9c200321670686095e551700",
+    "published_path": "research/erdos1060_audit_20260907/agent_reviews/three_base_classification_second_review.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/agent_reviews/three_base_regression.json",
+    "bytes": 412,
+    "sha256": "5133395ff881b657cfaf2617bd410a9c061eaf349cdfa14cdaed264e8cdc31c8",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/agent_reviews/three_base_regression.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/agent_reviews/verify_selected_certificates.py",
+    "bytes": 4074,
+    "sha256": "35d3d8a7e3f73d33ec6ee32733b7cbd72b381535163f06a833606b1d8d2be30f",
+    "published_path": "research/erdos1060_audit_20260907/agent_reviews/verify_selected_certificates.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/agent_reviews/verify_three_base_exchanges.py",
+    "bytes": 2256,
+    "sha256": "2bc74a2b16b92fcd125b291f66b5d0c4de82f8bcef27e887f225e7ac63d7faaa",
+    "published_path": "research/erdos1060_audit_20260907/agent_reviews/verify_three_base_exchanges.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/build_final_pass.txt",
+    "bytes": 8693,
+    "sha256": "0ab2358fc6a1dc1ccad844cf428a3d98e387c3516f2fb484a00eef6eda637cce",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/build_final_pass.txt"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/build_second_pass.txt",
+    "bytes": 9372,
+    "sha256": "b74ccb4e955282eff02a94ee89395f1ef667194065a10d2b99e3d0c634d443bc",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/build_second_pass.txt"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/build_verified_pass.txt",
+    "bytes": 8693,
+    "sha256": "cc4b15c8c519851a9eebce8d0369a01adbbd963eb2c22b63ea5feeb755fc06da",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/build_verified_pass.txt"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/docx_extracted.txt",
+    "bytes": 50567,
+    "sha256": "684faf15a3645150f3783944a9886eaf685fd7d1f4e0045a1a7c8ca746a588bc",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/docx_extracted.txt"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/docx_with_math.md",
+    "bytes": 70469,
+    "sha256": "4dc3cfcd2fd1e958127f02bab667a91fa0fd50616865ea07c14091fe7ae239b6",
+    "published_path": "research/erdos1060_audit_20260907/docx_with_math.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/input_hashes.json",
+    "bytes": 513,
+    "sha256": "89b68a2ba592f736505b59f5cb00ee8d793a38a6132bd5e12e3ed441504e4f3a",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/input_hashes.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/MANIFEST.json",
+    "bytes": 52407,
+    "sha256": "a245337b6f78ed23d8daa9244b2376a51debebd1631533df159b88f2fdd78afa",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/MANIFEST.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/NEXT_AGENT_PROMPT.md",
+    "bytes": 4900,
+    "sha256": "f3a82368b49db98608373250fb85406246f742fcc6628cca3114a5e913430620",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/NEXT_AGENT_PROMPT.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/START_HERE.md",
+    "bytes": 5491,
+    "sha256": "2a19fbdb569fdb6bf78a601777857faf833e531ee854618c42cdfe18bf8a0e72",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/START_HERE.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/erdos1060_branching_cycles_packet__erdos1060_branching_cycles__verify_new_results.py.log",
+    "bytes": 3264,
+    "sha256": "e2fb4ca61dd1d78db6d5c8617e34e985f444c7de964269cc435188ac3116ec6a",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/erdos1060_branching_cycles_packet__erdos1060_branching_cycles__verify_new_results.py.log"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/erdos1060_chain_packing_packet__erdos1060_v4__check_v4.py.log",
+    "bytes": 968,
+    "sha256": "dea591e22a93636d0f03e8c0ac6388f5c51630c3ed16e269d01fc074b4279cf6",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/erdos1060_chain_packing_packet__erdos1060_v4__check_v4.py.log"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/erdos1060_exact_certificates_packet__erdos1060_v9_packet__verify_v9.py.log",
+    "bytes": 2277,
+    "sha256": "d442b656eaf2acf451e980ecc9ccc41eb311b64a9dbb26dc15f4e7167f14d94e",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/erdos1060_exact_certificates_packet__erdos1060_v9_packet__verify_v9.py.log"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/erdos1060_feedback_obstruction_packet__erdos1060_feedback_obstruction__verify.py.log",
+    "bytes": 13161,
+    "sha256": "fe2fafce01c7d08994015f2ed85e18fc9dc47d072e126b2f12bb46dc7d880c8b",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/erdos1060_feedback_obstruction_packet__erdos1060_feedback_obstruction__verify.py.log"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/erdos1060_feedback_obstruction_packet__erdos1060_feedback_obstruction__verify_targets.py.log",
+    "bytes": 1486,
+    "sha256": "eb1c4f9a0c06eae679d2dbe5361d952b1efec6fdea78878588bdc7e00b9db6c3",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/erdos1060_feedback_obstruction_packet__erdos1060_feedback_obstruction__verify_targets.py.log"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/erdos1060_genuine_exchanges_packet__erdos1060_genuine_exchanges__verify_exchanges.py.log",
+    "bytes": 336,
+    "sha256": "c0e5089d1e3e139b56f1136ba162694ca4bf578b752a4521254161df8bc20672",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/erdos1060_genuine_exchanges_packet__erdos1060_genuine_exchanges__verify_exchanges.py.log"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/erdos1060_integer_gap_audit__verify_fractional_obstruction.py.log",
+    "bytes": 400,
+    "sha256": "a7dfa10f7da87170d5f36d4caf0930c38441b3451259201367f13061945e50d7",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/erdos1060_integer_gap_audit__verify_fractional_obstruction.py.log"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/erdos1060_literature_audit_packet__erdos1060_literature_audit__verify_order_lists.py.log",
+    "bytes": 373,
+    "sha256": "4a7ce4aaf85008804d17a82d98dfa65e7ba588ef7960857b7064a9a306c76f3c",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/erdos1060_literature_audit_packet__erdos1060_literature_audit__verify_order_lists.py.log"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/erdos1060_prime_order_constraints_packet__erdos1060_prime_order__verify.py.log",
+    "bytes": 4758,
+    "sha256": "ad5e79908a0153be1141cde5a6189354453d8654028791606e130278c4813372",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/erdos1060_prime_order_constraints_packet__erdos1060_prime_order__verify.py.log"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/erdos1060_proof_gap_audit__verify_gap.py.log",
+    "bytes": 2626,
+    "sha256": "ee6f67d4be0ac85a787aa474d3b949d2839816f8476304b4986aebd89b85d0b0",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/erdos1060_proof_gap_audit__verify_gap.py.log"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/erdos1060_research_packet_v3__erdos1060_v3__check_certificates.py.log",
+    "bytes": 1161,
+    "sha256": "bf28adaded766663f77512d1c239ad8a58f00a4737375b8b613175f4cfff28f8",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/erdos1060_research_packet_v3__erdos1060_v3__check_certificates.py.log"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/erdos1060_signed_feedback_packet__erdos1060_signed_feedback__verify_signed_feedback.py.log",
+    "bytes": 96,
+    "sha256": "906f7e7f165cea36c806433529fd40f9ce47e28e2fa2516de1dbb554f9d2eb5d",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/erdos1060_signed_feedback_packet__erdos1060_signed_feedback__verify_signed_feedback.py.log"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/erdos1060_small_prime_constraints_packet__erdos1060_v5__verify_v5.py.log",
+    "bytes": 1524,
+    "sha256": "d0f79a3e6ea2eb4787395b0c31d62a705b1d757593135af2a2178cae7bdeeac4",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/erdos1060_small_prime_constraints_packet__erdos1060_v5__verify_v5.py.log"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/erdos1060_sparse_changes_packet__erdos1060_v6__verify_v6.py.log",
+    "bytes": 1730,
+    "sha256": "b952b57e3348491ffe950f1de5ef760e926402136c34e8fee999522a8d2196f4",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/erdos1060_sparse_changes_packet__erdos1060_v6__verify_v6.py.log"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/erdos1060_two_prime_rigidity_packet__erdos1060_two_prime_rigidity__verify.py.log",
+    "bytes": 1890,
+    "sha256": "a0be6140a084942be5f2307c867bc8e620cba71f977d257c5f8e97cac246df2f",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/erdos1060_two_prime_rigidity_packet__erdos1060_two_prime_rigidity__verify.py.log"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/pdf_preflight.json",
+    "bytes": 88,
+    "sha256": "aedc6dbbf5b479f95aecadb3173355f8af8fa5b1ea9d8bd5d8d5fdc3867c3d49",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/pdf_preflight.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/rechecks.json",
+    "bytes": 5077,
+    "sha256": "e246bce1dc83a5b1966b61c3e5407f57c28da5dedf5127490b29caef358b6e15",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/checks/rechecks.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/erdos1060_research_handoff.pdf",
+    "bytes": 868643,
+    "sha256": "350cb4f8be0103d92dadc430f6aa8617cab9ed318d886f549b399a907f469cd6",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/erdos1060_research_handoff.pdf"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/examples_catalogue.json",
+    "bytes": 140726,
+    "sha256": "de528017fa0a38df81c7bd55551d2bd86b4e7335951b5975605a6ee599590221",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/examples_catalogue.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_branching_cycles.pdf",
+    "bytes": 244822,
+    "sha256": "52510aa4caa248e20fab8a2540190e1e7ae58b169fc1bbd5d7733abc2a70b71f",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_branching_cycles.pdf"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_branching_cycles.tex",
+    "bytes": 18491,
+    "sha256": "e9819bc39175dcdd6e10fc2defd45c2777da004f633972ea0279880571eeb8ad",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_branching_cycles.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_chain_packing_proof.pdf",
+    "bytes": 306630,
+    "sha256": "35446901c3d4cf8ac1398161a54c1e3bdcc7f8116d8d7a0911d50415159b2270",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_chain_packing_proof.pdf"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_chain_packing_proof.tex",
+    "bytes": 14436,
+    "sha256": "019210f7bdc1fa28253e5278127680190dad8ff6fb50387cb2edd75361104ab1",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_chain_packing_proof.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_complete_partial_bound.pdf",
+    "bytes": 310481,
+    "sha256": "953334b0cf8819c831ab0eb96b6c00c7ecc7ca06bbb20861aa96c16222d97374",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_complete_partial_bound.pdf"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_complete_partial_bound.tex",
+    "bytes": 14146,
+    "sha256": "dac0c0f770965cc302c560ac55a4bbbcc053cb85f888892565c2360f6162353e",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_complete_partial_bound.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_exact_certificates.pdf",
+    "bytes": 252478,
+    "sha256": "c2b29f15a2895b83f20532bf04c37535c9d6d66714003e1b61b20ddebbb1955e",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_exact_certificates.pdf"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_exact_certificates.tex",
+    "bytes": 18241,
+    "sha256": "6b8d9fad66255f6fba675657843fb795f14fa63e360f0dbc680144cfc9f502f3",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_exact_certificates.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_feedback_obstruction.pdf",
+    "bytes": 255870,
+    "sha256": "6b3948ca19e3a338c33b54c984ceaddf5bf90e9a5894eea64dc32f8f4159d4ac",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_feedback_obstruction.pdf"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_feedback_obstruction.tex",
+    "bytes": 21101,
+    "sha256": "de61938cf5c39f28b959939d76546f3c4391b45112e13959cd309865eaa2fba4",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_feedback_obstruction.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_genuine_exchanges.md",
+    "bytes": 12481,
+    "sha256": "8a76ab1b34029fbdda82704fb8011c7e5e498ffae0f7fd65f84d1bd1309ee63d",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_genuine_exchanges.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_helper_prompt.md",
+    "bytes": 17829,
+    "sha256": "43cb6db0e9ed98bb11ff9e89ae3662ebc9a1fba86f2dc7dfe6dc00c82d765916",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_helper_prompt.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_literature_audit.pdf",
+    "bytes": 238827,
+    "sha256": "c9a7f4dc7514813e562347f69b4cae92e784e2a1478ea6f56271cee8559a3764",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_literature_audit.pdf"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_literature_audit.tex",
+    "bytes": 18767,
+    "sha256": "1362690daa8d9228cb12685b4be7a7c8b40879b16903140780da1b1c1ef9b7ab",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_literature_audit.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_prime_index_entropy_proof.md",
+    "bytes": 17363,
+    "sha256": "996f55f3b0729fb23d5a42ee2d0be9446cabd2af898dff1baafa9142cdf94514",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_prime_index_entropy_proof.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_prime_order_constraints.pdf",
+    "bytes": 234801,
+    "sha256": "af91f0a58d5f625212a958b78ec2b02c2ba14b6a6df8359e6a2a79ca10fa6217",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_prime_order_constraints.pdf"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_prime_order_constraints.tex",
+    "bytes": 17132,
+    "sha256": "1b74167075c7003a698f367e64e0fcb3e67f33d48f2e0d0057ba892f4c70d36e",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_prime_order_constraints.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_proved_additions.md",
+    "bytes": 12991,
+    "sha256": "6136c034bf4f7b281cfbc97a47474a090f21b2c1d2c9f550c64d717356db4ed3",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_proved_additions.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_refined_helper_prompt.md",
+    "bytes": 15497,
+    "sha256": "af0651fffc52ee3763eece9f6be330d46aed126036886c711160b8507981480b",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_refined_helper_prompt.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_signed_feedback.pdf",
+    "bytes": 235139,
+    "sha256": "87b7e2a7919eb6ff3a209509f4ddb03774370fc7b272eeb0249895a43c1830e6",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_signed_feedback.pdf"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_signed_feedback.tex",
+    "bytes": 14875,
+    "sha256": "bc48aba1d707b4b7019b72303efbb444b7b46472179cc76b43b33007d9fb427c",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_signed_feedback.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_sixth_power_free_proof.pdf",
+    "bytes": 264008,
+    "sha256": "9109c4e1171d0eddb8754e9fddef1f577fddb9e8f400cd2235973a44b812457a",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_sixth_power_free_proof.pdf"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_sixth_power_free_proof.tex",
+    "bytes": 15449,
+    "sha256": "df75aed924e19b0a238b46726c85c9a6691f88f19a1d1d53e9d260349d129f06",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_sixth_power_free_proof.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_sparse_changes_proof.pdf",
+    "bytes": 262498,
+    "sha256": "a53f7582d6047276a733d3577bc239c68f527730f0b0cb83d2519fc56aa3a8e9",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_sparse_changes_proof.pdf"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_sparse_changes_proof.tex",
+    "bytes": 19782,
+    "sha256": "4edf3254cd8044d10f5affa5c56545dc163011ed3d0af834a7a2a6c52ab3a65c",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_sparse_changes_proof.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_two_prime_rigidity.pdf",
+    "bytes": 264742,
+    "sha256": "4a2110f879e9a6835d40451ac038c0358733615a893dde694eb53b38f06287cf",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_two_prime_rigidity.pdf"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_two_prime_rigidity.tex",
+    "bytes": 15851,
+    "sha256": "c20a266b0e1456fe26dfd34f01f73e4b388ec478ad9d0e70b9d643bed6ae2648",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_two_prime_rigidity.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_v5_packet/verification_v5.json",
+    "bytes": 1524,
+    "sha256": "bc516f5ea79751c649bd51544474f3e1271f9105ec4a339c6c3ae02413f0ebc6",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_v5_packet/verification_v5.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_worker_prompt_v3.md",
+    "bytes": 10896,
+    "sha256": "66697f509880af6e91c2f14be65449b4bba06cf5a045760238e85107bb75c7d1",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos1060_worker_prompt_v3.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos_uniform_audit/uniform_gap_audit.md",
+    "bytes": 10125,
+    "sha256": "6c37ba9d1f699409de6a14372f9fc505b9b3821edbde1264144c330228945839",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos_uniform_audit/uniform_gap_audit.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos_work_v7/proof_status_audit.md",
+    "bytes": 9090,
+    "sha256": "8d10ca6fd2cb4f9fcc7118b6432b4cc6080af7a28acd5a6a912608e32dbe54ed",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_notes/erdos_work_v7/proof_status_audit.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packet_manifest.json",
+    "bytes": 2905,
+    "sha256": "0ff9e31f29fe6335cdafcb617d2de5bc94d42a3f77c4b0284381c16df7224f80",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packet_manifest.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_branching_cycles_packet.zip",
+    "bytes": 265932,
+    "sha256": "85fa66843e8bb911e300d3608a46669de0945707413569524bd642c150b5ef63",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_branching_cycles_packet.zip"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_chain_packing_packet.zip",
+    "bytes": 320567,
+    "sha256": "fe81ec6daf6300d03a121a0c8d0219f4361bb507c9911e3762c3af7349b8ce6a",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_chain_packing_packet.zip"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_exact_certificates_packet.zip",
+    "bytes": 1772812,
+    "sha256": "74f587685b247506b8621a1cca8f0643f08bd845ceeaf0721a807c8f40f2470e",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_exact_certificates_packet.zip"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_feedback_obstruction_packet.zip",
+    "bytes": 270267,
+    "sha256": "26116f6988e057c46d52ffc98160314eefd636e976f7fa345b80c75771f416c5",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_feedback_obstruction_packet.zip"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_genuine_exchanges_packet.zip",
+    "bytes": 17310,
+    "sha256": "dda0bb080fb53ebe1faaf8e734184538b295777d86073bfd5d184f67b57b98d0",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_genuine_exchanges_packet.zip"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_integer_gap_audit.zip",
+    "bytes": 9143,
+    "sha256": "43b1624cba0420d9a4ab44f1a08d5b532f09ee369e0cb2c91005e1514eb37111",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_integer_gap_audit.zip"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_literature_audit_packet.zip",
+    "bytes": 245525,
+    "sha256": "2d544561a948d2919159a38807d409bc380fe69685c33361c7412bc229a919d3",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_literature_audit_packet.zip"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_prime_order_constraints_packet.zip",
+    "bytes": 242324,
+    "sha256": "e7c77821bfa4e24f12101dcabb2aeaad360214b30fe2b615ddd7a28a9116c9b3",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_prime_order_constraints_packet.zip"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_proof_gap_audit.zip",
+    "bytes": 8019,
+    "sha256": "11286561b14c9f41cff5da5d433d36bb486469482779c7b0ce02cf3fd5286dc1",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_proof_gap_audit.zip"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_refined_research_packet.zip",
+    "bytes": 25134,
+    "sha256": "aef26d13ce75aa1f827bbfae59faf2eae111c65a05f40d823105b08ef42d3fed",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_refined_research_packet.zip"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_research_packet_v3.zip",
+    "bytes": 515099,
+    "sha256": "fbf4d81e94d62455b1073dffcbf38fc1bdeb1bb36bd676818132ebc446669c09",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_research_packet_v3.zip"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_research_starter.zip",
+    "bytes": 12369,
+    "sha256": "2754f74caf6c23968e62123e97d49826e5bb4e1078ff68b53e2dd0904e78274a",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_research_starter.zip"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_signed_feedback_packet.zip",
+    "bytes": 240988,
+    "sha256": "b388e4b347fd96199bc5b25906471f37bc438be3e5626c00d4861b1f6d7a2262",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_signed_feedback_packet.zip"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_small_prime_constraints_packet.zip",
+    "bytes": 737011,
+    "sha256": "33dd706a2a72411482c51d5cfd44ba735214d7fa852ce62bda242e45efd2f00f",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_small_prime_constraints_packet.zip"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_sparse_changes_packet.zip",
+    "bytes": 300625,
+    "sha256": "12101b43ffcafc3eabf70946ea6cfad448d52109d7cf834b40709fe8efeee919",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_sparse_changes_packet.zip"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_two_prime_rigidity_packet.zip",
+    "bytes": 268457,
+    "sha256": "1948e99883abbf4a53904988f64e23b229caba36652f945eb9d2cfa435dbf6d9",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/original_packets/erdos1060_two_prime_rigidity_packet.zip"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/bibliography.tex",
+    "bytes": 6741,
+    "sha256": "b1fae4120ddc2f6f30db02b06097a64f1b05d31c042beb072352b6f9be914d8b",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/bibliography.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/attachment.tex",
+    "bytes": 2218,
+    "sha256": "fae1ac5a4ea5941b37802acce1e23593e67aebf2552c4e10b8409893a5948242",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/attachment.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/bh.tex",
+    "bytes": 9142,
+    "sha256": "7258e268c01447ffa8f2c46da54c76aaba5fefaa97d50ac2e24de7b8c104efd4",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/bh.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/chain.tex",
+    "bytes": 10367,
+    "sha256": "f66af87729c57fb7c6746eb870215e1e928b76c42ba3f14b3795e19a0e2e139a",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/chain.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/cycle.tex",
+    "bytes": 4582,
+    "sha256": "53558c4fe0d4252b23203ae07952a452d5cd4bad6d9ce3ec21c04e1e1699964c",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/cycle.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/examples.tex",
+    "bytes": 9704,
+    "sha256": "b7b278fc2ecf814d90b3f946ea7407733809f0b628c1a74aff331690a96e3abd",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/examples.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/exchanges.tex",
+    "bytes": 9089,
+    "sha256": "19e0a908417429ef203dc6eb449bd0b4f78f5583aa362c840355c80fb1fe305c",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/exchanges.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/foundations.tex",
+    "bytes": 6372,
+    "sha256": "b408bd5262b8c17cc5c0c2c73aff88b8287ddda1fd9fa176ccd462791f5b7320",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/foundations.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/integer.tex",
+    "bytes": 16100,
+    "sha256": "61c4fd2c159684894d9d49cc499824112884895aad9106b29d5e0a6a676f8043",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/integer.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/literature.tex",
+    "bytes": 8689,
+    "sha256": "9ac029316505ed6c41ddaebafeec9c068379f93dbd135170d9740968e815b736",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/literature.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/next.tex",
+    "bytes": 7333,
+    "sha256": "de407df8efdcc2fa406701acc0bb5f93ff8fb0e225e5e63257b2ff0bb0923420",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/next.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/orientation.tex",
+    "bytes": 8135,
+    "sha256": "2b0fcc9b13244352ea638a0bd4da9cb2a8b3817b69c4944d5d649c6158d699bd",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/orientation.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/primitive.tex",
+    "bytes": 7497,
+    "sha256": "ebbbbcf609ef850c0251858c7846e82b40db0427272d092c70cfeebc4648a20c",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/primitive.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/provenance.tex",
+    "bytes": 6751,
+    "sha256": "eca3d0268e0898d3025609f2376a34373d7c4418f1b60469881d88c7aad7ce52",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/provenance.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/ratio.tex",
+    "bytes": 6227,
+    "sha256": "0e450be26a9ff766da934a6b9ad67cfbc654fd66ca514f5863bd9be191e847d7",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/ratio.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/reductions.tex",
+    "bytes": 4375,
+    "sha256": "0491cd3a5356cf071c7258e857232f98ffb08699903d0a23d214d90ea9916733",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/reductions.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/repro.tex",
+    "bytes": 8843,
+    "sha256": "c0112b4cabc590199252728b1ced675993600b607084c814d7f7b15edac99e1d",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/repro.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/rough.tex",
+    "bytes": 12657,
+    "sha256": "cbe1d7ef12930f47524ba34d8d758b86280066205f2897af93844e41e26ff58b",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/rough.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/signed.tex",
+    "bytes": 8537,
+    "sha256": "ba79dced58940148c47623cbf6c5b831068e5e96fc98b25a60d39a135f82a4f6",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/signed.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/sparse.tex",
+    "bytes": 13387,
+    "sha256": "640a0ae20706e46a44ef96e28da3ff91c1ae87abdc85b3054712fcfc961d8fe2",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/sparse.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/twoprime.tex",
+    "bytes": 12567,
+    "sha256": "5203501659a268f6489eb8aa7c279f8dce93baed63e15582132157ba19e7c1be",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/twoprime.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/universal.tex",
+    "bytes": 11228,
+    "sha256": "30ab27fee212e323733737ea83ad12a17d21f9bb8218d79cae6dc8b7672de8d2",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/universal.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/weighted.tex",
+    "bytes": 12650,
+    "sha256": "ebc735408d1b01f53158036474bf34da19761f058cde8c9d5b944445c036ce49",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/chapters/weighted.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/dossier.tex",
+    "bytes": 5806,
+    "sha256": "a5617905de58438e50581f52adaeb8d09174abf33521557bcaf28c54a90c0646",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/source/dossier.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/verify_manifest.py",
+    "bytes": 1020,
+    "sha256": "21853dd92fe5181832218518170c98a903ff7b343b15fc3c8cfb12fef16ff37c",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/verify_manifest.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_branching_cycles_packet/erdos1060_branching_cycles/README.md",
+    "bytes": 4872,
+    "sha256": "288520f409f47cefe8b1874e78831479bc40de1fdb7cdf1f1429f150a2d6056e",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_branching_cycles_packet/erdos1060_branching_cycles/README.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_branching_cycles_packet/erdos1060_branching_cycles/branch_results.json",
+    "bytes": 11556,
+    "sha256": "914e7854f36ad076f57a9be5e0d3d28deec3131599ba009268778f7bf4d6ca24",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_branching_cycles_packet/erdos1060_branching_cycles/branch_results.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_branching_cycles_packet/erdos1060_branching_cycles/branch_solver.py",
+    "bytes": 8405,
+    "sha256": "3701c736a49b78d0c20a27b4651361bf427f97b8fc5d73e575254510fe057b05",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_branching_cycles_packet/erdos1060_branching_cycles/branch_solver.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_branching_cycles_packet/erdos1060_branching_cycles/erdos1060_branching_cycles.pdf",
+    "bytes": 244822,
+    "sha256": "52510aa4caa248e20fab8a2540190e1e7ae58b169fc1bbd5d7733abc2a70b71f",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_branching_cycles_packet/erdos1060_branching_cycles/erdos1060_branching_cycles.pdf"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_branching_cycles_packet/erdos1060_branching_cycles/erdos1060_branching_cycles.tex",
+    "bytes": 18491,
+    "sha256": "e9819bc39175dcdd6e10fc2defd45c2777da004f633972ea0279880571eeb8ad",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_branching_cycles_packet/erdos1060_branching_cycles/erdos1060_branching_cycles.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_branching_cycles_packet/erdos1060_branching_cycles/graph_analysis.py",
+    "bytes": 2562,
+    "sha256": "152fd28f08f466624ce0063f0156dd4935821a28c787acfb7ebc383b03f20590",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_branching_cycles_packet/erdos1060_branching_cycles/graph_analysis.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_branching_cycles_packet/erdos1060_branching_cycles/graph_results.json",
+    "bytes": 6229,
+    "sha256": "f48ba4db387f8346056ded3de6ebea735633e727ee4bb5cb64c90e69e0be8758",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_branching_cycles_packet/erdos1060_branching_cycles/graph_results.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_branching_cycles_packet/erdos1060_branching_cycles/stress_results.json",
+    "bytes": 61420,
+    "sha256": "b1e123a50bf1575f3ef9d722cea2484f07cacf4ea7db5b14e28a9003899db45d",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_branching_cycles_packet/erdos1060_branching_cycles/stress_results.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_branching_cycles_packet/erdos1060_branching_cycles/stress_runs.py",
+    "bytes": 1222,
+    "sha256": "6c22a316d0e1839a4ac3cef2f437916d7e49068b04b663f5e1150dbb47115035",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_branching_cycles_packet/erdos1060_branching_cycles/stress_runs.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_branching_cycles_packet/erdos1060_branching_cycles/verification_v8.json",
+    "bytes": 3264,
+    "sha256": "e2fb4ca61dd1d78db6d5c8617e34e985f444c7de964269cc435188ac3116ec6a",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_branching_cycles_packet/erdos1060_branching_cycles/verification_v8.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_branching_cycles_packet/erdos1060_branching_cycles/verify_new_results.py",
+    "bytes": 4031,
+    "sha256": "1154a1d273a769b3528e6eec724dc8a8ebc7c0d012200dc4fe69779e89a1f24f",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_branching_cycles_packet/erdos1060_branching_cycles/verify_new_results.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_chain_packing_packet/erdos1060_v4/README.md",
+    "bytes": 2585,
+    "sha256": "d1c4e220b34e4812d65cec8a65dd61e0fc035a29be3d3214203ad98fe5e9bc61",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_chain_packing_packet/erdos1060_v4/README.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_chain_packing_packet/erdos1060_v4/chain_packing_proof.pdf",
+    "bytes": 306630,
+    "sha256": "35446901c3d4cf8ac1398161a54c1e3bdcc7f8116d8d7a0911d50415159b2270",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_chain_packing_packet/erdos1060_v4/chain_packing_proof.pdf"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_chain_packing_packet/erdos1060_v4/chain_packing_proof.tex",
+    "bytes": 14436,
+    "sha256": "019210f7bdc1fa28253e5278127680190dad8ff6fb50387cb2edd75361104ab1",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_chain_packing_packet/erdos1060_v4/chain_packing_proof.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_chain_packing_packet/erdos1060_v4/check_v4.py",
+    "bytes": 6436,
+    "sha256": "8402d7c5e83fe05bcfc07a0179e17de73e0f096ee946d3b37768dd8fc0b9cecd",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_chain_packing_packet/erdos1060_v4/check_v4.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_chain_packing_packet/erdos1060_v4/rough_columns.json",
+    "bytes": 33457,
+    "sha256": "87d9a33f4747e755d6007b53716751f59a55fada907d351c3f769ff7595e2323",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_chain_packing_packet/erdos1060_v4/rough_columns.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_chain_packing_packet/erdos1060_v4/rough_search_cuts_v4_result.json",
+    "bytes": 328,
+    "sha256": "9e48456e66b214ffc1b4685505d3acc069c430727dc60cf2e9f2fce505457f52",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_chain_packing_packet/erdos1060_v4/rough_search_cuts_v4_result.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_chain_packing_packet/erdos1060_v4/rough_search_v4_result.json",
+    "bytes": 328,
+    "sha256": "90a800189d538fd85c9ce6ddb0e4ae8c9211024c3374c99aac33a11240cdafae",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_chain_packing_packet/erdos1060_v4/rough_search_v4_result.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_chain_packing_packet/erdos1060_v4/search_rough_cuts_v4.py",
+    "bytes": 2442,
+    "sha256": "aa5183ace572c7bbf054e13e7ab12eddaf9dbd9a3ff1a0558443fd5b10a4b211",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_chain_packing_packet/erdos1060_v4/search_rough_cuts_v4.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_chain_packing_packet/erdos1060_v4/search_rough_v4.py",
+    "bytes": 2082,
+    "sha256": "97ae6bf2b1c0289f087273686b0cafbc91c73ec845f68641d0406d5a5419d61d",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_chain_packing_packet/erdos1060_v4/search_rough_v4.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_chain_packing_packet/erdos1060_v4/verification_v4.json",
+    "bytes": 968,
+    "sha256": "dea591e22a93636d0f03e8c0ac6388f5c51630c3ed16e269d01fc074b4279cf6",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_chain_packing_packet/erdos1060_v4/verification_v4.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/README.md",
+    "bytes": 4161,
+    "sha256": "e27b9100948573a6b24aad5bbaeb5d78b0aab21c99b0d19f31b04c0da6d65ca2",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/README.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/core_search_251_1.json",
+    "bytes": 371,
+    "sha256": "f51aaf0fb8c8e854be6e312e5bffcd678e81fbe4dc9cacc24ff71613ed4d7caf",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/core_search_251_1.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/dense_probes.json",
+    "bytes": 7475,
+    "sha256": "77804eb0218bc84c744167b8e9014476916bcdd76982bb686ca94877a7efcef1",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/dense_probes.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/discover_certificate.py",
+    "bytes": 3829,
+    "sha256": "b0f144d6b2cfdaab179004b9d2a5ce9db88a39bba0ce574e8dc8555951965ce0",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/discover_certificate.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/dual_certificate.json",
+    "bytes": 5035,
+    "sha256": "1e58f71218ff3f4c522181fa9f39b4cae9ff5f2a738755f59f77f33a822fe44b",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/dual_certificate.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/erdos1060_exact_certificates.pdf",
+    "bytes": 252478,
+    "sha256": "c2b29f15a2895b83f20532bf04c37535c9d6d66714003e1b61b20ddebbb1955e",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/erdos1060_exact_certificates.pdf"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/erdos1060_exact_certificates.tex",
+    "bytes": 18241,
+    "sha256": "6b8d9fad66255f6fba675657843fb795f14fa63e360f0dbc680144cfc9f502f3",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/erdos1060_exact_certificates.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/generate_prime_data.py",
+    "bytes": 994,
+    "sha256": "1139e899b45c167027210b0b0e08869b1284df6ea74751070c60a8708d2ecaa6",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/generate_prime_data.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/peel_large_results.json",
+    "bytes": 3036,
+    "sha256": "b3d19d450feb3b003186d04565eae98720af5e15cd9cb516a12b9bcab7d9c5bd",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/peel_large_results.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/prime_graph_100000.json",
+    "bytes": 814260,
+    "sha256": "b118d70407eaad03755a901eeb41407600c377b20e030814ea7f2f4a85d2be32",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/prime_graph_100000.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/prime_graph_1000000.json",
+    "bytes": 7222494,
+    "sha256": "425d85a992483e8591f76b13810849a947f3f8d269448ebe613deace3f3b5141",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/prime_graph_1000000.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/rediscovered_certificate.json",
+    "bytes": 5206,
+    "sha256": "39064d54ec6a1f694fd65f85998c71387c97abdb8a05b2e28a675329f796b068",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/rediscovered_certificate.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/verification_large.json",
+    "bytes": 709,
+    "sha256": "a0da1e64e1dd284841ca254472e41bacaddaccc64d0bda6b482366bb3db92f9c",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/verification_large.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/verification_v9.json",
+    "bytes": 2277,
+    "sha256": "d442b656eaf2acf451e980ecc9ccc41eb311b64a9dbb26dc15f4e7167f14d94e",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/verification_v9.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/verify_large.py",
+    "bytes": 3170,
+    "sha256": "ca1ae2b4d4ccb001230b4ce8d2d1310c222528ee25116ca91100180f47d73aac",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/verify_large.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/verify_v9.py",
+    "bytes": 11157,
+    "sha256": "9814bb81421cbcce66b6fa51271d6dbe07a1df2c91b9da6d000c51f43d477b1d",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_exact_certificates_packet/erdos1060_v9_packet/verify_v9.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_feedback_obstruction_packet/erdos1060_feedback_obstruction/README.md",
+    "bytes": 2220,
+    "sha256": "11b2db7fed919161bf5fab2a1a7740f8b46c2ad7d37f8082dab2534a6bf9fe26",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_feedback_obstruction_packet/erdos1060_feedback_obstruction/README.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_feedback_obstruction_packet/erdos1060_feedback_obstruction/SHA256.json",
+    "bytes": 708,
+    "sha256": "6f50419675f8d00852ed788e3621df286347e9757a45cd2f44ba6d5a12b449b4",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_feedback_obstruction_packet/erdos1060_feedback_obstruction/SHA256.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_feedback_obstruction_packet/erdos1060_feedback_obstruction/proof.pdf",
+    "bytes": 255870,
+    "sha256": "6b3948ca19e3a338c33b54c984ceaddf5bf90e9a5894eea64dc32f8f4159d4ac",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_feedback_obstruction_packet/erdos1060_feedback_obstruction/proof.pdf"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_feedback_obstruction_packet/erdos1060_feedback_obstruction/proof.tex",
+    "bytes": 21101,
+    "sha256": "de61938cf5c39f28b959939d76546f3c4391b45112e13959cd309865eaa2fba4",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_feedback_obstruction_packet/erdos1060_feedback_obstruction/proof.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_feedback_obstruction_packet/erdos1060_feedback_obstruction/target_results.json",
+    "bytes": 14591,
+    "sha256": "7f2bcb4dbe8a0bf7ae0e955cab90d8db6e3df85b3b632b3ca087fe7a87a7cc6d",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_feedback_obstruction_packet/erdos1060_feedback_obstruction/target_results.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_feedback_obstruction_packet/erdos1060_feedback_obstruction/target_verification.json",
+    "bytes": 1486,
+    "sha256": "eb1c4f9a0c06eae679d2dbe5361d952b1efec6fdea78878588bdc7e00b9db6c3",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_feedback_obstruction_packet/erdos1060_feedback_obstruction/target_verification.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_feedback_obstruction_packet/erdos1060_feedback_obstruction/verification.json",
+    "bytes": 21611,
+    "sha256": "e6f82706c6bfce0d6980179f8efc2028cd74bd9055a9d76518788de8c2df894a",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_feedback_obstruction_packet/erdos1060_feedback_obstruction/verification.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_feedback_obstruction_packet/erdos1060_feedback_obstruction/verify.py",
+    "bytes": 7581,
+    "sha256": "78b3abc0653f7eb8dbb5c3d354b576c80c868dd668961bb715a3a190b842fa13",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_feedback_obstruction_packet/erdos1060_feedback_obstruction/verify.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_feedback_obstruction_packet/erdos1060_feedback_obstruction/verify_targets.py",
+    "bytes": 4150,
+    "sha256": "10250c30fc5da3731fb8df4d2de73c8a0fd492eaeda92bb029f4c21a2c318182",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_feedback_obstruction_packet/erdos1060_feedback_obstruction/verify_targets.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_genuine_exchanges_packet/erdos1060_genuine_exchanges/README.md",
+    "bytes": 12481,
+    "sha256": "8a76ab1b34029fbdda82704fb8011c7e5e498ffae0f7fd65f84d1bd1309ee63d",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_genuine_exchanges_packet/erdos1060_genuine_exchanges/README.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_genuine_exchanges_packet/erdos1060_genuine_exchanges/branch_solver.py",
+    "bytes": 8405,
+    "sha256": "3701c736a49b78d0c20a27b4651361bf427f97b8fc5d73e575254510fe057b05",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_genuine_exchanges_packet/erdos1060_genuine_exchanges/branch_solver.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_genuine_exchanges_packet/erdos1060_genuine_exchanges/verification.json",
+    "bytes": 119001,
+    "sha256": "471fdd3b971900c090afd9432a1b721844aa8635d92e5a66cb0fbf267b7f69a8",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_genuine_exchanges_packet/erdos1060_genuine_exchanges/verification.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_genuine_exchanges_packet/erdos1060_genuine_exchanges/verify_exchanges.py",
+    "bytes": 6957,
+    "sha256": "d02b460909c7ebac641f52c1f341da8d55bdd3426210188491292754a1e9f996",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_genuine_exchanges_packet/erdos1060_genuine_exchanges/verify_exchanges.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_integer_gap_audit/fractional_certificate.json",
+    "bytes": 3998,
+    "sha256": "10430307d8eb498ede0eab4fb71d271bff017f3ea6ba07053c7c60c6becc5b7b",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_integer_gap_audit/fractional_certificate.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_integer_gap_audit/uniform_gap_audit.md",
+    "bytes": 10125,
+    "sha256": "6c37ba9d1f699409de6a14372f9fc505b9b3821edbde1264144c330228945839",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_integer_gap_audit/uniform_gap_audit.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_integer_gap_audit/verification.json",
+    "bytes": 1776,
+    "sha256": "195f52ab75cfc979d7371b77d90d1b1224470571a8692d29c0336ea48fd80546",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_integer_gap_audit/verification.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_integer_gap_audit/verify_fractional_obstruction.py",
+    "bytes": 8292,
+    "sha256": "972b3637b303a6a8c853eba552334c0bd336043510ccdd29d9ae5cd62f58dcc2",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_integer_gap_audit/verify_fractional_obstruction.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_literature_audit_packet/erdos1060_literature_audit/README.md",
+    "bytes": 1906,
+    "sha256": "5b9ef4da1079f90887ce4aeb653ed58240ca9fad109b2ec49c036af42542556d",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_literature_audit_packet/erdos1060_literature_audit/README.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_literature_audit_packet/erdos1060_literature_audit/literature_and_exponent_lists.pdf",
+    "bytes": 238827,
+    "sha256": "c9a7f4dc7514813e562347f69b4cae92e784e2a1478ea6f56271cee8559a3764",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_literature_audit_packet/erdos1060_literature_audit/literature_and_exponent_lists.pdf"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_literature_audit_packet/erdos1060_literature_audit/literature_and_exponent_lists.tex",
+    "bytes": 18767,
+    "sha256": "1362690daa8d9228cb12685b4be7a7c8b40879b16903140780da1b1c1ef9b7ab",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_literature_audit_packet/erdos1060_literature_audit/literature_and_exponent_lists.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_literature_audit_packet/erdos1060_literature_audit/verification.json",
+    "bytes": 8267,
+    "sha256": "670f89afb614edab432664a797a605b287ae906d28d5a280d364389866fcaf92",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_literature_audit_packet/erdos1060_literature_audit/verification.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_literature_audit_packet/erdos1060_literature_audit/verify_order_lists.py",
+    "bytes": 7284,
+    "sha256": "0822580fd07f284b7f190f9a504be3c7e7598ca692d953b1f9be7d1aafdbc860",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_literature_audit_packet/erdos1060_literature_audit/verify_order_lists.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_prime_order_constraints_packet/erdos1060_prime_order/README.md",
+    "bytes": 2636,
+    "sha256": "99592aa28a59a08b67e63a8980531681d0a7811e4c400780a6e12287b66652b8",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_prime_order_constraints_packet/erdos1060_prime_order/README.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_prime_order_constraints_packet/erdos1060_prime_order/certificates.json",
+    "bytes": 5350,
+    "sha256": "6178202a25b39ada3616a631b9d89d7b7b1e97a25d948200e7eff6e1a673f75b",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_prime_order_constraints_packet/erdos1060_prime_order/certificates.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_prime_order_constraints_packet/erdos1060_prime_order/prime_graph.py",
+    "bytes": 1484,
+    "sha256": "b253d9568d69cf3f5d173735624d6d0b4a4481e235582b4358252d30b4ee4e59",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_prime_order_constraints_packet/erdos1060_prime_order/prime_graph.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_prime_order_constraints_packet/erdos1060_prime_order/proof.pdf",
+    "bytes": 234801,
+    "sha256": "af91f0a58d5f625212a958b78ec2b02c2ba14b6a6df8359e6a2a79ca10fa6217",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_prime_order_constraints_packet/erdos1060_prime_order/proof.pdf"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_prime_order_constraints_packet/erdos1060_prime_order/proof.tex",
+    "bytes": 17132,
+    "sha256": "1b74167075c7003a698f367e64e0fcb3e67f33d48f2e0d0057ba892f4c70d36e",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_prime_order_constraints_packet/erdos1060_prime_order/proof.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_prime_order_constraints_packet/erdos1060_prime_order/verification.json",
+    "bytes": 4758,
+    "sha256": "ad5e79908a0153be1141cde5a6189354453d8654028791606e130278c4813372",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_prime_order_constraints_packet/erdos1060_prime_order/verification.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_prime_order_constraints_packet/erdos1060_prime_order/verify.py",
+    "bytes": 4421,
+    "sha256": "156ef6315d99ffe094c8c249a8807baa5db7f52e89cee1acf1e7c52616ef37ea",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_prime_order_constraints_packet/erdos1060_prime_order/verify.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_proof_gap_audit/proof_status_audit.md",
+    "bytes": 9090,
+    "sha256": "8d10ca6fd2cb4f9fcc7118b6432b4cc6080af7a28acd5a6a912608e32dbe54ed",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_proof_gap_audit/proof_status_audit.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_proof_gap_audit/search_31_100000.log",
+    "bytes": 412,
+    "sha256": "0db0340c649502182342c0bac42e7861da6036ea2b8ea8e32f49130e080609e9",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_proof_gap_audit/search_31_100000.log"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_proof_gap_audit/verification.json",
+    "bytes": 2626,
+    "sha256": "ee6f67d4be0ac85a787aa474d3b949d2839816f8476304b4986aebd89b85d0b0",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_proof_gap_audit/verification.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_proof_gap_audit/verify_gap.py",
+    "bytes": 6039,
+    "sha256": "a42e115e98266ad7de5d82f5565869adafa2079f0ab6f0b33c61104ef37315dd",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_proof_gap_audit/verify_gap.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/README.md",
+    "bytes": 4840,
+    "sha256": "e3f03e05c7f83445e797457a2d2b7fe72d778f604083af4e79e9bf4754b92c25",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/README.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/collision_milp.py",
+    "bytes": 3293,
+    "sha256": "e64e5351ebf8b1df374cb36b2bb237fd446870441d3d3a5acdf5607808b0dc34",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/collision_milp.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/exact_f2_336M.json",
+    "bytes": 469,
+    "sha256": "a70490c5143eb887a66828bd556d09b95246553b47082074d3e4d94f646af030",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/exact_f2_336M.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/exact_f2_M.json",
+    "bytes": 390,
+    "sha256": "474c7d249aca382df5831b2e031e98da186ca50359103c5a047df77f2bafc9aa",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/exact_f2_M.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/exact_full_336M.json",
+    "bytes": 550,
+    "sha256": "d5536750b948c1488cd4383ccabb393a12068b95a8ab73fc8e0b5f2e3e0fd093",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/exact_full_336M.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/exact_full_M.json",
+    "bytes": 390,
+    "sha256": "b8cd5f7365ab7ce4f78c8089de1bbb0affdd3dcbeb92d3940284f5dfa055d51d",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/exact_full_M.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/exact_target_search.py",
+    "bytes": 2740,
+    "sha256": "5c5e622ac1c5266842bc04ca8d59bf871cd4939edb041aa40d85ff0781c62fd1",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/exact_target_search.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/independent_verification.json",
+    "bytes": 4291,
+    "sha256": "44a2bf80f4700e3ed3e4e31fd566165fd7d91402c8c6643beb3182446f614474",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/independent_verification.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/min5_cubefree_milp_10000.json",
+    "bytes": 1401,
+    "sha256": "3ccbbb45415909a610f19d5d76ffa7a54a7782e358c16e24fd052da758fa12a2",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/min5_cubefree_milp_10000.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/odd_cubefree_milp_2000.json",
+    "bytes": 1604,
+    "sha256": "78f7f6db1cc2d93754bc550c527a47c53970f39bdb072e477d2e4d587462e72b",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/odd_cubefree_milp_2000.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/proved_additions.md",
+    "bytes": 12991,
+    "sha256": "6136c034bf4f7b281cfbc97a47474a090f21b2c1d2c9f550c64d717356db4ed3",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/proved_additions.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/refined_helper_prompt.md",
+    "bytes": 15497,
+    "sha256": "af0651fffc52ee3763eece9f6be330d46aed126036886c711160b8507981480b",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/refined_helper_prompt.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/requirements_search.txt",
+    "bytes": 41,
+    "sha256": "f7308e5b60ea62603b458da5fadbb55614b46fbb4d083200fa2cc9843085ceef",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/requirements_search.txt"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/rough_cubefree_milp_5000.json",
+    "bytes": 460,
+    "sha256": "820d9f71502323df0a264c73d63bee0cf88a69e88ef9a21506ebec8adddd35a0",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/rough_cubefree_milp_5000.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/smoke_test_12_14.json",
+    "bytes": 740,
+    "sha256": "c8e211e3e26fba6bffa10a86a3aba349624e924ad89e6d1e91970a0be1534e0f",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/smoke_test_12_14.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/verify_witnesses.py",
+    "bytes": 3070,
+    "sha256": "e9d00431c97b5c818e8c69eb1c1899ab815fd24c6b830c015b742962141ed3ab",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_refined_research_packet/erdos1060_v2/verify_witnesses.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/README.md",
+    "bytes": 2721,
+    "sha256": "9e31afe4e199fa331d5e7b0aaefaebdc90ea910a7193f17434e5f3f63cd7e004",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/README.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/certification_run.txt",
+    "bytes": 3006,
+    "sha256": "736c05eff528cb17cbc602be83eb15146c84a1a11ad3db7cdd826e59f584fe44",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/certification_run.txt"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/certify_experiments.py",
+    "bytes": 4659,
+    "sha256": "589896302627b7c01e73fc7864a847967c8f83f2070c3c79233ce599ba5eabd8",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/certify_experiments.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/check_certificates.py",
+    "bytes": 3331,
+    "sha256": "ac401655361e505dc3524c36ab627240b3cd108bf85292fed69370e2cecfc902",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/check_certificates.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/cubefree_coordinates.py",
+    "bytes": 849,
+    "sha256": "2a4d52f3967afedd1b4f8cc3ac8789490e80a6eec1d4be46f178ceccaec321f8",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/cubefree_coordinates.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/cubefree_lo11_positive_control.json",
+    "bytes": 1548,
+    "sha256": "57d0e0cad2f2d1885bddae4b21d8826cde7d1938f6a7458cc727518d9a78e00c",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/cubefree_lo11_positive_control.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/entropy_opt.py",
+    "bytes": 1141,
+    "sha256": "dde8151672f23263c917fd372d80e974d1c124de05503eeaf11ef5eb4ce3bd61",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/entropy_opt.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/environment.json",
+    "bytes": 129,
+    "sha256": "fadb75cf35057b9be3981375f192999715848897e5d74ff9343de052d99b4182",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/environment.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/exact_certification.json",
+    "bytes": 3005,
+    "sha256": "f89b1af0fd8e0234c1755c196d0a0019950c5a32c8414b67c3b760e77fac15aa",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/exact_certification.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/factor_cache.json",
+    "bytes": 1273532,
+    "sha256": "a3fcb791ac728407f09f2db0c0475b48995a3324672af4b012140a366f2e27cc",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/factor_cache.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/odd_squares_e4.json",
+    "bytes": 506,
+    "sha256": "447aa271b2cd87735a0c7b0d84ed03a70726ec23ea17ae9b37c44a53517beb9d",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/odd_squares_e4.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/odd_squares_e6_B1000.json",
+    "bytes": 472,
+    "sha256": "9de1d27140c3341ca97e55bc7b0978c9a998ff069d82827893414d16c544fc6e",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/odd_squares_e6_B1000.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prime_certificates.json",
+    "bytes": 1272110,
+    "sha256": "bbe8ba892080609aa83a9a136ea04ba9e174c1948f97c68bd548c3be3bea99e8",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prime_certificates.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/README.md",
+    "bytes": 4840,
+    "sha256": "e3f03e05c7f83445e797457a2d2b7fe72d778f604083af4e79e9bf4754b92c25",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/README.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/collision_milp.py",
+    "bytes": 3293,
+    "sha256": "e64e5351ebf8b1df374cb36b2bb237fd446870441d3d3a5acdf5607808b0dc34",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/collision_milp.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/exact_f2_336M.json",
+    "bytes": 469,
+    "sha256": "a70490c5143eb887a66828bd556d09b95246553b47082074d3e4d94f646af030",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/exact_f2_336M.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/exact_f2_M.json",
+    "bytes": 390,
+    "sha256": "474c7d249aca382df5831b2e031e98da186ca50359103c5a047df77f2bafc9aa",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/exact_f2_M.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/exact_full_336M.json",
+    "bytes": 550,
+    "sha256": "d5536750b948c1488cd4383ccabb393a12068b95a8ab73fc8e0b5f2e3e0fd093",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/exact_full_336M.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/exact_full_M.json",
+    "bytes": 390,
+    "sha256": "b8cd5f7365ab7ce4f78c8089de1bbb0affdd3dcbeb92d3940284f5dfa055d51d",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/exact_full_M.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/exact_target_search.py",
+    "bytes": 2740,
+    "sha256": "5c5e622ac1c5266842bc04ca8d59bf871cd4939edb041aa40d85ff0781c62fd1",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/exact_target_search.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/independent_verification.json",
+    "bytes": 4291,
+    "sha256": "44a2bf80f4700e3ed3e4e31fd566165fd7d91402c8c6643beb3182446f614474",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/independent_verification.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/min5_cubefree_milp_10000.json",
+    "bytes": 1401,
+    "sha256": "3ccbbb45415909a610f19d5d76ffa7a54a7782e358c16e24fd052da758fa12a2",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/min5_cubefree_milp_10000.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/odd_cubefree_milp_2000.json",
+    "bytes": 1604,
+    "sha256": "78f7f6db1cc2d93754bc550c527a47c53970f39bdb072e477d2e4d587462e72b",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/odd_cubefree_milp_2000.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/proved_additions.md",
+    "bytes": 12991,
+    "sha256": "6136c034bf4f7b281cfbc97a47474a090f21b2c1d2c9f550c64d717356db4ed3",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/proved_additions.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/refined_helper_prompt.md",
+    "bytes": 15497,
+    "sha256": "af0651fffc52ee3763eece9f6be330d46aed126036886c711160b8507981480b",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/refined_helper_prompt.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/requirements_search.txt",
+    "bytes": 41,
+    "sha256": "f7308e5b60ea62603b458da5fadbb55614b46fbb4d083200fa2cc9843085ceef",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/requirements_search.txt"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/rough_cubefree_milp_5000.json",
+    "bytes": 460,
+    "sha256": "820d9f71502323df0a264c73d63bee0cf88a69e88ef9a21506ebec8adddd35a0",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/rough_cubefree_milp_5000.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/smoke_test_12_14.json",
+    "bytes": 740,
+    "sha256": "c8e211e3e26fba6bffa10a86a3aba349624e924ad89e6d1e91970a0be1534e0f",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/smoke_test_12_14.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/verify_witnesses.py",
+    "bytes": 3070,
+    "sha256": "e9d00431c97b5c818e8c69eb1c1899ab815fd24c6b830c015b742962141ed3ab",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/prior_v2/verify_witnesses.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/proved_results_v3.md",
+    "bytes": 17363,
+    "sha256": "996f55f3b0729fb23d5a42ee2d0be9446cabd2af898dff1baafa9142cdf94514",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/proved_results_v3.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/rechecked_witnesses.json",
+    "bytes": 4291,
+    "sha256": "44a2bf80f4700e3ed3e4e31fd566165fd7d91402c8c6643beb3182446f614474",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/rechecked_witnesses.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/rough_e2_B100000_lo101.json",
+    "bytes": 622,
+    "sha256": "2ad7d6cd07f947401a2d6eafdd22ce7b3e6ee9bac76a500243be3796f5f5777d",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/rough_e2_B100000_lo101.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/same_radical_e2.json",
+    "bytes": 411,
+    "sha256": "8d136d9bb83b8038572fb539bb5ada2ce946ef4187c1aaa16601b3bbb27f91ae",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/same_radical_e2.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/same_radical_e2_B100000.json",
+    "bytes": 444,
+    "sha256": "8e47bd25d9da2a26a00d3cea9091f7f52aa935d40515e6fef4b3b417b03bba59",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/same_radical_e2_B100000.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/search_models.py",
+    "bytes": 4704,
+    "sha256": "5074a0e1783e86e6a647746f2c9be60e7d08b67546129eef997016693f2f19bb",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/search_models.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/standalone_check.json",
+    "bytes": 1161,
+    "sha256": "bf28adaded766663f77512d1c239ad8a58f00a4737375b8b613175f4cfff28f8",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/standalone_check.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/worker_prompt_v3.md",
+    "bytes": 10896,
+    "sha256": "66697f509880af6e91c2f14be65449b4bba06cf5a045760238e85107bb75c7d1",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_packet_v3/erdos1060_v3/worker_prompt_v3.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_starter/erdos1060_README.txt",
+    "bytes": 1972,
+    "sha256": "26bfd3932fe1d921bb43c0805eb8517a4167438aa507c157e8de3b6628cf28d4",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_starter/erdos1060_README.txt"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_starter/erdos1060_census_results.txt",
+    "bytes": 2228,
+    "sha256": "2199b90b0002ff182795b1093a760b3d0daaabf6aa0f54ab8348218437147d4f",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_starter/erdos1060_census_results.txt"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_starter/erdos1060_exploratory_census.cpp",
+    "bytes": 7547,
+    "sha256": "ee11b4c73717986652b2a3d06cc401807130ed72d2e189c44fb8ade842005fdf",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_starter/erdos1060_exploratory_census.cpp",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_starter/erdos1060_helper_prompt.md",
+    "bytes": 17829,
+    "sha256": "43cb6db0e9ed98bb11ff9e89ae3662ebc9a1fba86f2dc7dfe6dc00c82d765916",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_research_starter/erdos1060_helper_prompt.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_signed_feedback_packet/erdos1060_signed_feedback/README.md",
+    "bytes": 2417,
+    "sha256": "94f166614bb977c2d4249d64f0782bd342c2fdd296fad07ece03402821a7dc9b",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_signed_feedback_packet/erdos1060_signed_feedback/README.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_signed_feedback_packet/erdos1060_signed_feedback/erdos1060_signed_feedback.pdf",
+    "bytes": 235139,
+    "sha256": "87b7e2a7919eb6ff3a209509f4ddb03774370fc7b272eeb0249895a43c1830e6",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_signed_feedback_packet/erdos1060_signed_feedback/erdos1060_signed_feedback.pdf"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_signed_feedback_packet/erdos1060_signed_feedback/erdos1060_signed_feedback.tex",
+    "bytes": 14875,
+    "sha256": "bc48aba1d707b4b7019b72303efbb444b7b46472179cc76b43b33007d9fb427c",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_signed_feedback_packet/erdos1060_signed_feedback/erdos1060_signed_feedback.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_signed_feedback_packet/erdos1060_signed_feedback/verification.json",
+    "bytes": 4701,
+    "sha256": "c4192bcb553e9d957b1ab92a0aba50379cde624dd25741ceacfe952c0791a064",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_signed_feedback_packet/erdos1060_signed_feedback/verification.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_signed_feedback_packet/erdos1060_signed_feedback/verify_signed_feedback.py",
+    "bytes": 9192,
+    "sha256": "a43be1677695f02c2484553d0fec38140fb27936ffebd5f0eed0377f5118bce0",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_signed_feedback_packet/erdos1060_signed_feedback/verify_signed_feedback.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_small_prime_constraints_packet/erdos1060_v5/README.md",
+    "bytes": 5216,
+    "sha256": "350ea2d3d5f7cc15a23fb026d572cd35fe63b587afcb22e14d52dfe6f899ff26",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_small_prime_constraints_packet/erdos1060_v5/README.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_small_prime_constraints_packet/erdos1060_v5/factor_cache.json",
+    "bytes": 1273532,
+    "sha256": "a3fcb791ac728407f09f2db0c0475b48995a3324672af4b012140a366f2e27cc",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_small_prime_constraints_packet/erdos1060_v5/factor_cache.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_small_prime_constraints_packet/erdos1060_v5/general_101_100000_3.json",
+    "bytes": 182,
+    "sha256": "70753ba77cd42854f6c6f7d75bfebac20833b74119cfe9961e44389f93e6ada3",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_small_prime_constraints_packet/erdos1060_v5/general_101_100000_3.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_small_prime_constraints_packet/erdos1060_v5/general_17_10000_1.json",
+    "bytes": 3126,
+    "sha256": "654d877cca5bbe494a2aec6f9d1d0a63571f15edd8bcbc50947daf041cd1485f",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_small_prime_constraints_packet/erdos1060_v5/general_17_10000_1.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_small_prime_constraints_packet/erdos1060_v5/general_31_10000_2.json",
+    "bytes": 186,
+    "sha256": "6d8a67b062f04a8f5540f042a4a4bc2bbcdf000c143974039a3f407e0e22b5cc",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_small_prime_constraints_packet/erdos1060_v5/general_31_10000_2.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_small_prime_constraints_packet/erdos1060_v5/peel_thresholds.json",
+    "bytes": 6132,
+    "sha256": "1dc7ee820441012c5fec9c2493e22f23844d1ce67905506bb4ebceacfd70ae78",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_small_prime_constraints_packet/erdos1060_v5/peel_thresholds.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_small_prime_constraints_packet/erdos1060_v5/peel_thresholds.py",
+    "bytes": 1422,
+    "sha256": "9b49b874e1e943c1b6e1656f8a24b9a5c8c8afac5a490e48a7204edfed7ae48d",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_small_prime_constraints_packet/erdos1060_v5/peel_thresholds.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_small_prime_constraints_packet/erdos1060_v5/prime_certificates.json",
+    "bytes": 1272110,
+    "sha256": "bbe8ba892080609aa83a9a136ea04ba9e174c1948f97c68bd548c3be3bea99e8",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_small_prime_constraints_packet/erdos1060_v5/prime_certificates.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_small_prime_constraints_packet/erdos1060_v5/search_general.py",
+    "bytes": 3459,
+    "sha256": "ef7f457e0206b33203163a4bd59445d36d8c68382916ec3eb4eb84ef35afbbdf",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_small_prime_constraints_packet/erdos1060_v5/search_general.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_small_prime_constraints_packet/erdos1060_v5/small_prime_constraints.pdf",
+    "bytes": 264008,
+    "sha256": "9109c4e1171d0eddb8754e9fddef1f577fddb9e8f400cd2235973a44b812457a",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_small_prime_constraints_packet/erdos1060_v5/small_prime_constraints.pdf"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_small_prime_constraints_packet/erdos1060_v5/small_prime_constraints.tex",
+    "bytes": 15449,
+    "sha256": "df75aed924e19b0a238b46726c85c9a6691f88f19a1d1d53e9d260349d129f06",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_small_prime_constraints_packet/erdos1060_v5/small_prime_constraints.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_small_prime_constraints_packet/erdos1060_v5/verification_v5.json",
+    "bytes": 1524,
+    "sha256": "d0f79a3e6ea2eb4787395b0c31d62a705b1d757593135af2a2178cae7bdeeac4",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_small_prime_constraints_packet/erdos1060_v5/verification_v5.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_small_prime_constraints_packet/erdos1060_v5/verify_v5.py",
+    "bytes": 7394,
+    "sha256": "40e31ee28c55c9902f8307c7cb1d3c1f7030e39d5209a1959e92738d20aaa0bd",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_small_prime_constraints_packet/erdos1060_v5/verify_v5.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_sparse_changes_packet/erdos1060_v6/README.md",
+    "bytes": 3437,
+    "sha256": "74723ab72519bbc7f4a137b78fd09fa47492a0c3fbf5e0013393a352b7b2e5a5",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_sparse_changes_packet/erdos1060_v6/README.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_sparse_changes_packet/erdos1060_v6/erdos1060_sparse_changes_proof.pdf",
+    "bytes": 262498,
+    "sha256": "a53f7582d6047276a733d3577bc239c68f527730f0b0cb83d2519fc56aa3a8e9",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_sparse_changes_packet/erdos1060_v6/erdos1060_sparse_changes_proof.pdf"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_sparse_changes_packet/erdos1060_v6/erdos1060_sparse_changes_proof.tex",
+    "bytes": 19782,
+    "sha256": "4edf3254cd8044d10f5affa5c56545dc163011ed3d0af834a7a2a6c52ab3a65c",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_sparse_changes_packet/erdos1060_v6/erdos1060_sparse_changes_proof.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_sparse_changes_packet/erdos1060_v6/explore_even.py",
+    "bytes": 2483,
+    "sha256": "4929397ef349661f6d8c111285060cc7a7b4df870d1101c5755e4f8b173c3b92",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_sparse_changes_packet/erdos1060_v6/explore_even.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_sparse_changes_packet/erdos1060_v6/finite_model_1000_10.json",
+    "bytes": 43044,
+    "sha256": "22ff08c901a25b4855c4bfc3486f6873e176f3114bc0c57b98e6358e89de0cce",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_sparse_changes_packet/erdos1060_v6/finite_model_1000_10.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_sparse_changes_packet/erdos1060_v6/finite_model_5000_6.json",
+    "bytes": 112449,
+    "sha256": "032747973750299c1faf6a99bb1fb6876ad5952cd778c17e0d0dcfb04a694510",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_sparse_changes_packet/erdos1060_v6/finite_model_5000_6.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_sparse_changes_packet/erdos1060_v6/verification_v6.json",
+    "bytes": 1730,
+    "sha256": "b952b57e3348491ffe950f1de5ef760e926402136c34e8fee999522a8d2196f4",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_sparse_changes_packet/erdos1060_v6/verification_v6.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_sparse_changes_packet/erdos1060_v6/verify_v6.py",
+    "bytes": 6122,
+    "sha256": "ec7542f148005214c56bfe164e63c8fe60c948fd6e1c3f3bd762938bee742a86",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_sparse_changes_packet/erdos1060_v6/verify_v6.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_two_prime_rigidity_packet/erdos1060_two_prime_rigidity/README.md",
+    "bytes": 2043,
+    "sha256": "62c3de56349ea88de11c436472fc06cbea067380bbeabbc6b361bba9360996a4",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_two_prime_rigidity_packet/erdos1060_two_prime_rigidity/README.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_two_prime_rigidity_packet/erdos1060_two_prime_rigidity/proof.pdf",
+    "bytes": 264742,
+    "sha256": "4a2110f879e9a6835d40451ac038c0358733615a893dde694eb53b38f06287cf",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_two_prime_rigidity_packet/erdos1060_two_prime_rigidity/proof.pdf"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_two_prime_rigidity_packet/erdos1060_two_prime_rigidity/proof.tex",
+    "bytes": 15851,
+    "sha256": "c20a266b0e1456fe26dfd34f01f73e4b388ec478ad9d0e70b9d643bed6ae2648",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_two_prime_rigidity_packet/erdos1060_two_prime_rigidity/proof.tex",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_two_prime_rigidity_packet/erdos1060_two_prime_rigidity/verification.json",
+    "bytes": 1890,
+    "sha256": "a0be6140a084942be5f2307c867bc8e620cba71f977d257c5f8e97cac246df2f",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_two_prime_rigidity_packet/erdos1060_two_prime_rigidity/verification.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_two_prime_rigidity_packet/erdos1060_two_prime_rigidity/verify.py",
+    "bytes": 5724,
+    "sha256": "3f1d8b2bbfe9947fd31f4d8d9298714d2e6179befff92e7cab62ccf7b7eb3390",
+    "published_path": "research/erdos1060_audit_20260907/inputs/erdos1060_handoff/working_packets/erdos1060_two_prime_rigidity_packet/erdos1060_two_prime_rigidity/verify.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/pdf_structural_checks.json",
+    "bytes": 839,
+    "sha256": "b1f84409606911ac20eb3d02e819e80fb1df433fea8148e0a5c8ad24fc968907",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/pdf_structural_checks.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/render_log.txt",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/render_log.txt"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/unpack_handoff.py",
+    "bytes": 892,
+    "sha256": "b90ea3775441338ac5e321b03b6058e80f391513d7ce84be5832bb7e51c05ec2",
+    "published_path": "research/erdos1060_audit_20260907/unpack_handoff.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/verification_results.json",
+    "bytes": 2460,
+    "sha256": "42856002ffb0d6d5a1705daac1beefa635336baa61dde8a9f192075db3f5eff5",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/erdos1060_audit_20260907/verification_results.json"
+  },
+  {
+    "origin": "research/erdos1060_audit_20260907/verify_audit.py",
+    "bytes": 8489,
+    "sha256": "c05de686e7f930988d44fe4adfbd41bd9b8ba9291ab6bfafada53bfd73a11b3c",
+    "published_path": "research/erdos1060_audit_20260907/verify_audit.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/fixed-r-entropy-conditioning-barrier-2026-09-05.md",
+    "bytes": 18090,
+    "sha256": "1ca903371ad849c6a49f55efa156ca29904422ff6663df14803b542e6a353668",
+    "published_path": "research/fixed-r-entropy-conditioning-barrier-2026-09-05.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/fixed-r-reciprocal-gap-route-2026-09-05.md",
+    "bytes": 7814,
+    "sha256": "2db89e78cc537045f76318a0109583fc101d5baf6df24c71de8e5966dc0ef3eb",
+    "published_path": "research/fixed-r-reciprocal-gap-route-2026-09-05.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_rough_collision_search_2026-09-05/README.md",
+    "bytes": 1155,
+    "sha256": "718e4a5210e94af30a007419279aebfaf30e3f6715ea6178da779940b1fe8aa5",
+    "published_path": "research/ksigma_rough_collision_search_2026-09-05/README.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_rough_collision_search_2026-09-05/collision_11_700_e8.json",
+    "bytes": 2185,
+    "sha256": "f4ec8d85514417b2ebc342ed86c5f543eb9601c8b0e5892360dc9873486a5fd9",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/ksigma_rough_collision_search_2026-09-05/collision_11_700_e8.json"
+  },
+  {
+    "origin": "research/ksigma_rough_collision_search_2026-09-05/search.py",
+    "bytes": 7095,
+    "sha256": "ce6ed6b9141fbce62813557273e61eb3b5b9897b1faebe7df0a1ea8c4851e2b2",
+    "published_path": "research/ksigma_rough_collision_search_2026-09-05/search.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_rough_collision_search_2026-09-05/verify_certificate.py",
+    "bytes": 2030,
+    "sha256": "23b18600d0d0ea0b0bb4b61b369e794ab8a47038358b5c68d27339164edfe2de",
+    "published_path": "research/ksigma_rough_collision_search_2026-09-05/verify_certificate.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/avoid_2_3_31_u20000.json",
+    "bytes": 5077,
+    "sha256": "b0b146661a83249801d363e0f2b66f471408f17c2065546b81a6a5544b40d463",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/ksigma_verification_2026-09-05/avoid_2_3_31_u20000.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/bounded_collision_transition_audit.py",
+    "bytes": 8271,
+    "sha256": "b8bcc9fbcbc1b2135ba67f9667c08c58cdd34ab82f1265281ddb946f46ce39e9",
+    "published_path": "research/ksigma_verification_2026-09-05/bounded_collision_transition_audit.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/bounded_fiber_K1e7_R3.txt",
+    "bytes": 163,
+    "sha256": "23a367dbcfdccfe53af5cdecfd0582b974e9fe5c3cc76853cb951f1d1cf176f1",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/ksigma_verification_2026-09-05/bounded_fiber_K1e7_R3.txt"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/bounded_fiber_K1e7_R4.txt",
+    "bytes": 163,
+    "sha256": "9cc1b7efeaec50ab689f6ce00cde3534cb7c5f84f15ead83f52fb174e4378509",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/ksigma_verification_2026-09-05/bounded_fiber_K1e7_R4.txt"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/bounded_fiber_K1e7_R5.txt",
+    "bytes": 263874,
+    "sha256": "17423f724f0e4b72adb9014389b8a99c21bc42f2353f986e2aaf5427ca66b236",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/ksigma_verification_2026-09-05/bounded_fiber_K1e7_R5.txt"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/bounded_fiber_K1e7_R6.txt",
+    "bytes": 263928,
+    "sha256": "ba883fd3016cbbd7cf882475b1ca77ca45ca440f48d54b641ad2287418c7da2f",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/ksigma_verification_2026-09-05/bounded_fiber_K1e7_R6.txt"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/bounded_fiber_K1e7_R7.txt",
+    "bytes": 351571,
+    "sha256": "569867b66c153fd37a6c9afe4c76f4e186f43cb2b6df32a15d5897adad77d86c",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/ksigma_verification_2026-09-05/bounded_fiber_K1e7_R7.txt"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/bounded_fiber_K1e7_R8.txt",
+    "bytes": 351896,
+    "sha256": "7e246c0ac294b80a9fcb03c6d04c4e341743c94c9a93e9cc64c21d3a8897c312",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/ksigma_verification_2026-09-05/bounded_fiber_K1e7_R8.txt"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/bounded_fiber_K1e8_R3.txt",
+    "bytes": 171,
+    "sha256": "3824be6181bfa915aeb9842baa17a2784cc097297c5fe55ba176f56221f9876f",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/ksigma_verification_2026-09-05/bounded_fiber_K1e8_R3.txt"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/bounded_fiber_K1e8_R5.txt",
+    "bytes": 2884541,
+    "sha256": "801694e7842a51db2abd865917781e576c59391ff43863ad049c893f62065b91",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/ksigma_verification_2026-09-05/bounded_fiber_K1e8_R5.txt"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/bounded_fiber_K1e8_R7.txt",
+    "bytes": 3840553,
+    "sha256": "3eee68e2f6ac68fedb0d714cd63d3d01f24ed12464462126a32cbeede1f9b77f",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/ksigma_verification_2026-09-05/bounded_fiber_K1e8_R7.txt"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/bounded_fiber_census.cpp",
+    "bytes": 3210,
+    "sha256": "54b24fede9892f5f49a2ea288c2489d60fb9a5d3771da8c7555e9f5b08c37370",
+    "published_path": "research/ksigma_verification_2026-09-05/bounded_fiber_census.cpp",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/bounded_transition_K1e7_R5.json",
+    "bytes": 8954028,
+    "sha256": "f0e42884006a5ec1656527ab115905e33c5eddf20bee9d9d331a3ad4eb0b6b16",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/ksigma_verification_2026-09-05/bounded_transition_K1e7_R5.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/bounded_transition_K1e7_R7.json",
+    "bytes": 12030285,
+    "sha256": "166dd132576e1f11a0d923b22226170f5c016f8c764c334883fa8dc86275553e",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-001.zip",
+    "member": "research/ksigma_verification_2026-09-05/bounded_transition_K1e7_R7.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/bounded_transition_K1e8_R5.json",
+    "bytes": 90988272,
+    "sha256": "4feaf0155a563c3abba182d9db46167c7d6222bf810b631614e7a900670be15d",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/bounded_transition_K1e8_R5.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/bounded_transition_K1e8_R5_summary.txt",
+    "bytes": 1092,
+    "sha256": "bafc20a6cefb7dc7127d3081009b9ee1705829b1118daaca5127dfaaaa387071",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/bounded_transition_K1e8_R5_summary.txt"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/bounded_transition_K1e8_R7.json",
+    "bytes": 122187705,
+    "sha256": "0ed54df9cb65f4d37ad61ba11cf59262d600f9df5c75857ef7f72e6e2ba49183",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/bounded_transition_K1e8_R7.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/bounded_transition_K1e8_R7_summary.txt",
+    "bytes": 1095,
+    "sha256": "d58290f1059cdc71142bbe4448812ca4a3bb0aa3eb07dd91e8c473f438febcc2",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/bounded_transition_K1e8_R7_summary.txt"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/bounded_transition_analyzer.py",
+    "bytes": 8944,
+    "sha256": "5bb13874b9f1e19d5dbccfcdd3c7847a3eecfc4b104e75afc39f2bbc120cf826",
+    "published_path": "research/ksigma_verification_2026-09-05/bounded_transition_analyzer.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/bounded_transition_fvs_K1e7_R5.json",
+    "bytes": 7228337,
+    "sha256": "44c45b5731d1c9d43a112e5fc69e74059e4f4ba111bf9e4e7642890aff2aefdb",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/bounded_transition_fvs_K1e7_R5.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/bounded_transition_fvs_K1e7_R5_summary.txt",
+    "bytes": 5976,
+    "sha256": "2ecd859e5489862d48fe391f3b689871260ae021cadbfe047513f020a72dc054",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/bounded_transition_fvs_K1e7_R5_summary.txt"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/bounded_transition_fvs_K1e7_R7.json",
+    "bytes": 9612577,
+    "sha256": "0440d38d78993e1c659776283139a8af2d3e7cf6c1352dd41e9ffcbf0621b950",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/bounded_transition_fvs_K1e7_R7.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/bounded_transition_fvs_K1e7_R7_summary.txt",
+    "bytes": 5976,
+    "sha256": "6862b1a97572437a86cf1ee5db561cdd3903b065f04c92417503d8e69a485977",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/bounded_transition_fvs_K1e7_R7_summary.txt"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/bounded_transition_fvs_K1e8_R5.json",
+    "bytes": 6021,
+    "sha256": "8aeff7a046de2dd79383b8b7b4d86c19c118b8e3be8b62175561e098c4b7374e",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/bounded_transition_fvs_K1e8_R5.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/bounded_transition_fvs_K1e8_R5_summary.txt",
+    "bytes": 6021,
+    "sha256": "8aeff7a046de2dd79383b8b7b4d86c19c118b8e3be8b62175561e098c4b7374e",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/bounded_transition_fvs_K1e8_R5_summary.txt"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/bounded_transition_fvs_K1e8_R7.json",
+    "bytes": 6021,
+    "sha256": "5aa12f31fbf8c67430c1782a49d55e3ca4ffae81aac17378afca20cd5e04b5ec",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/bounded_transition_fvs_K1e8_R7.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/bounded_transition_fvs_K1e8_R7_summary.txt",
+    "bytes": 6021,
+    "sha256": "5aa12f31fbf8c67430c1782a49d55e3ca4ffae81aac17378afca20cd5e04b5ec",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/bounded_transition_fvs_K1e8_R7_summary.txt"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/bounded_transition_fvs_postprocess.py",
+    "bytes": 4602,
+    "sha256": "5c78bc7791659209de0c42125b437b377b2c0a54929982f9a45704060e26caa3",
+    "published_path": "research/ksigma_verification_2026-09-05/bounded_transition_fvs_postprocess.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/census.cpp",
+    "bytes": 24807,
+    "sha256": "68c7a3afa79ae5cca058fe9edf0238a68484023b7cc2aa9703e2d54b6d4f4668",
+    "published_path": "research/ksigma_verification_2026-09-05/census.cpp",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/census_san.dSYM/Contents/Resources/Relocations/aarch64/census_san.yml",
+    "bytes": 94,
+    "sha256": "4bea69906f786785ed7ced50e575ad4e8e69f1c5b48b91de9898bfb13ec84e52",
+    "published_path": "research/ksigma_verification_2026-09-05/census_san.dSYM/Contents/Resources/Relocations/aarch64/census_san.yml",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/compose_rough_with_census.cpp",
+    "bytes": 15756,
+    "sha256": "c2dbebdc78aafa3a8679a8037ee8d5f2083db72e0f5b3edcf08ff3ec98ac2b05",
+    "published_path": "research/ksigma_verification_2026-09-05/compose_rough_with_census.cpp",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/cubefree_collision_pairs_K1e7.tsv",
+    "bytes": 8998618,
+    "sha256": "9a20611d21135b999118312065e955b77df1164f322fe07e392fdd544c9bc1db",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/cubefree_collision_pairs_K1e7.tsv"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/cubefree_fiber_transition_K1e5.txt",
+    "bytes": 1681,
+    "sha256": "37d2ec8002e16b11be691c3c92e46ca6da8739e2cc53021573dab241001e509f",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/cubefree_fiber_transition_K1e5.txt"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/cubefree_fiber_transition_K1e7.txt",
+    "bytes": 1705,
+    "sha256": "797c8bc9dd2bfcb0af59d7a79fcfbd9c6bbab1811bddab5332b818fe7d001bcd",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/cubefree_fiber_transition_K1e7.txt"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/cubefree_fiber_transition_K1e8.txt",
+    "bytes": 1807,
+    "sha256": "e901985978ae599d54aee60f80aa2ccd32e4003732a058948c99db850f74c0d0",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/cubefree_fiber_transition_K1e8.txt"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/cubefree_fiber_transition_census.cpp",
+    "bytes": 16335,
+    "sha256": "c9c3e0f784d9deb085a51bc746c2b60dffda76f80a54616d5e9d3258949337b7",
+    "published_path": "research/ksigma_verification_2026-09-05/cubefree_fiber_transition_census.cpp",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/cubefree_fvs3_tensor_audit.json",
+    "bytes": 16556,
+    "sha256": "b9981c1f8037fd05b50de2e05149322a747da89dce0bdbae5c6e1e412de53f68",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/cubefree_fvs3_tensor_audit.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/cubefree_girth_gt5_collision.json",
+    "bytes": 1940,
+    "sha256": "a201ca714d3b26b7cbf3caeb5b6cf88ae39bf7959b2376bf0cc76290db4b8ba0",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/cubefree_girth_gt5_collision.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/cubefree_girth_gt6_collision.json",
+    "bytes": 1819,
+    "sha256": "dfcf5da897ed2e1ef0f9fffc1eeaca35f4b9ed6c127b0a5f976112c2147fc6d5",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/cubefree_girth_gt6_collision.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/cubefree_girth_gt8_collision.json",
+    "bytes": 3203,
+    "sha256": "d1afce5530a45239a6c78953bd761ebb100e01056f56f60c5e761c5a44b36a7a",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/cubefree_girth_gt8_collision.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/cubefree_girth_gt8_collision_transition_audit.json",
+    "bytes": 15910,
+    "sha256": "a6cba6e5ccf5b3a42c6631148a68003dd0c1ceff0dd903319f480b103dfcab55",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/cubefree_girth_gt8_collision_transition_audit.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/cubefree_no_2cycle_collision.json",
+    "bytes": 708,
+    "sha256": "489a117983fd196b94fc08cb94bacff5b849cf881ef32b6a8436b1b4e3331443",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/cubefree_no_2cycle_collision.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/cubefree_no_2cycle_collision_transition_audit.json",
+    "bytes": 5925,
+    "sha256": "727c4120780f4eb742d3af282cc35a79f92f18da98fdcf1d0ed8def786219243",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/cubefree_no_2cycle_collision_transition_audit.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/cubefree_parametric_template_obstructions.md",
+    "bytes": 6217,
+    "sha256": "29d67f3895055ecfa20b65843018660f2fe386cee12f996f877eab3177192917",
+    "published_path": "research/ksigma_verification_2026-09-05/cubefree_parametric_template_obstructions.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/cubefree_rough17_transition_audit.json",
+    "bytes": 13521,
+    "sha256": "290e8f7bec32bc49e74f408e7498cfbd9b891784f90d998286c742befe8b0362",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/cubefree_rough17_transition_audit.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/cubefree_rough19_transition_audit.json",
+    "bytes": 29909,
+    "sha256": "288c39e6fd0c3c967a432181628f0c761bee9da413495aabb571b4c3b6d3dd1b",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/cubefree_rough19_transition_audit.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/cubefree_rough210_collision.json",
+    "bytes": 1511,
+    "sha256": "4c80aa7010de7322c169277f92fd7c9b4cdfbadf8b5d73a4b6d079aa56a90b01",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/cubefree_rough210_collision.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/cubefree_rough210_transition_audit.json",
+    "bytes": 6110,
+    "sha256": "9c088041c5a5affe92dcc108c5a39826ca3ee5fd11d5186f8bc1de5b05653b89",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/cubefree_rough210_transition_audit.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/disjoint_atom_search.py",
+    "bytes": 5166,
+    "sha256": "349dd6835d9777478351b6636a7845b5c703325ce1c50df4e46bf546f9654071",
+    "published_path": "research/ksigma_verification_2026-09-05/disjoint_atom_search.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/equal_exponent_pattern_search.py",
+    "bytes": 4244,
+    "sha256": "416f6c75989c1891d571c0f9bab0ed6bd96da08b0bbdfaac4d5449c819af37bd",
+    "published_path": "research/ksigma_verification_2026-09-05/equal_exponent_pattern_search.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/equal_omega_collision.json",
+    "bytes": 1238,
+    "sha256": "e6da95c1ae6517a6844d59e718145954347086bd8f551a93d4974595d70d32ba",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/equal_omega_collision.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/equal_omega_e2_u700.json",
+    "bytes": 1798,
+    "sha256": "932d2a7ea0fa129f9b799db947d2ae663f8cef7f1eb34d5dfd85257787685eb6",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/equal_omega_e2_u700.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/equal_omega_e3_u100.json",
+    "bytes": 1163,
+    "sha256": "150ec7414cfa4de928cad33d3a477a6314a6b84e513fbc5cd6de7bcddf777ae8",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/equal_omega_e3_u100.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/equal_omega_e4_u100.json",
+    "bytes": 1164,
+    "sha256": "d7aa3946ddae3cc575aa8ce6deb0c832a12555f478c939e564bb13e37d4c050d",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/equal_omega_e4_u100.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/equal_omega_e5_u100.json",
+    "bytes": 1164,
+    "sha256": "53f082f7ab60b9654a0f9a1b836174e8f5d09f3f991cdfc3bd57a9940dd441e9",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/equal_omega_e5_u100.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/equal_omega_e6_u100.json",
+    "bytes": 1164,
+    "sha256": "4be7a36123e792e760b91283da298258f45ec6f97e7326cdfbd610ff72c98be7",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/equal_omega_e6_u100.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/equal_omega_e7_u50.json",
+    "bytes": 998,
+    "sha256": "5841ef0b8313391fc956889b381c6afe7b351fd2402b94f10043cc48af73d017",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/equal_omega_e7_u50.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/equal_omega_u50.json",
+    "bytes": 998,
+    "sha256": "3556f7294adb55c12ed3995fbea28f28405665643597b0bba6ee19de01c01602",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/equal_omega_u50.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/equal_omega_u70.json",
+    "bytes": 1210,
+    "sha256": "f4dde2a74688073ac1f6f183ca2f16262fea39757d6ca8ff8252229b347d0c57",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/equal_omega_u70.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/equal_omega_u90.json",
+    "bytes": 1210,
+    "sha256": "a6d5d8c383babd6450d027cbe791a50d5161907e277f26f913dbef0ccffcdc20",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/equal_omega_u90.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/equal_partition_u300.json",
+    "bytes": 1749,
+    "sha256": "c263c6c096209bc45d5d65ae78f1e33a179583d93729f3d81b33676a75fcfcc3",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/equal_partition_u300.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/equal_powerful_omega_search.py",
+    "bytes": 9186,
+    "sha256": "8a2fc320fcd33ae8311729852ca699ca341584ef9b4bbb76d81cf5edb73734af",
+    "published_path": "research/ksigma_verification_2026-09-05/equal_powerful_omega_search.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/equal_radical_milp.py",
+    "bytes": 5011,
+    "sha256": "5b6648ad01c86f562b2c6c49a41536eb5d808907f227335a3009ae8b334f8143",
+    "published_path": "research/ksigma_verification_2026-09-05/equal_radical_milp.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/equal_radical_p10000_e3_infeasible.txt",
+    "bytes": 197,
+    "sha256": "14473e0bd981cf89d4aeb8936d1f1732c65943dc0c0b2217ed8b3e8b74a23dcb",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/equal_radical_p10000_e3_infeasible.txt"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/equal_radical_p2000_e4_infeasible.txt",
+    "bytes": 196,
+    "sha256": "6efd219c165dda813140d590ce1c9810762c556a6a280d95a53d038d64ac88de",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/equal_radical_p2000_e4_infeasible.txt"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/equal_repeated_partition_u100.json",
+    "bytes": 1205,
+    "sha256": "0cf003c03d5f92313dfdc5a0f10eb352b6e8e53febaecaf75a71b85f9d258f94",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/equal_repeated_partition_u100.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/equal_saturation_profile_u5000_e2.json",
+    "bytes": 2437,
+    "sha256": "8d27cb7b3bc84193e473ccbe20183c5d2933f712f63bf1194f5ebe9cee3c298b",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/equal_saturation_profile_u5000_e2.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/exponent_jump_candidate.json",
+    "bytes": 410,
+    "sha256": "372d57b1c5b5bb73b6433959b2f1f1d60c240324cf277d9e3e6d501f3302d7ea",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/exponent_jump_candidate.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/exponent_pattern_census.cpp",
+    "bytes": 4013,
+    "sha256": "42cb58ebd3a5ccb2f28740c7be07affe0f9bec19ad7fd2ba54e4b5949df75023",
+    "published_path": "research/ksigma_verification_2026-09-05/exponent_pattern_census.cpp",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/global_core_profile_milp.py",
+    "bytes": 7463,
+    "sha256": "e61a4e6c06cf06ba05ef7f98c46fb630af095496ef57e6f4a570d0cb14745f6c",
+    "published_path": "research/ksigma_verification_2026-09-05/global_core_profile_milp.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/hub_families_h100_e50_q100000_f3.json",
+    "bytes": 1037,
+    "sha256": "9e4043daef47cdd5e1631e25356ab5b97a721c130c178f3b019a01b3de816350",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/hub_families_h100_e50_q100000_f3.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/hub_families_h50_e30_q10000_f4.json",
+    "bytes": 1035,
+    "sha256": "c55eec740193ba15e5190e6c5e2643a3a2b18eb8039d3a594add69343d5c1640",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/hub_families_h50_e30_q10000_f4.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/hub_families_pairs_h50_e30_q10000_f4.json",
+    "bytes": 1035,
+    "sha256": "80297101e3320ad245185a63c145ff2b96b767152ce4f8cf1d87dd88003c643a",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/hub_families_pairs_h50_e30_q10000_f4.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/hub_family_search.py",
+    "bytes": 5294,
+    "sha256": "3d296e76e660039309a5f04012c02ef3b3a5e1d1cfadd71cfe0bd1f8b06bcb39",
+    "published_path": "research/ksigma_verification_2026-09-05/hub_family_search.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/invariant_census.cpp",
+    "bytes": 6154,
+    "sha256": "1f9fc448a2c4adef682c26bbcf15bed970dac35f747995614771a6aa62f2c5e1",
+    "published_path": "research/ksigma_verification_2026-09-05/invariant_census.cpp",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/largest_prime_search.py",
+    "bytes": 3680,
+    "sha256": "807e05ee5574607781ff5ea4da640b2ea60cbc2502172d81aaddcc5f0c17cec2",
+    "published_path": "research/ksigma_verification_2026-09-05/largest_prime_search.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/mersenne_hub_fiber.py",
+    "bytes": 4193,
+    "sha256": "9ffa33cfe9bf91b672076846a65935a8632bef103e8571e44455c228117031a1",
+    "published_path": "research/ksigma_verification_2026-09-05/mersenne_hub_fiber.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/mersenne_hub_fiber_metrics.json",
+    "bytes": 13922,
+    "sha256": "d87cc8db699f9429355bad20d4c2ecb81d13de8e4eda9009e86579142b22a9ec",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/mersenne_hub_fiber_metrics.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/min_euler_mass_collision.py",
+    "bytes": 4809,
+    "sha256": "220a93009fb5953d7c50d10d6b177ade9095a818556d037404f1c42878e80634",
+    "published_path": "research/ksigma_verification_2026-09-05/min_euler_mass_collision.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/min_euler_mass_u20000_e2_gt11.json",
+    "bytes": 3188,
+    "sha256": "dceba6fae4e90255d7afb1d67bed236fe7a2500698db59fde1800e6e58440fb7",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/min_euler_mass_u20000_e2_gt11.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/min_euler_mass_u7000_e2_gt7.json",
+    "bytes": 1563,
+    "sha256": "946cbe5cc4465d9abd79545e195c7120b7f40ef705c6a608eb26d67c38c39857",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/min_euler_mass_u7000_e2_gt7.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/min_v2_collision_u5000_e8.json",
+    "bytes": 1168,
+    "sha256": "cfaacd9f3ee81665508dd0d94b22513d88b0a6576a150f597bedcdf6a38028f0",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/min_v2_collision_u5000_e8.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/no_two_cycle_search.py",
+    "bytes": 4556,
+    "sha256": "92f6a95bc4ecc1c7e1ac0f570e81e969625c42a44a106a3dd9fb35f9263fba21",
+    "published_path": "research/ksigma_verification_2026-09-05/no_two_cycle_search.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/normalized_profile_K1e7_extended.txt",
+    "bytes": 1015,
+    "sha256": "61c546972c34c4daa22363144f58c65df48843809931d46bc33738663106031e",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/normalized_profile_K1e7_extended.txt"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/normalized_profile_census.cpp",
+    "bytes": 8730,
+    "sha256": "d4d3bb61798ced4020333867143dfce35d23850ab10acb8941bffcf98db2eab4",
+    "published_path": "research/ksigma_verification_2026-09-05/normalized_profile_census.cpp",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/odd_square_census.cpp",
+    "bytes": 2655,
+    "sha256": "497ab457a28aeaedea8d0a159d08cae83ca7d582e4508292cc808ac770b8df42",
+    "published_path": "research/ksigma_verification_2026-09-05/odd_square_census.cpp",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/parity_class_census.cpp",
+    "bytes": 2902,
+    "sha256": "365fa06c85d6963a1c9f8d11469ecfd04c3cb783de90ef4a7aea51abc0c45d1d",
+    "published_path": "research/ksigma_verification_2026-09-05/parity_class_census.cpp",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/parity_route_audit.md",
+    "bytes": 8106,
+    "sha256": "9f953737168e444c19c5d729154eca8713a0b8a9ea443a9ae27778d522cb5f83",
+    "published_path": "research/ksigma_verification_2026-09-05/parity_route_audit.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/parity_route_verify.py",
+    "bytes": 2684,
+    "sha256": "c8e2f2405ff6d32838a9ee943f77b31293d495e97420a9c8a5e27fd542236962",
+    "published_path": "research/ksigma_verification_2026-09-05/parity_route_verify.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/polynomial_block_relation_search.py",
+    "bytes": 6990,
+    "sha256": "0cce77772375b5667f986c77067c1a53261e4dde05d3f908f45971cf890fe8bf",
+    "published_path": "research/ksigma_verification_2026-09-05/polynomial_block_relation_search.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/primitive_setpack_census.cpp",
+    "bytes": 4553,
+    "sha256": "4f58cb1ea1044915296c33d4bdb74f8789b783ed5ebbbf0079a40f20f19e5e7e",
+    "published_path": "research/ksigma_verification_2026-09-05/primitive_setpack_census.cpp",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/projection_code_R7_K1e7.json",
+    "bytes": 693,
+    "sha256": "bd2425c2789b0c96b8bd78c5033f51aa87631da2069abc90fee2e43b742f90ac",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/projection_code_R7_K1e7.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/projection_code_audit.py",
+    "bytes": 2707,
+    "sha256": "13dd49f8bb7b4bd26e08184e3b65a4178471cc2acfc8e7c329b20857e8cb8a8b",
+    "published_path": "research/ksigma_verification_2026-09-05/projection_code_audit.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/rankin_constant.py",
+    "bytes": 1969,
+    "sha256": "97cd7e15ff4e6ea75c972180a9b1ffcb744b2d04946ddaf9d87bf9f57af71f64",
+    "published_path": "research/ksigma_verification_2026-09-05/rankin_constant.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/recurrent_graph.cpp",
+    "bytes": 7622,
+    "sha256": "08c4840c10780421fceb27bcb5323d8a87b6b2c5235a35acc173ba23414130fb",
+    "published_path": "research/ksigma_verification_2026-09-05/recurrent_graph.cpp",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/relation_decompose.py",
+    "bytes": 4568,
+    "sha256": "fa5b412dbd790b635e21b5ce687bb8ffdb81f0e056c65973e71a54f1f306204a",
+    "published_path": "research/ksigma_verification_2026-09-05/relation_decompose.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/rough210_binary_rank_audit.json",
+    "bytes": 1371,
+    "sha256": "d65434624d0b19fe343625f70afcfeaec83508cb5814dd819ffa1f8d6b54e7f6",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/rough210_binary_rank_audit.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/rough_gt17_u50000_e2_disjoint_trial.json",
+    "bytes": 16370,
+    "sha256": "6a887fa7f78f48767d7504a994480ef9f85935cab824df79716422c4d50603b1",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/rough_gt17_u50000_e2_disjoint_trial.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/same_base_ratio_core_p100000000_e2.json",
+    "bytes": 201,
+    "sha256": "92f299ce5a9915ba552f700cc1be16d0c8ccff5f1bd070af08731de70e0bd820",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/same_base_ratio_core_p100000000_e2.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/same_base_ratio_core_p10000000_e2.json",
+    "bytes": 198,
+    "sha256": "d3ed67019278ba14641ece10bb72f447c6f7e3693c6d55e392230e9385800816",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/same_base_ratio_core_p10000000_e2.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/same_base_ratio_core_sieve.cpp",
+    "bytes": 6061,
+    "sha256": "ce8498f07abd8030a1085435930d031034e19b783080ba3626f930bd5b9a5746",
+    "published_path": "research/ksigma_verification_2026-09-05/same_base_ratio_core_sieve.cpp",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/same_base_ratio_rank.py",
+    "bytes": 6373,
+    "sha256": "7e616b3f4d7fe4ff6a19becc597070619c09d0379cb3c19831335173a1d525ad",
+    "published_path": "research/ksigma_verification_2026-09-05/same_base_ratio_rank.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/same_base_ratio_rank_p1000000_e2.json",
+    "bytes": 305,
+    "sha256": "ec0e571a14e5f9d7723269346d9de6bd04e5f0d6b9b0a20def40f54ff36943bd",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/same_base_ratio_rank_p1000000_e2.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/same_base_ratio_rank_p100000_e2.json",
+    "bytes": 300,
+    "sha256": "8d8551faee8bda0222a754055f07c997f5d29b62c626425d5b916921b5a7fd6a",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/same_base_ratio_rank_p100000_e2.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/same_base_ratio_rank_p10000_e3.json",
+    "bytes": 1966,
+    "sha256": "d37230fb158d94b3bf56ac4293e3cc2c47e295cc00472de37a4852548743dc1d",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/same_base_ratio_rank_p10000_e3.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/same_base_ratio_rank_p2000_e4.json",
+    "bytes": 1964,
+    "sha256": "120b155cd16fbe7024585a64ff402539bfe47f7009ac099d8d16d9423abf3cfe",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/same_base_ratio_rank_p2000_e4.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/seeded_target_profile_extension.py",
+    "bytes": 4801,
+    "sha256": "4e4e1990f1f2abd5d12fed4bff711b1895b0082412b2b8aa300884cbcd7f986a",
+    "published_path": "research/ksigma_verification_2026-09-05/seeded_target_profile_extension.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/short_cycle_search.py",
+    "bytes": 11423,
+    "sha256": "dc89d0170c14a495a1edffd5a17e22944709019a08b40af59116d50d979690df",
+    "published_path": "research/ksigma_verification_2026-09-05/short_cycle_search.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/spot_checks.py",
+    "bytes": 8772,
+    "sha256": "6c6f54ed3351a1a1a2ce7bae03a2c3980184f25b3726329cee529102ae0fe7b2",
+    "published_path": "research/ksigma_verification_2026-09-05/spot_checks.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/structural_census.cpp",
+    "bytes": 18162,
+    "sha256": "87b1a148363ede3123da9ed366d86700a1490858a2f8186042cc5e9c4ea5af95",
+    "published_path": "research/ksigma_verification_2026-09-05/structural_census.cpp",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/structural_graph.py",
+    "bytes": 8258,
+    "sha256": "2caf40e3f0b32a489fe7c263603d30ceac3dcf66078c090ce12af2b2578f0327",
+    "published_path": "research/ksigma_verification_2026-09-05/structural_graph.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/target_profile_audit.md",
+    "bytes": 2491,
+    "sha256": "8dd54d7b8a4dacc84c04c647a8ea34da8fd066e2806724d02d6e6633d90b3ded",
+    "published_path": "research/ksigma_verification_2026-09-05/target_profile_audit.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/target_profile_census.cpp",
+    "bytes": 4205,
+    "sha256": "d9f5555652868e0c984883a55b4521fd695e01bbcea26a6ce42a53ba4b85a039",
+    "published_path": "research/ksigma_verification_2026-09-05/target_profile_census.cpp",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/target_profile_milp.py",
+    "bytes": 11460,
+    "sha256": "b8b7ac7dadc042e7269368661cce71ed5ca128501e7aeb21fbabc99cad614e48",
+    "published_path": "research/ksigma_verification_2026-09-05/target_profile_milp.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/third_disjoint_rough210_12_14_e2_u100000_negative.json",
+    "bytes": 2233,
+    "sha256": "e650e45828c4b11949cbfc2a6002b2df5e358ea3741b4d972217b7a8a82164c7",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/ksigma_verification_2026-09-05/third_disjoint_rough210_12_14_e2_u100000_negative.json"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/verify_avoid_2_3_31.py",
+    "bytes": 6652,
+    "sha256": "431f1ee5b10932cdb7836edaafc6a23382d5b52ea6a41b689cdd9bef1ee763dd",
+    "published_path": "research/ksigma_verification_2026-09-05/verify_avoid_2_3_31.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/verify_coprime210.py",
+    "bytes": 4572,
+    "sha256": "a0a81fbf7a2426e3f60802f19963c711fd93ccb32158394e712655dac2689cfb",
+    "published_path": "research/ksigma_verification_2026-09-05/verify_coprime210.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/verify_cubefree_fvs3_tensor.py",
+    "bytes": 4290,
+    "sha256": "34e8a3885c0818bf717da9aa367ef3ae69edf6f1e539a30fc2cb6050e9aa313a",
+    "published_path": "research/ksigma_verification_2026-09-05/verify_cubefree_fvs3_tensor.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/verify_cubefree_girth_gt5.py",
+    "bytes": 6542,
+    "sha256": "b086cf192f57996c12a7b7017400196223aebd22594a7b1c2b5664a6c0b53139",
+    "published_path": "research/ksigma_verification_2026-09-05/verify_cubefree_girth_gt5.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/verify_cubefree_girth_gt8.py",
+    "bytes": 7455,
+    "sha256": "119b7afdace2eea299f45589edd02475e113efa3c0177bedbccf542543f23be7",
+    "published_path": "research/ksigma_verification_2026-09-05/verify_cubefree_girth_gt8.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/verify_cubefree_no2.py",
+    "bytes": 3657,
+    "sha256": "36fc4c40b2f6805bdb75c3bbcb27be4d14d3667d813859cd325e98ccee1a0064",
+    "published_path": "research/ksigma_verification_2026-09-05/verify_cubefree_no2.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/verify_cubefree_rough17.py",
+    "bytes": 3771,
+    "sha256": "1cae3e5e428fd0fd256ed7331540e8c6b7d3933c71c3124d493dca199c540705",
+    "published_path": "research/ksigma_verification_2026-09-05/verify_cubefree_rough17.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/verify_cubefree_rough210.py",
+    "bytes": 7269,
+    "sha256": "116549c4466a50a9cff50a9bdeb3f1422d1aed60bdffa7505d78dc472e14b3f7",
+    "published_path": "research/ksigma_verification_2026-09-05/verify_cubefree_rough210.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/verify_dedekind_approximant.py",
+    "bytes": 3177,
+    "sha256": "0c2dc60479090e252cfcb9560412a98e39e2c8c25f765c96304d2bb8dca99d7b",
+    "published_path": "research/ksigma_verification_2026-09-05/verify_dedekind_approximant.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/verify_equal_exponent_partition.py",
+    "bytes": 2922,
+    "sha256": "c15634eb7a8970ad4e281bf2ec93ae8bbcc558e9f25d35bb3c88ef7b77db389a",
+    "published_path": "research/ksigma_verification_2026-09-05/verify_equal_exponent_partition.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/verify_equal_omega_cubefree.py",
+    "bytes": 4895,
+    "sha256": "9a7a560c190ab02f3eb9362be19377eced950a84cc2f0fbbb2a14c987d9c9bd9",
+    "published_path": "research/ksigma_verification_2026-09-05/verify_equal_omega_cubefree.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/verify_equal_saturation_profile.py",
+    "bytes": 2037,
+    "sha256": "249773e01ba3f355107eaa6e5a3887c5328d103774b7b89c01609e750a5d1886",
+    "published_path": "research/ksigma_verification_2026-09-05/verify_equal_saturation_profile.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/verify_equal_target_profile_common_block.py",
+    "bytes": 1278,
+    "sha256": "78733fccec06fcd932ec453bed80e18e189cff4712c24a1cde309c581cf73233",
+    "published_path": "research/ksigma_verification_2026-09-05/verify_equal_target_profile_common_block.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/verify_local_gcd_descent.py",
+    "bytes": 3892,
+    "sha256": "325e2340d5944a6282bb74b0e68d60d825469bbdeb3ab3a51bfc11125d8f52a9",
+    "published_path": "research/ksigma_verification_2026-09-05/verify_local_gcd_descent.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/verify_mills_phi3_prime_cycle.py",
+    "bytes": 2207,
+    "sha256": "5015bd0636b3dd538d9e35408310b8ae30996ee752236cd477c581a0ceefc47e",
+    "published_path": "research/ksigma_verification_2026-09-05/verify_mills_phi3_prime_cycle.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/verify_min_euler_mass_gt11.py",
+    "bytes": 3829,
+    "sha256": "68e59f09a12b7cbca50d17d1f15348f485f45648d44a726171eef67effa7b148",
+    "published_path": "research/ksigma_verification_2026-09-05/verify_min_euler_mass_gt11.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/ksigma_verification_2026-09-05/verify_rough210_binary_rank.py",
+    "bytes": 4282,
+    "sha256": "8102139e2729edba8f152965f9066a6b9b2f9ffafef6b750c6e0365fa8f7be75",
+    "published_path": "research/ksigma_verification_2026-09-05/verify_rough210_binary_rank.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/local-gcd-descent-2026-09-05.md",
+    "bytes": 17983,
+    "sha256": "0014903e6ad95104f36b5feadd0f3b9b273c521e0198f345f79a18af12cc6d71",
+    "published_path": "research/local-gcd-descent-2026-09-05.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/output/Erdos_Problem_1060_Research_Note.docx",
+    "bytes": 2157496,
+    "sha256": "9a8bb17fec39e244b7ace7734496a6abd1ebe8737084291eff35d2c8a56268c4",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/output/Erdos_Problem_1060_Research_Note.docx"
+  },
+  {
+    "origin": "research/report-source.md",
+    "bytes": 73679,
+    "sha256": "5386d7ae5b04665dd8d7efddaadbe849b6aa200b8d4686e24b32e6d2590ce6c4",
+    "published_path": "research/report-source.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/research_artifacts/Erdos_1959_sigma.pdf",
+    "bytes": 1690699,
+    "sha256": "3bac901e7397e31f806589fc9c47b03c8702778eb6e6e497fa83245a42732f7a",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/research_artifacts/Erdos_1959_sigma.pdf"
+  },
+  {
+    "origin": "research/research_artifacts/Kominers_ksigmak.pdf",
+    "bytes": 448225,
+    "sha256": "e34c30c3a640d6c313a0bd602432552d0a77c255cf7c611c9ecc3515b178c00f",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/research_artifacts/Kominers_ksigmak.pdf"
+  },
+  {
+    "origin": "research/research_artifacts/Noppakaew_Pongsriiam_2023.pdf",
+    "bytes": 303778,
+    "sha256": "c2091a9ca19c640741ced4841253d167cfd726b9bb1b2e2743c878e996c16d9d",
+    "storage": "evidence_archive",
+    "archive": "evidence/recovered-evidence-002.zip",
+    "member": "research/research_artifacts/Noppakaew_Pongsriiam_2023.pdf"
+  },
+  {
+    "origin": "research/research_artifacts/claim-source-ledger.md",
+    "bytes": 7021,
+    "sha256": "1edab9bc5f01bfc329cc3d98bdb3efad8c5a8681df4944b18a3ded4e17d73421",
+    "published_path": "research/research_artifacts/claim-source-ledger.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "research/scripts/build_research_docx.py",
+    "bytes": 22708,
+    "sha256": "934bd213bc0bfc571236d9526b8f1c2a47aaf651a20fd8a8133514a79becd840",
+    "published_path": "research/scripts/build_research_docx.py",
+    "storage": "expanded"
+  },
+  {
+    "origin": "claude-original/erdos1060-note.md",
+    "bytes": 46918,
+    "sha256": "dea2c354894a5f15150ce3babf753ffc72a33ef856292d18aa015331f87abaac",
+    "published_path": "claude-original/erdos1060-note.md",
+    "storage": "expanded"
+  },
+  {
+    "origin": "reports/Erdos_1060_Proof_Audit.pdf",
+    "published_path": "reports/Erdos_1060_Proof_Audit.pdf",
+    "storage": "expanded",
+    "bytes": 366023,
+    "sha256": "3bad798ec81f4e20c5ff6d3997c444eb65389aa09dfa632c83c7fb04e326b868"
+  }
+]
