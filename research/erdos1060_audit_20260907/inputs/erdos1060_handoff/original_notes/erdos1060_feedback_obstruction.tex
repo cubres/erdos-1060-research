@@ -1,0 +1,399 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,microtype}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Universal feedback versus actual arithmetic ambiguity for k sigma(k)=N},pdfsubject={Partial results and a conditional obstruction; no complete solution of Erdos 1060},pdfauthor={Research continuation}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\DeclareMathOperator{\ord}{ord}
+\title{Universal feedback versus actual arithmetic ambiguity\\for \texorpdfstring{$k\sigma(k)=N$}{k sigma(k)=N}}
+\author{Research continuation: exact results and a conditional obstruction}
+\date{6 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+The latest proposed sufficient condition for Erd\H{o}s 1060 requires a subpolynomial positive-cycle transversal in a universal prime graph, for every fixed exponent cap. We show that this condition would contradict the Bateman--Horn conjecture for the two admissible polynomials $t^2+1$ and $t^2+t+1$: each simultaneous prime value produces a vertex-disjoint positive two-cycle at cap five. This is a conditional obstruction, not an unconditional disproof of the sufficient condition or a counterexample to Erd\H{o}s 1060. We also prove exact injectivity on an extensive class of two-prime input sets, including the constructed pairs with completely unrestricted exponents. We construct represented targets with many such cycles, and under the same conjecture their unpruned target graphs have positive-scale feedback costs. Exact checks on five such targets nevertheless prove unique cap-five preimages. Thus graph cycles do not by themselves produce arithmetic collisions. No unrestricted asymptotic bound is improved and no complete solution is claimed. Originality relative to the full literature has not been established.
+\end{abstract}
+
+\section{The distinction under investigation}
+Write
+\[
+ h(k)=k\sigma(k),\qquad f_E(N)=\#\{k:h(k)=N,\ v_p(k)\le E\text{ for all primes }p\}.
+\]
+The requested unrestricted estimate is
+\[
+ \log\max\{1,f(N)\}=o\!\left(\frac{\log N}{\log\log N}\right).
+\]
+It remains unproved here.
+
+For fixed $E$ and $x$, the universal signed graph has all primes at most $x$ as vertices. If $p\ne q$ and
+\[
+ v_q(\sigma(p^{j+1}))-v_q(\sigma(p^j))\ne0,
+ \qquad 0\le j<E,
+\]
+include an edge $p\to q$ with the negative of the sign of this difference. A positive cycle has distinct vertices before returning to its start and has edge-sign product $+1$.
+Let $A_E(x)$ be the minimum number of vertices meeting every such positive cycle. The preceding note proved the implication
+\[
+ \bigl[A_E(x)=x^{o(1)}\text{ for every fixed }E\bigr]
+ \quad\Longrightarrow\quad\text{the requested multiplicity bound}.
+\]
+The hypothesis was not proved. It concerns a graph of all potential local choices, not a target-specific set of actual solutions. This note tests that distinction directly.
+
+\section{An exact family of positive two-cycles}
+For an integer $t\ge3$, set
+\[
+ P=t^2+1,\qquad Q=t^2+t+1,\qquad R=t^2-t+1,\qquad S=t^2+2t+2.
+\]
+Polynomial multiplication gives
+\begin{equation}\label{eq:identities}
+ \boxed{P^2-P+1=QR,\qquad Q^2+1=PS.}
+\end{equation}
+
+\begin{lemma}\label{lem:orders}
+If $p=P$ and $q=Q$ are both prime, then
+\[
+ \ord_q(p)=6,\qquad \ord_p(q)=4,
+\]
+and
+\[
+ v_q(\sigma(p^5))=1,\qquad v_p(\sigma(q^3))=1.
+\]
+For $0\le e\le5$, the complete cross-valuation lists are
+\[
+ \bigl(v_q(\sigma(p^e))\bigr)_{e=0}^{5}=(0,0,0,0,0,1),
+\]
+\[
+ \bigl(v_p(\sigma(q^e))\bigr)_{e=0}^{5}=(0,0,0,1,0,0).
+\]
+\end{lemma}
+\begin{proof}
+Here $p,q>3$. Since $p\equiv-t\pmod q$, the first identity in \eqref{eq:identities} implies $p^2-p+1\equiv0\pmod q$. This forces order six: $p^3\equiv-1$, while $p\not\equiv-1$ because that would give $q=3$. Also $0<R<q$, so $v_q(p^2-p+1)=1$. No other factor of $\sigma(p^5)=(p+1)(p^2+p+1)(p^2-p+1)$ is divisible by $q$.
+
+Since $q\equiv t\pmod p$ and $t^2\equiv-1\pmod p$, the order of $q$ modulo $p$ is four. The second identity gives $q^2+1=pS$, and
+\[
+ S=p+2t+1,\qquad 0<2t+1<p\quad(t\ge3).
+\]
+Thus $p\nmid S$, proving the stated valuation. Since $p$ does not divide $q-1$ and $q$ does not divide $p-1$, the relevant divisor sums vanish modulo the opposite prime precisely when the exponent index is a multiple of four or six, respectively. The displayed lists follow.
+\end{proof}
+
+The steps $4\to5$ at $p$ and $2\to3$ at $q$ therefore supply two negative edges $p\to q\to p$. Their two-cycle is positive and belongs to the universal graph at every cap $E\ge5$.
+
+\begin{theorem}\label{thm:lower}
+Define
+\[
+ J(T)=\#\{t\in\mathbb Z:3\le t\le T,\ t^2+1\text{ and }t^2+t+1\text{ are prime}\}.
+\]
+For every $E\ge5$, and all sufficiently large real $x$,
+\begin{equation}\label{eq:lower}
+ \boxed{A_E(x)\ge J\!\left(\left\lfloor\frac{\sqrt{4x-3}-1}{2}\right\rfloor\right).}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Each counted parameter produces a positive two-cycle with both vertices at most $x$. These cycles are vertex-disjoint, since
+\[
+ t^2+1<t^2+t+1<(t+1)^2+1
+\]
+for every $t\ge1$. A set meeting all positive cycles must contain at least one vertex from every counted pair. This proves the bound.
+\end{proof}
+
+For example, $t=6$ gives $(p,q)=(37,43)$ and
+\[
+ 37^2-37+1=43\cdot31,\qquad43^2+1=37\cdot50.
+\]
+The next examples include $(197,211)$, $(401,421)$ and $(577,601)$.
+
+\section{The conditional obstruction to the proposed growth estimate}
+The polynomials
+\[
+ F_1(t)=t^2+1,\qquad F_2(t)=t^2+t+1
+\]
+are distinct irreducible polynomials over $\mathbb Q$, with positive leading coefficients. No prime divides $F_1(t)F_2(t)$ for every integer $t$, because $F_1(0)F_2(0)=1$. Thus they satisfy the admissibility hypotheses of the Bateman--Horn conjecture; see \cite[Section 3.6]{bh}.
+
+\begin{corollary}[Conditional on Bateman--Horn for this pair]\label{cor:BH}
+There is a positive constant $C$ such that, for every $E\ge5$,
+\[
+ A_E(x)\ge(C+o(1))\frac{\sqrt{x}}{(\log x)^2}.
+\]
+In particular, $A_E(x)=x^{o(1)}$ would be false for every $E\ge5$ under this instance of Bateman--Horn.
+\end{corollary}
+\begin{proof}
+Bateman--Horn predicts
+\[
+ J(T)\sim C\int_2^T\frac{du}{\log F_1(u)\log F_2(u)}
+ \sim \frac C4\frac{T}{(\log T)^2}.
+\]
+The upper parameter in \eqref{eq:lower} is asymptotic to $\sqrt{x}$. Substitution proves the result. The resulting lower bound has logarithm $(\tfrac12+o(1))\log x$, incompatible with subpolynomial growth.
+\end{proof}
+
+This corollary is conditional. It does not prove Bateman--Horn, does not unconditionally disprove the universal growth estimate, and does not challenge the Erd\H{o}s multiplicity conjecture. It does show that the latest proposed sufficient hypothesis is not a harmless finishing lemma: proving it would refute this explicit admissible instance of a standard prime-pattern conjecture. The target-specific integer problem may still have very small fibers even when this universal graph has many disjoint positive cycles.
+
+\subsection{The obstruction also occurs in represented target graphs}
+Let $\mathcal T(T)$ denote the parameters counted by $J(T)$. Form
+\[
+ K_T=\prod_{t\in\mathcal T(T)}(t^2+1)^5(t^2+t+1)^3,
+ \qquad N_T=h(K_T).
+\]
+Empty products are allowed. Every $N_T$ is represented, and its displayed preimage has exponent cap five.
+For any target $N$, let $\Theta_5(N)$ be the minimum number of vertices meeting all positive cycles in its \emph{unpruned} cap-five admissible signed graph. Its local domains are
+\[
+ D_p(N)=\{0\le e\le\min(5,v_p(N)):h(p^e)\mid N\},
+\]
+and signs are taken across consecutive elements of these ordered domains, which may skip integers.
+
+\begin{proposition}\label{prop:targetcycles}
+Unconditionally, for each finite $T$,
+\[
+ \boxed{\Theta_5(N_T)\ge J(T).}
+\]
+Conditioned on Bateman--Horn for $t^2+1,t^2+t+1$, as $T\to\infty$ one has
+\[
+ \boxed{\Theta_5(N_T)\ge
+ \left(\frac1{32}+o(1)\right)
+ \frac{\log N_T}{\log\log N_T}.}
+\]
+\end{proposition}
+\begin{proof}
+For each counted pair $(p,q)$, the factors $h(p^5)$ and $h(q^3)$ divide $N_T$. Therefore $0,5\in D_p(N_T)$ and $0,3\in D_q(N_T)$. By the valuation lists in Lemma~\ref{lem:orders}, the transition into exponent five at $p$ supplies a negative $p\to q$ edge, regardless of which smaller exponent immediately precedes it in the admissible domain. Likewise the transition into exponent three at $q$ supplies a negative $q\to p$ edge. The resulting positive cycles are vertex-disjoint, proving the first assertion.
+
+For the conditional asymptotic, write $p(t)=t^2+1$ and $q(t)=t^2+t+1$. Elementary estimates give
+\[
+ \log h(p(t)^5q(t)^3)=32\log t+O(1/t).
+\]
+Indeed $\log h(r^e)=2e\log r+O(1/r)$ for fixed $e$, while $\log p(t)=2\log t+O(t^{-2})$ and $\log q(t)=2\log t+O(t^{-1})$. Under Bateman--Horn,
+\[
+ J(T)\sim\frac C4\frac{T}{(\log T)^2}.
+\]
+Partial summation consequently gives
+\[
+ \sum_{t\in\mathcal T(T)}\log t
+ =J(T)\log T-\int_3^T\frac{J(u)}u\,du
+ \sim J(T)\log T.
+\]
+For clarity, the integral is $O(T/(\log T)^2)$: split at $\sqrt T$, use a crude bound below that point and $J(u)\ll u/(\log u)^2$ above it. Thus
+\[
+ \log N_T\sim32J(T)\log T,
+ \qquad \log\log N_T\sim\log T.
+\]
+Combine these estimates with the first assertion.
+\end{proof}
+
+There is an analogous obstruction for the consecutive-domain cuts from the previous signed-feedback note. If the domain at $p$ is partitioned into $c_p$ consecutive blocks, and the retained signed graph has no positive cycle, then
+\[
+ \sum_p\log c_p\ge J(T)\log2.
+\]
+Each of the vertex-disjoint two-cycles must lose an edge, which requires at least two blocks at one of its two bases. Distinct pairs require cuts at distinct bases. Conditioned on the same Bateman--Horn instance, this lower bound is $(\log2/32+o(1))\log N_T/\log\log N_T$. Again, it is a lower bound on this particular recording cost, not on the actual multiplicity.
+
+The proposition concerns \emph{unpruned} admissible graphs. Further sound integer deductions can eliminate their cycles, as the examples below demonstrate. Neither the unconditional nor the conditional assertion is a lower bound on $f_5(N_T)$. In particular, merely restricting attention to represented targets does not repair the proposed ``count all admissible positive cycles'' strategy under this prime-pattern conjecture.
+
+\section{Two-prime rigidity from the full arithmetic equation}
+The following theorem makes that last distinction exact.
+
+\begin{theorem}\label{thm:rigidity}
+Let $p<q$ be primes and $E\ge0$. Suppose
+\[
+ v_q(\sigma(p^a))\le1,\qquad v_p(\sigma(q^b))\le1
+ \qquad(0\le a,b\le E).
+\]
+Then the map
+\[
+ (a,b)\longmapsto h(p^a q^b)
+\]
+is injective on $\{0,\ldots,E\}^2$.
+\end{theorem}
+\begin{proof}
+Suppose two exponent pairs $(a,b),(a',b')$ give the same value. The $p$-adic and $q$-adic equations are
+\[
+ a+v_p(\sigma(q^b))=a'+v_p(\sigma(q^{b'})),
+\]
+\[
+ b+v_q(\sigma(p^a))=b'+v_q(\sigma(p^{a'})).
+\]
+The hypotheses imply $|a-a'|\le1$ and $|b-b'|\le1$. If either difference is zero, the other equation forces both to be zero.
+
+Otherwise both differences have magnitude one. If their signs agree, strict increase of each prime-power factor $h(p^a)$ and $h(q^b)$ rules out equality.
+
+If the signs are opposite, compare the increment ratios
+\[
+ I_r(j)=\frac{h(r^{j+1})}{h(r^j)}
+ =r^2+\frac{r(r-1)}{r^{j+1}-1}.
+\]
+For every prime $r$ and $j\ge0$,
+\[
+ r^2<I_r(j)\le r^2+r.
+\]
+Since $p<q$,
+\[
+ I_p(j)\le p^2+p<q^2<I_q(k)
+\]
+for all $j,k\ge0$. Moving one unit of exponent from one prime to the other therefore changes the value of $h$ strictly. Equality is again impossible. The exponent pairs must coincide.
+\end{proof}
+
+\begin{lemma}[Elementary prime-adic lifting]\label{lem:lifting}
+Let $\ell$ be an odd prime and let $z$ satisfy $v_\ell(z-1)=1$. Then
+\[
+ v_\ell(z^n-1)=1+v_\ell(n)\qquad(n\ge1).
+\]
+\end{lemma}
+\begin{proof}
+If $\ell\nmid n$, the quotient $(z^n-1)/(z-1)$ is $n$ modulo $\ell$, proving the assertion. More generally, if $v_\ell(w)=s\ge1$, binomial expansion shows
+\[
+ v_\ell((1+w)^\ell-1)=s+1.
+\]
+The first term $\ell w$ has that valuation, while each other term has strictly larger valuation. Write $n=\ell^a u$ with $\ell\nmid u$, first apply the coprime case to $z^u$, and then apply the binomial observation $a$ times.
+\end{proof}
+
+\begin{theorem}[Two close primes, unrestricted exponents]\label{thm:allpowers}
+Let $5\le p<q<2p$ be primes, put $r=\ord_q(p)$ and $s=\ord_p(q)$, and suppose
+\[
+ v_q(p^r-1)=v_p(q^s-1)=1.
+\]
+Then $h$ is injective on
+\[
+ \{p^a q^b:a,b\ge0\}.
+\]
+\end{theorem}
+\begin{proof}
+Here $r\ge3$ and $s\ge2$. Indeed $r=1$ is impossible since $1<p<q$, and $r=2$ would require $q=p+1$, impossible for these odd primes. Likewise $s=1$ would require $q=p+1$ in the interval $(p,2p)$.
+
+Suppose $h(p^a q^b)=h(p^{a'}q^{b'})$ for different exponent pairs. Strict monotonicity rules out two differences of the same sign, and equality in one coordinate forces equality in the other. Relabel the pairs so that
+\[
+ d=a-a'>0,\qquad f=b'-b>0.
+\]
+The $p$- and $q$-adic equations imply
+\[
+ v_p(\sigma(q^{b'}))\ge d,
+ \qquad v_q(\sigma(p^a))\ge f.
+\]
+Using the multiplicative orders and Lemma~\ref{lem:lifting}, these yield
+\begin{equation}\label{eq:indexgrowth}
+ b'+1\ge s p^{d-1},\qquad a+1\ge r q^{f-1}.
+\end{equation}
+For example, the nonzero second valuation requires $a+1=rj$, and it equals $1+v_q(j)$; hence $q^{f-1}\mid j$. The first inequality is identical with the primes interchanged.
+
+Define the multi-step increment ratio
+\[
+ J_v(j,m)=\frac{h(v^{j+m})}{h(v^j)}
+ =v^{2m}+\frac{v^m(v^m-1)}{v^{j+1}-1}.
+\]
+For $j\ge0,m\ge1$,
+\[
+ v^{2m}<J_v(j,m)<v^{2m}\frac v{v-1}.
+\]
+The supposed collision gives $J_p(a',d)=J_q(b,f)$. Its size bounds imply
+\[
+ p^d<2q^f,\qquad q^f<2p^d.
+\]
+The latter implies $f\le d$. The former, together with $q<2p$, implies $d<2f$: if $d\ge2f$ then $p^f<2^{f+1}$, impossible for $p\ge5$. Thus
+\begin{equation}\label{eq:df}
+ f\le d<2f.
+\end{equation}
+If $f=1$, this forces $d=1$, and the one-step intervals from Theorem~\ref{thm:rigidity} are disjoint. Thus assume $f,d\ge2$.
+
+For integers $n\ge2$, one has $5^{n-1}\ge2n$ (by induction). Therefore $q^{f-1}\ge2f>d$ and $p^{d-1}\ge2d\ge2f$. Combining these inequalities with $r\ge3$, $s\ge2$, and \eqref{eq:indexgrowth}, gives
+\[
+ a'+1=a+1-d\ge r q^{f-1}-d\ge2d,
+\]
+\[
+ b+1=b'+1-f\ge s p^{d-1}-f\ge2f.
+\]
+It follows directly from the displayed formula for $J$ that
+\[
+ p^{2d}<J_p(a',d)<p^{2d}+1,
+ \qquad
+ q^{2f}<J_q(b,f)<q^{2f}+1.
+\]
+The integers $p^{2d}$ and $q^{2f}$ are distinct, so these open intervals are disjoint. This contradicts equality of the two increments and completes the proof.
+\end{proof}
+
+\begin{corollary}\label{cor:familyrigid}
+For every prime pair $p=t^2+1$, $q=t^2+t+1$ with $t\ge3$, all values
+\[
+ \boxed{h(p^a q^b),\qquad a,b\ge0,}
+\]
+are distinct. Thus the positive universal two-cycle at cap five creates no collision among inputs supported only on these two primes, even when the input exponents are unrestricted.
+\end{corollary}
+\begin{proof}
+We have $5\le p<q<2p$. Lemma~\ref{lem:orders} gives the orders $r=6,s=4$ and the unit initial valuations. Theorem~\ref{thm:allpowers} applies.
+\end{proof}
+
+At cap five the two internal rows reduce to
+\[
+ B_p=a+\mathbf1_{\{b=3\}},\qquad
+ B_q=b+\mathbf1_{\{a=5\}}.
+\]
+Their only repeated image comes from $(a,b)=(4,3)$ and $(5,2)$, both giving $(B_p,B_q)=(5,3)$. The internal rows alone cannot distinguish them. The full equation does:
+\[
+ \frac{h(p^4q^3)}{h(p^5q^2)}
+ =\frac{I_q(2)}{I_p(4)}>1.
+\]
+Thus a positive feedback cycle and even two internally consistent fillings are not sufficient for a collision.
+
+\section{What has and has not been accomplished}
+The exact lower bound \eqref{eq:lower}, the polynomial identities, and both two-prime rigidity theorems are unconditional. The growth consequence in Corollary~\ref{cor:BH} is explicitly conditional on Bateman--Horn. No unconditional asymptotic estimate for $J(T)$ is asserted.
+
+The rigidity theorems cannot be applied to many interacting pairs independently. Contributions from other input primes alter their valuation rows, and outgoing factors from different pairs can overlap. A proof for arbitrary targets must control those interactions using the full equations
+\[
+ v_q(N)=e_q+\sum_{p\ne q}v_q(\sigma(p^{e_p})).
+\]
+Neither sparse universal feedback nor the separate two-prime theorem supplies that uniform control. The fixed-cap estimate
+\[
+ \log\max_{M\le X}\max\{1,f_E(M)\}
+ =o_E\!\left(\frac{\log X}{\log\log X}\right)
+\]
+remains unproved. The high-exponent reduction from the preceding work remains valid, but cannot be completed by inserting this estimate as an assumption.
+
+\section{Exact finite verification}
+The standard-library program \texttt{verify.py} checks both polynomial identities coefficient by coefficient. It uses a complete prime sieve and trial division to examine every integer $3\le t\le10{,}000$. It finds 122 simultaneous prime pairs. Their vertices are disjoint, and the certified lower bounds from this family are
+\begin{center}
+\begin{tabular}{@{}rr@{}}\toprule
+Prime cutoff $x$&Lower bound on $A_5(x)$\\\midrule
+$10^3$&4\\
+$10^4$&7\\
+$10^5$&13\\
+$10^6$&23\\
+$10^7$&51\\
+$10^8$&122\\\bottomrule
+\end{tabular}
+\end{center}
+For every pair it verifies the precise cross-valuation lists and the distinctness of all 36 cap-five values. For $(p,q)=(37,43)$ it also checks all 21,609 values with $0\le a,b\le146$. Finally, 2,292 small-prime instances satisfying the hypotheses of Theorem~\ref{thm:rigidity} are checked directly. For Theorem~\ref{thm:allpowers}, all 117 pairs with $5\le p<q\le101$, $q<2p$, and the required unit initial valuations are checked: all input exponents through 30 give distinct values, and the lifted cross-valuation formulas are checked through exponent 150. These are finite regression tests of the unrestricted theorem, not its proof. The output lists every one of the 122 polynomial prime pairs and all 117 nearby-prime test pairs.
+
+\subsection{Complete checks of five represented targets}
+Take the first $r$ prime pairs in increasing parameter order, for $r\in\{1,2,3,5,8\}$, and form the associated input with exponent five at each smaller prime and three at each larger prime. Its $h$-value is the target. The complete cap-five fibers were certified as follows:
+\begin{center}
+\begin{tabular}{@{}rrrrr@{}}\toprule
+Pairs $r$&Target digits&Initial options&Final options&$f_5(N)$\\\midrule
+1&26&25&10&1\\
+2&63&44&16&1\\
+3&105&65&22&1\\
+5&204&94&34&1\\
+8&391&143&55&1\\\bottomrule
+\end{tabular}
+\end{center}
+The final-option count equals the number of target primes: every domain is a singleton. No branching is required. The standalone program \texttt{verify\_targets.py} independently rebuilds all admissible local options from the supplied, checked target factorizations. For every target-prime valuation row and every candidate option, it computes the exact attainable sums from the other variables' current domains. An option is removed only when that row cannot be completed. This necessary-condition deletion preserves every genuine preimage. At termination all domains are singletons, and their product is verified to equal the intended input and to have the prescribed $h$-value.
+
+The first target is
+\[
+ N_1=h(37^5 43^3)=31984991189820195724150800.
+\]
+Its unrestricted fiber is checked separately by evaluating all $33{,}600$ positive divisors of $N_1$. The only preimage is
+\[
+ 37^5 43^3=5513329989199.
+\]
+The divisor sum of this input is also independently obtained by constructing and summing all its 24 divisors. The larger four claims are cap-five claims only; their unrestricted fibers were not enumerated.
+
+All target prime factors are checked prime by complete trial division in this verifier. The factorizations are checked by exact multiplication. This is a complete finite verification for the five specified target/cap pairs, not an input-bounded search for small preimages. It is not a proof that every target assembled from these prime pairs has a unique preimage.
+
+These are finite checks, not proofs of an asymptotic prime-value prediction. The written proofs are independent of the computations. No independent human referee review or formal proof-assistant verification is claimed.
+
+\begin{thebibliography}{9}
+\bibitem{bh} S. L. Aletheia-Zomlefer, L. Fukshansky and S. R. Garcia, \emph{The Bateman--Horn Conjecture: Heuristics, History, and Applications}, arXiv:1807.08899v3, especially Section 3.6.\newline
+\url{https://arxiv.org/html/1807.08899v3}
+\bibitem{prior} \emph{Prime-order constraints and universal cycle certificates for $k\sigma(k)=N$}, preceding internal working note in this investigation, 6 September 2026. The universal-transversal criterion is a sufficient condition there, not a proved hypothesis.
+\bibitem{kominers} S. D. Kominers, \emph{On the Number of Solutions of $k\sigma(k)=n$}, working paper. Background positive-constant bound and higher-exponent limitations.\newline
+\url{https://www.scottkom.com/assets/articles/Kominers_ksigmak.pdf}
+\end{thebibliography}
+\end{document}

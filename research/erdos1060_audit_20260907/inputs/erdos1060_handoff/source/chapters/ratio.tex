@@ -1,0 +1,212 @@
+\chapter{The exact denominator obstruction}\label{ch:ratio}
+\sourcebox{proof\_status\_audit.md}{A complete audit of why compatibility cannot be removed from the sparse-change proof. The large-denominator example is not a disproof of the original conjecture.}
+\section{An identity valid for every collision}\label{ratio:an-identity-valid-for-every-collision}
+
+Suppose that distinct positive integers \(a,b\) satisfy \(a\sigma(a)=b\sigma(b)=N\). Put
+
+\[
+e_p=v_p(a),\quad f_p=v_p(b),\quad g=\gcd(a,b),
+\]
+
+\[
+H=\prod_p\gcd\bigl(\sigma(p^{e_p}),\sigma(p^{f_p})\bigr),
+\quad R=\frac{\sigma(g)}H,
+\quad T=\frac{\gcd(\sigma(a),\sigma(b))}H.
+\]
+
+Then \(R,T\) are positive integers, \(T\mid N\), and
+
+\[
+\boxed{1<(T/R)^2<\prod_{p:e_p\ne f_p}\frac p{p-1}
+\le\mathcal P(N),\qquad
+\mathcal P(N)=\prod_{p\mid N}\frac p{p-1}.}
+\tag{1}
+\]
+
+Moreover,
+
+\[
+\boxed{R=1\ \Longleftrightarrow\
+e_p+1\text{ and }f_p+1\text{ are divisibility-comparable for every }p.}
+\tag{2}
+\]
+
+\subsection{Proof}\label{ratio:proof}
+
+For nonnegative integers \(e,f\), the geometric-sum gcd identity gives
+
+\[
+\gcd(\sigma(p^e),\sigma(p^f))
+=\sigma\bigl(p^{\gcd(e+1,f+1)-1}\bigr).
+\tag{3}
+\]
+
+Indeed, multiply the two divisor sums by \(p-1\), use \(\gcd(p^r-1,p^s-1)=p^{\gcd(r,s)}-1\), and divide by \(p-1\).
+
+The right-hand side of (3) divides \(\sigma(p^{\min(e,f)})\), since its exponent index divides \(\min(e,f)+1\). Thus \(H\mid\sigma(g)\). Also \(H\) divides both \(\sigma(a)\) and \(\sigma(b)\), by multiplying the local divisibilities. Therefore \(R,T\) are integers and \(T\mid\sigma(a)\mid N\).
+
+Each factor
+
+\[
+\frac{\sigma(p^{\min(e_p,f_p)})}
+     {\sigma(p^{\gcd(e_p+1,f_p+1)-1})}
+\]
+
+in \(R\) is an integer at least one. It is one precisely when \(\gcd(e_p+1,f_p+1)=\min(e_p+1,f_p+1)\), equivalently when the two indices are comparable. This proves (2).
+
+Write \(a=gu\), \(b=gv\), where \(\gcd(u,v)=1\). The collision gives \(u\sigma(a)=v\sigma(b)\), so there is a positive integer \(t\) with
+
+\[
+\sigma(a)=vt,\quad\sigma(b)=ut,\quad
+ t=\gcd(\sigma(a),\sigma(b)).
+\]
+
+Consequently,
+
+\[
+\left(\frac TR\right)^2
+=\left(\frac t{\sigma(g)}\right)^2
+=\frac{\sigma(a)\sigma(b)}{uv\,\sigma(g)^2}
+=\prod_{p:e_p\ne f_p}
+\frac{\sigma(p^{\max(e_p,f_p)})}
+ {p^{|e_p-f_p|}\sigma(p^{\min(e_p,f_p)})}.
+\]
+
+If \(A>B\ge0\), then
+
+\[
+\frac{\sigma(p^A)}{p^{A-B}\sigma(p^B)}
+=\frac{1-p^{-(A+1)}}{1-p^{-(B+1)}}
+\in\left(1,\frac p{p-1}\right).
+\]
+
+There is at least one differing prime, so multiplication proves (1). □
+
+The quantity that was a small integer in a compatible pair is therefore the \textbf{rational number} \(T/R\) for an arbitrary pair. Smallness of the ratio does not bound the integer \(T\).
+
+\section{The exact replacement for the small-label identity}\label{ratio:the-exact-replacement-for-the-small-label-identity}
+
+Suppose additionally that \(e_p=f_p\) for every prime \(p\le Y\). For every prime \(q\le Y\),
+
+\[
+\boxed{
+\sum_{p>Y}
+\left|v_q(\sigma(p^{e_p}))-v_q(\sigma(p^{f_p}))\right|
+=2v_q(T).}
+\tag{4}
+\]
+
+To prove it, put \(A_p=v_q(\sigma(p^{e_p}))\) and \(B_p=v_q(\sigma(p^{f_p}))\). Equality of the input exponents at \(q\), together with the collision equation, gives
+
+\[
+\sum_p A_p=\sum_p B_p=v_q(t).
+\]
+
+Also \(v_q(H)=\sum_p\min(A_p,B_p)\). Hence
+
+\[
+\sum_p|A_p-B_p|
+=2v_q(t)-2v_q(H)=2v_q(T).
+\]
+
+The terms with \(p\le Y\) vanish because those input exponents were fixed. This proves (4).
+
+When the pair is compatible, \(R=1\) and \(T<\sqrt{\mathcal P(N)}\), giving the earlier sparse-change bound. In general, the available bound is only
+
+\[
+T<R\sqrt{\mathcal P(N)},
+\]
+
+and \(R\) is uncontrolled by that argument.
+
+\section{The smallest illustration}\label{ratio:the-smallest-illustration}
+
+For \(a=12\), \(b=14\),
+
+\[
+N=336,\quad g=2,\quad H=1,\quad R=3,\quad T=4.
+\]
+
+Thus the multiplier is \(T/R=4/3\), not an integer. The indices at the input prime 2 are 3 and 2, which are incomparable. This illustrates why the integer-square contradiction cannot be applied to arbitrary collisions.
+
+\section{The failure persists after fixing all small input exponents}\label{ratio:the-failure-persists-after-fixing-all-small-input-exponents}
+
+Use the previously supplied collision
+
+\[
+\begin{aligned}
+a={}&11^2 13^2 17\,19\,31\,61\,97\,127^2 271\,307^2 331\,367,\\
+b={}&13\,17^2 19^2 23\,31^2 43\,61^2 83\,127\,307\,733\,5419.
+\end{aligned}
+\]
+
+Then
+
+\[
+a=60629697601617236747379985403,
+\quad b=61655391632564660609643619057,
+\]
+
+\[
+h(a)=h(b)=
+5276516179938729922490847708056660616574496169354744299520=:N.
+\]
+
+Both inputs are odd and cubefree, and all input primes exceed 7. Exact arithmetic gives
+
+\[
+H=1,\quad
+R=394214768640,\quad T=436988805120,\quad
+\boxed{T/R=378/341.}
+\]
+
+Their relevant factorizations are
+
+\[
+R=2^{19}3^2\cdot5\cdot7^2\cdot11\cdot31,
+\qquad
+T=2^{20}3^5\cdot5\cdot7^3.
+\]
+
+The exact target Euler product is
+
+\[
+\mathcal P(N)=
+\frac{7228777887289039394175783661}
+     {1051444089041931542200320000}.
+\]
+
+In particular \(4<\mathcal P(N)<8<9\). The cutoff \(Y=3\) satisfies \(Y>\sqrt{\mathcal P(N)}\), and both inputs have identical exponents at 2 and 3, namely zero.
+
+For labels
+
+\[
+\lambda_p(k)=
+\bigl(v_2(\sigma(p^{v_p(k)})),v_3(\sigma(p^{v_p(k)}))\bigr),
+\]
+
+there are \textbf{16 changed base labels} between these inputs:
+
+\[
+13,17,19,23,31,43,61,83,97,127,271,307,331,367,733,5419.
+\]
+
+Dropping compatibility from the old radius estimate would allow at most
+
+\[
+\left\lfloor\frac{\log\mathcal P(N)}{\log2}\right\rfloor=2.
+\]
+
+Thus that proposed extension is false even for odd cubefree inputs with every small input exponent fixed.
+
+The actual coordinatewise variation agrees with (4): it is 40 at prime 2 and 10 at prime 3. These equal \(2v_2(T)\) and \(2v_3(T)\), respectively. There is no contradiction with the conditional compatible-family theorem.
+
+\section{The compatible-partition criterion is still the original counting task}
+Let $C(N)$ be the minimum number of compatible subfamilies partitioning a
+nonempty fiber. Chapter~\ref{ch:sparse} gives
+\[
+ \log f(N)\le\log C(N)+O((\log\log N)^{3/2}).
+\]
+Since $C(N)\le f(N)$ and the error is $o(\log N/\log\log N)$, a zero-constant
+bound for $\log C(N)$ is equivalent to the original question at this scale.
+It locates the unresolved ambiguity; it does not remove it.

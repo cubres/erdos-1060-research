@@ -1,0 +1,344 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,microtype,booktabs}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Sparse changes in divisor-sum labels for k sigma(k)=N},pdfsubject={Proved partial results for Erdos Problem 1060},pdfauthor={Research continuation}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\NN}{\mathbb N}
+\newcommand{\PP}{\mathcal P}
+\newcommand{\FF}{\mathcal F}
+\newcommand{\sig}{\sigma}
+\newcommand{\llog}{\log\log}
+\title{Sparse changes in divisor-sum labels\\for the equation \texorpdfstring{$k\sigma(k)=N$}{k sigma(k)=N}}
+\author{Research continuation: rigorously proved partial results}
+\date{5 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Let $f(N)=\#\{k\ge1:k\sigma(k)=N\}$ and put $w=\log\log N$. We prove a small-change reconstruction bound for subfamilies whose exponent indices are pairwise divisibility-comparable. It gives $\log|\FF|=O_E(w\log w)$ when input exponents are bounded by $E$, without bounding any target exponent. As applications, we prove $\log f(N)=O(w\log w)$ for targets $N=2^a m$ with $m$ odd and fourth-power-free, with no bound on $a$, and improve the sixth-power-free target bound to $O(w\log w/\log\log w)$. Exact finite-prime certificates are supplied separately. The unrestricted zero-constant conjecture is \emph{not proved}. Originality relative to the complete literature has not been established. No independent human referee review or formal proof-assistant verification is claimed.
+\end{abstract}
+
+\section{Definitions and scope}
+Write
+\[
+ h(k)=k\sigma(k),\qquad \alpha_p=v_p(N),\qquad
+ f_E(N)=\#\{k:h(k)=N,\ v_p(k)\le E\text{ for every prime }p\}.
+\]
+All logarithms are natural. The assertions involving $w=\log\log N$ are asymptotic as $N\to\infty$, so all iterated logarithms used below are positive. Set
+\[
+ \PP(N)=\prod_{p\mid N}\frac{p}{p-1},\qquad
+ \omega(N)=\#\{p:p\mid N\},\qquad \Omega(N)=\sum_p\alpha_p.
+\]
+A nonempty subfamily $\FF\subseteq\{k:h(k)=N\}$ is called \emph{compatible} if, for every $k,m\in\FF$ and every prime $p$, one of
+\[
+ v_p(k)+1,\qquad v_p(m)+1
+\]
+divides the other. The direction of divisibility may vary with both the pair and the prime. The compatibility hypothesis is essential and is not asserted for an arbitrary fiber.
+
+The new argument records changes in small-prime divisor-sum valuations relative to one reference preimage. This replaces the need to record every block contributing such a valuation inside a compatible family.
+
+\section{The integer multiplier for a compatible pair}
+\begin{lemma}\label{lem:multiplier}
+Suppose $k\ne m$, $h(k)=h(m)=N$, and the exponent indices are comparable at every prime. For each differing prime, write the larger exponent as $a_p$, the smaller as $b_p$, and $d_p=a_p-b_p>0$. Then there is an integer $c>1$, dividing $N$, such that
+\[
+ 1<c^2<\PP(N).
+\]
+If in addition $v_p(k)=v_p(m)$ for all $p\le Y$, then, for each prime $q\le Y$,
+\begin{equation}\label{eq:l1identity}
+ \sum_{p>Y}\left|v_q\bigl(\sigma(p^{v_p(k)})\bigr)
+                   -v_q\bigl(\sigma(p^{v_p(m)})\bigr)\right|
+ =2v_q(c).
+\end{equation}
+All sums are finite; absent input primes have exponent zero and divisor sum $1$.
+\end{lemma}
+\begin{proof}
+Comparability gives $b_p+1\mid a_p+1$. Thus
+\[
+ \frac{h(p^{a_p})}{h(p^{b_p})}=p^{d_p}Q_p,
+ \qquad Q_p=\frac{p^{a_p+1}-1}{p^{b_p+1}-1}\in\NN,
+\]
+and the geometric sum gives
+\begin{equation}\label{eq:local}
+ 1<\frac{Q_p}{p^{d_p}}<\frac1{1-p^{-(b_p+1)}}\le\frac p{p-1}.
+\end{equation}
+Let $P_+$ contain the primes with larger exponent in $k$, and $P_-$ those with larger exponent in $m$. Put
+\[
+ A=\prod_{p\in P_+}p^{d_p},\quad B=\prod_{p\in P_-}p^{d_p},\quad
+ U=\prod_{p\in P_+}Q_p,\quad V=\prod_{p\in P_-}Q_p.
+\]
+Cancel equal local factors in $h(k)=h(m)$. Then $AU=BV$ and $\gcd(A,B)=1$, so
+\[
+ U=cB,\qquad V=cA
+\]
+for a positive integer $c$. Since $U\mid\sigma(k)$, we have $c\mid N$. Multiplying \eqref{eq:local} shows
+\[
+ 1<c^2=\frac{UV}{AB}
+ <\prod_{p\in P_+\cup P_-}\frac p{p-1}\le\PP(N).
+\]
+In particular $c>1$.
+
+If all input exponents at primes at most $Y$ agree, no such prime divides $A$ or $B$. Hence, for $q\le Y$,
+\[
+ v_q(U)=v_q(V)=v_q(c).
+\]
+At a differing prime $p$, the absolute difference between the two local $q$-adic divisor-sum valuations is $v_q(Q_p)$. Summing over $P_+$ and $P_-$ proves \eqref{eq:l1identity}.
+\end{proof}
+
+\section{Sparse labels determine a compatible preimage}
+For $Y\ge2$ and each input base $p>Y$, define the label
+\[
+ \lambda_p(k)=\bigl(v_q(\sigma(p^{v_p(k)}))\bigr)_{q\le Y,\ q\text{ prime}}.
+\]
+This is a finite vector of nonnegative integers.
+
+\begin{theorem}\label{thm:finite}
+Let $N\ge2$, let $\FF$ be a compatible subfamily of its fiber, and take
+\[
+ Y\ge\max\{2,\sqrt{\PP(N)}\},\qquad
+ D=\left\lfloor\frac{\log\PP(N)}{\log2}\right\rfloor.
+\]
+If every input exponent in $\FF$ is at most $E$, then
+\begin{equation}\label{eq:finiteE}
+ \boxed{|\FF|\le (E+1)^{\pi(Y)}(1+E\omega(N))^D.}
+\end{equation}
+Without an input exponent bound,
+\begin{equation}\label{eq:finiteunbounded}
+ \boxed{|\FF|\le
+ \prod_{p\mid N,\ p\le Y}(\alpha_p+1)\,
+ (1+\Omega(N))^D.}
+\end{equation}
+\end{theorem}
+\begin{proof}
+First partition $\FF$ according to all exact input exponents at primes $p\le Y$. The number of parts is at most $(E+1)^{\pi(Y)}$ in the bounded case and the displayed product in the unbounded case.
+
+Fix a nonempty part $\mathcal G$. We show that its full vector of large-base labels $(\lambda_p(k))_{p\mid N,\ p>Y}$ is injective. If two different members had the same vector, each integer local quotient $Q_p$ from Lemma~\ref{lem:multiplier} would have no prime factor at most $Y$. Its integer multiplier $c$, as a divisor of $U$, would have the same property. But
+\[
+ 1<c<\sqrt{\PP(N)}\le Y,
+\]
+a contradiction. Thus equal label vectors imply equal preimages.
+
+Choose a reference $k_0\in\mathcal G$. For $k\ne k_0$, Lemma~\ref{lem:multiplier} gives
+\[
+ \sum_{p>Y}\sum_{q\le Y}
+ \left|v_q(\sigma(p^{v_p(k)}))-v_q(\sigma(p^{v_p(k_0)}))\right|
+ =2\sum_{q\le Y}v_q(c)\le2\Omega(c).
+\]
+Each changed label contributes at least one to the left side. Also
+\[
+ 2\Omega(c)\le\frac{2\log c}{\log2}
+ <\frac{\log\PP(N)}{\log2}.
+\]
+Consequently at most $D$ labels can differ from those of $k_0$. The assertion is immediate for $k=k_0$ as well.
+
+For a fixed base $p$, at most $E$ label values differ from its reference value, since at most $E+1$ exponents are allowed. Encode the changed bases and their replacement labels as a sorted list, padded with empty entries to length $D$. Its alphabet has at most $1+E\omega(N)$ elements. The injectivity already proved therefore gives
+\[
+ |\mathcal G|\le(1+E\omega(N))^D.
+\]
+In the unbounded case there are at most $\alpha_p$ replacement labels at $p$, so the alphabet size is at most $1+\sum_p\alpha_p=1+\Omega(N)$. Summing over the parts proves both bounds.
+\end{proof}
+
+\section{Uniform asymptotic consequences}
+\begin{lemma}\label{lem:mertens}
+Uniformly over integers $N$ tending to infinity,
+\[
+ \PP(N)\ll\log\log N.
+\]
+\end{lemma}
+\begin{proof}
+Put $L=\log N$ and $w=\log L$. The part with primes at most $L$ is at most
+\[
+ \prod_{p\le L}\frac p{p-1}\ll\log L=w
+\]
+by Mertens' product theorem \cite{mertens}. The number of prime divisors of $N$ larger than $L$ is at most $L/\log L$. Their logarithmic contribution is at most
+\[
+ \sum_{p\mid N,\ p>L}\frac1{p-1}=O(1/w).
+\]
+Multiplying the two estimates proves the lemma.
+\end{proof}
+
+\begin{corollary}\label{cor:compatible}
+Let $w=\log\log N$, and let $\FF$ be a compatible subfamily of the fiber of $N$.
+For each fixed $E$, if all input exponents are at most $E$, then
+\begin{equation}\label{eq:compatgrowth}
+ \log|\FF|=O_E(w\log w).
+\end{equation}
+Without any input exponent bound,
+\[
+ \log|\FF|=O(w^{3/2}).
+\]
+Both are $o(\log N/\log\log N)$.
+\end{corollary}
+\begin{proof}
+Choose $Y=\max\{2,\sqrt{\PP(N)}\}$. Lemma~\ref{lem:mertens} gives
+\[
+ Y=O(\sqrt w),\qquad D=O(\log w),\qquad
+ \log(1+\Omega(N))=O(w).
+\]
+Since $\pi(Y)\le Y$ and $\omega(N)\le\Omega(N)\le\log N/\log2$, \eqref{eq:finiteE} gives \eqref{eq:compatgrowth}. For \eqref{eq:finiteunbounded}, the logarithm of its small-prime factor is at most
+\[
+ \pi(Y)\log(1+\log N/\log2)=O(w^{3/2}).
+\]
+The remaining term is $O(w\log w)$, which is smaller asymptotically. The final claim follows because $\log N/\log\log N=e^w/w$.
+\end{proof}
+
+\begin{corollary}\label{cor:boundedtarget}
+Fix $E,A$. If $\FF$ is compatible, every input exponent is at most $E$, and $\alpha_p\le A$ for every prime $p$, then
+\begin{equation}\label{eq:boundedtarget}
+ \log|\FF|=O_{E,A}\!\left(\frac{w\log w}{\log\log w}\right).
+\end{equation}
+\end{corollary}
+\begin{proof}
+The multiplier $c$ in Lemma~\ref{lem:multiplier} divides $N$, and $c<\sqrt{\PP(N)}=O(\sqrt w)$. If $s=\omega(c)$, then
+\[
+ c\ge\prod_{j=1}^{s}p_j\ge(s+1)!,\qquad \Omega(c)\le As.
+\]
+The elementary factorial bound gives
+\[
+ s=O\!\left(\frac{\log w}{\log\log w}\right).
+\]
+Indeed $\log c=O(\log w)$, while $\log(s!)\ge(s/2)\log(s/2)$ for $s\ge4$; bounded $s$ is harmless. Therefore the number of changed labels in the proof of Theorem~\ref{thm:finite} is at most
+\[
+ O_A\!\left(\frac{\log w}{\log\log w}\right)
+\]
+in place of $D$. Each replacement record costs $O_E(w)$ logarithmically, and the small-prime exponent record costs $O_E(\sqrt w)$. This proves \eqref{eq:boundedtarget}.
+\end{proof}
+
+\section{Reducing bounded-exponent fibers to compatible parts}
+\begin{theorem}\label{thm:cap3}
+Uniformly for targets $N\to\infty$, with $w=\log\log N$,
+\begin{equation}\label{eq:cap3}
+ \boxed{\log\max(1,f_3(N))
+ =O\bigl((v_3(N)+\log w)w\bigr).}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Fix the exact exponent at the input prime $3$, with at most four choices. Among all other positive input blocks $p^e$, record those for which $3\mid\sigma(p^e)$. There are at most $v_3(N)$ such blocks, because each contributes at least one to $v_3(\sigma(k))\le v_3(N)$. Their bases divide $N$ and their exponents are at most $3$. Thus the number of records is at most
+\[
+ 4(1+3\omega(N))^{v_3(N)}.
+\]
+As before, this follows by using sorted lists padded with empty entries.
+
+Fix a record and remove its full input prime-power blocks. Every remaining base $p\ne3$ satisfies $3\nmid\sigma(p^e)$. If $p\equiv1\pmod3$, the possible exponent indices for $0\le e\le3$ are $1,2,4$. If $p\equiv-1\pmod3$, they are $1,3$. In either case they form a divisibility chain. At recorded bases the exponents are fixed. Hence the entire part is compatible.
+
+Applying Corollary~\ref{cor:compatible} with $E=3$ to each part and counting the records proves \eqref{eq:cap3}. More explicitly, with $Y,D$ as in Theorem~\ref{thm:finite},
+\[
+ f_3(N)\le4^{1+\pi(Y)}(1+3\omega(N))^{v_3(N)+D}.
+\]
+\end{proof}
+
+\begin{theorem}\label{thm:cap5}
+Uniformly for targets $N\to\infty$,
+\begin{equation}\label{eq:cap5}
+ \boxed{\log\max(1,f_5(N))
+ =O\bigl((v_2(N)+v_3(N)+v_5(N)+\log w)w\bigr).}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Fix the exact input exponents at $2,3,5$, with at most $6^3$ choices. For other positive input blocks, record those whose divisor sum is divisible by $2$, $3$, or $5$. There are at most
+\[
+ b=v_2(N)+v_3(N)+v_5(N)
+\]
+such blocks, so there are at most $6^3(1+5\omega(N))^b$ records.
+
+Fix a record, let $d$ be the product of all recorded full prime-power blocks, and write $k=du$ with $\gcd(d,u)=1$. The residuals all satisfy $h(u)=N/h(d)$. Their prime bases exceed $5$ and $\gcd(\sigma(u),30)=1$. Consequently all positive exponents are $2$ or $4$, because an odd input base to an odd exponent has an even divisor sum.
+
+We show that any two residuals in this part have comparable indices at each prime. The only possible incomparable pair is $3,5$, arising from exponents $2,4$ at a base $p>5$. Coprimality of the corresponding divisor sums with $3$ and $5$ forces
+\[
+ p\not\equiv1\pmod3,\qquad p\not\equiv1\pmod5.
+\]
+On the other hand, every prime $q>5$ dividing a local divisor sum with index $3$ or $5$ is $1$ modulo $3$ or $5$, respectively. To check this, $q$ divides $x^\ell-1$ with $\ell=3$ or $5$; if $x\equiv1\pmod q$ then $q\mid\ell$, impossible, and otherwise the order of $x$ modulo $q$ is $\ell$. Thus such a $p$ divides neither residual divisor sum. Taking its valuation in the equality of their $h$-values forces equal input exponents, a contradiction.
+
+The residuals, and hence the original part, are compatible. Corollary~\ref{cor:compatible} proves \eqref{eq:cap5}. The finite bound is
+\[
+ f_5(N)\le6^{3+\pi(Y)}(1+5\omega(N))^{b+D}.
+\]
+\end{proof}
+
+\section{Two full-fiber consequences}
+\begin{theorem}\label{thm:unboundedtwo}
+Let $N=2^a m$, where $m$ is odd and fourth-power-free; equivalently, $v_p(m)\le3$ for every prime $p$. There is no restriction on $a$. Uniformly over these targets,
+\[
+ \boxed{\log\max(1,f(N))=O(w\log w).}
+\]
+In particular the zero-constant bound of Erd\H{o}s Problem 1060 holds on this class.
+\end{theorem}
+\begin{proof}
+Fix the exponent $e=v_2(k)$ of a preimage, at a cost of at most $a+1$ choices, and write $k=2^e u$ with $u$ odd. The residual target $M=N/h(2^e)$ is integral for an actual preimage, and $h(u)=M$. All input exponents in $u$ are at most $3$, since $u\mid m$, and $v_3(M)\le v_3(N)\le3$.
+
+Theorem~\ref{thm:cap3}, applied to $M\le N$, bounds each nonempty residual fiber by $\exp(O(w\log w))$. The estimate can be used uniformly up to $N$ by enlarging its absolute constant to include bounded $M$. Finally,
+\[
+ \log(a+1)\le\log(1+\log N/\log2)=O(w).
+\]
+Multiplying by the number of choices for $e$ proves the result.
+\end{proof}
+
+\begin{theorem}\label{thm:sixth}
+Uniformly over sixth-power-free targets $N$, meaning $v_p(N)\le5$ for all primes $p$,
+\[
+ \boxed{\log\max(1,f(N))
+ =O\!\left(\frac{w\log w}{\log\log w}\right).}
+\]
+This improves the previous restricted-case bound $O((w/\log w)^{3/2})$ in the earlier working note.
+\end{theorem}
+\begin{proof}
+Every preimage divides $N$, so $f(N)=f_5(N)$. In the partition from Theorem~\ref{thm:cap5}, we have $b\le15$, and hence only $\exp(O(w))$ records. Each part is compatible. Apply Corollary~\ref{cor:boundedtarget} with $E=A=5$ to its size. The cost $O(w)$ of the records is smaller than the stated bound.
+\end{proof}
+
+For either theorem, its logarithmic upper bound divided by $\log N/\log\log N=e^w/w$ tends to zero. These results concern the full multiplicity on their stated target classes, not merely a bounded-exponent subset of the fiber.
+
+\section{Why these theorems do not yet settle arbitrary targets}
+\textbf{Compatibility cannot be omitted.} The equality $h(12)=h(14)=336$ has exponent indices $3$ and $2$ at the prime $2$, which are incomparable. The sparse-label theorem assumes compatible pairs; it does not establish that an arbitrary fiber can be partitioned into sufficiently few compatible parts.
+
+\textbf{The remaining valuation costs can be large.} In Theorem~\ref{thm:cap3}, the exceptional-record count depends on $v_3(N)$. In Theorem~\ref{thm:cap5}, it depends on $v_2(N)+v_3(N)+v_5(N)$. Bounded input exponents do not bound these target valuations. In particular, the displayed parameterized estimates do not imply the required uniform bound for $f_3$ or $f_5$ on all targets.
+
+\textbf{Higher indices permit more dependence.} Exponent $6$ adds index $7$ to the residual types $3,5$. The argument that an incomparable pair rules out all possible incoming divisor-sum factors then fails. The local example
+\[
+ \sigma(29^2)=13\cdot67
+\]
+has $67\equiv1\pmod3$, but $67$ is $1$ modulo neither $5$ nor $7$, while $\sigma(67^4)$ and $\sigma(67^6)$ have no prime factor among $2,3,5,7$. This is a local obstruction to that proof extension, not a collision.
+
+A proposed larger-prime shortcut is also false even after excluding small divisor-sum primes:
+\[
+ \sigma(269^2)=72631=13\cdot37\cdot151.
+\]
+All three factors exceed $7$ and are smaller than the input base $269$.
+
+A sufficient remaining task is to partition every fiber, uniformly, into $\exp(o(\log N/\log\log N))$ compatible subfamilies: Corollary~\ref{cor:compatible}, including its unbounded-exponent version, would then finish the problem. No such partition estimate is proved here. The previous rough bounded-exponent reduction is another precise unresolved route. The positive-constant unrestricted bound from the preceding chain-packing note has not been improved by the present argument.
+
+\section{Exact finite certificates and reproducibility}
+The analytic results above do not depend on any finite search. The packet also contains two complete finite-prime noncollision certificates. In each case, $h$ is injective on the indicated class:
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Input prime bases & Input exponent cap & Divisor-sum restriction\\
+\midrule
+$7<p\le5000$ & $6$ & $\gcd(\sigma(k),2\cdot3\cdot5\cdot7)=1$\\
+$11<p\le1000$ & $10$ & $\gcd(\sigma(k),2\cdot3\cdot5\cdot7\cdot11)=1$\\
+\bottomrule
+\end{tabular}
+\end{center}
+These are bounds on the input \emph{prime factors}, not on the size of $k$. The divisor-sum restrictions force even input exponents.
+
+For every allowed local block, its exact factorization is supplied. The verifier enumerates all permitted input primes by a sieve and all possible local exponents, checks the defining divisor-sum restriction, and verifies the integer product for every local block. For each input base $p$ and each two permitted exponents $a>b$, it forms the difference of their factor-exponent columns. A collision can select at most one such column, with sign $+1$ or $-1$, per input base. If a factor row is nonzero only for columns owned by one input base, no collision can use a column nonzero in that row. Delete these columns and repeat.
+
+All $2035$ columns in the first class disappear in rounds of sizes $2003,30,2$. All $1005$ columns in the second disappear in rounds of sizes $998,7$.
+
+The verifier does not assume that large factor-row bases are prime. Instead, it checks that all distinct row bases are integers at least $2$ and are pairwise coprime, using a product tree. This certifies their multiplicative independence, which is exactly what the column argument requires. Input bases themselves are verified prime by the sieve. Thus no floating-point solver status or unverified large-prime assumption is used.
+
+Run \texttt{python3 verify\_v6.py} in the packet directory. It uses only the Python standard library, recreates the columns and eliminations, checks regression examples and the two local obstructions, and writes \texttt{verification\_v6.json}. The checker was run successfully. This is exact computational verification, not proof-assistant certification or an unbounded-prime theorem.
+
+\clearpage
+\begin{thebibliography}{9}
+\bibitem{mertens} Zach Teitler, \emph{Analytic Number Theory Notes}, Section 6.3, Theorem 6.3.1 (Mertens' theorems).\newline
+\url{https://zteitler.github.io/analytic-number-theory-notes/sec-mertens.html}
+\bibitem{kominers} Scott Duke Kominers, \emph{On the Number of Solutions of $k\sigma(k)=n$}, working paper. Theorem 1.2 and the higher-exponent discussion provide background; they are not being cited as proofs of the new statements in this note.\newline
+\url{https://scottkom.com/assets/articles/Kominers_ksigmak.pdf}
+\bibitem{prior} \emph{Small-prime divisor-sum constraints for the equation $k\sigma(k)=N$}, preceding working note in this investigation, 5 September 2026. The two-index residue argument and sixth-power-free result are extended here. This is an internal partial-results note, not a claim of external publication or priority.
+\end{thebibliography}
+\end{document}

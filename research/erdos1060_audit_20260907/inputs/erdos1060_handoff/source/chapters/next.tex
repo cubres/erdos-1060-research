@@ -1,0 +1,124 @@
+\chapter{Handoff instructions for the next researcher}\label{ch:next}
+\section{The task is a new uniform arithmetic bound}
+Continue toward either a proof or a counterexample to \eqref{eq:EP}. Do not
+spend the next pass merely repackaging the same gap or reporting that the
+examples have small fibers. The best-supported starting points are the exact
+fixed-cap reduction, primitive-divisor exponent lists, full valuation equations,
+and genuine-exchange decomposition. The complete fixed-two-prime proof removes
+all two-base exchanges, but leaves the interaction of larger exchanges open.
+
+Before leaning heavily on the newest two-prime theorem, independently audit its
+reduced-denominator formula, the bounds $d>f\ge2$ and $A<2d,B<2f$, the
+prime-adic inequalities, the integer alignment $\alpha f=\beta d$, and the final
+monotonicity identity. Finite regression cannot replace this proof audit.
+Likewise, audit the strongest general chain-packing proof if its constant is
+used in a new argument. This prioritizes central dependencies rather than
+rechecking every already superseded numerical estimate.
+
+\section{Three remaining routes, stated honestly}
+\paragraph{Actual exchange packing.}
+Prove a uniform bound on the independent-set count of exact minimal exchanges,
+without first enumerating the unknown fiber. Retain overlap information when
+useful; the product bound in Chapter~\ref{ch:exchanges} can be much stronger
+than necessary. Every minimal exchange now has at least three changed bases,
+but a fixed lower bound on its support size is insufficient. Look for a proved
+relation among the number of independent exchanges, their input-prime scales,
+and their total target cost.
+
+\paragraph{Integer reconstruction.}
+Use exact row-support tests, integer-valid rounding, certificates with a
+controlled positive budget, or a deterministic branching decoder. A successful
+proof must bound the worst-case logarithmic choice cost on all targets at every
+fixed cap. It need not give a fast algorithm: forced computation and branching
+ambiguity are different quantities. The singleton fractional example should
+prevent a return to dimension-only optimism.
+
+\paragraph{Arithmetic restrictions beyond potential feedback.}
+The signed-graph criterion remains valid after sound target-specific domain
+reductions. Counting every unpruned universal positive cycle is conditionally
+obstructed by the polynomial-prime family, so do not assume that route's
+subpolynomial hypothesis. A useful refinement must quantify which cycles survive
+all required valuation capacities and which internally possible fillings fail
+on outside-prime rows. The arbitrary fixed-two-prime injectivity theorem is one
+example of such arithmetic elimination.
+
+None of these paragraphs is a proved finishing lemma. Their purpose is to make
+the required new information explicit.
+
+\section{Counterexample program}
+Search for pairwise input-support-disjoint genuine collisions at bounded exponent
+cap. If $h(a_i)=h(b_i)=M_i$ and the supports of $a_ib_i$ are pairwise disjoint,
+then $2^r$ inputs share target $\prod_{i=1}^rM_i$. A construction with total
+logarithmic target cost $O(r\log r)$ would disprove the primary question.
+Repeated coprime scaling of one collision does not give this independence.
+A large graph cycle without an exact equality also does not count.
+
+For a conjectured intermediate statement, search deliberately for its smallest
+counterexample or an infinite obstruction family before polishing a proof around
+it. Use the main witnesses in Chapter~\ref{ch:examples}, including the
+polynomial-pair targets with many unpruned cycles and unique cap-five inputs.
+
+\section{Computational protocol}
+Build complete local domains from the target factorization or the exact
+multiplicative-order lists. Include every output-prime row. Choose at most one
+local prime-power block per input base, require exact exhaustion of all target
+valuations, and prove each pruning operation necessary. Label interrupted
+searches incomplete. Use integer or rational arithmetic to certify discovered
+witnesses and row weights. Numerical optimization can discover a candidate but
+its infeasibility or optimality status is not automatically a proof.
+
+Separate the input-size cutoff, target-size cutoff, allowed prime-factor range,
+exponent cap, and divisor-sum roughness restriction in every experiment.
+When practical, verify a witness by constructing and summing its divisors, a
+method independent of the geometric-sum implementation. For a specified factored
+target, exhaustive divisor enumeration is complete because every preimage
+divides the target. Do not claim minimality of a target from a particular-fiber
+check.
+
+If actual parallel-worker tools are available, assign distinct roles to proof,
+source verification, counterexample search, and adversarial audit. Otherwise
+perform clearly separated passes. Do not report independent agents or formal
+verification that did not occur.
+
+\section{Copy-paste continuation brief}
+\begin{statusbox}{Instruction to the receiving agent}
+Investigate Erd\H{o}s 1060 using this dossier and its accompanying archive.
+The objective is the uniform bound
+$\log\max(1,f(N))=o(\log N/\log\log N)$ for $f(N)=\#\{k:k\sigma(k)=N\}$.
+No complete proof currently appears in the record.
+
+Start with the fixed-cap reduction, the complete fixed-two-prime rigidity
+proof, primitive-divisor exponent lists, and genuine exchanges. Independently
+audit any working proof on which your new step depends. Use the strongest
+general bound only as a partial result, not as evidence that its constant can
+be made arbitrarily small.
+
+Do not assume the unproved low-cost feedback, low-nullity, cheap reconstruction,
+or exchange-packing bounds. The dossier includes exact counterexamples and a
+conditional obstruction to several versions of those assertions. Preserve
+all output-prime valuation equations and distinguish integer solutions from
+fractional ones.
+
+Develop a concrete argument far enough to prove a new lemma, find a
+counterexample, or identify one precise implication still missing. Continue
+revising failed routes rather than returning another generic list of ideas.
+Check every quantifier and parameter dependence before claiming a solution.
+A proof at every fixed exponent cap would complete the unrestricted problem;
+a proof at just one cap would not.
+
+Use reproducible exact tests to challenge conjectured lemmas. State any
+unproved assertion explicitly. Return a full proof only when the entire
+implication to the uniform little-$o$ estimate is established. Otherwise return
+the strongest actual result and its exact remaining gap, with no claim of
+completion or proximity.
+\end{statusbox}
+
+\section{What a final proof audit must check}
+The normalized target coefficient must approach zero for every sufficiently
+large $N$. Every residual target in a decomposition must be handled uniformly,
+including bounded ones. Only unitary blocks may be automatically canceled.
+The exponent-index conventions and primitive-divisor exceptions must match.
+No density-one theorem, finite range, conditional prime-pattern prediction,
+positive-constant estimate, or real-relaxation fact may be substituted for a
+uniform integer-fiber theorem. Newness and correctness are separate questions:
+verify the latter before making a publication or priority claim.

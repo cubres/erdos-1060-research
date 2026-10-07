@@ -1,0 +1,287 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,microtype,booktabs}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\sig}{\sigma}
+\newcommand{\NN}{\mathbb N}
+\DeclareMathOperator{\lcm}{lcm}
+\title{Small-prime divisor-sum constraints\texorpdfstring{\\}{ }for the equation \texorpdfstring{$k\sigma(k)=N$}{k sigma(k)=N}}
+\author{Research continuation: a proved restricted-case bound}
+\date{5 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Let $f(N)=\#\{k\ge1:k\sigma(k)=N\}$. We prove, uniformly over targets having no prime sixth-power divisor,
+\[
+ \log\max(1,f(N))
+ =O\!\left(\left(\frac{\log\log N}{\log\log\log N}\right)^{3/2}\right).
+\]
+In particular, the zero-constant bound asked for in Erd\H{o}s Problem 1060 holds on this class of targets. The proof records a controlled number of prime-power blocks whose divisor sums contain small primes, and proves uniqueness of the residual input. A more general uniqueness lemma permits exponent indices supported on any two fixed primes. The unrestricted Erd\H{o}s conjecture is not proved here. Originality relative to the complete literature has not been established; no independent human referee review or proof-assistant verification is claimed.
+\end{abstract}
+
+\section{Definitions and the precise scope}
+Write
+\[
+ h(k)=k\sigma(k),\qquad
+ f_E(N)=\#\{k:h(k)=N,\ v_p(k)\le E\text{ for every prime }p\}.
+\]
+All logarithms are natural. We call an integer $Y$-rough when it has no prime divisor at most $Y$; the integer $1$ is included. Set
+\[
+ Q_Y=\prod_{q\le Y\atop q\text{ prime}}q,\qquad
+ P_Y(N)=\prod_{p\mid N\atop p>Y}\frac{p}{p-1},\qquad
+ B_Y(N)=\sum_{q\le Y\atop q\text{ prime}}v_q(N),
+\]
+\[
+ r_Y(N)=\#\{p\mid N:p>Y\}.
+\]
+An integer is sixth-power-free if $v_p(N)\le5$ for every prime $p$.
+
+\begin{theorem}\label{thm:main}
+Uniformly as sixth-power-free targets $N$ tend to infinity,
+\[
+ \boxed{\log\max(1,f(N))
+ =O\!\left(\left(\frac{\log\log N}{\log\log\log N}\right)^{3/2}\right).}
+\]
+Consequently,
+\[
+ \log\max(1,f(N))=o\!\left(\frac{\log N}{\log\log N}\right)
+\]
+on this class of targets.
+\end{theorem}
+
+The restriction is on the \emph{target} $N$, not merely the input $k$. The theorem neither states nor implies a uniform zero-constant bound for all $N$.
+
+\section{Uniqueness with two exponent-index primes}
+The argument below generalizes the integer-square obstruction from the previous chain-packing note. No probabilistic covering or entropy estimate is needed here.
+
+\begin{lemma}\label{lem:twoindex}
+Let $\ell_1,\ell_2$ be distinct primes and $Y\ge\max(\ell_1,\ell_2)$. Let $S$ be a finite set of primes exceeding $Y$, with
+\[
+ \prod_{p\in S}\frac{p}{p-1}\le Y^2.
+\]
+Suppose $u,v$ have prime factors only in $S$, that $\sigma(u)\sigma(v)$ is $Y$-rough, and that every exponent index in both inputs has the form
+\[
+ v_p(u)+1=\ell_1^{a_p}\ell_2^{b_p},\qquad
+ v_p(v)+1=\ell_1^{c_p}\ell_2^{d_p}
+\]
+with nonnegative integer exponents. If $h(u)=h(v)$, then $u=v$.
+\end{lemma}
+
+\begin{proof}
+First consider a prime $q$ dividing a local divisor sum $\sigma(x^e)$ from either input. We have $q>Y$, $q\ne x$, and
+\[
+ e+1=\ell_1^a\ell_2^b.
+\]
+If $x\equiv1\pmod q$, then $\sigma(x^e)\equiv e+1\pmod q$, impossible because $q>Y\ge\ell_1,\ell_2$. Otherwise the multiplicative order of $x$ modulo $q$ is a divisor greater than $1$ of $e+1$. At least one of $\ell_1,\ell_2$ therefore divides $q-1$. Thus
+\begin{equation}\label{eq:outputclasses}
+ q\mid\sigma(u)\sigma(v)
+ \quad\Longrightarrow\quad
+ q\equiv1\pmod{\ell_1}\ \text{or}\ q\equiv1\pmod{\ell_2}.
+\end{equation}
+
+We next show that the two exponent indices at each input prime are divisibility-comparable. Suppose otherwise at a prime $p$. The union of the prime factors of two incomparable $\{\ell_1,\ell_2\}$-smooth integers contains both $\ell_1$ and $\ell_2$: integers supported on just one prime are comparable. For each $i\in\{1,2\}$, at least one of the two indices is divisible by $\ell_i$. If $p\equiv1\pmod{\ell_i}$, the corresponding local divisor sum is divisible by $\ell_i$, contrary to its being $Y$-rough. Hence $p$ is congruent to $1$ modulo neither $\ell_1$ nor $\ell_2$.
+
+By \eqref{eq:outputclasses}, this means $p\nmid\sigma(u)\sigma(v)$. The $p$-adic valuation in $u\sigma(u)=v\sigma(v)$ then forces $v_p(u)=v_p(v)$, contradicting incomparability. The indices are therefore comparable at every prime.
+
+Cancel equal local factors. At a differing prime write the larger exponent as $a$, the smaller as $b$, and $d=a-b>0$. Comparability gives $b+1\mid a+1$, so
+\[
+ \frac{h(p^a)}{h(p^b)}=p^d T_p,\qquad
+ T_p=\frac{p^{a+1}-1}{p^{b+1}-1}\in\NN.
+\]
+Since $T_p=\sigma(p^a)/\sigma(p^b)$, it is $Y$-rough. Also
+\begin{equation}\label{eq:localgrowth}
+ 1<\frac{T_p}{p^d}<\frac{1}{1-p^{-(b+1)}}\le\frac{p}{p-1}.
+\end{equation}
+Let $P_+$ and $P_-$ be the primes at which the first and second input, respectively, has the larger exponent. Put
+\[
+ A=\prod_{p\in P_+}p^{d_p},\quad
+ B=\prod_{p\in P_-}p^{d_p},\quad
+ U=\prod_{p\in P_+}T_p,\quad
+ V=\prod_{p\in P_-}T_p.
+\]
+The collision says $AU=BV$, and $\gcd(A,B)=1$. Hence $U=cB$ and $V=cA$ for some positive integer $c$. As a divisor of $U$, the integer $c$ is $Y$-rough. If any exponent differs, \eqref{eq:localgrowth} gives
+\[
+ 1<c^2=\frac{UV}{AB}
+ <\prod_{p\in P_+\cup P_-}\frac{p}{p-1}
+ \le Y^2.
+\]
+But a $Y$-rough integer $c>1$ satisfies $c>Y$. This contradiction proves the lemma.
+\end{proof}
+
+\begin{corollary}\label{cor:capfive}
+Let $Y\ge5$ and let $S$ be a finite set of primes exceeding $Y$, with $\prod_{p\in S}p/(p-1)\le Y^2$. Among inputs $u$ supported on $S$ with all prime exponents at most $5$ and with $\sigma(u)$ $Y$-rough, the function $h$ is injective.
+\end{corollary}
+\begin{proof}
+For an odd prime $p$, $\sigma(p^e)$ is even exactly when $e$ is odd. Since $\sigma(u)$ is $Y$-rough, positive input exponents can only be $2$ or $4$. Their exponent indices are $3$ and $5$, while an absent prime has index $1$. Apply Lemma~\ref{lem:twoindex} with $(\ell_1,\ell_2)=(3,5)$.
+\end{proof}
+
+\section{An exact exceptional-block bound}
+\begin{theorem}\label{thm:finite}
+Let $N\ge1$ and $Y\ge5$, and suppose $P_Y(N)\le Y^2$. Put $B=B_Y(N)$ and $r=r_Y(N)$. Then
+\begin{equation}\label{eq:finite}
+ \boxed{f_5(N)\le6^{\pi(Y)}
+ \sum_{j=0}^{\min(B,r)}\binom{r}{j}5^j.}
+\end{equation}
+In particular,
+\begin{equation}\label{eq:coarsefinite}
+ \boxed{\log\max(1,f_5(N))
+ \le\pi(Y)\log6+B_Y(N)\log(1+5r_Y(N)).}
+\end{equation}
+\end{theorem}
+\begin{proof}
+For each preimage counted by $f_5(N)$, record the exact input exponents at primes at most $Y$. There are at most $6^{\pi(Y)}$ choices.
+
+Call a remaining positive input block $p^e$ exceptional when
+\[
+ p>Y,\qquad \gcd(\sigma(p^e),Q_Y)>1.
+\]
+Every exceptional block contributes at least one to
+\[
+ \sum_{q\le Y}v_q(\sigma(k))\le\sum_{q\le Y}v_q(N)=B.
+\]
+Thus there are at most $B$ exceptional blocks. Their bases belong to the $r$ primes exceeding $Y$ that divide $N$, and each exponent is one of $1,\ldots,5$. The number of possible records is at most the sum in \eqref{eq:finite}.
+
+Fix both records. Let $d$ be the product of the recorded prime-power blocks. Every input in this part has the form $k=du$, with $\gcd(d,u)=1$, so
+\[
+ h(u)=N/h(d).
+\]
+The residual $u$ has prime factors exceeding $Y$, exponents at most $5$, and $\sigma(u)$ is $Y$-rough. Its input support is contained in $\{p\mid N:p>Y\}$, whose Euler product is at most $Y^2$. Corollary~\ref{cor:capfive} implies that there is at most one such $u$. This proves \eqref{eq:finite}.
+
+For the second bound, record a subset of at most $B$ bases with its exponent labels in a sorted list, padded with empty entries to length $B$. This gives an injection into lists over an alphabet of $1+5r$ symbols. Thus the sum in \eqref{eq:finite} is at most $(1+5r)^B$, including the case $B=0$.
+\end{proof}
+
+\section{Choosing the small-prime cutoff}
+We use two standard elementary prime estimates:
+\begin{equation}\label{eq:mertens}
+ \pi(x)\ll\frac{x}{\log x},\qquad
+ \prod_{p\le x}\frac{p}{p-1}=e^\gamma\log x\,(1+o(1)).
+\end{equation}
+The latter is Mertens' product theorem; an elementary exposition, including the prime-counting estimate, appears in~\cite{teitler}. The argument does not need a quantitative prime number theorem.
+
+\begin{lemma}\label{lem:cutoff}
+Put $L=\log N$, $u=\log L$, and, for sufficiently large $N$, choose
+\[
+ Y=2\sqrt{\frac{u}{\log u}}.
+\]
+Uniformly over all targets $N$,
+\[
+ P_Y(N)\le Y^2.
+\]
+\end{lemma}
+\begin{proof}
+There are at most $L/\log L=L/u$ prime divisors of $N$ exceeding $L$. Therefore
+\[
+ \log\prod_{p\mid N\atop p>L}\frac{p}{p-1}
+ \le\sum_{p\mid N\atop p>L}\frac{1}{p-1}
+ =O(1/u).
+\]
+The remaining primes give, by Mertens' theorem,
+\[
+ \begin{split}
+ P_Y(N)
+ &\le \left(\prod_{Y<p\le L}\frac{p}{p-1}\right)\exp(O(1/u))\\
+ &=(1+o(1))\frac{\log L}{\log Y}
+ =(2+o(1))\frac{u}{\log u}.
+ \end{split}
+\]
+But $Y^2=4u/\log u$, which proves the assertion for sufficiently large $N$. The bounds are independent of the factorization of $N$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+If $N$ is sixth-power-free then every preimage divides $N$, so $f(N)=f_5(N)$. Also
+\[
+ B_Y(N)\le5\pi(Y).
+\]
+Use the cutoff in Lemma~\ref{lem:cutoff} and Theorem~\ref{thm:finite}. Since $r_Y(N)\le L/\log2$,
+\[
+ \log\max(1,f(N))
+ \le\pi(Y)\log6+5\pi(Y)\log(1+5L/\log2)
+ \ll u\pi(Y).
+\]
+Now
+\[
+ \log Y\sim\tfrac12\log u,
+ \qquad
+ \pi(Y)\ll\frac{Y}{\log Y}
+ \ll\frac{\sqrt u}{(\log u)^{3/2}},
+\]
+so
+\[
+ \log\max(1,f(N))\ll\left(\frac{u}{\log u}\right)^{3/2}.
+\]
+This is the stated result. Moreover,
+\[
+ \frac{(u/\log u)^{3/2}}{\log N/\log\log N}
+ =\frac{u^{5/2}}{e^u(\log u)^{3/2}}\longrightarrow0,
+\]
+so the zero-constant consequence follows.
+\end{proof}
+
+\begin{remark}
+The same proof bounds $f_5(N)$ by
+$\exp(O_A((\log\log N/\log\log\log N)^{3/2}))$
+whenever $v_q(N)\le A$ for all primes $q\le Y(N)$, with $A$ fixed. It does not require a bound on the large-prime target exponents in this restricted-input version. The finite bound in Theorem~\ref{thm:finite} is more informative when the actual small-prime valuations are known.
+\end{remark}
+
+\section{Why the proof does not cover all targets}
+There are two distinct limitations.
+
+First, bounded input exponents do not bound $B_Y(N)$. Even a cubefree input can have many prime blocks whose divisor sums are even, making $v_2(N)$ large. Without a useful bound on the exceptional-record count, Theorem~\ref{thm:finite} need not have a zero asymptotic constant.
+
+Second, allowing exponent $6$ introduces the third exponent-index prime $7$. The residue-class argument in Lemma~\ref{lem:twoindex} depends on there being at most two index primes: an incomparable pair then exhausts them. With three index primes, an output factor from the third type can supply a prime at which two other types are being exchanged.
+
+A concrete local illustration is
+\[
+ \sigma(29^2)=13\cdot67.
+\]
+The input prime $67$ is $1\pmod3$ but is $1$ modulo neither $5$ nor $7$. Both $\sigma(67^4)$ and $\sigma(67^6)$ are coprime to $2\cdot3\cdot5\cdot7$, as is $\sigma(29^2)$. Thus the incomparable indices $5$ and $7$ at the prime $67$ can receive an incoming divisor-sum factor from index $3$. This is a local obstruction to that particular proof extension, \emph{not} a collision and not a disproof of any global injectivity assertion.
+
+The earlier sufficient target remains a uniform bound on rough bounded-exponent fibers, for every fixed exponent cap. The present result supplies neither that unrestricted family of bounds nor a replacement argument for the large exceptional-block budgets. In particular, the previously proved general constant $\tfrac12\log(1+1/\sqrt2)$ has not been improved in this continuation.
+
+\section{Exact computational checks}
+The mathematical proofs above do not rely on these experiments. The included \texttt{verify\_v5.py} uses only the Python standard library and exact integer arithmetic.
+
+\subsection*{A finite-prime noncollision certificate}
+For cubefree inputs all of whose prime factors lie between $251$ and $100{,}000$ inclusive, the function $h$ is injective. This is a finite-prime statement, not an upper bound of $100{,}000$ on the inputs themselves.
+
+For each allowed prime $p$ and unequal exponents $a>b$ from $\{0,1,2\}$, form
+\[
+ c_{p,a,b}=\nu(h(p^a))-\nu(h(p^b)),
+\]
+where $\nu$ is the vector of prime valuations. A collision selects at most one signed column at each input prime, with sum zero. If a row is nonzero only in columns owned by one input prime, none of those nonzero columns can occur in a collision. Delete such columns repeatedly.
+
+All $28{,}617$ columns for the $9{,}539$ permitted input primes disappear in $32$ rounds. The verifier regenerates the columns from checked factorizations, certifies every prime factor using recursive Lucas certificates, and repeats every deletion. No floating-point infeasibility claim is used.
+
+\subsection*{A new explicit collision and smaller checks}
+The search also found a collision between two odd cubefree inputs, each having $106$ decimal digits, whose combined input support consists of $47$ primes between $17$ and $9{,}439$. Its common target has $211$ digits. The complete factorizations and target are recorded in \texttt{general\_17\_10000\_1.json}. The verifier checks the identity both by local geometric sums and in the independently certified prime-valuation representation. It does \emph{not} enumerate all divisors of these much larger inputs.
+
+A separate input-bounded test checked the exceptional-block encoding with $Y=5$ for all $196{,}592$ integers $k\le200{,}000$ having prime exponents at most $5$, and found no duplicate pair consisting of target and encoded block product. This is a stress test, not a complete census of all larger preimages of every target encountered.
+
+The numerical search with allowed input primes $101$ through $100{,}000$ ended at its configured limit without a witness and is inconclusive. A zero optimum for a selected random linear objective in another run is also not used as a noncollision certificate. Only the exact deletion certificate stated above supports a nonexistence claim.
+
+\begin{thebibliography}{9}
+\bibitem{teitler}
+Zach Teitler, \emph{Analytic Number Theory Notes}, Sections 6.2 and 6.3, especially Theorem 6.3.1.\newline
+\url{https://zteitler.github.io/analytic-number-theory-notes/sec-mertens.html}
+
+\bibitem{kominers}
+Scott Duke Kominers, \emph{On the Number of Solutions of $k\sigma(k)=n$}, working paper, 2026.\newline
+\url{https://scottkom.com/assets/articles/Kominers_ksigmak.pdf}
+
+\bibitem{noppakaew}
+Passawan Noppakaew and Prapanpong Pongsriiam, \emph{Product of Some Polynomials and Arithmetic Functions}, Journal of Integer Sequences 26 (2023), Article 23.9.1.\newline
+\url{https://cs.uwaterloo.ca/journals/JIS/VOL26/Pongsriiam/pong43.pdf}
+
+\bibitem{bibby}
+Sean Bibby, Pieter Vyncke, and Joshua Zelinsky, \emph{On the Third Largest Prime Divisor of an Odd Perfect Number}, arXiv:1908.09420. Its divisor-sum mutual-divisibility results concern local dependence patterns, not the present multiplicity bound.\newline
+\url{https://arxiv.org/abs/1908.09420}
+\end{thebibliography}
+\end{document}

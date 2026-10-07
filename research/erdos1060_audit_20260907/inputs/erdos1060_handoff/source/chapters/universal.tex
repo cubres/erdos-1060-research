@@ -1,0 +1,214 @@
+\chapter{Universal graphs and prime-order constraints}\label{ch:universal}
+\sourcebox{erdos1060\_prime\_order\_constraints.tex}{The cutoff implication and local arithmetic constraints are proved. Its universal subpolynomial-transversal hypothesis is unproved and conditionally obstructed in Chapter~\ref{ch:bh}.}
+\section{Definitions and the uniform gap}
+Let
+\[
+ h(k)=k\sigma(k),\qquad f_E(N)=\#\{k:h(k)=N,\ v_p(k)\le E\text{ for every prime }p\}.
+\]
+All logarithms are natural. The unrestricted multiplicity is $f(N)$, and the required estimate is
+\[
+ \log\max(1,f(N))=o\!\left(\frac{\log N}{\log\log N}\right).
+\]
+For a cutoff $x\ge2$, let $\mathcal G_E^{\pm}(x)$ have all primes at most $x$ as vertices. For $p\ne q$, put
+\[
+ a_{qp}(e)=v_q(\sigma(p^e)),\qquad 0\le e\le E.
+\]
+If $a_{qp}(j+1)-a_{qp}(j)\ne0$, include the signed edge
+\[
+ p\longrightarrow q,\qquad -\sgn\bigl(a_{qp}(j+1)-a_{qp}(j)\bigr).
+\]
+Both signs on one ordered pair are allowed. A positive cycle always means an \emph{elementary} directed cycle, with distinct vertices and edge-sign product $+1$. Repeating a negative cycle twice is not such a cycle.
+
+Define $A_E(x)$ to be the minimum number of vertices meeting every positive cycle in $\mathcal G_E^{\pm}(x)$. For cap two, define $T_2(x)$ in the same manner, but restricting to primes exceeding three and only cycles of length at least three. These quantities depend on $x,E$, not on a target or on its preimages.
+
+Positive-feedback bounds for discrete fixed points are established literature; see Richard~\cite{richard2022}. We provide the specific argument needed for these arithmetic equations.
+
+
+\section{A uniform implication, with its hypothesis left explicit}
+\begin{lemma}\label{universal:lem:positive}
+Suppose two different exponent vectors $e,f$ give preimages of one target, and agree outside a set of primes $S$. The universal signed graph on $S$ contains a positive elementary cycle on changed coordinates.
+\end{lemma}
+\begin{proof}
+The target-prime equations are
+\[
+ e_q+\sum_{p\ne q}a_{qp}(e_p)=v_q(N).
+\]
+There is no self-contribution because $q\nmid\sigma(q^{e_q})$. Put $d_q=e_q-f_q$. At a changed coordinate,
+\[
+ d_q=-\sum_{p\ne q}\delta_{qp},\qquad
+ \delta_{qp}=a_{qp}(e_p)-a_{qp}(f_p).
+\]
+Some changed $p$ satisfies $\delta_{qp}d_q<0$. Telescope between $e_p$ and $f_p$ using the consecutive integers from $0$ to $E$. At least one increasing step has the sign of $\delta_{qp}/d_p$. Thus the universal graph contains an edge $p\to q$ with sign $\sgn(d_q/d_p)$. Select such a predecessor for every changed coordinate. Following predecessors gives an elementary cycle, and its signs multiply to $+1$ by cancellation of the successive signs of the $d_p$. The cycle is contained in $S$.
+\end{proof}
+
+\begin{theorem}\label{universal:thm:cutoff}
+For $E\ge1$, $N\ge2$ and $x\ge2$, write
+\[
+ \omega_{>x}(N)=\#\{p\mid N:p>x\}.
+\]
+Then
+\begin{equation}\label{universal:eq:cutoff}
+ \boxed{\log\max(1,f_E(N))\le
+ \left(A_E(x)+\omega_{>x}(N)\right)\log(E+1)
+ \le\left(A_E(x)+\frac{\log N}{\log x}\right)\log(E+1).}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Fix all input exponents at primes greater than $x$ and at a positive-cycle transversal in $\mathcal G_E^{\pm}(x)$. There are at most the claimed number of records. Two distinct preimages with the same record would, by Lemma~\ref{universal:lem:positive}, produce a positive cycle avoiding the transversal. Hence each record permits at most one preimage. Finally, $\prod_{p\mid N,p>x}p\le N$ gives $\omega_{>x}(N)\log x\le\log N$.
+\end{proof}
+
+\begin{corollary}[Conditional sufficient criterion]\label{universal:cor:conditional}
+If, for every fixed $E$,
+\begin{equation}\label{universal:eq:unproved}
+ \boxed{A_E(x)=x^{o(1)}\quad(x\to\infty),}
+\end{equation}
+then Erd\H{o}s Problem 1060 has an affirmative answer.
+\end{corollary}
+\begin{proof}
+Fix $E$ and a positive constant $a$. To bound all targets $M\le N$, set $L=\log N$ and $x=L^a$. Under the hypothesis, for sufficiently large $N$,
+\[
+ A_E(L^a)\le L^{1/2}.
+\]
+Theorem~\ref{universal:thm:cutoff} therefore gives
+\[
+ \log\max_{M\le N}\max(1,f_E(M))
+ \le\log(E+1)\left(L^{1/2}+\frac{L}{a\log L}\right).
+\]
+After division by $L/\log L$, the limsup is at most $\log(E+1)/a$. Since $a$ is arbitrary, the fixed-cap estimate has zero constant.
+
+For completeness, split each unrestricted input into its coprime prime-power blocks of exponent exceeding $E$, and its remaining part. There are at most
+\[
+ G_E(N)=\prod_{p\mid N}\bigl(1+\max(v_p(N)-E,0)\bigr)
+\]
+possible high-exponent parts. Hence
+\[
+ f(N)\le G_E(N)\max_{M\le N}\max(1,f_E(M)).
+\]
+Put
+\[
+ c_E=\sup_{b\ge E+1}\frac{\log(b-E+1)}b.
+\]
+Splitting the primes at $z=L/(\log L)^3$ gives
+\[
+ \log G_E(N)\le(c_E+o_E(1))\frac{L}{\log L}.
+\]
+Indeed the primes at most $z$ contribute $O(L/(\log L)^2)$, since each factor has logarithm $O(\log L)$, and the larger primes contribute at most $c_EL/\log z$. For $E\ge2$,
+\[
+ c_E\le\sup_{b\ge E+1}\frac{\log b}{b}
+ =\frac{\log(E+1)}{E+1}\longrightarrow0.
+\]
+First fix $E$ sufficiently large, then take the target threshold sufficiently large. This proves the conclusion under \eqref{universal:eq:unproved}.
+\end{proof}
+
+\textbf{Equation \eqref{universal:eq:unproved} is not proved here.} It is a target-independent sufficient condition, potentially stronger than necessary, not a new name for an established finishing lemma.
+
+The particular previous gap also has a direct reduction. If $\tau_+(N)$ denotes the target-specific long positive-cycle transversal from the preceding note, then
+\begin{equation}\label{universal:eq:tau}
+ \boxed{\tau_+(N)\le T_2(x)+\omega_{>x}(N)
+ \le T_2(x)+\frac{\log N}{\log x}.}
+\end{equation}
+Delete all variable target primes greater than $x$, then a universal transversal. Every remaining target edge has a sign occurring in the universal graph: if its domain skips integers, telescope across the skipped adjacent steps and retain a step of the same sign. Thus no long positive cycle remains. In particular, $T_2(x)=x^{o(1)}$ would prove the previously missing cap-two transversal estimate. Neither growth assertion has been established.
+
+
+\section{Constructing the graph without factoring divisor sums}
+\begin{lemma}[Prime-order characterization]\label{universal:lem:orders}
+For distinct primes $p,q$ and $e\ge1$,
+\[
+ q\mid\sigma(p^e)
+ \quad\Longleftrightarrow\quad
+ \begin{cases}
+ q\mid e+1,&p\equiv1\pmod q,\\
+ \ord_q(p)\mid e+1,&p\not\equiv1\pmod q.
+ \end{cases}
+\]
+Consequently the possible nonzero residue classes modulo $q$ of a source prime, when $e\le E$, are exactly
+\[
+ \mathcal R_E(q)=
+ \bigl(\{1\}\text{ if }q\le E+1;\ \varnothing\text{ otherwise}\bigr)
+ \cup\bigcup_{\substack{2\le d\le E+1\\d\mid q-1}}
+ \{r:\ord_q(r)=d\}.
+\]
+For $q>E+1$, their number is at most $\sum_{d=2}^{E+1}\varphi(d)$.
+\end{lemma}
+\begin{proof}
+When $p\equiv1\pmod q$, the divisor sum is $e+1$ modulo $q$. Otherwise $p-1$ is invertible modulo $q$, so the divisor sum vanishes exactly when $p^{e+1}\equiv1\pmod q$. The residue classes of exact order $d$ number $\varphi(d)$. Existence of an exponent $e\le E$ with that order dividing $e+1$ is equivalent to $d\le E+1$.
+\end{proof}
+
+This characterizes the \emph{unsigned} underlying graph. Its acyclic deletion sets are also valid positive-cycle transversals. At cap two and $q>3$, the possible classes are $-1$ and the two primitive cube roots of unity, when the latter exist. Linear edges have both possible signs in the universal graph; quadratic edges have only negative sign.
+
+\begin{proposition}[A largest-prime restriction]\label{universal:prop:largest}
+Let $q>3$ be the largest prime divisor of a target having a cubefree preimage. Then
+\[
+ \boxed{v_q(N)\le4.}
+\]
+There are at most two smaller input primes that can contribute to the $q$-adic divisor-sum row. They are the prime values among the roots of $r^2+r+1\equiv0\pmod q$ in $1\le r<q$. When both exist, their sum is $q-1$, and each contributes exactly one at input exponent two.
+\end{proposition}
+\begin{proof}
+Every input prime is at most $q$. A smaller prime cannot supply $q$ through $p+1$, since $p\le q-2$. The polynomial $x^2+x+1$ has at most two roots modulo $q$; when it has roots, they are distinct for $q>3$ and sum to $q-1$ as representatives in $(0,q)$. Also
+\[
+ 0<p^2+p+1<q^2,
+\]
+so every nonzero contribution is exactly one. The input at $q$ supplies at most two more powers of $q$, and its own divisor sum supplies none.
+\end{proof}
+
+The bound four is sharp. Take
+\[
+ k=(29\cdot37\cdot67)^2=5168315881.
+\]
+Then
+\[
+ h(k)=28862924302091774349
+ =3^2 7^3\cdot13\cdot29^2\cdot31\cdot37^2\cdot67^4.
+\]
+Here
+\[
+ \sigma(29^2)=13\cdot67,\quad
+ \sigma(37^2)=3\cdot7\cdot67,\quad
+ \sigma(67^2)=3\cdot7^2\cdot31.
+\]
+In particular, largest-prime valuation four forces the input exponent at $q$ and both contributing roots to be two.
+
+\begin{proposition}[A version for every fixed cap]
+If $q>\max(E+1,3)$ is the largest prime divisor of a target with a cap-$E$ preimage, then
+\[
+ v_q(N)\le E+\sum_{d=2}^{E+1}\varphi(d)(\varphi(d)-1).
+\]
+\end{proposition}
+\begin{proof}
+For $p<q$ contributing to the row, let $d=\ord_q(p)>1$. Then $d\mid e+1\le E+1$. Since $q>E+1$, the quotient $(p^{e+1}-1)/(p^d-1)$ is nonzero modulo $q$ after cancellation: it is congruent to $(e+1)/d$ modulo $q$. Thus the contribution equals $v_q(p^d-1)=v_q(\Phi_d(p))$, where $\Phi_d$ is the $d$th cyclotomic polynomial. The last equality follows because $q$ cannot divide $p^s-1$ for $s<d$. Its complex root factorization gives
+\[
+ 0<\Phi_d(p)\le(p+1)^{\varphi(d)}<q^{\varphi(d)},
+\]
+so its valuation is at most $\varphi(d)-1$. There are at most $\varphi(d)$ source primes of exact order $d$ below $q$. Sum over $d$, and add the input exponent at $q$, which is at most $E$.
+\end{proof}
+
+These bounded predecessor counts do not alone prove that the universal graph has few feedback vertices. Disjoint positive directed triangles, for example, have indegree one and require one deleted vertex per triangle. The arithmetic residue restrictions, not sparsity by itself, would have to yield the missing asymptotic estimate.
+
+
+\section{A size-only cutoff does not eliminate all long cycles}
+The universal cap-two graph contains
+\[
+ 2179\to226201\to49831\to6229\to4021\to2011
+ \to14821\to14389\to4357\to2179.
+\]
+The edge types and integer quotients are
+\begin{center}
+\begin{tabular}{@{}rrlr@{}}\toprule
+$p$ & $q$ & Divisibility & Quotient\\\midrule
+2179&226201&$q\mid p^2+p+1$&21\\
+226201&49831&$q\mid p^2+p+1$&1026813\\
+49831&6229&$q\mid p+1$&8\\
+6229&4021&$q\mid p^2+p+1$&9651\\
+4021&2011&$q\mid p+1$&2\\
+2011&14821&$q\mid p^2+p+1$&273\\
+14821&14389&$q\mid p^2+p+1$&15267\\
+14389&4357&$q\mid p^2+p+1$&47523\\
+4357&2179&$q\mid p+1$&2\\\bottomrule
+\end{tabular}
+\end{center}
+Select the negative sign on all six quadratic edges and the positive sign on all three linear edges. Their product is positive. All vertices are prime, as checked by trial division, and
+\[
+ \min(p)^2=2011^2=4044121>226201=\max(p).
+\]
+Thus deleting all primes at most $\sqrt{x}$ does not necessarily hit every long positive cycle of the universal graph up to $x$. This is a universal-graph counterexample to that cutoff rule, not a collision and not a claim concerning the largest prime factor of a represented target.
+

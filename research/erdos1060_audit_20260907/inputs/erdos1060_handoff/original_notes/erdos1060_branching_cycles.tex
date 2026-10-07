@@ -1,0 +1,256 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,microtype,booktabs}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Branching certificates and quadratic feedback for k sigma(k)=N},pdfsubject={Proved partial results; the unrestricted Erdos conjecture is not proved}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\sig}{\sigma}
+\DeclareMathOperator{\rad}{rad}
+\title{Branching certificates and quadratic feedback\\for the equation \texorpdfstring{$k\sigma(k)=N$}{k sigma(k)=N}}
+\author{Research continuation: proved partial results and exact experiments}
+\date{6 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We replace an unsuccessful attempt to bound a collision denominator by exact reconstruction from exponent choices. For cubefree preimages, let $b(N)$ count the input-prime vertices in strongly connected components of size at least three in the admissible divisor-sum graph. We prove
+\[
+ \log\max(1,f_2(N))\le (b(N)+2)\log3+\sqrt{(\log2)\log N}.
+\]
+The quadratic two-cycle classification used here is due to prior literature. We also prove a forcing lemma preserving bounded-exponent multiplicities under multiplication of the target by sufficiently large $q(q+1)$, and a general branching-certificate bound. Exact computations show that the previous large-denominator collision requires only one binary decision under the supplied propagation rule. No uniform bound on larger-component branching is proved. The unrestricted Erd\H{o}s conjecture remains unproved in this investigation. No originality, human-referee, or formal-proof-assistant claim is made.
+\end{abstract}
+
+\section{The gap and the exact constraint model}
+Write
+\[
+ h(k)=k\sigma(k),\qquad f_E(N)=\#\{k:h(k)=N,\ v_p(k)\le E\ \text{for all }p\}.
+\]
+The full multiplicity is $f(N)$. All logarithms are natural. The desired conclusion is
+\[
+ \log\max(1,f(N))=o(\log N/\log\log N).
+\]
+The preceding audit showed that the small integer multiplier of a compatible collision becomes a rational number $T/R$ for arbitrary pairs. Smallness of $T/R$ does not bound $T$ or the number of changed divisor-sum labels. This note does not impose a new unjustified bound on $R$.
+
+For $N=\prod_q q^{\alpha_q}$ and an exponent cap $E$, define
+\[
+ D_p=\{0\le e\le\min(E,\alpha_p):h(p^e)\mid N\}\quad(p\mid N).
+\]
+A preimage is exactly an assignment $e_p\in D_p$ satisfying every equation
+\begin{equation}\label{eq:rows}
+ \alpha_q=\sum_{p\mid N}v_q(h(p^{e_p}))
+          =e_q+\sum_{p\ne q}v_q(\sigma(p^{e_p})).
+\end{equation}
+In particular $q\nmid\sigma(q^{e_q})$. Every target-prime row is retained, including rows at primes with no positive admissible input exponent. The local divisibility test rules out factors outside $N$; the equalities, not inequalities, require full target exhaustion.
+
+\section{What two-prime feedback can do}
+\begin{lemma}\label{lem:mixed}
+Let $p<q$ be primes with $p>3$. It is impossible to have both
+\[
+ q\mid p^2+p+1,\qquad p\mid q+1.
+\]
+Consequently, in the exponent-cap-two graph on primes exceeding $3$, every directed two-cycle uses the quadratic divisor sums in both directions.
+\end{lemma}
+\begin{proof}
+Set $c=(p^2+p+1)/q$. Reduction modulo $p$ gives $c\equiv-1\pmod p$, so $c\ge p-1$. Also $p\mid q+1$ and $q>p$ imply $q\ge2p-1$. Thus
+\[
+ 2p-1\le q\le\frac{p^2+p+1}{p-1}=p+2+\frac3{p-1},
+\]
+which is impossible for $p\ge5$. An edge from a smaller prime to a larger prime cannot use $\sigma(p)=p+1$. The only remaining mixed orientation is precisely the one just excluded.
+\end{proof}
+
+We use the following established classification, stated as Lemma 5 in Bibby--Vyncke--Zelinsky~\cite{bibby}. Positive integers $p,q$ satisfying mutual divisibility by $x^2+x+1$ are, up to order, consecutive terms of
+\begin{equation}\label{eq:sequence}
+ t_1=t_2=1,\qquad
+ t_{j+2}=\frac{t_{j+1}^2+t_{j+1}+1}{t_j}
+         =5t_{j+1}-t_j-1.
+\end{equation}
+They satisfy $p^2+q^2+p+q+1=5pq$, and $4t_j<t_{j+1}<5t_j$ for $j>3$. The initial terms are $1,1,3,13,61,291,\ldots$. These arithmetic facts, not a classification of whole collision graphs, are what is imported from that source.
+
+\begin{theorem}\label{thm:graph}
+Form the directed graph $G_2(N)$ as follows. Its vertices are primes $p>3$ with a positive exponent in $D_p$. Draw $p\to q$ for distinct vertices whenever $q\mid\sigma(p^e)$ for some $e\in D_p$. Let $b(N)$ be the total number of vertices in strongly connected components of size at least three, and let $r(N)$ be the number of components of size two. Then
+\begin{equation}\label{eq:graphfinite}
+ \boxed{f_2(N)\le9\,3^{b(N)}2^{r(N)}.}
+\end{equation}
+For $N\ge2$, this implies
+\begin{equation}\label{eq:graphasymp}
+ \boxed{\log\max(1,f_2(N))\le (b(N)+2)\log3+\sqrt{(\log2)\log N}.}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Fix the exponents at $2,3$, at a cost of at most $9$ assignments. Fix all exponents at vertices in components of size at least three, at a cost of at most $3^{b(N)}$ assignments. After removal of these fixed vertices, every remaining component has size one or two. Process these components in topological order of the condensation graph, using the orientation from a contributor to a recipient.
+
+A singleton exponent is forced by its own equation~\eqref{eq:rows}, because all possible external contributors have already been fixed. A forced exponent outside its admissible domain rejects the assignment.
+
+Consider a two-vertex component $p<q$. Lemma~\ref{lem:mixed} shows that the internal contributions can arise only from exponent two. We have $q\mid\sigma(p^2)$ and $p\mid\sigma(q^2)$. Furthermore,
+\[
+ v_q(\sigma(p^2))=1,
+\]
+because $p^2+p+1<q^2$. Write $A=v_p(\sigma(q^2))\ge1$. Subtracting already fixed external contributions from the two rows gives
+\begin{equation}\label{eq:twovars}
+ B_p=x+A\mathbf1_{\{y=2\}},\qquad
+ B_q=y+\mathbf1_{\{x=2\}},\qquad x,y\in\{0,1,2\}.
+\end{equation}
+There are at most two solutions. When $x<2$, the second equation fixes $y=B_q$, and the first then fixes $x$. When $x=2$, the second fixes $y=B_q-1$. Admissibility and other target rows can only eliminate these possibilities. Iterating over the components proves~\eqref{eq:graphfinite}.
+
+For each two-vertex component take its larger prime. These $r=r(N)$ primes are distinct divisors of $N$. By~\eqref{eq:sequence}, each is a distinct term $t_j$ with $j\ge5$. Ordering them increasingly as $q_1,\ldots,q_r$ yields
+\[
+ q_i\ge t_{i+4}>13\cdot4^i.
+\]
+Therefore
+\[
+ \log N\ge\sum_{i=1}^r\log q_i>
+  \frac{r(r+1)}2\log4=r(r+1)\log2
+\]
+when $r>0$. In particular $r\log2\le\sqrt{(\log2)\log N}$. Equation~\eqref{eq:graphasymp} follows; the case $r=0$ is immediate.
+\end{proof}
+
+\begin{corollary}
+On any class of targets satisfying
+\[
+ b(N)=o(\log N/\log\log N),
+\]
+the conjectured zero-constant estimate holds for $f_2(N)$. In particular it holds when all components of $G_2(N)$ have size at most two.
+\end{corollary}
+
+No uniform estimate of that kind for $b(N)$ has been proved here. The graph includes edges arising from mutually incompatible exponent choices, so its larger components can exaggerate actual ambiguity. The previous large-denominator example has a component of size nine, yet the adaptive calculation in Section~\ref{sec:experiments} needs one binary decision.
+
+\begin{lemma}[Smaller-base supply]\label{lem:supply}
+For a prime $q>3$, at most two primes $p<q$ can contribute to the $q$-row under exponent cap two. Such a contribution must come from $\sigma(p^2)$ and has valuation one. If two such bases exist, their sum is $q-1$.
+\end{lemma}
+\begin{proof}
+The linear sum $p+1$ is smaller than $q$. The polynomial $x^2+x+1$ has at most two roots modulo $q$. Bases in $(0,q)$ identify those residues uniquely; two roots have sum $-1$ modulo $q$, hence sum $q-1$ in this range. Finally $p^2+p+1<q^2$ proves valuation one.
+\end{proof}
+
+Thus, after larger exponents have been fixed, the row at $q$ has the form $B_q=e_q+\mathbf1_{e_r=2}+\mathbf1_{e_s=2}$, with nonexistent smaller-base terms omitted. This is a bounded local-dependence statement, not global injectivity.
+
+\section{A forcing lemma for a large attached prime}
+\begin{lemma}\label{lem:attachment}
+If $q>7$ is prime and $r\mid q+1$ is prime, then
+\[
+ q\nmid\sigma(r^j)\qquad(j=1,2,3).
+\]
+\end{lemma}
+\begin{proof}
+Here $r<q$. The linear case is immediate. If $q\mid r^2+r+1$, putting $c=(r^2+r+1)/q$ gives $c\equiv-1\pmod r$, hence $c\ge r-1$. Together with $q\ge2r-1$ this forces $r\le3$ as in Lemma~\ref{lem:mixed}. Directly checking $r=2,3$ leaves only the possible quadratic pair $(r,q)=(2,7)$, excluded by $q>7$.
+
+For $j=3$, factor $\sigma(r^3)=(r+1)(r^2+1)$. The prime $q$ cannot divide $r+1$. If $q\mid r^2+1$, its quotient is again $-1$ modulo $r$, giving
+\[
+ 2r-1\le q\le\frac{r^2+1}{r-1}=r+1+\frac2{r-1}.
+\]
+This forces $r\le3$; checking $r=2,3$ gives only $q=5$. This is also excluded.
+\end{proof}
+
+\begin{theorem}\label{thm:lift}
+Let $M\ge1$, let $E\in\{1,2,3\}$, and let $q$ be a prime with
+\[
+ q>\max\bigl(\{7\}\cup\{\sigma(r^3):r\mid M,\ r\text{ prime}\}\bigr).
+\]
+Then multiplication by $q$ is a bijection between the cap-$E$ preimages of $M$ and those of $Mq(q+1)$. In particular,
+\[
+ \boxed{f_E(Mq(q+1))=f_E(M).}
+\]
+\end{theorem}
+\begin{proof}
+The inequality implies that $q$ divides neither $M$ nor $q+1$, so the new target has $q$-adic valuation one. Every other input base $r$ divides $M$ or $q+1$. If $r\mid M$, then $\sigma(r^e)\le\sigma(r^3)<q$. If $r\mid q+1$, Lemma~\ref{lem:attachment} excludes $q\mid\sigma(r^e)$. Thus the only possible contribution to the $q$-row is the input factor $q$ itself, forcing $v_q(k)=1$. Write $k=qv$, with $\gcd(q,v)=1$, and divide the equation by $q(q+1)$ to obtain $h(v)=M$. Conversely, any preimage of $M$ is coprime to $q$ and can be multiplied by $q$. The exponent cap is preserved in both directions.
+\end{proof}
+
+This theorem controls an infinite family of enlargements without adding any multiplicity. It does not assert that a general target can be reduced by such enlargements.
+
+\section{Adaptive reconstruction and its counting cost}
+The attached program implements the following exact rule for~\eqref{eq:rows}. At every stage each variable has a finite nonempty domain of admissible exponents.
+
+For a target-prime row $q$ and a candidate exponent $e$ at $p$, compute the set of all possible sums of contributions from the other variables' current domains. Delete $e$ if $\alpha_q-v_q(h(p^e))$ is absent from that set. Sum sets are computed using finite-set dynamic programming, with no floating point. Repeat until stable. All deletions are necessary conditions for a solution, so no solution is removed.
+
+Next temporarily fix each remaining candidate and repeat this row propagation. A candidate leading to a contradiction is deleted. If choices remain, use a deterministic rule to select the next variable and branch on all its candidates. The implemented score, in order, minimizes the maximum number of ambiguous variables in a propagated child, the total remaining domain excess across children, the branching arity, and the input prime. It uses no completed-fiber data. At a leaf, all rows are checked exactly.
+
+An execution with no time or node cutoff visits a finite tree: every actual branch fixes a previously ambiguous exponent. Completed executions therefore enumerate precisely the requested fiber. With a resource cutoff, an interrupted execution is explicitly labeled incomplete and supplies no nonexistence certificate.
+
+\begin{proposition}[Branching-certificate bound]\label{prop:cost}
+For any deterministic finite exact reconstruction tree, let $d_1,\ldots,d_s$ be the branch arities along a successful path, and put
+\[
+ B=\max_{\text{successful paths}}\sum_{i=1}^s\log d_i.
+\]
+There are at most $e^B$ successful leaves.
+\end{proposition}
+\begin{proof}
+At each branch choose uniformly among its $d_i$ children. Distinct successful terminal paths are disjoint events. Each has probability $\prod_i d_i^{-1}\ge e^{-B}$. Their probabilities sum to at most one. Forced steps have no branching cost.
+\end{proof}
+
+This argument does not charge an additional $\log\omega(N)$ for identifying each branch location: the target, the earlier choices, and the public deterministic rule reconstruct that location. It bounds the number of successful leaves, not the run time; propagation and failed-branch tests may be expensive.
+
+A sufficient new analytic target is to bound this cost by $o(\log N/\log\log N)$ for every fixed exponent cap. No such uniform cost bound is proved here. It is a substantive algorithm-specific assertion, not a definition equating the cost with $\log f_E(N)$. A poorly chosen reconstruction tree can have a large cost even when the fiber is tiny.
+
+\section{Exact experiments}\label{sec:experiments}
+Let
+\[
+ M=5276516179938729922490847708056660616574496169354744299520.
+\]
+The preceding audit's inputs are
+\[
+ a=60629697601617236747379985403,\qquad
+ b=61655391632564660609643619057.
+\]
+The new complete search confirms $h^{-1}(M)=\{a,b\}$. For both the unrestricted and cubefree runs, its deterministic reconstruction needs exactly one binary branch, at prime $11$, followed by forced propagation. The branch states are $v_{11}(k)=0$ and $2$.
+
+This is the same pair for which the prior audit found $R=394214768640$, $T=436988805120$, $T/R=378/341$, and sixteen changed small-prime labels. Those changes do not represent sixteen independent decisions.
+
+\begin{center}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Target & Input cap & Multiplicity & Max. decisions & Max. $\prod d_i$\\
+\midrule
+$M$ & $2$ & $2$ & $1$ & $2$\\
+$M$ & unrestricted & $2$ & $1$ & $2$\\
+$336M$ & $2$ & $4$ & $2$ & $4$\\
+$336M$ & unrestricted & $6$ & $2$ & $9$\\
+$2^{28}3^3\cdot5\cdot7\cdot13\cdot31\cdot127\cdot8191$
+ & unrestricted & $7$ & $2$ & $8$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The final target is included as a known test value from the multiplicity literature~\cite{kominers}. Only its complete fiber, not any minimality assertion, was checked here. A ``decision'' counts a charged branch node; not every branch is binary.
+
+Five additional tests multiply $M$ by $h(D)$, where $D$ is the product of the first $t$ primes at least $10007$ congruent to $2$ modulo $3$, for $t=0,5,10,20,40$. The resulting targets have $58,98,138,218,379$ digits. Every cap-two fiber has exactly two members and a single binary branch. This is a report on five selected targets, not a universal scaling theorem. Twelve further seeded random represented targets, with $58$ to $208$ digits and cap two or three, each had a unique preimage at the requested cap and no charged branching.
+
+For $G_2(M)$, the computation gives nineteen vertices, one component of size nine, the two-vertex component $\{13,61\}$, and eight singleton components. Thus the raw component-size upper bound is much larger than the actual fiber. Propagation can remove choices that the static graph retains.
+
+The standard-library verifier independently enumerates the entire cap-two fiber by target divisors for each of the $1248$ inputs $k\le1500$ with all prime exponents at most two. It computes $\sigma$ by direct divisor summation, independently of the reconstruction algorithm. All comparisons agree; $66$ of these checks encounter a target with multiple cap-two preimages. These are checks, not counts of distinct targets.
+
+The verifier also checks the local mutual-divisibility and root-supply lemmas for primes at most $2000$, and reruns the six primary and seventeen stress computations. The large-target reruns use the same exact enumeration algorithm; they are reproducibility checks, not a claim of an independently implemented second large-target solver. Every listed search completed. No statement here relies on an optimizer's infeasibility status, a numerical tolerance, or a timeout.
+
+\section{The remaining asymptotic assertion}
+For completeness, the fixed-cap reduction is as follows. Split a preimage into its full prime-power blocks of exponent greater than $E$ and the remaining coprime factor. The first factor has at most
+\[
+ G_E(N)=\prod_{p\mid N}\bigl(1+\max(\alpha_p-E,0)\bigr)
+\]
+possibilities. With $F_E(X)=\max_{M\le X}f_E(M)$,
+\[
+ f(N)\le G_E(N)F_E(N).
+\]
+For fixed $E$, put
+\[
+ c_E=\sup_{a\ge E+1}\frac{\log(a-E+1)}a.
+\]
+Splitting primes at $z=\log N/(\log\log N)^3$ gives
+\[
+ \log G_E(N)\le(c_E+o_E(1))\frac{\log N}{\log\log N},\qquad c_E\longrightarrow0.
+\]
+Indeed small primes contribute $O(\log N/(\log\log N)^2)$, and the larger-prime sum is at most $c_E\log N/\log z$. For $E\ge2$ one can bound $c_E\le\log(E+1)/(E+1)$.
+
+Hence a zero-constant bound for $f_E$ for every fixed $E$ would finish the original problem: choose $E$ first, then the sufficiently large target threshold. The graph theorem only treats the two-vertex feedback part of the case $E=2$. It proves neither that $b(N)$ is uniformly negligible nor that the adaptive branch cost is uniformly negligible. Higher exponents introduce further divisor-sum dependence types.
+
+The proposed next task is therefore to bound the cost of genuinely surviving choices in larger components using their exact valuation capacities. The previous ``small ratio'' gap is avoided in this formulation, but the uniform branching estimate is still an unproved mathematical assertion. It is not valid to infer it from the successful experiments, from bounded local degree, or from the classification of two-cycles alone.
+
+\begin{thebibliography}{9}
+\bibitem{bibby} S. Bibby, P. Vyncke and J. Zelinsky, \emph{On the Third Largest Prime Divisor of an Odd Perfect Number}, arXiv:1908.09420v3, 2021. Lemmas 4 and 5 concern mixed pairs and quadratic mutual-divisibility pairs.\newline
+\url{https://arxiv.org/abs/1908.09420}
+\bibitem{kominers} S. D. Kominers, \emph{On the Number of Solutions of $k\sigma(k)=n$}, working paper. General multiplicity bounds and numerical test values.\newline
+\url{https://scottkom.com/assets/articles/Kominers_ksigmak.pdf}
+\bibitem{audit} \emph{Erd\H{o}s Problem 1060: proof-status audit and the exact missing factor}, previous internal note in this investigation. The arbitrary-pair identity and the explicit large-denominator witness are the starting point here; this is not an external publication or priority claim.
+\end{thebibliography}
+\end{document}

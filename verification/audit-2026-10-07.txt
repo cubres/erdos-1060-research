@@ -1,0 +1,7 @@
+Direct complete fiber: 7 solutions, 7424 divisors
+Direct complete fiber: 6 solutions, 12288 divisors
+Direct complete fiber: 9 solutions, 23552 divisors
+Complete cap-two fiber: 2 solutions, 44 nodes
+Complete cap-two fiber: 4 solutions, 51 nodes
+Complete cap-two fiber: 1 solutions, 9 nodes
+PASS: all independent finite checks completed

@@ -1,0 +1,325 @@
+\chapter{Exact integer models and algebraic certificates}\label{ch:integer}
+\sourcebox{erdos1060\_exact\_certificates.tex}{Finite exact certificates. A small real nullity is sufficient, not necessary, for a small binary fiber; the fractional obstruction is included in this chapter.}
+\section{The exact indicator model}
+Write $N=\prod_{q\in S}q^{\alpha_q}$. For each $p\in S$, start with
+\[
+ D_p=\{0\le e\le\min(E,\alpha_p):h(p^e)\mid N\}.
+\]
+Introduce one indicator $x_{p,e}\in\{0,1\}$ for each $e\in D_p$. Impose
+\begin{align}
+ \sum_{e\in D_p}x_{p,e}&=1 &&(p\in S),\label{integer:eq:onehot}\\
+ \sum_{p\in S}\sum_{e\in D_p}v_q(h(p^e))x_{p,e}&=\alpha_q &&(q\in S).\label{integer:eq:valuation}
+\end{align}
+Together these are $Ax=b$, with an integer matrix $A$ and integer right-hand side $b$. They encode the fiber exactly. The local divisibility test excludes outside factors, and the equalities exhaust every target valuation. The rows for target primes that cannot appear positively in the input are retained.
+
+It is safe to delete a candidate exponent if, in any row, its contribution cannot be completed by a sum of contributions from the other variables' current domains. The attainable sums are finite integer sets. Repeating this necessary-condition operation preserves every solution. The numerical certificate below uses this preliminary operation; applying its weights to all unpruned local options would not be justified.
+
+\begin{lemma}[Exact nonnegative scores]\label{integer:lem:dual}
+Let $A_j$ be the columns of the current indicator model. Suppose rational row weights $y$ satisfy
+\[
+ y^TA_j\ge0\quad\text{for every }j,\qquad y^Tb=0.
+\]
+Then every feasible nonnegative assignment satisfies $x_j=0$ whenever $y^TA_j>0$.
+\end{lemma}
+\begin{proof}
+For $Ax=b$, we have
+\[
+ 0=y^Tb=\sum_j(y^TA_j)x_j.
+\]
+Each summand is nonnegative, so every positive-score variable vanishes.
+\end{proof}
+
+This is an exact certificate, regardless of how the weights were discovered. Negative row weights are allowed; it is the resulting column scores that must be nonnegative. Multiplying by a common denominator gives an integer certificate.
+
+\begin{lemma}[Dimension bounds the number of binary solutions]\label{integer:lem:rank}
+If an $m$-column real linear system $Ax=b$ has rank $r$, it has at most $2^{m-r}$ binary solutions.
+\end{lemma}
+\begin{proof}
+Choose $r$ linearly independent columns. Fixing the other $m-r$ coordinates determines at most one assignment on those columns. There are at most $2^{m-r}$ binary assignments to the fixed coordinates.
+\end{proof}
+
+Hence, after safe pruning and exact zero-budget certificates, an $m_0$-column residual model with rational rank $r_0$ gives
+\[
+ \boxed{f_E(N)\le2^{m_0-r_0}.}
+\]
+This is a finite bound, not a uniform estimate for $m_0-r_0$.
+
+\begin{proposition}[A version with a positive budget]\label{integer:prop:budget}
+Suppose $s_j=y^TA_j\ge0$ and $\Delta=y^Tb\ge0$. Let $m_+$ count the positive-score columns, and suppose each such score is at least $\eta>0$. Put $B=\lfloor\Delta/\eta\rfloor$. If the zero-score submatrix has $m_0$ columns and rank $r_0$, then
+\[
+ \#\{x\in\{0,1\}^m:Ax=b\}
+ \le 2^{m_0-r_0}\sum_{j=0}^{\min(B,m_+)}\binom{m_+}{j}
+ \le 2^{m_0-r_0}(1+m_+)^B.
+\]
+\end{proposition}
+\begin{proof}
+The identity $\sum s_jx_j=\Delta$ allows at most $B$ selected positive-score coordinates. Once they are fixed, the zero-score coordinates solve a linear system whose coefficient matrix has rank $r_0$, so Lemma~\ref{integer:lem:rank} applies. Summing over the positive-coordinate subsets proves the first inequality. Encoding each subset as a sorted list padded with empty symbols to length $B$ proves the second.
+\end{proof}
+
+
+\section{An exact certificate for the nine-vertex example}
+Let
+\[
+ M=5276516179938729922490847708056660616574496169354744299520.
+\]
+Its prime factorization is
+\begin{align*}
+ M={}&2^{20}3^5\cdot5\cdot7^3\cdot11^2 13^2 17^2 19^2\cdot23\cdot31^2\cdot43\cdot61^2\\
+ &\cdot83\cdot97\cdot127^2\cdot271\cdot307^2\cdot331\cdot367\cdot733\cdot5419.
+\end{align*}
+For exponent cap two, the exact local model has 53 indicators. Integer row-support propagation removes five, leaving 48. An integer vector $y$ has zero target budget and nonnegative scores on all 48 columns. Ten scores are positive, so their indicators vanish by Lemma~\ref{integer:lem:dual}. The 38 retained columns have exact rational rank 37.
+
+Consequently, the entire cubefree fiber has at most two members. Fixing the indicator $x_{11,0}$ to 0 or 1 gives the following two valid integer assignments:
+\[
+ a=60629697601617236747379985403,\qquad
+ b=61655391632564660609643619057.
+\]
+Their factors are
+\begin{align*}
+ a&=11^2 13^2\cdot17\cdot19\cdot31\cdot61\cdot97\cdot127^2\cdot271\cdot307^2\cdot331\cdot367,\\
+ b&=13\cdot17^2 19^2\cdot23\cdot31^2\cdot43\cdot61^2\cdot83\cdot127\cdot307\cdot733\cdot5419.
+\end{align*}
+Thus
+\[
+ \boxed{\{k:h(k)=M,\ k\text{ cubefree}\}=\{a,b\}.}
+\]
+The count itself was already known from the preceding exact search. The present result is a different certificate for its completeness, not a new record or a claim that all fibers behave this way.
+
+The coefficient vector is recorded as prime-row prices $y_q$ and block-row offsets $\beta_p$. A local score is
+\[
+ s(p,e)=\beta_p+\sum_q y_qv_q(h(p^e)).
+\]
+The certificate includes all prices and offsets, every retained option, the positive scores, and the free indicator. The standard-library checker rebuilds the local model, independently repeats necessary-condition propagation, verifies all score inequalities and the zero budget, and computes rank by rational Gaussian elimination. It solves the two endpoint systems and independently constructs and sums all 20,736 divisors of each input.
+
+\begin{center}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Stage & Indicators & Rational nullity\\
+\midrule
+All locally admissible options & 53 & not used\\
+After exact row-support pruning & 48 & 6\\
+After the integer score certificate & 38 & 1\\
+After fixing $x_{11,0}$ & 38 & 0\\
+\bottomrule
+\end{tabular}
+\end{center}
+The rational-nullity figure 6 includes all prime rows and all block rows. The final fixed-indicator equation increases the rank to 38.
+
+
+\section{Adaptive reconstruction and its counting cost}
+The attached program implements the following exact rule for~\eqref{integer:eq:valuation}. At every stage each variable has a finite nonempty domain of admissible exponents.
+
+For a target-prime row $q$ and a candidate exponent $e$ at $p$, compute the set of all possible sums of contributions from the other variables' current domains. Delete $e$ if $\alpha_q-v_q(h(p^e))$ is absent from that set. Sum sets are computed using finite-set dynamic programming, with no floating point. Repeat until stable. All deletions are necessary conditions for a solution, so no solution is removed.
+
+Next temporarily fix each remaining candidate and repeat this row propagation. A candidate leading to a contradiction is deleted. If choices remain, use a deterministic rule to select the next variable and branch on all its candidates. The implemented score, in order, minimizes the maximum number of ambiguous variables in a propagated child, the total remaining domain excess across children, the branching arity, and the input prime. It uses no completed-fiber data. At a leaf, all rows are checked exactly.
+
+An execution with no time or node cutoff visits a finite tree: every actual branch fixes a previously ambiguous exponent. Completed executions therefore enumerate precisely the requested fiber. With a resource cutoff, an interrupted execution is explicitly labeled incomplete and supplies no nonexistence certificate.
+
+\begin{proposition}[Branching-certificate bound]\label{adaptive:prop:cost}
+For any deterministic finite exact reconstruction tree, let $d_1,\ldots,d_s$ be the branch arities along a successful path, and put
+\[
+ B=\max_{\text{successful paths}}\sum_{i=1}^s\log d_i.
+\]
+There are at most $e^B$ successful leaves.
+\end{proposition}
+\begin{proof}
+At each branch choose uniformly among its $d_i$ children. Distinct successful terminal paths are disjoint events. Each has probability $\prod_i d_i^{-1}\ge e^{-B}$. Their probabilities sum to at most one. Forced steps have no branching cost.
+\end{proof}
+
+This argument does not charge an additional $\log\omega(N)$ for identifying each branch location: the target, the earlier choices, and the public deterministic rule reconstruct that location. It bounds the number of successful leaves, not the run time; propagation and failed-branch tests may be expensive.
+
+A sufficient new analytic target is to bound this cost by $o(\log N/\log\log N)$ for every fixed exponent cap. No such uniform cost bound is proved here. It is a substantive algorithm-specific assertion, not a definition equating the cost with $\log f_E(N)$. A poorly chosen reconstruction tree can have a large cost even when the fiber is tiny.
+
+
+\section*{Fractional obstruction: an indispensable counterexample}
+\section{A general obstruction to zero-budget certificates}\label{fractional:a-general-obstruction-to-zero-budget-certificates}
+
+\textbf{Lemma.} Suppose \(Ax^*=b\) has a solution \(x^*>0\). If row weights \(y\) satisfy
+
+\[
+y^{\mathsf T}A_j\ge0\quad\text{for every column }j,
+\qquad y^{\mathsf T}b=0,
+\]
+
+then \(y^{\mathsf T}A_j=0\) for every column.
+
+\textbf{Proof.} The identity
+
+\[
+0=y^{\mathsf T}b=\sum_j(y^{\mathsf T}A_j)x_j^*
+\]
+
+is a sum of nonnegative terms. Since every \(x_j^*\) is positive, every column score must vanish. This works for real as well as rational row weights. □
+
+The lemma concerns zero-budget certificates. It does not exclude positive-budget bounds, additional integer-valid inequalities, or branching.
+
+\section{An arithmetic example inside the actual problem}\label{fractional:an-arithmetic-example-inside-the-actual-problem}
+
+Take
+
+\[
+N_0=504654433920=2^7 3^3\cdot5\cdot7^2\cdot13\cdot19^2\cdot127.
+\]
+
+The candidate input is
+
+\[
+k_0=3\cdot5\cdot7\cdot13\cdot19^2=492765.
+\]
+
+Its divisor sum is
+
+\[
+\sigma(k_0)=4\cdot6\cdot8\cdot14\cdot381=1024128,
+\]
+
+and \(k_0\sigma(k_0)=N_0\).
+
+For cap \(E=2\), the initially admissible domains are
+
+\[
+\begin{aligned}
+D_2=D_3=D_7=D_{19}&=\{0,1,2\},\\
+D_5=D_{13}=D_{127}&=\{0,1\}.
+\end{aligned}
+\]
+
+There are 18 local-option indicators. The only option removed by iterated single-row integer-support propagation is exponent zero at 19. In the 19-adic row the equation is
+
+\[
+x_{19,1}+2x_{19,2}+x_{7,2}=2.
+\]
+
+If \(e_{19}=0\), the other terms supply at most one. Hence this option is impossible. The exact checker verifies that each of the 17 remaining options has a completion in each individual valuation row, so this particular propagation operation is at a fixed point.
+
+The surviving coefficient matrix has 17 columns and exact rational rank 14. The following parameterization gives all its real solutions. Set
+
+\[
+u=x_{7,1},\qquad v=x_{13,1},\qquad t=x_{127,1}.
+\]
+
+\begin{longtable}[]{@{}lrrr@{}}
+\toprule\noalign{}
+Prime & \(x_{p,0}\) & \(x_{p,1}\) & \(x_{p,2}\) \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+2 & \(3-2v-4t\) & \(u+3v+6t-4\) & \(2-u-v-2t\) \\
+3 & \(u+2v+5t-3\) & \(3-u-v-5t\) & \(1-v\) \\
+5 & \(t\) & \(1-t\) & inadmissible \\
+7 & \(1-u-t\) & \(u\) & \(t\) \\
+13 & \(1-v\) & \(v\) & inadmissible \\
+19 & removed & \(t\) & \(1-t\) \\
+127 & \(1-t\) & \(t\) & inadmissible \\
+\end{longtable}
+
+Substitution verifies the equations. For completeness, exact Gaussian elimination gives rank 14, and the three parameter directions are independent because their coordinates at \((7,1),(13,1),(127,1)\) form the identity matrix. Consequently the parameterization is exhaustive, not just a subfamily of solutions.
+
+\subsection{A positive fractional solution}\label{fractional:a-positive-fractional-solution}
+
+Choose
+
+\[
+(u,v,t)=\left(\frac13,\frac23,\frac13\right).
+\]
+
+The resulting probabilities, in increasing order of the surviving exponent domains, are
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+Prime & Domain & Coordinate values \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+2 & 0, 1, 2 & 1/3, 1/3, 1/3 \\
+3 & 0, 1, 2 & 1/3, 1/3, 1/3 \\
+5 & 0, 1 & 1/3, 2/3 \\
+7 & 0, 1, 2 & 1/3, 1/3, 1/3 \\
+13 & 0, 1 & 1/3, 2/3 \\
+19 & 1, 2 & 1/3, 2/3 \\
+127 & 0, 1 & 2/3, 1/3 \\
+\end{longtable}
+
+Every surviving coordinate lies strictly between zero and one. A neighborhood of this parameter triple is therefore feasible over the reals, proving that the feasible real set really has dimension three.
+
+By the preceding positivity lemma, no nonnegative zero-budget row certificate can remove any of these 17 surviving columns, no matter how its weights are chosen.
+
+\subsection{The integer fiber is nevertheless a singleton}\label{fractional:the-integer-fiber-is-nevertheless-a-singleton}
+
+For a binary solution, \(u,v,t\) are themselves binary. The first entry of the parameterization gives
+
+\[
+x_{2,0}=3-2v-4t\ge0.
+\]
+
+If \(t=1\), the right-hand side is at most \(-1\), which is impossible. Therefore \(t=0\). Next,
+
+\[
+x_{2,0}=3-2v\le1
+\]
+
+forces \(v=1\). Finally,
+
+\[
+x_{2,1}=u-1\ge0
+\]
+
+forces \(u=1\). Substitution gives exactly the exponent vector of \(k_0\). Thus
+
+\[
+\boxed{f_2(N_0)=1.}
+\]
+
+These are elementary integer-valid deductions. For example, \(4t+2v+x_{2,0}=3\), together with nonnegativity, implies \(t\le3/4\); its integrality upgrades this to \(t=0\). That rounding is valid for the binary problem and is false as an exclusion of all fractional feasible points.
+
+\subsection{Separate check of the unrestricted fiber}\label{fractional:separate-check-of-the-unrestricted-fiber}
+
+Every preimage divides \(N_0\). The checker enumerates all
+
+\[
+(7+1)(3+1)(1+1)(2+1)(1+1)(2+1)(1+1)=2304
+\]
+
+divisors of \(N_0\), using the full target exponent bounds rather than cap two, and evaluates their \(h\)-values exactly. It finds
+
+\[
+\boxed{f(N_0)=1,\qquad h^{-1}(N_0)=\{492765\}.}
+\]
+
+This complete finite enumeration is not used to justify the three-dimensional cubefree parameterization or the binary proof above.
+
+\section{Exactly what this does and does not rule out}\label{fractional:exactly-what-this-does-and-does-not-rule-out}
+
+It rules out the shortcut that sufficient zero-budget nonnegative linear certificates must remove all fractional degrees of freedom whenever an arithmetic fiber has a unique integer preimage. They cannot remove a single one of the surviving coordinates in this example.
+
+It does \textbf{not} disprove a uniform subexponential bound on residual nullity: three is a small constant. It also does not invalidate the earlier bound \(f_E(N)\le2^{m-r}\), which gives \(1\le8\) here. It does not rule out the positive-budget certificate formulation or more powerful sound domain reductions. Global integer reasoning already resolves this particular case.
+
+What remains missing is a uniform theorem controlling the integer choices that survive all proposed reductions. Solving more particular targets, or finding more row weights, does not prove such a theorem.
+
+\section{The actual objects that need counting}\label{fractional:the-actual-objects-that-need-counting}
+
+For any one feasible binary assignment \(x^{(0)}\), put
+
+\[
+\Lambda_N=\{z\in\mathbb Z^m:Az=0\}.
+\]
+
+The exact fiber is in bijection with
+
+\[
+\Lambda_N\cap\prod_{j=1}^m[-x_j^{(0)},1-x_j^{(0)}].
+\]
+
+Indeed, an integer point in this box gives a binary vector \(x=x^{(0)}+z\), and \(Ax=b\) holds precisely when \(Az=0\). Conversely, every binary solution gives such a lattice point.
+
+This is an exact reformulation, \textbf{not a new upper bound}. It explains why the real dimension can exaggerate the ambiguity. A useful finishing argument must exploit special arithmetic properties of the divisor-sum matrix to bound these box-constrained integer points, or prove a uniformly inexpensive branching/rounding procedure. No such bound is supplied here.
+
+The existing reduction would finish Erdős 1060 if one proved, for every fixed cap \(E\),
+
+\[
+\log\max_{M\le X}\max(1,f_E(M))=o_E(\log X/\log\log X).
+\]
+
+That estimate is still not established. It must not be inserted as an unproved lemma into a purported completion.

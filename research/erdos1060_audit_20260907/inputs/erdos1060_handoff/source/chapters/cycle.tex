@@ -1,0 +1,70 @@
+\chapter{Arithmetic restrictions on feedback cycles}\label{ch:cycle}
+\sourcebox{erdos1060\_exact\_certificates.tex}{Complete proofs excluding cycles with exactly one quadratic edge and controlling simple quadratic cycle components. These do not control arbitrary overlapping cycles.}
+\section{Cycles with one quadratic edge are impossible}
+On primes greater than $3$, call $p\to q$ a linear edge if $q\mid p+1$, and a quadratic edge if $q\mid p^2+p+1$. Both refer to divisibilities, not to a claimed collision.
+
+\begin{theorem}\label{cycle:thm:onequad}
+A directed cycle on primes exceeding $3$ cannot contain exactly one quadratic edge and otherwise only linear edges.
+\end{theorem}
+\begin{proof}
+Suppose the quadratic edge is $p\to q$, where $q\mid p^2+p+1$. The rest of the cycle is a nonempty linear path
+\[
+ q=q_0\longrightarrow q_1\longrightarrow\cdots\longrightarrow q_s=p.
+\]
+Write $q_i+1=a_iq_{i+1}$. Since the vertices are odd primes, each $a_i$ is an even integer at least $2$. Successive substitution gives
+\[
+ q=Ap-B,
+\]
+where
+\[
+ A=\prod_{i=0}^{s-1}a_i,\qquad
+ B=1+a_0+a_0a_1+\cdots+a_0\cdots a_{s-2}.
+\]
+The expression for $B$ is $1$ when $s=1$. We have $0<B<A$: dividing by $A$ expresses $B/A$ as a sum of $s$ reciprocals of suffix products, bounded by $\sum_{j=1}^s2^{-j}<1$. Also $A$ is even.
+
+Set $c=(p^2+p+1)/q$. Reduction modulo $p$ gives $cB\equiv-1\pmod p$. Thus
+\[
+ cB=tp-1
+\]
+for an integer $t\ge1$. The equality $c(Ap-B)=p^2+p+1$ then gives
+\[
+ cA=p+1+t.
+\]
+Consequently,
+\[
+ 0<c(A-B)=(1-t)p+t+2.
+\]
+If $t\ge2$, the right-hand side is at most $4-p<0$, since $p\ge5$. Hence $t=1$, so $cA=p+2$. Its left-hand side is even and its right-hand side is odd, a contradiction.
+\end{proof}
+
+Every linear edge decreases its prime vertex. Thus a directed cycle has at least one quadratic edge, and Theorem~\ref{cycle:thm:onequad} improves this to at least two. It does not bound how many cycles or independent choices may occur.
+
+\begin{proposition}\label{cycle:prop:oddcycle}
+Suppose a strongly connected component in the cubefree admissible graph is a simple directed cycle, and every internal contribution arises only at input exponent two. After contributions from other components have been fixed, the component has at most one filling if its length is odd, and at most two fillings if its length is even.
+\end{proposition}
+\begin{proof}
+Its equations have the form
+\[
+ B_i=e_i+a_{i-1}\mathbf1_{\{e_{i-1}=2\}},\qquad e_i\in\{0,1,2\},\quad a_i\ge1,
+\]
+with cyclic indices. Define $F_i(x)=B_i-a_{i-1}\mathbf1_{\{x\ge2\}}$ for real $x$. Each $F_i$ is nonincreasing and agrees with the required rule on valid exponents. An odd composition is nonincreasing, so has at most one fixed point: $x<y$ and $F(x)=x,F(y)=y$ would imply $x\ge y$. Any nonempty composition has an image of at most two points, proving the even case. Once one exponent is specified, the other exponents are forced. Domain restrictions and unused target rows only remove possibilities.
+\end{proof}
+
+
+\begin{corollary}\label{cycle:cor:graphclass}
+For a target $N$, consider the cap-two admissible graph on input primes greater than $3$: an exponent $e\in\{1,2\}$ is admissible at $p$ when $h(p^e)\mid N$, and it creates $p\to q$ when $q\mid\sigma(p^e)$. Suppose every strongly connected component is a singleton, a two-vertex component, or a simple odd directed cycle whose internal contributions are only quadratic. Then
+\[
+ \log\max(1,f_2(N))\le 2\log3+\sqrt{(\log2)\log N}.
+\]
+In particular the zero-constant estimate holds for $f_2$ on this graph-defined class, allowing components of arbitrarily large odd size.
+\end{corollary}
+\begin{proof}
+Fix the exponents at $2,3$ in at most nine ways and process components in topological order. A singleton is forced by its own valuation equation. Proposition~\ref{cycle:prop:oddcycle} gives at most one filling for an allowed odd component. A two-vertex component is purely quadratic by Theorem~\ref{cycle:thm:onequad} and has at most two fillings by the same proposition.
+
+If there are $r$ two-vertex components, their larger prime vertices are distinct consecutive-term endpoints in the quadratic mutual-divisibility sequence of \cite[Lemma 5]{bibby}, beginning $1,1,3,13,61,291,\ldots$. After the initial terms its successive ratio exceeds four. Ordering the larger primes therefore gives $q_i>13\cdot4^i$, and
+\[
+ \log N\ge\sum_{i=1}^r\log q_i>r(r+1)\log2
+\]
+for $r>0$. The bound $f_2(N)\le9\cdot2^r$ proves the assertion. This is the two-component counting estimate from the previous note, now with the unique odd components included.
+\end{proof}
+

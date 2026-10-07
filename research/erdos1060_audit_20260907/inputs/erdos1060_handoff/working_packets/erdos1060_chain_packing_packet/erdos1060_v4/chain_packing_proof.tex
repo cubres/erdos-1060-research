@@ -1,0 +1,307 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.4em}
+\setlength{\headheight}{15pt}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small Divisibility-chain packing for $k\sigma(k)$}
+\fancyhead[R]{\small Partial result}
+\fancyfoot[C]{\thepage}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem*{remark}{Remark}
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\lcm}{lcm}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\NN}{\mathbb N}
+\newcommand{\FF}{\mathcal F}
+\title{Divisibility-chain packing and the multiplicity\\of $k\sigma(k)$}
+\author{A further partial result toward Erd\H{o}s Problem 1060}
+\date{5 September 2026}
+\begin{document}
+\maketitle\thispagestyle{fancy}
+\begin{abstract}
+Let $f(N)=\#\{k\ge1:k\sigma(k)=N\}$. We prove
+\[
+\log\max\{1,f(N)\}\le
+\left(\frac12\log\left(1+\frac1{\sqrt2}\right)+o(1)\right)
+\frac{\log N}{\log\log N}.
+\]
+The constant is $0.267399998369785\ldots$. The main new ingredient is an incompatibility condition for equal values of $k\sigma(k)$: once the product of $p/(p-1)$ over the allowed input primes is at most $4$, two distinct preimages cannot have divisibility-comparable exponent indices at every prime. Packing independent random divisibility chains then gives the bound. The proof is independent of computational experiments and needs no prime number theorem. This does not establish the zero constant required by the conjecture. Originality relative to the complete literature has not been established.
+\end{abstract}
+
+\section{Statement}
+Write
+\[
+h(k)=k\sigma(k),\qquad f(N)=\#\{k\ge1:h(k)=N\},\qquad \alpha_p=v_p(N).
+\]
+All logarithms are natural, and $\Omega(k)=\sum_p v_p(k)$. The target conjecture, as formulated in \cite{Kominers}, is
+\[
+\log\max\{1,f(N)\}=o\!\left(\frac{\log N}{\log\log N}\right).
+\]
+The result proved here is the following.
+
+\begin{theorem}\label{thm:main}
+Put
+\[
+C_1=\frac12\log\left(1+\frac1{\sqrt2}\right).
+\]
+For $N\ge2$ and $z\ge2$, define
+\[
+\mathcal P_z(N)=\prod_{\substack{p\mid N\\p>z}}\frac{p}{p-1}.
+\]
+Whenever $\mathcal P_z(N)\le4$,
+\begin{equation}\label{eq:finite}
+\boxed{\log\max\{1,f(N)\}\le
+\sum_{\substack{p\mid N\\p\le z}}\log(\alpha_p+1)
++C_1\frac{\log N}{\log z}.}
+\end{equation}
+Consequently, uniformly as $N\to\infty$,
+\begin{equation}\label{eq:asymptotic}
+\boxed{\log\max\{1,f(N)\}\le
+(C_1+o(1))\frac{\log N}{\log\log N}.}
+\end{equation}
+\end{theorem}
+Kominers obtains the constant $\log3/3$ from a squarefree-based encoding \cite{Kominers}. The preceding working note in this investigation obtained $\log3/2-\log2/3=0.318257\ldots$ from prime-index encodings. Neither result is needed as a premise below.
+
+\section{An integer obstruction to comparable exponent indices}
+Two positive integers are called divisibility-comparable when one divides the other.
+
+\begin{lemma}\label{lem:incompatibility}
+Let $S$ be a finite set of primes such that
+\[
+\prod_{p\in S}\frac{p}{p-1}\le4.
+\]
+Suppose $u,v$ have all their prime factors in $S$, $h(u)=h(v)$, and, for every $p\in S$, the integers $v_p(u)+1$ and $v_p(v)+1$ are divisibility-comparable. Then $u=v$.
+\end{lemma}
+\begin{proof}
+The function $h$ is multiplicative. Cancel equal local factors in the equality $h(u)=h(v)$. At each remaining prime $p$, let $a_p>b_p\ge0$ be the larger and smaller exponents, and put $d_p=a_p-b_p$. Comparability gives $b_p+1\mid a_p+1$, so
+\[
+\frac{h(p^{a_p})}{h(p^{b_p})}=p^{d_p}Q_p,
+\qquad Q_p=\frac{p^{a_p+1}-1}{p^{b_p+1}-1}\in\NN.
+\]
+The geometric sum for $Q_p$ shows that
+\begin{equation}\label{eq:local}
+1<\frac{Q_p}{p^{d_p}}
+=\frac{1-p^{-(a_p+1)}}{1-p^{-(b_p+1)}}
+<\frac1{1-p^{-(b_p+1)}}\le\frac{p}{p-1}.
+\end{equation}
+Let $P_+$ be the primes where $u$ has the larger exponent, and let $P_-$ be those where $v$ has the larger exponent. Set
+\[
+A=\prod_{p\in P_+}p^{d_p},\quad B=\prod_{p\in P_-}p^{d_p},
+\quad U=\prod_{p\in P_+}Q_p,\quad V=\prod_{p\in P_-}Q_p.
+\]
+Then $AU=BV$ and $\gcd(A,B)=1$. Hence $A\mid V$, $B\mid U$, and there is a positive integer $c$ with
+\[
+U=cB,\qquad V=cA.
+\]
+If any exponent differs, \eqref{eq:local} yields
+\[
+1<c^2=\frac{UV}{AB}
+=\prod_{p\in P_+\cup P_-}\frac{Q_p}{p^{d_p}}
+<\prod_{p\in P_+\cup P_-}\frac{p}{p-1}\le4.
+\]
+There is no square of a positive integer strictly between $1$ and $4$. This contradiction proves $u=v$.
+\end{proof}
+
+\begin{remark}
+The assertion compares exponent indices at \emph{all} primes simultaneously. The quotient multipliers need not be powers of the same prime, and the direction of divisibility may vary from one input prime to another. This is stronger, in the stated small-Euler-product setting, than using one fixed prime-index encoding.
+\end{remark}
+
+\section{A finite probability distribution on divisibility chains}
+Set
+\[
+t=\frac1{\sqrt2},\qquad D=t+t^2,\qquad A=\sqrt D.
+\]
+Thus $0<t<1<A$.
+
+\begin{lemma}\label{lem:chains}
+For each integer $a\ge0$, there is a probability distribution on chains $\mathcal C\subseteq\{1,\ldots,a+1\}$ under divisibility, all containing $1$, such that
+\begin{equation}\label{eq:inclusion}
+\PP(j+1\in\mathcal C)\ge A^{-a}t^j
+\qquad(0\le j\le a).
+\end{equation}
+\end{lemma}
+\begin{proof}
+For $a=0$, use the chain $\{1\}$. In general, make $\{1,\ldots,a+1\}$ into a rooted tree by assigning each $n>1$ the parent $n/P^+(n)$, where $P^+(n)$ is its largest prime factor. Every root-to-vertex path is a divisibility chain.
+
+Prescribe node-inclusion masses
+\[
+q(1)=1,\qquad q(n)=A^{-a}t^{n-1}\quad(2\le n\le a+1).
+\]
+We show that the sum of the child masses never exceeds the parent mass.
+For $n\ge2$, every child has the form $np$ with a prime $p\ge P^+(n)$. Therefore
+\[
+\frac{\sum_{m\text{ child of }n}q(m)}{q(n)}
+\le\sum_{r=2}^{\infty}t^{n(r-1)}
+=\frac{t^n}{1-t^n}\le1,
+\]
+since $t^n\le t^2=1/2$.
+
+The children of the root are the primes at most $a+1$. It remains to verify
+\begin{equation}\label{eq:root}
+\sum_{\substack{p\le a+1\\p\text{ prime}}}t^{p-1}\le A^a.
+\end{equation}
+The cases $a=0,1$ are immediate. For $a=2,3$, the sum is $t+t^2=A^2$, at most $A^a$. For $a=4,5$, it is
+\[
+t+t^2+t^4=(t+t^2)^2=A^4\le A^a.
+\]
+For $a\ge6$, since every prime except $2$ is odd,
+\[
+\sum_{p\le a+1}t^{p-1}
+\le t+\sum_{r=1}^{\infty}t^{2r}
+=t+1.
+\]
+But
+\[
+A^6-(1+t)=(t+1/2)^3-(1+t)=\frac{2t-1}{8}>0,
+\]
+so \eqref{eq:root} follows for all $a\ge6$ as well.
+
+Assign each vertex $n$ the terminal probability
+\[
+r(n)=q(n)-\sum_{m\text{ child of }n}q(m)\ge0.
+\]
+These probabilities sum to $q(1)=1$ by telescoping over the finite tree. Choose a terminal vertex according to $r$, and take its root-to-vertex path. Again by telescoping over the subtree of $n$, the probability that this path contains $n$ is exactly $q(n)$.
+
+For $j\ge1$, this is $A^{-a}t^j$; for $j=0$, the probability is $1\ge A^{-a}$. Thus \eqref{eq:inclusion} holds.
+\end{proof}
+
+\section{Packing the preimages}
+\begin{proof}[Proof of the finite bound in Theorem~\ref{thm:main}]
+The empty fiber is harmless. Partition the preimages of $N$ by their exact exponents at primes $p\le z$. There are at most
+\[
+T=\prod_{\substack{p\mid N\\p\le z}}(\alpha_p+1)
+\]
+parts. Fix a nonempty part $\FF$. Every $k\in\FF$ has a common small-prime part $d$, so $k=du$ with $\gcd(d,u)=1$, and
+\[
+h(u)=N/h(d).
+\]
+Let $S=\{p\mid N:p>z\}$. For every $p\in S$, independently choose a random chain $\mathcal C_p$ supplied by Lemma~\ref{lem:chains} with cap $a=\alpha_p$.
+
+For $k=du\in\FF$, let $E_k$ be the event that
+\[
+v_p(u)+1\in\mathcal C_p\qquad\text{for every }p\in S.
+\]
+These events are pairwise disjoint. Indeed, if $E_k$ and $E_m$ both occur, the two exponent indices at each prime lie on the same divisibility chain. Lemma~\ref{lem:incompatibility}, using $\mathcal P_z(N)\le4$, forces the two residual inputs, and hence $k,m$, to be equal.
+
+Independence and \eqref{eq:inclusion} give
+\[
+\PP(E_k)\ge A^{-\sum_{p\in S}\alpha_p}t^{\Omega(u)}.
+\]
+Because $u^2\le h(u)\le N$,
+\[
+\sum_{p\in S}\alpha_p\le\frac{\log N}{\log z},
+\qquad
+\Omega(u)\le\frac{\log u}{\log z}\le\frac{\log N}{2\log z}.
+\]
+Consequently,
+\[
+\PP(E_k)\ge\exp\!\left[-\left(\log A-\frac12\log t\right)
+\frac{\log N}{\log z}\right].
+\]
+The constant simplifies to
+\[
+\log A-\frac12\log t
+=\frac12\log\frac{t+t^2}{t}
+=\frac12\log(1+t)=C_1.
+\]
+The disjointness of the events yields
+\[
+1\ge\sum_{k\in\FF}\PP(E_k)
+\ge |\FF|\exp\!\left(-C_1\frac{\log N}{\log z}\right).
+\]
+Bounding the size of each of the at most $T$ parts proves \eqref{eq:finite}.
+\end{proof}
+
+\section{Why the required Euler-product condition is uniform}
+\begin{lemma}\label{lem:tail}
+Let $L=\log N$, $u=\log L$, and $z=L/u^3$. Then
+\[
+\log\mathcal P_z(N)=O\!\left(\frac{\log u}{u}\right)=o(1)
+\]
+uniformly as $N\to\infty$.
+\end{lemma}
+\begin{proof}
+We use only the elementary estimate $\pi(x)=O(x/\log x)$. For completeness, this follows from the binomial-coefficient proof of Chebyshev's bound: the product of primes in $(n,2n]$ divides $\binom{2n}{n}<4^n$; summing the resulting bounds over dyadic intervals gives $\vartheta(x)=O(x)$. Splitting primes at $\sqrt x$ then gives
+\[
+\pi(x)\le\sqrt x+\frac{2\vartheta(x)}{\log x}=O(x/\log x).
+\]
+Since $-\log(1-1/p)\le1/(p-1)\le2/p$, it is enough to bound $\sum_{p\mid N,p>z}1/p$.
+There are at most $L/\log L=L/u$ prime divisors of $N$ exceeding $L$, so their contribution is at most $1/u$.
+For the others, partial summation and the elementary prime-counting bound give
+\[
+\begin{aligned}
+\sum_{z<p\le L}\frac1p
+&=\frac{\pi(L)}{L}-\frac{\pi(z)}z+
+\int_z^L\frac{\pi(t)}{t^2}\,dt\\
+&=O\!\left(\frac1u+\log\frac{\log L}{\log z}\right)
+=O\!\left(\frac{\log u}{u}\right),
+\end{aligned}
+\]
+where $\log z=u-3\log u$. This proves the assertion.
+\end{proof}
+
+\begin{proof}[Completion of Theorem~\ref{thm:main}]
+For sufficiently large $N$, Lemma~\ref{lem:tail} gives $\mathcal P_z(N)<4$ and $z\ge2$, so the finite bound applies. Since $\alpha_p\le L/\log2$,
+\[
+\sum_{p\mid N,p\le z}\log(\alpha_p+1)
+\le z\log(1+L/\log2)=O(L/u^2)=o(L/u).
+\]
+Also $\log z\sim u$. Substitution proves \eqref{eq:asymptotic}. More explicitly, the error may be written $O(L\log u/u^2)$.
+\end{proof}
+
+\section{A stronger constant for cubefree inputs}
+Let $f_2(N)$ count only the preimages whose prime exponents are at most $2$.
+\begin{corollary}
+Writing $\varphi=(1+\sqrt5)/2$,
+\[
+\boxed{\log\max\{1,f_2(N)\}\le
+\left(\frac12\log\varphi+o(1)\right)\frac{\log N}{\log\log N}.}
+\]
+The constant is $0.2406059125298017\ldots$.
+\end{corollary}
+\begin{proof}
+Put $r=1/\varphi$, so $r+r^2=1$. At each large input prime, choose the chain $\{1,2\}$ with probability $r$ and $\{1,3\}$ with probability $r^2$. The inclusion probabilities for exponent indices $1,2,3$ are $1,r,r^2$. Hence the event attached to a residual preimage $u$ has probability exactly $r^{\Omega(u)}$. Lemma~\ref{lem:incompatibility} again makes the events disjoint, so the number in a fixed small-prime part is at most $r^{-L/(2\log z)}$. Fixing small exponents costs at most $3^{\pi(z)}=\exp(o(L/u))$. Use the same $z=L/u^3$.
+\end{proof}
+
+\section{What is still missing}
+The new incompatibility lemma is a genuinely global restriction, but it does not imply the conjecture on its own. In an abstract exponent model, consider an even number $s$ of coordinates, each with cap $3$, and take all words having $s/2$ exponents equal to $1$ and $s/2$ equal to $2$. Distinct words have incomparable exponent indices $2,3$ at some coordinate. Each word also satisfies the aggregate size budget $\sum e_p=\frac12\sum\alpha_p$. Nevertheless, there are
+\[
+\binom{s}{s/2}=\exp((\log2+o(1))s)
+\]
+such words. These are not asserted to be actual preimages. They demonstrate that incomparability and the aggregate exponent budgets alone permit exponential families.
+
+Actual preimages must additionally satisfy every prime-valuation equation
+\[
+\alpha_q=e_q+\sum_{p\ne q}v_q\bigl(\sigma(p^{e_p})\bigr).
+\]
+The needed zero-constant estimate must use further consequences of these simultaneous equations. In the earlier reduction, for every fixed $E\ge1$ and $\delta>0$ one needs
+\[
+\log R_{E,\delta}(X)=o_{E,\delta}(\log X/\log\log X),
+\]
+where $R_{E,\delta}(X)$ is the largest number of preimages of a target $M\le X$ with exponents at most $E$ and all input primes exceeding $\delta\log X$. That estimate remains unproved here. Neither $C_1$ nor the cubefree constant has a parameter that tends to zero.
+
+\section{Computational audit and search record}
+The included standard-library script \texttt{check\_v4.py} verifies the algebra in $\mathbb Q(\sqrt2)$, checks the chain root-mass inequalities for caps $0$ through $200$, checks $200$ child-mass inequalities and $120$ local ratio inequalities, and independently recomputes a known 29-digit cubefree collision by listing and summing all $20{,}736$ divisors of each input. Its common input-prime Euler product is approximately $1.57145<4$; its differing exponent indices are indeed incomparable at several primes. These finite checks are not premises in the all-parameter proof.
+
+Two numerical searches on the previously constructed valuation model with input primes from $101$ through $100{,}000$ ended at their $12$-second and $30$-second limits without a feasible witness. A preceding process was externally terminated at a $60$-second wall limit before writing a result. All of these searches are inconclusive; none supplies a nonexistence certificate. Their source and returned status records are included.
+
+No formal proof-assistant check, independent human referee review, or claim of priority is asserted.
+
+\begin{thebibliography}{9}
+\bibitem{Kominers}
+Scott Duke Kominers, \emph{On the Number of Solutions of $k\sigma(k)=n$}, working paper. Theorem 1.2 and Corollary 1.3 give the squarefree-based bound and its $\log3/3$ consequence.\par
+\url{https://scottkom.com/assets/articles/Kominers_ksigmak.pdf}
+\bibitem{NP}
+Passawan Noppakaew and Prapanpong Pongsriiam, \emph{Product of Some Polynomials and Arithmetic Functions}, Journal of Integer Sequences 26 (2023), Article 23.9.1. The squarefree injectivity results and related cross-divisibility arguments provide context, not a substitute for the proof above.\par
+\url{https://cs.uwaterloo.ca/journals/JIS/VOL26/Pongsriiam/pong43.pdf}
+\end{thebibliography}
+\end{document}

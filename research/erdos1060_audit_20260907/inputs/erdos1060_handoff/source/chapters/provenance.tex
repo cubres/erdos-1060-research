@@ -1,0 +1,84 @@
+\chapter{Provenance and file-level verification}\label{ch:provenance}
+\section{Source map}
+The following are the principal mathematical sources supplied in this conversation.
+They are preserved under \texttt{original\_notes/} with their existing filenames.
+Equivalent PDF versions are included when supplied. Contact-sheet images are
+rendering artifacts and are not needed for the mathematical handoff. The original
+file dates are retained as source metadata; the unified dossier is dated at
+handoff rather than treating those dates as an independently verified chronology.
+
+\small
+\begin{longtable}{@{}p{0.19\textwidth}p{0.45\textwidth}p{0.29\textwidth}@{}}
+\toprule Topic & Source filename & Main contribution\\\midrule\endhead
+Foundations & \path{erdos1060_helper_prompt.md} & Original bound, exact completion, false relaxed count, fixed-cap reduction.\\
+First additions & \path{erdos1060_proved_additions.md} & Exponent coloring, odd-square injectivity, 29-digit witness, rough-input formulation.\\
+Weighted proof & \path{erdos1060_complete_partial_bound.tex} & Full $C_0$ proof; supersedes the exposition in the earlier entropy note.\\
+Entropy history & \path{erdos1060_prime_index_entropy_proof.md} & Equivalent entropy formulation, local-relaxation barrier and v3 certificate record.\\
+Chain packing & \path{erdos1060_chain_packing_proof.tex} & Strongest unrestricted constant in this record; cubefree constant.\\
+Roughness & \path{erdos1060_sixth_power_free_proof.tex} & Two-index uniqueness and original restricted target bound.\\
+Sparse changes & \path{erdos1060_sparse_changes_proof.tex} & Compatible-family theorem and sharper target classes.\\
+Denominator audit & \path{erdos_work_v7/proof_status_audit.md} & General $R,T$ identity and the failed compatibility removal.\\
+Branching & \path{erdos1060_branching_cycles.tex} & Exact decoder, branch-cost lemma and large-prime attachment.\\
+Linear certificates & \path{erdos1060_exact_certificates.tex} & Dual/rank bounds, cycle restrictions, exact affine-line example.\\
+Integer obstruction & \path{erdos_uniform_audit/uniform_gap_audit.md} & Positive fractional singleton-fiber example and exact rounding.\\
+Signed feedback & \path{erdos1060_signed_feedback.tex} & Positive-cycle theorem and cubefree transversal bound.\\
+Universal graph & \path{erdos1060_prime_order_constraints.tex} & Order characterization, largest-prime bound, finite transversals.\\
+Graph obstruction & \path{erdos1060_feedback_obstruction.tex} & Conditional Bateman--Horn obstruction; older two-prime rigidity proofs.\\
+Actual exchanges & \path{erdos1060_genuine_exchanges.md} & Exact decomposition and exchange packing; seven-member example.\\
+Primitive divisors & \path{erdos1060_literature_audit.tex} & Support-sensitive bound, finite exponent lists and quantitative literature audit.\\
+Latest rigidity & \path{erdos1060_two_prime_rigidity.tex} & Unrestricted theorem for every fixed prime pair; distance-three consequence.\\
+\bottomrule\end{longtable}\normalsize
+The older helper prompts are retained for provenance, not as the preferred
+instructions. In particular, the small-range cubefree classification suggestion
+was disproved. Use Chapter~\ref{ch:next} instead of copying an early prompt
+without its later corrections. The old close-prime and unit-cross-valuation
+rigidity theorems are superseded in scope by Chapter~\ref{ch:twoprime}; their
+source proofs remain available in the original feedback-obstruction note.
+
+\section{Handoff reruns}
+Each entry below names a script under \texttt{working\_packets/}; enter its
+containing directory and run \texttt{python3 <script>}. Script SHA-256 hashes
+and complete stdout/stderr are in \texttt{checks/rechecks.json} and the named
+logs. A PASS means that this exact finite verifier completed during compilation.
+The interrupted large check remains an archived result with no fresh completion
+claim. Runtime measurements are environmental and are not complexity bounds.
+
+\small
+\begin{longtable}{@{}p{0.77\textwidth}p{0.16\textwidth}@{}}
+\toprule Script path & Handoff status\\\midrule\endhead
+\path{erdos1060_integer_gap_audit/verify_fractional_obstruction.py} & PASS\\
+\path{erdos1060_chain_packing_packet/erdos1060_v4/check_v4.py} & PASS\\
+\path{erdos1060_literature_audit_packet/erdos1060_literature_audit/verify_order_lists.py} & PASS\\
+\path{erdos1060_feedback_obstruction_packet/erdos1060_feedback_obstruction/verify_targets.py} & PASS\\
+\path{erdos1060_two_prime_rigidity_packet/erdos1060_two_prime_rigidity/verify.py} & PASS\\
+\path{erdos1060_genuine_exchanges_packet/erdos1060_genuine_exchanges/verify_exchanges.py} & PASS\\
+\path{erdos1060_sparse_changes_packet/erdos1060_v6/verify_v6.py} & PASS\\
+\path{erdos1060_signed_feedback_packet/erdos1060_signed_feedback/verify_signed_feedback.py} & PASS\\
+\path{erdos1060_research_packet_v3/erdos1060_v3/check_certificates.py} & PASS\\
+\path{erdos1060_small_prime_constraints_packet/erdos1060_v5/verify_v5.py} & PASS\\
+\path{erdos1060_prime_order_constraints_packet/erdos1060_prime_order/verify.py} & PASS\\
+\path{erdos1060_exact_certificates_packet/erdos1060_v9_packet/verify_v9.py} & PASS\\
+\path{erdos1060_exact_certificates_packet/erdos1060_v9_packet/verify_large.py} & INTERRUPTED\\
+\path{erdos1060_branching_cycles_packet/erdos1060_branching_cycles/verify_new_results.py} & PASS\\
+\path{erdos1060_feedback_obstruction_packet/erdos1060_feedback_obstruction/verify.py} & PASS\\
+\path{erdos1060_proof_gap_audit/verify_gap.py} & PASS\\
+\bottomrule\end{longtable}\normalsize
+\section{Preservation and edits}
+The original source files and ZIP packets are retained unchanged. The consolidated
+LaTeX renumbers labels, resolves local command conflicts, groups related proofs,
+and adds dependency links and scope notes. Redundant status reports and repeated
+search narratives were removed. The companion JSON catalogue preserves exact
+large integers rather than relying on line-wrapped PDF extraction.
+
+The handoff archive includes SHA-256 hashes for all distributed files except the
+manifest itself. These detect transfer changes; they do not certify mathematical
+truth. No model weights, private credentials, or font files are included.
+
+\section{Final record boundary}
+This compilation is a handoff of the supplied research, not an additional claim
+of a new bound or a completed solution. Its central unresolved statement is still
+\eqref{eq:BE-front}, equivalently the unrestricted target \eqref{eq:EP}. Every
+sufficient criterion in the dossier remains conditional on proving its explicitly
+stated cost estimate. The receiving researcher can proceed without the original
+conversation, but should not convert the working theorems into externally
+refereed results merely because they appear in a typeset dossier.

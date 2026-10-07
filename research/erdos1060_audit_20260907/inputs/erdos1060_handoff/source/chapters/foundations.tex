@@ -1,0 +1,144 @@
+\chapter{Elementary foundations and exact completion}\label{ch:foundations}
+\sourcebox{Original olympiad prompt; first helper note; later proof notes}{The starting powerful-core argument was supplied by the user with attribution to Nikola Gyulev. The displayed multiplicativity line in the original prompt had a typographical duplication; the corrected identity is used here.}
+
+\section{Local identities and safe cancellation}
+For a prime $p$ and $e\ge0$,
+\[
+ \sigma(p^e)=\frac{p^{e+1}-1}{p-1},\qquad
+ h(p^e)=p^e\frac{p^{e+1}-1}{p-1},\qquad
+ p\nmid\sigma(p^e).
+\]
+Both $\sigma$ and $h$ are multiplicative on coprime arguments. Every preimage
+$k$ divides $N$ and satisfies $k^2\le N$, strictly for $k>1$. We have $f(1)=1$.
+If $h(a)=h(b)$, the product
+\[
+ C=\prod_{v_p(a)=v_p(b)>0}p^{v_p(a)}
+\]
+is unitary in both inputs, so $h(a/C)=h(b/C)$. Dividing the inputs by their
+arbitrary gcd and canceling its $h$-value is generally invalid.
+
+\section{Squarefree injectivity and the powerful core}
+\begin{lemma}\label{found:squarefree}
+If $a,b$ are squarefree and $h(a)=h(b)$, then $a=b$.
+\end{lemma}
+\begin{proof}
+Cancel all common prime blocks $p(p+1)$. The residual prime supports are disjoint.
+If the largest remaining prime is $q\ge5$, assume it occurs on the first side.
+Every opposite prime $p$ has $p<q$ and $p+1<q$: equality would make the even
+integer $q-1\ge4$ prime. Thus $q$ cannot divide the opposite product, a
+contradiction. The only remaining bases could be $2,3$, whose squarefree
+products have distinct $h$-values $1,6,12,72$. The residuals must be equal.
+\end{proof}
+This is also a specialization of Noppakaew--Pongsriiam's Theorem 12 \cite{np}.
+
+Write
+\[
+ d(k)=\prod_{v_p(k)\ge2}p^{v_p(k)},\qquad s(k)=k/d(k).
+\]
+The second factor is squarefree and coprime to the first. Hence
+$N=h(d(k))h(s(k))$. A fixed $d(k)$ permits at most one $s(k)$ by
+Lemma~\ref{found:squarefree}. At a target prime $p$, the core exponent belongs
+to $\{0,2,3,\ldots,\alpha_p\}$, a set of $\alpha_p$ choices. Therefore
+\begin{equation}\label{found:product}
+ \boxed{f(N)\le\prod_{p\mid N}\alpha_p.}
+\end{equation}
+The exact statement retains the completion condition:
+\begin{equation}\label{found:completion}
+ f(N)=\#\left\{d:\begin{array}{l}
+ d\text{ powerful},\ h(d)\mid N,\\
+ N/h(d)=h(s)\text{ for squarefree }s,\ \gcd(d,s)=1
+ \end{array}\right\}.
+\end{equation}
+In particular, an upper bound on arbitrary possible cores can be much too large.
+
+\section{The original maximal-order constant}
+Let $g(N)=\prod_{p\mid N}\alpha_p$ and $c=\log3/3$. For every integer $a\ge1$,
+$\log a\le ca$. Set $L=\log N$, $w=\log L$, and $z=L/w^3$. The primes at most
+$z$ contribute at most $O(z w)=O(L/w^2)$ to $\log g(N)$. For the others,
+\[
+ \sum_{p>z}\log\alpha_p\le c\sum_{p>z}\alpha_p\le cL/\log z.
+\]
+Thus $\log f(N)\le(c+o(1))L/w$. Along
+$N_y=\prod_{p\le y}p^3$, the prime number theorem gives
+$\log g(N_y)\sim c\log N_y/\log\log N_y$.
+This establishes sharpness for the majorant $g$, not for the true $f$.
+Kominers gives the corresponding direct theorem and discussion \cite{kominers}.
+
+\section{A deterministic squarefree inverse}
+A squarefree inverse of a positive integer residual $R$, if it exists, is unique.
+If $P^+(R)=q\ge5$, any squarefree preimage must contain $q$: a smaller base
+cannot generate $q$ through its factor $p(p+1)$, while a larger base would
+itself divide $R$. Divide $R$ by $q(q+1)$, rejecting a nonintegral division,
+and record $q$. Reject a repeated base. Repeat until no prime at least $5$
+remains. The terminal residual must be one of
+\[
+ (s,h(s))=(1,1),(2,6),(3,12),(6,72).
+\]
+Every accepted step is forced, and the final product verifies the inverse.
+When the procedure is used in \eqref{found:completion}, also enforce
+$\gcd(d,s)=1$.
+
+\section{Integer coordinates adapted to the squarefree part}
+The numbers $h(p)=p(p+1)$, indexed by primes, form a multiplicative
+$\mathbb Z$-basis of the positive rational numbers. Namely, every $x\in\mathbb Q_{>0}$
+has a unique finite expression
+\[
+ x=\prod_p h(p)^{b_p(x)},\qquad b_p(x)\in\mathbb Z.
+\]
+For $p\ge5$, all prime factors of $p+1$ are smaller than $p$, so descending
+elimination is triangular with diagonal coefficient one. The initial two
+prime coordinates are invertible over $\mathbb Z$ because
+\[
+ 2=\frac{h(3)}{h(2)},\qquad 3=\frac{h(2)^2}{h(3)}.
+\]
+A squarefree inverse exists exactly when every $b_p(x)$ belongs to $\{0,1\}$.
+Coprimality with a chosen core adds $b_p(x)=0$ for every $p\mid d$.
+For example,
+\[
+ h(4)=\frac{h(2)h(7)}{h(3)}
+\]
+encodes the collision $h(12)=h(14)$. This coordinate change gives an exact
+completion constraint; no asymptotic advantage has been proved from it alone.
+
+\section{Why counting divisible cores cannot finish the problem}\label{found:badcores}
+Define $B(N)=\#\{d:d\text{ powerful},\ h(d)\mid N\}$. The desired little-$o$
+bound is false for $B$. For
+\[
+ N_y=\prod_{3\le p\le y}h(p^2)=h\!\left(\prod_{3\le p\le y}p^2\right),
+\]
+every subset $T$ gives a distinct core $d_T=\prod_{p\in T}p^2$ with
+$h(d_T)\mid N_y$. Thus $B(N_y)\ge2^{\pi(y)-1}$. Since
+$\log N_y=(4+o(1))y$,
+\[
+ \log B(N_y)\ge\left(\frac{\log2}{4}+o(1)\right)
+ \frac{\log N_y}{\log\log N_y}.
+\]
+These targets are odd and represented. Among these particular subset cores,
+only the full subset admits squarefree completion: a proper subset leaves an
+odd residual greater than one, whereas $h(s)$ is even for every squarefree
+$s>1$. This refutes the relaxed count, not the original conjecture.
+
+\section{Lower-bound mechanisms that every proof must permit}
+If $h(a)=h(b)=M$ and $\gcd(d,ab)=1$, then $h(da)=h(db)=h(d)M$.
+This propagates one collision but does not create independent choices.
+If $h(a_i)=h(b_i)=M_i$, $a_i\ne b_i$, and the prime supports of $a_ib_i$
+are pairwise disjoint, choosing either member of every pair gives $2^r$
+distinct preimages of $\prod_{i=1}^rM_i$.
+An infinite construction with
+\[
+ \log\prod_{i=1}^rM_i=O(r\log r)
+\]
+would refute the primary conjecture. No such family was obtained.
+
+For distinct Mersenne primes $M_i=2^{r_i}-1$, put
+\[
+ R=\sum_i r_i,\qquad k_i=2^{r_i-1}\prod_{j\ne i}M_j.
+\]
+Then
+\[
+ \sigma(k_i)=M_i2^{R-r_i},\qquad
+ \boxed{h(k_i)=2^{R-1}\prod_jM_j.}
+\]
+The $k_i$ are distinct. This is the corrected form of the Mersenne construction
+used throughout; it must not be quoted without the product over $j\ne i$.
+No infinitude assumption about Mersenne primes is used.

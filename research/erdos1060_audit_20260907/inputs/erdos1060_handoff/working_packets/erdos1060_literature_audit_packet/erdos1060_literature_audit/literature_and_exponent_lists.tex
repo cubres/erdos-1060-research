@@ -1,0 +1,275 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,microtype}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Primitive-divisor exponent lists and a literature audit for Erdos 1060},pdfsubject={Proved support-sensitive bound and exact limitations; no complete solution}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\rad}{rad}
+\title{Primitive-divisor exponent lists\texorpdfstring{\\}{ }and a literature audit for Erd\H{o}s 1060}
+\author{Research continuation: a proved support-sensitive bound}
+\date{7 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Let $f(N)=\#\{k\ge1:k\sigma(k)=N\}$ and $r=\omega(N)$. Combining squarefree injectivity with the Bang--Zsigmondy theorem, we prove $f(N)\le r^r$ for $N>1$, uniformly in the target exponents and the values of its prime divisors. More precisely, each input prime has at most $r-1$ admissible exponents greater than one. We give exact exponent lists in terms of multiplicative orders and check them on four complete fibers and 48,590 local regression cases. A quantitative literature audit explains why the nearby fixed-abundancy, primitive-solution, and typical-fiber results inspected do not supply the missing uniform little-$o$ estimate. The unrestricted conjecture is not proved, and the previously established unrestricted asymptotic constant is not improved. Originality of the deduction relative to the full literature has not been established. No independent human referee review or formal proof-assistant verification is claimed.
+\end{abstract}
+
+\section{The exact target and the outcome of the search}
+Write
+\[
+ h(k)=k\sigma(k),\qquad f(N)=\#\{k\ge1:h(k)=N\}.
+\]
+All logarithms are natural. Erd\H{o}s 1060 asks whether
+\begin{equation}\label{eq:target}
+ \log\max\{1,f(N)\}=o\!\left(\frac{\log N}{\log\log N}\right)
+\end{equation}
+uniformly over all sufficiently large targets. This is strictly stronger than $f(N)=N^{o(1)}$.
+
+The literature check below did not locate a verified theorem proving \eqref{eq:target}. Direct access to the main problem page and discussion was unsuccessful during this check; no global current-status conclusion is inferred from that failure. The source results have been inspected for their hypotheses and actual quantitative scales. This note extracts an additional support-sensitive bound rather than claiming to have found a complete proof.
+
+\section{A classical primitive-divisor input}
+A prime $q$ is a primitive prime divisor of $a^m-1$ if it divides $a^m-1$ but divides none of $a^j-1$ for $1\le j<m$. Equivalently, $\ord_q(a)=m$.
+
+We use the following classical form of the Bang--Zsigmondy theorem; it is stated in the introduction of Glasby--L\"ubeck--Niemeyer--Praeger~\cite{zsig}.
+
+\begin{theorem}[Bang--Zsigmondy, restricted form used here]\label{thm:bang}
+For integers $a\ge2$ and $m\ge3$, the number $a^m-1$ has a primitive prime divisor unless $(a,m)=(2,6)$.
+\end{theorem}
+
+The restriction $m\ge3$ is important. No assertion about the additional exceptions at index two is needed. For a primitive divisor $q$ at such an index, one has $q\ne a$ when $a$ is prime, and $m\mid q-1$. In particular, $q\ge5$.
+
+\section{Few possible higher exponents at each input prime}
+Let $N>1$, let $S=\{q:q\mid N\}$, and put $r=|S|$. For $p\in S$, define
+\[
+ B_p(N)=\{0\}\cup\{e\ge2:p^e\sigma(p^e)\mid N\}.
+\]
+The symbol zero in this set records absence of a higher prime-power block; it merges input exponents zero and one.
+
+\begin{lemma}\label{lem:listsize}
+For every $p\mid N$, one has $|B_p(N)|\le r$.
+\end{lemma}
+\begin{proof}
+Let $e\ge2$ be an admissible exponent, initially excluding $(p,e)=(2,5)$. Apply Theorem~\ref{thm:bang} to $p^{e+1}-1$. It supplies a prime $q$ with
+\[
+ \ord_q(p)=e+1.
+\]
+Since $e+1\ge3$, the prime $q$ does not divide $p-1$. Therefore
+\[
+ q\mid\frac{p^{e+1}-1}{p-1}=\sigma(p^e),
+\]
+so $q\in S\setminus\{p\}$. Choose, for example, the smallest possible such $q$ for each exponent.
+
+For a fixed input base $p$, two different exponents cannot have the same chosen prime: $\ord_q(p)$ has a unique value. Thus the nonexceptional higher-exponent choices inject into $S\setminus\{p\}$.
+
+If $p$ is odd there is no exception, proving that there are at most $r-1$ higher-exponent choices. Suppose $p=2$ and exponent five is admissible. Then
+\[
+ \sigma(2^5)=63=3^2\cdot7,
+\]
+so $3\in S$. No nonexceptional witness can equal $3$, because $\ord_3(2)=2$, whereas all their required orders are at least three. Assign the exceptional exponent five the label $3$. The injection into $S\setminus\{2\}$ is still valid. If exponent five is not admissible, no additional label is needed.
+
+In every case there are at most $r-1$ admissible exponents greater than one. Adding the symbol zero proves $|B_p(N)|\le r$.
+\end{proof}
+
+\textbf{Local, not global, distinctness.} The chosen witnesses are distinct only when the input base $p$ is fixed. They may be reused at different bases: for example,
+\[
+ \ord_7(2)=\ord_7(11)=3.
+\]
+No globally fresh-prime assertion is used or implied.
+
+\section{The multiplicity bound}
+We recall the elementary squarefree injectivity underlying the olympiad argument and Kominers's bound~\cite{kominers}.
+
+\begin{lemma}\label{lem:squarefree}
+If $u,v$ are squarefree positive integers and $h(u)=h(v)$, then $u=v$.
+\end{lemma}
+\begin{proof}
+Cancel the equal factors $p(p+1)$ from primes shared by $u$ and $v$. The remaining inputs have disjoint prime supports. If their largest remaining prime is $q\ge5$, assume it divides the first input. Every prime $p$ in the opposite input satisfies $p<q$ and $p+1<q$: equality $p+1=q$ would make the even integer $q-1\ge4$ prime. Thus $q$ divides none of the opposite factors $p(p+1)$, a contradiction. The only possible remaining primes are $2,3$. The values on their squarefree products are
+\[
+ h(1)=1,\quad h(2)=6,\quad h(3)=12,\quad h(6)=72,
+\]
+which are all distinct. Hence no unequal residual inputs remain.
+\end{proof}
+
+\begin{theorem}\label{thm:main}
+For $N>1$ and $r=\omega(N)$,
+\begin{equation}\label{eq:main}
+ \boxed{f(N)\le\prod_{p\mid N}|B_p(N)|\le r^r.}
+\end{equation}
+In fact, writing $\alpha_p=v_p(N)$,
+\[
+ f(N)\le\prod_{p\mid N}|B_p(N)|
+ \le\min\!\left\{\prod_{p\mid N}\alpha_p,\ r^r\right\}.
+\]
+\end{theorem}
+\begin{proof}
+For a preimage $k$, write
+\[
+ d(k)=\prod_{v_p(k)\ge2}p^{v_p(k)},\qquad k=d(k)s(k).
+\]
+The integer $s(k)$ is squarefree and coprime to $d(k)$. The function $h$ is multiplicative on coprime arguments, so
+\[
+ h(k)=h(d(k))h(s(k)).
+\]
+A fixed value of $d(k)$ determines $h(s(k))=N/h(d(k))$, and Lemma~\ref{lem:squarefree} gives at most one possible $s(k)$. Thus the map $k\mapsto d(k)$ is injective within the fiber.
+
+Every local block $p^e$ with $e\ge2$ satisfies $h(p^e)\mid N$. The number of possible powerful cores is therefore at most $\prod_{p\mid N}|B_p(N)|$. Lemma~\ref{lem:listsize} bounds each factor by $r$. Also $B_p(N)\subseteq\{0,2,3,\ldots,\alpha_p\}$, which has $\alpha_p$ elements. This proves both assertions.
+\end{proof}
+
+The case $N=1$ is separate and has $f(1)=1$. Theorem~\ref{thm:main} gives a bound depending only on the number of distinct target primes, uniformly over their values and target exponents. It is not claimed to improve the earlier unrestricted asymptotic estimate in the many-prime regime.
+
+\section{An exact finite candidate list, with no exponent scan}
+For a finite nonempty set of primes $S$ and $p\in S$, put
+\begin{align*}
+ \mathcal L_p(S)={}&\{0,1\}\cup
+ \{\ord_q(p)-1:q\in S\setminus\{p\},\ \ord_q(p)\ge3\}\
+ &{}\cup\begin{cases}\{5\},&p=2,\\\varnothing,&p\ne2.\end{cases}
+\end{align*}
+Theorem~\ref{thm:bang} proves that every exponent in any input with $\rad(h(k))$ supported on $S$ lies in this list. For a specified target $N$ with prime support $S$, the exact local domain is therefore
+\begin{equation}\label{eq:domains}
+ \boxed{D_p(N)=\{e\in\mathcal L_p(S):p^e\sigma(p^e)\mid N\}.}
+\end{equation}
+The divisibility test automatically enforces $e\le v_p(N)$. Formula~\eqref{eq:domains} is equality, not merely a necessary-condition subset.
+
+There are at most $r-1$ actual exponents greater than one at each base, with zero and one kept separately here. Thus every fully filtered local domain has at most $r+1$ members, even if a target exponent is enormous. Factoring $q-1$ and computing orders may still require substantial computational work; no polynomial-time complexity claim is made.
+
+The same proof gives a finite-support statement with no specified target:
+\begin{corollary}
+For any nonempty set $S$ of $r$ primes,
+\[
+ \#\{k\ge1:\text{every prime divisor of }h(k)\text{ belongs to }S\}
+ \le(r+1)^r.
+\]
+\end{corollary}
+\begin{proof}
+At each $p\in S$, apply the preceding primitive-witness argument to all exponents whose local divisor sum is supported on $S$. It gives at most $r-1$ higher-exponent options, in addition to zero and one. Any input satisfying the stated condition has all its prime factors in $S$. Counting the independent choices proves the assertion. Conversely, every combination of fully support-filtered local options has $h$ supported on $S$, by multiplicativity; thus the lists also give an exact enumeration in this fixed-support problem.
+\end{proof}
+
+For example, if $S=\{2,3\}$ the only inputs are $1,2,3,6$. If $S=\{2,3,7\}$ the allowed exponents are
+\[
+ e_2\in\{0,1,2,5\},\qquad e_3,e_7\in\{0,1\}.
+\]
+There are exactly 16 inputs, of arbitrary permitted size rather than under an imposed height cutoff; the largest fiber has size two, realized by $h(12)=h(14)=336$.
+
+\section{What the literature does and does not supply}
+\subsection*{The direct source}
+Kominers~\cite{kominers}, Theorem 1.2 and Corollary 1.3, proves the product majorant $\prod_{p\mid N}v_p(N)$ and its maximal-order constant $\log3/3$. Its sharpness statement concerns that majorant, not $f(N)$. The inspected manuscript does not supply the requested zero-constant bound.
+
+\subsection*{Wirsing's method and fixed abundancy}
+Pollack's sequel~\cite{pollack2023}, Section 1.1, reviews the uniform bound
+\[
+ \#\{n\le x:\sigma(n)=\lambda n\}\le x^{O(1/\log\log x)}
+\]
+with a constant independent of $\lambda$. It explicitly records, at the time of that paper, the lack of a little-$o$ replacement even for its perfect-number counting problem. This is a statement about that source and that different problem, not an equivalence or a current-status claim about every later paper.
+
+The reconstruction idea is relevant: after a suitable unitary partial divisor is chosen, a prime dividing a reduced denominator forces the next prime. But in a fiber of $h$,
+\[
+ \frac{\sigma(k)}k=\frac{N}{k^2},
+\]
+so the abundancy ratio varies with $k$. A theorem fixing $\lambda$ cannot be substituted directly.
+
+\subsection*{Fixing only an abundancy denominator}
+Pollack~\cite{pollack2011}, Theorem 4.1, proves a bound of the form
+\[
+ \#\{n\le x:b(n)=b\}\le
+ \exp\!\left(C\frac{\log x}{\sqrt{\log\log x}}\right),
+ \qquad b(n)=\frac{n}{\gcd(n,\sigma(n))}.
+\]
+Its proof explicitly balances $x^{1/j+C'j/\log\log x}$ with $j$ of order $\sqrt{\log\log x}$. Dividing the exponent by the scale required here gives $C\sqrt{\log\log x}$, not something tending to zero. Thus this result neither has the needed scale nor directly fixes the data of our fiber.
+
+\subsection*{Primitive solutions of a different divisor-sum equation}
+Broughan--De Koninck--K\'atai--Luca~\cite{bdkl}, Theorem 6, treats primitive solutions of $\sigma(n)=\rad(n)^2$, with primitiveness defined by a proper-unitary-divisor condition. It is not the minimal-exchange definition in our previous note. Tracing the proof gives, with $M=\lceil\log x/\log\log x\rceil$, an upper bound
+\[
+ 2^{6M}=\exp\!\left((6\log2)\frac{\log x}{\log\log x}+O(1)\right).
+\]
+Although this is $x^{o(1)}$, its coefficient at the required scale is positive. The proof is not a source of the missing little-$o$ estimate for genuine exchanges.
+
+\subsection*{Typical fibers are not maximum fibers}
+Pollack~\cite{pollack2015}, Theorem 2, proves that for asymptotically all values in the image of $\sigma$, all preimages have the same largest prime factor. This is a density-one statement for $\sigma$, not an exceptional-target bound for $h$. It leaves open the very targets that a uniform maximum must control.
+
+\subsection*{A recent neighboring problem}
+Li's June 24, 2026 preprint~\cite{li2026} claims a resolution of Erd\H{o}s 1061 concerning $\sigma(a)+\sigma(b)=\sigma(a+b)$. Its construction uses fixed equal-abundancy coefficients and prime affine systems. It concerns a different equation, a different counting function, and a lower-bound construction. This note does not independently referee that preprint and does not treat its claim as a solution of 1060 or as an available maximal-fiber estimate.
+
+\section{Exact computations completed in this pass}
+The standard-library script \texttt{verify\_order\_lists.py} compares \eqref{eq:domains} with direct scans through $0\le e\le v_p(N)$, checks the distinct witnesses (including the exceptional label), and reconstructs selected complete fibers. The general proof depends on Theorem~\ref{thm:bang}; finite checks are not a replacement for that theorem.
+
+The four targets are
+\begin{align*}
+ N_7&=106345074572730040320,\\
+ N_6&=7089671638182002688000,\\
+ N_9&=1826980530660612389572800675840,\\
+ N_0&=504654433920.
+\end{align*}
+Their factorizations and all inputs are in \texttt{verification.json}. These are previously used targets, not newly discovered multiplicity records. Each full fiber was checked by enumerating every target divisor; each returned input was separately checked by constructing and summing all its divisors.
+
+\begin{center}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Target & Target divisors & $f(N)$ & $\prod_p|B_p(N)|$ & $\prod_p v_p(N)$\\
+\midrule
+$N_7$ & 7,424 & 7 & 24 & 84\\
+$N_6$ & 12,288 & 6 & 48 & 186\\
+$N_9$ & 23,552 & 9 & 27 & 135\\
+$N_0$ & 2,304 & 1 & 60 & 84\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+For $N_7=2^{28}3^3\cdot5\cdot7\cdot13\cdot31\cdot127\cdot8191$, the powerful-core options are
+\[
+ B_2(N_7)=\{0,2,3,4,5,6,11,12\},\qquad
+ B_3(N_7)=\{0,2,3\},
+\]
+with $B_p(N_7)=\{0\}$ at the other six bases. This explains the bound $24$ directly. The coarser $r^r$ bound is not the numerically best one for these examples; its feature is uniformity in target exponent sizes.
+
+A separate regression uses the represented targets $k\sigma(k)$ for each seed $2\le k\le10,000$, obtaining 48,590 exact local-domain comparisons. Targets may repeat. This is not a complete enumeration of their unrestricted fibers. The script also completely enumerates the two fixed-support examples above using the proved finite lists.
+
+Run, without Python's optimization flag \texttt{-O},
+\begin{verbatim}
+python3 verify_order_lists.py
+\end{verbatim}
+The program writes \texttt{verification.json}. All listed checks passed. No numerical optimizer or unverifiable search-infeasibility claim is used.
+
+\section{The uniform gap remains}
+Theorem~\ref{thm:main} implies the desired bound along any target sequence for which
+\[
+ \omega(N)\log\omega(N)=o\!\left(\frac{\log N}{\log\log N}\right).
+\]
+For instance, $\omega(N)=o(\log N/(\log\log N)^2)$ suffices. This sparse-prime regime can also be controlled by other earlier bounds; it is not claimed as a previously unresolved case. The feature extracted here is a multiplicity bound depending only on $\omega(N)$ and a short exact list of possible local exponents.
+
+When $r$ is of order $\log N/\log\log N$, the quantity $r\log r$ is of order $\log N$, which is too large. Thus $r^r$ does not improve the general positive-constant estimates obtained earlier. The primitive-divisor labels can be reused at different input bases, and their coupled valuation requirements remain essential.
+
+The genuine-exchange decomposition from the preceding note remains valid. It does not itself control the number, overlap pattern, or arithmetic cost of the minimal exchanges. None of the literature results audited above supplied that missing uniform theorem.
+
+In particular, the fixed-cap estimate
+\[
+ \log\max_{M\le X}\max\{1,f_E(M)\}
+ =o_E\!\left(\frac{\log X}{\log\log X}\right)
+ \qquad\text{for every fixed }E
+\]
+is still unproved in this investigation. The established high-exponent reduction would imply the full conjecture from these estimates, but they cannot be inserted as assumptions in a purported complete proof.
+
+\textbf{Conclusion.} This continuation supplies a fully proved support-sensitive bound, exact exponent lists, finite verification, and a quantitative source audit. It does not fill the unrestricted gap, does not show the remaining gap is small, and does not warrant a solution claim.
+
+\begin{thebibliography}{9}
+\bibitem{zsig} S. P. Glasby, F. L\"ubeck, A. C. Niemeyer and C. E. Praeger, \emph{Primitive prime divisors and the $n$-th cyclotomic polynomial}, arXiv:1504.02598v4 (2016), Introduction, p.~2.\newline
+\url{https://arxiv.org/pdf/1504.02598}
+\bibitem{kominers} S. D. Kominers, \emph{On the Number of Solutions of $k\sigma(k)=n$}, working paper; Theorem 1.2, Corollary 1.3 and Section 4.\newline
+\url{https://www.scottkom.com/assets/articles/Kominers_ksigmak.pdf}
+\bibitem{pollack2023} P. Pollack, \emph{On the greatest common divisor of a number and its sum of divisors, II}, Section 1.1.\newline
+\url{https://www.pollack-math.net/gcdnsigmasequel.pdf}
+\bibitem{pollack2011} P. Pollack, \emph{On the greatest common divisor of a number and its sum of divisors}, Michigan Math. J. 60 (2011), 199--214; Theorem 4.1.\newline
+\url{https://www.pollack-math.net/combined3.pdf}
+\bibitem{bdkl} K. A. Broughan, J.-M. De Koninck, I. K\'atai and F. Luca, \emph{On Integers for Which the Sum of Divisors is the Square of the Squarefree Core}, Journal of Integer Sequences 15 (2012), Article 12.7.5; Theorem 6.\newline
+\url{https://researchcommons.waikato.ac.nz/server/api/core/bitstreams/1334a60f-d6e3-4604-8fb0-6dbadce6ab0e/content}
+\bibitem{pollack2015} P. Pollack, \emph{Remarks on fibers of the sum-of-divisors function}, Theorem 2.\newline
+\url{https://www.pollack-math.net/preimages-maier3.pdf}
+\bibitem{li2026} E. Li, \emph{A resolution of Erd\H{o}s Problem 1061 on the sum-of-divisors function}, arXiv:2606.25849v1, June 24, 2026. Cited as an inspected preprint claim on a different problem.\newline
+\url{https://arxiv.org/pdf/2606.25849}
+\bibitem{prior} \emph{Genuine integer exchanges for $k\sigma(k)=N$}, preceding internal working note in this investigation, September 6, 2026. Exact exchange decomposition and its still-unproved uniform counting requirement.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,195 @@
+\chapter{Why universal feedback can overcount ambiguity}\label{ch:bh}
+\sourcebox{erdos1060\_feedback\_obstruction.tex}{Exact polynomial identities and a conditional Bateman--Horn obstruction to the universal-graph route. The conditional lower bounds concern graph cost, not actual fiber multiplicity.}
+\section{An exact family of positive two-cycles}
+For an integer $t\ge3$, set
+\[
+ P=t^2+1,\qquad Q=t^2+t+1,\qquad R=t^2-t+1,\qquad S=t^2+2t+2.
+\]
+Polynomial multiplication gives
+\begin{equation}\label{bh:eq:identities}
+ \boxed{P^2-P+1=QR,\qquad Q^2+1=PS.}
+\end{equation}
+
+\begin{lemma}\label{bh:lem:orders}
+If $p=P$ and $q=Q$ are both prime, then
+\[
+ \ord_q(p)=6,\qquad \ord_p(q)=4,
+\]
+and
+\[
+ v_q(\sigma(p^5))=1,\qquad v_p(\sigma(q^3))=1.
+\]
+For $0\le e\le5$, the complete cross-valuation lists are
+\[
+ \bigl(v_q(\sigma(p^e))\bigr)_{e=0}^{5}=(0,0,0,0,0,1),
+\]
+\[
+ \bigl(v_p(\sigma(q^e))\bigr)_{e=0}^{5}=(0,0,0,1,0,0).
+\]
+\end{lemma}
+\begin{proof}
+Here $p,q>3$. Since $p\equiv-t\pmod q$, the first identity in \eqref{bh:eq:identities} implies $p^2-p+1\equiv0\pmod q$. This forces order six: $p^3\equiv-1$, while $p\not\equiv-1$ because that would give $q=3$. Also $0<R<q$, so $v_q(p^2-p+1)=1$. No other factor of $\sigma(p^5)=(p+1)(p^2+p+1)(p^2-p+1)$ is divisible by $q$.
+
+Since $q\equiv t\pmod p$ and $t^2\equiv-1\pmod p$, the order of $q$ modulo $p$ is four. The second identity gives $q^2+1=pS$, and
+\[
+ S=p+2t+1,\qquad 0<2t+1<p\quad(t\ge3).
+\]
+Thus $p\nmid S$, proving the stated valuation. Since $p$ does not divide $q-1$ and $q$ does not divide $p-1$, the relevant divisor sums vanish modulo the opposite prime precisely when the exponent index is a multiple of four or six, respectively. The displayed lists follow.
+\end{proof}
+
+The steps $4\to5$ at $p$ and $2\to3$ at $q$ therefore supply two negative edges $p\to q\to p$. Their two-cycle is positive and belongs to the universal graph at every cap $E\ge5$.
+
+\begin{theorem}\label{bh:thm:lower}
+Define
+\[
+ J(T)=\#\{t\in\mathbb Z:3\le t\le T,\ t^2+1\text{ and }t^2+t+1\text{ are prime}\}.
+\]
+For every $E\ge5$, and all sufficiently large real $x$,
+\begin{equation}\label{bh:eq:lower}
+ \boxed{A_E(x)\ge J\!\left(\left\lfloor\frac{\sqrt{4x-3}-1}{2}\right\rfloor\right).}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Each counted parameter produces a positive two-cycle with both vertices at most $x$. These cycles are vertex-disjoint, since
+\[
+ t^2+1<t^2+t+1<(t+1)^2+1
+\]
+for every $t\ge1$. A set meeting all positive cycles must contain at least one vertex from every counted pair. This proves the bound.
+\end{proof}
+
+For example, $t=6$ gives $(p,q)=(37,43)$ and
+\[
+ 37^2-37+1=43\cdot31,\qquad43^2+1=37\cdot50.
+\]
+The next examples include $(197,211)$, $(401,421)$ and $(577,601)$.
+
+
+\section{The conditional obstruction to the proposed growth estimate}
+The polynomials
+\[
+ F_1(t)=t^2+1,\qquad F_2(t)=t^2+t+1
+\]
+are distinct irreducible polynomials over $\mathbb Q$, with positive leading coefficients. No prime divides $F_1(t)F_2(t)$ for every integer $t$, because $F_1(0)F_2(0)=1$. Thus they satisfy the admissibility hypotheses of the Bateman--Horn conjecture; see \cite[Section 3.6]{bh}.
+
+\begin{corollary}[Conditional on Bateman--Horn for this pair]\label{bh:cor:BH}
+There is a positive constant $C$ such that, for every $E\ge5$,
+\[
+ A_E(x)\ge(C+o(1))\frac{\sqrt{x}}{(\log x)^2}.
+\]
+In particular, $A_E(x)=x^{o(1)}$ would be false for every $E\ge5$ under this instance of Bateman--Horn.
+\end{corollary}
+\begin{proof}
+Bateman--Horn predicts
+\[
+ J(T)\sim C\int_2^T\frac{du}{\log F_1(u)\log F_2(u)}
+ \sim \frac C4\frac{T}{(\log T)^2}.
+\]
+The upper parameter in \eqref{bh:eq:lower} is asymptotic to $\sqrt{x}$. Substitution proves the result. The resulting lower bound has logarithm $(\tfrac12+o(1))\log x$, incompatible with subpolynomial growth.
+\end{proof}
+
+This corollary is conditional. It does not prove Bateman--Horn, does not unconditionally disprove the universal growth estimate, and does not challenge the Erd\H{o}s multiplicity conjecture. It does show that the latest proposed sufficient hypothesis is not a harmless finishing lemma: proving it would refute this explicit admissible instance of a standard prime-pattern conjecture. The target-specific integer problem may still have very small fibers even when this universal graph has many disjoint positive cycles.
+
+\subsection{The obstruction also occurs in represented target graphs}
+Let $\mathcal T(T)$ denote the parameters counted by $J(T)$. Form
+\[
+ K_T=\prod_{t\in\mathcal T(T)}(t^2+1)^5(t^2+t+1)^3,
+ \qquad N_T=h(K_T).
+\]
+Empty products are allowed. Every $N_T$ is represented, and its displayed preimage has exponent cap five.
+For any target $N$, let $\Theta_5(N)$ be the minimum number of vertices meeting all positive cycles in its \emph{unpruned} cap-five admissible signed graph. Its local domains are
+\[
+ D_p(N)=\{0\le e\le\min(5,v_p(N)):h(p^e)\mid N\},
+\]
+and signs are taken across consecutive elements of these ordered domains, which may skip integers.
+
+\begin{proposition}\label{bh:prop:targetcycles}
+Unconditionally, for each finite $T$,
+\[
+ \boxed{\Theta_5(N_T)\ge J(T).}
+\]
+Conditioned on Bateman--Horn for $t^2+1,t^2+t+1$, as $T\to\infty$ one has
+\[
+ \boxed{\Theta_5(N_T)\ge
+ \left(\frac1{32}+o(1)\right)
+ \frac{\log N_T}{\log\log N_T}.}
+\]
+\end{proposition}
+\begin{proof}
+For each counted pair $(p,q)$, the factors $h(p^5)$ and $h(q^3)$ divide $N_T$. Therefore $0,5\in D_p(N_T)$ and $0,3\in D_q(N_T)$. By the valuation lists in Lemma~\ref{bh:lem:orders}, the transition into exponent five at $p$ supplies a negative $p\to q$ edge, regardless of which smaller exponent immediately precedes it in the admissible domain. Likewise the transition into exponent three at $q$ supplies a negative $q\to p$ edge. The resulting positive cycles are vertex-disjoint, proving the first assertion.
+
+For the conditional asymptotic, write $p(t)=t^2+1$ and $q(t)=t^2+t+1$. Elementary estimates give
+\[
+ \log h(p(t)^5q(t)^3)=32\log t+O(1/t).
+\]
+Indeed $\log h(r^e)=2e\log r+O(1/r)$ for fixed $e$, while $\log p(t)=2\log t+O(t^{-2})$ and $\log q(t)=2\log t+O(t^{-1})$. Under Bateman--Horn,
+\[
+ J(T)\sim\frac C4\frac{T}{(\log T)^2}.
+\]
+Partial summation consequently gives
+\[
+ \sum_{t\in\mathcal T(T)}\log t
+ =J(T)\log T-\int_3^T\frac{J(u)}u\,du
+ \sim J(T)\log T.
+\]
+For clarity, the integral is $O(T/(\log T)^2)$: split at $\sqrt T$, use a crude bound below that point and $J(u)\ll u/(\log u)^2$ above it. Thus
+\[
+ \log N_T\sim32J(T)\log T,
+ \qquad \log\log N_T\sim\log T.
+\]
+Combine these estimates with the first assertion.
+\end{proof}
+
+There is an analogous obstruction for the consecutive-domain cuts from the previous signed-feedback note. If the domain at $p$ is partitioned into $c_p$ consecutive blocks, and the retained signed graph has no positive cycle, then
+\[
+ \sum_p\log c_p\ge J(T)\log2.
+\]
+Each of the vertex-disjoint two-cycles must lose an edge, which requires at least two blocks at one of its two bases. Distinct pairs require cuts at distinct bases. Conditioned on the same Bateman--Horn instance, this lower bound is $(\log2/32+o(1))\log N_T/\log\log N_T$. Again, it is a lower bound on this particular recording cost, not on the actual multiplicity.
+
+The proposition concerns \emph{unpruned} admissible graphs. Further sound integer deductions can eliminate their cycles, as the examples below demonstrate. Neither the unconditional nor the conditional assertion is a lower bound on $f_5(N_T)$. In particular, merely restricting attention to represented targets does not repair the proposed ``count all admissible positive cycles'' strategy under this prime-pattern conjecture.
+
+
+\section{Two-prime rigidity from the full arithmetic equation}
+The following theorem makes that last distinction exact.
+
+\begin{theorem}\label{bhunit:thm:rigidity}
+Let $p<q$ be primes and $E\ge0$. Suppose
+\[
+ v_q(\sigma(p^a))\le1,\qquad v_p(\sigma(q^b))\le1
+ \qquad(0\le a,b\le E).
+\]
+Then the map
+\[
+ (a,b)\longmapsto h(p^a q^b)
+\]
+is injective on $\{0,\ldots,E\}^2$.
+\end{theorem}
+\begin{proof}
+Suppose two exponent pairs $(a,b),(a',b')$ give the same value. The $p$-adic and $q$-adic equations are
+\[
+ a+v_p(\sigma(q^b))=a'+v_p(\sigma(q^{b'})),
+\]
+\[
+ b+v_q(\sigma(p^a))=b'+v_q(\sigma(p^{a'})).
+\]
+The hypotheses imply $|a-a'|\le1$ and $|b-b'|\le1$. If either difference is zero, the other equation forces both to be zero.
+
+Otherwise both differences have magnitude one. If their signs agree, strict increase of each prime-power factor $h(p^a)$ and $h(q^b)$ rules out equality.
+
+If the signs are opposite, compare the increment ratios
+\[
+ I_r(j)=\frac{h(r^{j+1})}{h(r^j)}
+ =r^2+\frac{r(r-1)}{r^{j+1}-1}.
+\]
+For every prime $r$ and $j\ge0$,
+\[
+ r^2<I_r(j)\le r^2+r.
+\]
+Since $p<q$,
+\[
+ I_p(j)\le p^2+p<q^2<I_q(k)
+\]
+for all $j,k\ge0$. Moving one unit of exponent from one prime to the other therefore changes the value of $h$ strictly. Equality is again impossible. The exponent pairs must coincide.
+\end{proof}
+
+
+\paragraph{Superseded restriction.} The fully unrestricted fixed-pair theorem is in Chapter~\ref{ch:twoprime}. This shorter lemma remains useful when local valuation differences are bounded by one.

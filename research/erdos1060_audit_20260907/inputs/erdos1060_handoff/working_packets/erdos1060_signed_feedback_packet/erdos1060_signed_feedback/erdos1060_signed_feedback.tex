@@ -1,0 +1,250 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,microtype,booktabs}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\DeclareMathOperator{\sgn}{sgn}
+\title{Signed feedback in the exact valuation equations\\for \texorpdfstring{$k\sigma(k)=N$}{k sigma(k)=N}}
+\author{Research continuation: proved counting criteria}
+\date{6 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We specialize a positive-feedback principle to the exact divisor-sum valuation equations. Two different integer preimages necessarily differ on a positive elementary signed circuit. Consequently, domain cuts that remove positive circuits give a rigorous multiplicity bound, even if negative circuits remain. For cubefree inputs, the known classification of quadratic mutual-divisibility pairs gives
+\[
+\log\max(1,f_2(N))\le (\tau_+(N)+2)\log3+\sqrt{(\log2)\log N},
+\]
+where $\tau_+(N)$ is the least number of vertices meeting every positive elementary circuit of length at least three in the specified signed graph. This yields a zero-constant result when $\tau_+(N)=o(\log N/\log\log N)$, but that condition is not proved for general targets. Exact certificates for two earlier test targets are included. The unrestricted Erd\H{o}s conjecture is not resolved, and its previously established unrestricted upper-bound constant is not improved here. The general positive-feedback principle is established literature, not a novelty claim of this note.
+\end{abstract}
+
+\section{The arithmetic domains and signed graph}
+Let $h(k)=k\sigma(k)$, and let $f_E(N)$ count preimages of $N$ whose prime exponents are at most $E$. Factor $N=\prod_{p\in S}p^{\alpha_p}$. Start with
+\[
+ D_p=\{0\le e\le\min(E,\alpha_p):h(p^e)\mid N\}.
+\]
+The domains may subsequently be reduced by any sound necessary-condition test. Every actual preimage must remain represented. We assume that the remaining domains are nonempty; a proved empty domain certifies an empty fiber.
+
+For distinct primes $p,q\in S$, set
+\[
+ a_{qp}(e)=v_q(\sigma(p^e)).
+\]
+Because $p\nmid\sigma(p^e)$, every represented preimage satisfies
+\begin{equation}\label{eq:rows}
+ e_q+\sum_{p\ne q}a_{qp}(e_p)=\alpha_q\qquad(q\in S).
+\end{equation}
+All target-prime rows must be retained, even when a prime has only exponent zero in its input domain.
+
+The graph has the primes whose domains contain at least two values as vertices. If $a<b$ are consecutive elements of the ordered domain $D_p$, and
+\[
+ a_{qp}(b)-a_{qp}(a)\ne0,
+\]
+put an edge $p\to q$ with sign
+\begin{equation}\label{eq:edge}
+ -\sgn\bigl(a_{qp}(b)-a_{qp}(a)\bigr).
+\end{equation}
+An ordered pair of vertices can carry both signs, supported by different domain transitions. There are no loops.
+
+A circuit here is \emph{elementary}: its vertices are distinct except for the repetition needed to close it. It is positive if the product of its edge signs is $+1$. A negative circuit traversed twice is a positive closed walk, but is not a positive elementary circuit and must not be counted as one.
+
+Positive-circuit control of fixed points is established in the discrete dynamical-systems literature, notably Richard~\cite{richard}. The following direct argument applies to the arithmetic equations without needing to extend their right sides to a self-map of a box.
+
+\section{Every collision yields positive feedback}
+\begin{lemma}\label{lem:positive}
+If two different exponent vectors satisfy \eqref{eq:rows}, then the signed graph contains a positive elementary circuit all of whose vertices are coordinates at which the vectors differ.
+\end{lemma}
+\begin{proof}
+Let the two vectors be $e,f$. At a changed coordinate put $d_p=e_p-f_p\ne0$. Subtracting the equations at $q$ gives
+\[
+ d_q=-\sum_{p\ne q}\delta_{qp},\qquad
+ \delta_{qp}=a_{qp}(e_p)-a_{qp}(f_p).
+\]
+For every changed $q$, at least one summand satisfies
+\[
+ \delta_{qp}d_q<0.
+\]
+Such a $p$ is changed. Between $f_p$ and $e_p$, telescope through consecutive domain values. At least one increasing adjacent-domain increment has the sign of $\delta_{qp}/d_p$. Therefore the graph contains an edge $p\to q$ of sign
+\[
+ -\sgn(\delta_{qp}/d_p)=\sgn(d_q/d_p).
+\]
+Choose one such predecessor for every changed vertex. Following predecessors in the finite set of changed vertices produces an elementary directed circuit. On that circuit the product of the chosen signs telescopes:
+\[
+ \prod_{p\to q}\sgn(d_q/d_p)=+1.
+\]
+It is the required positive circuit.
+\end{proof}
+
+\begin{corollary}\label{cor:fvs}
+If a set $I$ of variable primes meets every positive elementary circuit, then
+\[
+ \boxed{f_E(N)\le\prod_{p\in I}|D_p|.}
+\]
+In particular, absence of positive circuits implies at most one preimage.
+\end{corollary}
+\begin{proof}
+Fix the exponents at primes in $I$. Two different remaining solutions would yield, by Lemma~\ref{lem:positive}, a positive circuit avoiding $I$, which is impossible. Count the assignments on $I$.
+\end{proof}
+
+\subsection*{Cutting domains rather than fixing exact exponents}
+Partition each ordered domain $D_p$ into $c_p$ nonempty consecutive blocks. Retain only signed edges supported by adjacent-domain transitions lying within a single block. Take the union of these edges over all blocks.
+
+\begin{corollary}\label{cor:cuts}
+If this retained graph has no positive elementary circuit, then
+\[
+ \boxed{f_E(N)\le\prod_{p\in S}c_p.}
+\]
+\end{corollary}
+\begin{proof}
+Record the block containing the exponent at every prime. For two solutions with the same record, every telescoping step in the proof of Lemma~\ref{lem:positive} stays inside a recorded block. They would give a positive circuit in the retained graph. Hence each block record permits at most one solution.
+\end{proof}
+
+This criterion does not demand an acyclic graph. Negative elementary circuits may remain. It also does not assume that the real relaxation of the integer system has small dimension.
+
+\section{A quantitative cubefree consequence}
+For this section, use the unpruned cap-two domains and restrict the signed graph to primes greater than $3$. Denote the resulting graph by $G_2^\pm(N)$. Define $\tau_+(N)$ to be the minimum cardinality of a vertex set meeting every positive elementary circuit of length at least three in this graph. An empty collection of such circuits has $\tau_+(N)=0$.
+
+Call $p\to q$ linear if $q\mid p+1$ and quadratic if $q\mid p^2+p+1$. These labels refer to arithmetic divisibility, not to the edge sign. A quadratic contribution has negative sign in $G_2^\pm(N)$. A linear contribution can have negative sign across $0\to1$ and positive sign across $1\to2$. In particular, the two notions must not be identified.
+
+\begin{lemma}\label{lem:mixed}
+Every two-vertex directed circuit on primes greater than $3$ is a mutual quadratic-divisibility pair.
+\end{lemma}
+\begin{proof}
+A linear arrow strictly decreases its prime vertex. Suppose $3<p<q$ form a two-cycle. The upward arrow must have $q\mid p^2+p+1$. If the return were linear, $p\mid q+1$. Setting $c=(p^2+p+1)/q$, reduction modulo $p$ gives $c\equiv-1\pmod p$, so $c\ge p-1$. Also $q+1$ is a multiple of $p$ exceeding $p$, hence $q\ge2p-1$. Thus
+\[
+ 2p-1\le q\le\frac{p^2+p+1}{p-1}=p+2+\frac3{p-1},
+\]
+which is impossible for $p\ge5$. The return arrow is therefore quadratic.
+\end{proof}
+
+Let $r(N)$ be the number of unordered mutual quadratic pairs in the graph. They need not be separate strongly connected components.
+
+\begin{theorem}\label{thm:graphbound}
+For all positive targets,
+\begin{equation}\label{eq:finite}
+ \boxed{f_2(N)\le 9\,3^{\tau_+(N)}2^{r(N)}.}
+\end{equation}
+For $N\ge2$, consequently,
+\begin{equation}\label{eq:asym}
+ \boxed{\log\max(1,f_2(N))\le
+ (\tau_+(N)+2)\log3+\sqrt{(\log2)\log N}.}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Fix the input exponents at $2,3$ in at most nine ways. Choose a set $I$ of $\tau_+(N)$ vertices meeting all the long positive circuits and fix its exponents in at most $3^{\tau_+(N)}$ ways.
+
+For each mutual quadratic pair $p<q$, partition the exponent domain at $q$ according to whether $e_q\le1$ or $e_q=2$. Ignore empty blocks. This costs at most two possibilities per distinct selected base, hence at most $2^{r(N)}$ altogether. The partition removes every outgoing quadratic contribution from that base: it is constant zero on exponents $0,1$, and there is no transition inside the singleton block $\{2\}$.
+
+No positive circuit of length at least three remains after fixing $I$, and every remaining two-cycle is broken by these cuts. There are no loops. Corollary~\ref{cor:cuts} now gives at most one input for each record, proving \eqref{eq:finite}.
+
+The classification in Bibby--Vyncke--Zelinsky~\cite[Lemma 5]{bibby} says that positive integers satisfying
+\[
+ p\mid q^2+q+1,\qquad q\mid p^2+p+1
+\]
+are consecutive terms of the sequence
+\[
+ t_1=t_2=1,\qquad
+ t_{j+2}=\frac{t_{j+1}^2+t_{j+1}+1}{t_j},
+\]
+whose first terms are $1,1,3,13,61,291,\ldots$, and $t_{j+1}>4t_j$ for $j>3$.
+The larger endpoints of distinct pairs are distinct. Order them as $q_1<\cdots<q_r$. Since both endpoints exceed $3$, one has
+\[
+ q_i\ge t_{i+4}>13\cdot4^i.
+\]
+Each $q_i$ divides $N$, and therefore, for $r>0$,
+\[
+ \log N\ge\sum_{i=1}^r\log q_i>
+ \frac{r(r+1)}2\log4=r(r+1)\log2.
+\]
+Thus $r\log2\le\sqrt{(\log2)\log N}$. The case $r=0$ is immediate. Taking logarithms of \eqref{eq:finite} proves \eqref{eq:asym}.
+\end{proof}
+
+In particular, if $G_2^\pm(N)$ has no positive elementary circuit of length at least three, then
+\[
+ \log\max(1,f_2(N))=O(\sqrt{\log N})
+ =o(\log N/\log\log N).
+\]
+Arbitrarily complicated negative circuits are allowed by this criterion. It is a graph-defined restricted result, not a conclusion for every target.
+
+\section{Exact certificates for the two test targets}
+The included script constructs the admissible domains, repeats exact individual-row support pruning, and enumerates all elementary directed circuits with their possible signs. The enumeration requires distinct circuit vertices; it never treats two traversals of a negative circuit as a positive elementary circuit.
+
+For
+\[
+ M=5276516179938729922490847708056660616574496169354744299520,
+\]
+the cap-two model has $53$ initial options and $48$ after sound pruning. Make the domain cuts
+\[
+ \begin{array}{c|c}
+ \text{base}&\text{blocks}\\ \hline
+ 2&\{0\},\{1\},\{2\}\\
+ 13&\{0,1\},\{2\}\\
+ 19&\{0,1\},\{2\}
+ \end{array}
+\]
+and leave every other domain uncut. Exactly two elementary circuits remain, and both have negative sign:
+\[
+ (3,13,7),\qquad(3,13,7,19,5).
+\]
+Therefore Corollary~\ref{cor:cuts} certifies $f_2(M)\le12$. This does not improve the previously certified exact value $f_2(M)=2$; it is a different proof of a weaker finite bound that deliberately leaves feedback circuits in place.
+
+In the unpruned graph above $3$, there are six elementary circuits, five positive. Four of the positive circuits have length greater than two, and all contain $17$. The remaining positive circuit is the pair $\{13,61\}$. Hence $\tau_+(M)=1$ and $r(M)=1$, and \eqref{eq:finite} gives $f_2(M)\le54$ without any row pruning.
+
+For the singleton test target
+\[
+ N_0=504654433920=2^7 3^3\cdot5\cdot7^2\cdot13\cdot19^2\cdot127,
+\]
+pruning gives $17$ options. Splitting the exponent at $2$ into singletons and splitting the domain at $3$ into $\{0,1\},\{2\}$ leaves an acyclic graph, giving $f_2(N_0)\le6$. The earlier exact integer argument proved the sharper result $f(N_0)=1$. No improvement to that exact count is claimed.
+
+The checker separately verifies the two known inputs of $M$ by complete divisor summation. Each has $20{,}736$ divisors. The actual pair produces a positive circuit
+\[
+ (19,127,5419,271,17,307,43,11)
+\]
+with all eight selected edge signs negative, in agreement with Lemma~\ref{lem:positive}.
+
+\section{The remaining gap and a nontrivial long cycle}
+Theorem~\ref{thm:graphbound} would give the desired cap-two estimate if one proved
+\[
+ \tau_+(N)=o(\log N/\log\log N)
+\]
+uniformly. No such assertion is proved here. It is only a sufficient criterion; the graph can include transitions that cannot coexist in a solution. The threshold-cut bound likewise needs a uniform estimate for the total logarithm of its block counts.
+
+Long positive circuits cannot simply be declared absent. The primes
+\[
+ 193,1783,1279,2383,12541,576151,151009,6067
+\]
+form a directed cycle under quadratic divisibility. For each successive pair $(p,q)$, including the last-to-first pair, the quotient $(p^2+p+1)/q$ is respectively
+\[
+ 21,\ 2487,\ 687,\ 453,\ 273,\ 2198217,\ 3758673,\ 190749.
+\]
+All are positive integers; the input primes are verified by trial division. These eight negative quadratic edges form a positive signed circuit. This is not a collision and does not imply multiple preimages. It does show why the missing long-circuit estimate cannot be replaced by the claim that all positive circuits are the classified two-cycles.
+
+Finally, cap two is not the whole problem. The established high-exponent decomposition says
+\[
+ f(N)\le G_E(N)F_E(N),\qquad
+ F_E(X)=\max_{M\le X}\max(1,f_E(M)),
+\]
+\[
+ G_E(N)=\prod_{p\mid N}(1+\max(\alpha_p-E,0)),\qquad
+ \log G_E(N)\le(c_E+o_E(1))\frac{\log N}{\log\log N},
+\]
+where
+\[
+ c_E=\sup_{a\ge E+1}\frac{\log(a-E+1)}a\longrightarrow0.
+\]
+Thus zero-constant estimates for every fixed $E$ would finish the unrestricted statement. This note proves signed-feedback criteria and their stated restricted consequences, not that uniform family of estimates. No complete solution or new unrestricted asymptotic constant is claimed.
+
+\section*{Reproducibility}
+Run \texttt{python3 verify\_signed\_feedback.py}. It uses only the Python standard library and writes \texttt{verification.json}. The finite assertions described above have been checked. No independent human referee review or formal proof-assistant verification is claimed. Exploratory software and analogies are not premises in the mathematical proofs.
+
+\begin{thebibliography}{9}
+\bibitem{richard} A. Richard, \emph{Positive circuits and maximal number of fixed points in discrete dynamical systems}, author preprint dated 15 April 2009, especially Theorem 2.\\
+\url{https://webusers.i3s.unice.fr/~richard/PUBLICATIONS/JOURNALS/2009_MaxFP_DAM.pdf}
+\bibitem{bibby} S. Bibby, P. Vyncke and J. Zelinsky, \emph{On the Third Largest Prime Divisor of an Odd Perfect Number}, arXiv:1908.09420v3, Lemma 5.\\
+\url{https://arxiv.org/html/1908.09420v3}
+\bibitem{previous} Earlier working notes in this investigation: \emph{Exact certificates and longer feedback cycles for $k\sigma(k)=N$}; \emph{Erd\H{o}s 1060: real dimension is not integer ambiguity}. Both explicitly leave the unrestricted uniform estimate unproved.
+\end{thebibliography}
+\end{document}

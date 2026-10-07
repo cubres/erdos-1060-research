@@ -1,0 +1,263 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,microtype,booktabs}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Exact certificates and longer feedback cycles for k sigma(k)=N},pdfsubject={Partial results; no solution of the unrestricted conjecture}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\DeclareMathOperator{\rank}{rank}
+\title{Exact certificates and longer feedback cycles\\for \texorpdfstring{$k\sigma(k)=N$}{k sigma(k)=N}}
+\author{Research continuation: proved partial results and exact finite checks}
+\date{6 September 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We extend the exclusion of mixed two-cycles to all cycles with exactly one quadratic divisor-sum edge and otherwise linear edges, for prime vertices exceeding three. We also give elementary exact dual and rank certificates for finite fibers. After necessary-condition integer pruning, one such certificate reduces the previous 29-digit cubefree collision to an affine line and proves its complete cubefree fiber has two elements. A separate exact elimination certificate proves injectivity for cubefree inputs with all prime factors between $1001$ and $10^6$. These are partial results: no uniform estimate for the remaining degrees of freedom is proved, and the unrestricted Erd\H{o}s conjecture is not resolved. No originality, independent human-referee, or proof-assistant claim is made.
+\end{abstract}
+
+\section{Scope and the unresolved target}
+Let
+\[
+ h(k)=k\sigma(k),\qquad f_E(N)=\#\{k:h(k)=N,\ v_p(k)\le E\text{ for every prime }p\}.
+\]
+The full multiplicity is $f(N)$. The desired uniform conclusion remains
+\[
+ \log\max(1,f(N))=o\!\left(\frac{\log N}{\log\log N}\right).
+\]
+The preceding note bounds two-vertex feedback components, using the quadratic pair classification of Bibby--Vyncke--Zelinsky~\cite{bibby}, and gives an exact adaptive reconstruction algorithm. It does not bound its total branching cost uniformly. The present arguments do not assume such a bound and do not improve the previously established unrestricted asymptotic constant.
+
+\section{Cycles with one quadratic edge are impossible}
+On primes greater than $3$, call $p\to q$ a linear edge if $q\mid p+1$, and a quadratic edge if $q\mid p^2+p+1$. Both refer to divisibilities, not to a claimed collision.
+
+\begin{theorem}\label{thm:onequad}
+A directed cycle on primes exceeding $3$ cannot contain exactly one quadratic edge and otherwise only linear edges.
+\end{theorem}
+\begin{proof}
+Suppose the quadratic edge is $p\to q$, where $q\mid p^2+p+1$. The rest of the cycle is a nonempty linear path
+\[
+ q=q_0\longrightarrow q_1\longrightarrow\cdots\longrightarrow q_s=p.
+\]
+Write $q_i+1=a_iq_{i+1}$. Since the vertices are odd primes, each $a_i$ is an even integer at least $2$. Successive substitution gives
+\[
+ q=Ap-B,
+\]
+where
+\[
+ A=\prod_{i=0}^{s-1}a_i,\qquad
+ B=1+a_0+a_0a_1+\cdots+a_0\cdots a_{s-2}.
+\]
+The expression for $B$ is $1$ when $s=1$. We have $0<B<A$: dividing by $A$ expresses $B/A$ as a sum of $s$ reciprocals of suffix products, bounded by $\sum_{j=1}^s2^{-j}<1$. Also $A$ is even.
+
+Set $c=(p^2+p+1)/q$. Reduction modulo $p$ gives $cB\equiv-1\pmod p$. Thus
+\[
+ cB=tp-1
+\]
+for an integer $t\ge1$. The equality $c(Ap-B)=p^2+p+1$ then gives
+\[
+ cA=p+1+t.
+\]
+Consequently,
+\[
+ 0<c(A-B)=(1-t)p+t+2.
+\]
+If $t\ge2$, the right-hand side is at most $4-p<0$, since $p\ge5$. Hence $t=1$, so $cA=p+2$. Its left-hand side is even and its right-hand side is odd, a contradiction.
+\end{proof}
+
+Every linear edge decreases its prime vertex. Thus a directed cycle has at least one quadratic edge, and Theorem~\ref{thm:onequad} improves this to at least two. It does not bound how many cycles or independent choices may occur.
+
+\begin{proposition}\label{prop:oddcycle}
+Suppose a strongly connected component in the cubefree admissible graph is a simple directed cycle, and every internal contribution arises only at input exponent two. After contributions from other components have been fixed, the component has at most one filling if its length is odd, and at most two fillings if its length is even.
+\end{proposition}
+\begin{proof}
+Its equations have the form
+\[
+ B_i=e_i+a_{i-1}\mathbf1_{\{e_{i-1}=2\}},\qquad e_i\in\{0,1,2\},\quad a_i\ge1,
+\]
+with cyclic indices. Define $F_i(x)=B_i-a_{i-1}\mathbf1_{\{x\ge2\}}$ for real $x$. Each $F_i$ is nonincreasing and agrees with the required rule on valid exponents. An odd composition is nonincreasing, so has at most one fixed point: $x<y$ and $F(x)=x,F(y)=y$ would imply $x\ge y$. Any nonempty composition has an image of at most two points, proving the even case. Once one exponent is specified, the other exponents are forced. Domain restrictions and unused target rows only remove possibilities.
+\end{proof}
+
+
+\begin{corollary}\label{cor:graphclass}
+For a target $N$, consider the cap-two admissible graph on input primes greater than $3$: an exponent $e\in\{1,2\}$ is admissible at $p$ when $h(p^e)\mid N$, and it creates $p\to q$ when $q\mid\sigma(p^e)$. Suppose every strongly connected component is a singleton, a two-vertex component, or a simple odd directed cycle whose internal contributions are only quadratic. Then
+\[
+ \log\max(1,f_2(N))\le 2\log3+\sqrt{(\log2)\log N}.
+\]
+In particular the zero-constant estimate holds for $f_2$ on this graph-defined class, allowing components of arbitrarily large odd size.
+\end{corollary}
+\begin{proof}
+Fix the exponents at $2,3$ in at most nine ways and process components in topological order. A singleton is forced by its own valuation equation. Proposition~\ref{prop:oddcycle} gives at most one filling for an allowed odd component. A two-vertex component is purely quadratic by Theorem~\ref{thm:onequad} and has at most two fillings by the same proposition.
+
+If there are $r$ two-vertex components, their larger prime vertices are distinct consecutive-term endpoints in the quadratic mutual-divisibility sequence of \cite[Lemma 5]{bibby}, beginning $1,1,3,13,61,291,\ldots$. After the initial terms its successive ratio exceeds four. Ordering the larger primes therefore gives $q_i>13\cdot4^i$, and
+\[
+ \log N\ge\sum_{i=1}^r\log q_i>r(r+1)\log2
+\]
+for $r>0$. The bound $f_2(N)\le9\cdot2^r$ proves the assertion. This is the two-component counting estimate from the previous note, now with the unique odd components included.
+\end{proof}
+
+\section{The exact indicator model}
+Write $N=\prod_{q\in S}q^{\alpha_q}$. For each $p\in S$, start with
+\[
+ D_p=\{0\le e\le\min(E,\alpha_p):h(p^e)\mid N\}.
+\]
+Introduce one indicator $x_{p,e}\in\{0,1\}$ for each $e\in D_p$. Impose
+\begin{align}
+ \sum_{e\in D_p}x_{p,e}&=1 &&(p\in S),\label{eq:onehot}\\
+ \sum_{p\in S}\sum_{e\in D_p}v_q(h(p^e))x_{p,e}&=\alpha_q &&(q\in S).\label{eq:valuation}
+\end{align}
+Together these are $Ax=b$, with an integer matrix $A$ and integer right-hand side $b$. They encode the fiber exactly. The local divisibility test excludes outside factors, and the equalities exhaust every target valuation. The rows for target primes that cannot appear positively in the input are retained.
+
+It is safe to delete a candidate exponent if, in any row, its contribution cannot be completed by a sum of contributions from the other variables' current domains. The attainable sums are finite integer sets. Repeating this necessary-condition operation preserves every solution. The numerical certificate below uses this preliminary operation; applying its weights to all unpruned local options would not be justified.
+
+\begin{lemma}[Exact nonnegative scores]\label{lem:dual}
+Let $A_j$ be the columns of the current indicator model. Suppose rational row weights $y$ satisfy
+\[
+ y^TA_j\ge0\quad\text{for every }j,\qquad y^Tb=0.
+\]
+Then every feasible nonnegative assignment satisfies $x_j=0$ whenever $y^TA_j>0$.
+\end{lemma}
+\begin{proof}
+For $Ax=b$, we have
+\[
+ 0=y^Tb=\sum_j(y^TA_j)x_j.
+\]
+Each summand is nonnegative, so every positive-score variable vanishes.
+\end{proof}
+
+This is an exact certificate, regardless of how the weights were discovered. Negative row weights are allowed; it is the resulting column scores that must be nonnegative. Multiplying by a common denominator gives an integer certificate.
+
+\begin{lemma}[Dimension bounds the number of binary solutions]\label{lem:rank}
+If an $m$-column real linear system $Ax=b$ has rank $r$, it has at most $2^{m-r}$ binary solutions.
+\end{lemma}
+\begin{proof}
+Choose $r$ linearly independent columns. Fixing the other $m-r$ coordinates determines at most one assignment on those columns. There are at most $2^{m-r}$ binary assignments to the fixed coordinates.
+\end{proof}
+
+Hence, after safe pruning and exact zero-budget certificates, an $m_0$-column residual model with rational rank $r_0$ gives
+\[
+ \boxed{f_E(N)\le2^{m_0-r_0}.}
+\]
+This is a finite bound, not a uniform estimate for $m_0-r_0$.
+
+\begin{proposition}[A version with a positive budget]\label{prop:budget}
+Suppose $s_j=y^TA_j\ge0$ and $\Delta=y^Tb\ge0$. Let $m_+$ count the positive-score columns, and suppose each such score is at least $\eta>0$. Put $B=\lfloor\Delta/\eta\rfloor$. If the zero-score submatrix has $m_0$ columns and rank $r_0$, then
+\[
+ \#\{x\in\{0,1\}^m:Ax=b\}
+ \le 2^{m_0-r_0}\sum_{j=0}^{\min(B,m_+)}\binom{m_+}{j}
+ \le 2^{m_0-r_0}(1+m_+)^B.
+\]
+\end{proposition}
+\begin{proof}
+The identity $\sum s_jx_j=\Delta$ allows at most $B$ selected positive-score coordinates. Once they are fixed, the zero-score coordinates solve a linear system whose coefficient matrix has rank $r_0$, so Lemma~\ref{lem:rank} applies. Summing over the positive-coordinate subsets proves the first inequality. Encoding each subset as a sorted list padded with empty symbols to length $B$ proves the second.
+\end{proof}
+
+\section{An exact certificate for the nine-vertex example}
+Let
+\[
+ M=5276516179938729922490847708056660616574496169354744299520.
+\]
+Its prime factorization is
+\begin{align*}
+ M={}&2^{20}3^5\cdot5\cdot7^3\cdot11^2 13^2 17^2 19^2\cdot23\cdot31^2\cdot43\cdot61^2\\
+ &\cdot83\cdot97\cdot127^2\cdot271\cdot307^2\cdot331\cdot367\cdot733\cdot5419.
+\end{align*}
+For exponent cap two, the exact local model has 53 indicators. Integer row-support propagation removes five, leaving 48. An integer vector $y$ has zero target budget and nonnegative scores on all 48 columns. Ten scores are positive, so their indicators vanish by Lemma~\ref{lem:dual}. The 38 retained columns have exact rational rank 37.
+
+Consequently, the entire cubefree fiber has at most two members. Fixing the indicator $x_{11,0}$ to 0 or 1 gives the following two valid integer assignments:
+\[
+ a=60629697601617236747379985403,\qquad
+ b=61655391632564660609643619057.
+\]
+Their factors are
+\begin{align*}
+ a&=11^2 13^2\cdot17\cdot19\cdot31\cdot61\cdot97\cdot127^2\cdot271\cdot307^2\cdot331\cdot367,\\
+ b&=13\cdot17^2 19^2\cdot23\cdot31^2\cdot43\cdot61^2\cdot83\cdot127\cdot307\cdot733\cdot5419.
+\end{align*}
+Thus
+\[
+ \boxed{\{k:h(k)=M,\ k\text{ cubefree}\}=\{a,b\}.}
+\]
+The count itself was already known from the preceding exact search. The present result is a different certificate for its completeness, not a new record or a claim that all fibers behave this way.
+
+The coefficient vector is recorded as prime-row prices $y_q$ and block-row offsets $\beta_p$. A local score is
+\[
+ s(p,e)=\beta_p+\sum_q y_qv_q(h(p^e)).
+\]
+The certificate includes all prices and offsets, every retained option, the positive scores, and the free indicator. The standard-library checker rebuilds the local model, independently repeats necessary-condition propagation, verifies all score inequalities and the zero budget, and computes rank by rational Gaussian elimination. It solves the two endpoint systems and independently constructs and sums all 20,736 divisors of each input.
+
+\begin{center}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Stage & Indicators & Rational nullity\\
+\midrule
+All locally admissible options & 53 & not used\\
+After exact row-support pruning & 48 & 6\\
+After the integer score certificate & 38 & 1\\
+After fixing $x_{11,0}$ & 38 & 0\\
+\bottomrule
+\end{tabular}
+\end{center}
+The rational-nullity figure 6 includes all prime rows and all block rows. The final fixed-indicator equation increases the rank to 38.
+
+\section{Other completed finite checks}
+\subsection*{A larger finite-prime noncollision certificate}
+The function $h$ is injective on cubefree integers whose prime factors all lie in $[1001,10^6]$. This is a finite allowed-prime statement, not an upper bound of $10^6$ on the inputs.
+
+There are 78,330 allowed input primes. For each, form the three signed-difference types between exponents 0, 1, and 2. A collision selects at most one signed difference at each input prime. If a factor row is nonzero only in columns owned by one input prime, no nonzero column at that row can participate in a collision. Repeating this exact elimination removes all 234,990 difference columns in 35 rounds.
+
+The checker verifies each local product exactly. It checks the input primes by a sieve. For the 130,468 distinct factor-row bases, it verifies pairwise coprimality using a product and remainder tree. Output-row bases need not be assumed prime: distinct pairwise coprime integers greater than one are multiplicatively independent, which is sufficient for the row argument. The entire check uses the Python standard library.
+
+\subsection*{Complete prime-graph check through $10^5$}
+For input primes $5\le p\le10^5$, all local factorizations at exponents 1 and 2 were checked exactly, including trial-division primality verification of their factors. The finite graph has precisely three directed triangles, up to cyclic rotation:
+\[
+ (31,331,5233),\qquad(43,631,79),\qquad(43,631,307).
+\]
+The middle triangle has edge types quadratic, linear, quadratic. The other two have all quadratic edges. The checker also verifies the absence of a linear return path for all 17,280 quadratic edges whose endpoints lie in this finite graph. Theorem~\ref{thm:onequad}, not this finite check, supplies the unbounded-prime assertion.
+
+\subsection*{Five dense represented targets}
+For each cutoff $P\in\{31,61,101,251,503\}$, take the product of all primes $p\le P$, assigning exponent 2 when every factor of $p^2+p+1$ is at most $P$, and exponent 1 otherwise. Form its $h$-value. The resulting targets have 31, 60, 110, 273, and 557 digits. Exact row propagation alone determines every cubefree input exponent, certifying that each chosen target has exactly one cubefree preimage. This is a report on five constructed targets, not a density or asymptotic assertion.
+
+\subsection*{An inconclusive search}
+For cubefree input primes in $[251,10^6]$, exact elimination leaves 1,412 difference columns on 602 bases. A reduced numerical mixed-integer search, with a 30-second limit, returned no nonzero witness. Its time-limit status proves neither existence nor nonexistence. The unresolved columns are not being labeled actual collisions.
+
+\section{What would finish the conjecture, and what is still missing}
+The certificate framework gives a rigorous sufficient task: construct safe domains and exact row weights, uniformly for every fixed exponent cap $E$, for which
+\[
+ (m_0-r_0)\log2+B\log(1+m_+)
+ =o_E\!\left(\frac{\log N}{\log\log N}\right),
+\]
+with the notation of Proposition~\ref{prop:budget}. In the zero-budget case this reduces to a uniform bound on the residual nullity. Neither assertion has been proved here. A feasible real relaxation can retain many degrees of freedom that have no corresponding binary solutions, so this sufficient condition may be stronger than necessary.
+
+The finite affine-line certificate does not justify a claim that all larger feedback components reduce to one decision. The cycle theorem does not bound the number or complexity of cycles with at least two quadratic edges. Higher exponent caps introduce additional divisor-sum polynomials.
+
+For clarity, the established fixed-cap reduction is
+\[
+ f(N)\le G_E(N)F_E(N),\qquad
+ F_E(X)=\max_{M\le X}f_E(M),\qquad
+ G_E(N)=\prod_{p\mid N}\bigl(1+\max(\alpha_p-E,0)\bigr).
+\]
+For fixed $E$,
+\[
+ \log G_E(N)\le(c_E+o_E(1))\frac{\log N}{\log\log N},\qquad
+ c_E=\sup_{a\ge E+1}\frac{\log(a-E+1)}a\longrightarrow0.
+\]
+Thus zero-constant bounds at \emph{every} fixed cap would complete the argument, by first choosing $E$ and then taking $N$ large. This note supplies finite certificates and structural lemmas, not that uniform family of estimates.
+
+The source checks did not supply a missing completion theorem. Kominers~\cite{kominers} proves a positive-constant bound and explains the need for further higher-exponent control. The injectivity results in Noppakaew--Pongsriiam~\cite{np} concern specific different arithmetic functions or restricted input classes. Fixed-abundancy results~\cite{pp} cannot be substituted directly, because $\sigma(k)/k=N/k^2$ varies within the present fiber. No global literature-status claim is inferred from failed access to the current problem page.
+
+\textbf{Conclusion.} There is still no complete solution to the unrestricted conjecture in this investigation. No solution claim or submission-ready resolution is warranted by these arguments.
+
+\begin{thebibliography}{9}
+\bibitem{bibby} S. Bibby, P. Vyncke and J. Zelinsky, \emph{On the Third Largest Prime Divisor of an Odd Perfect Number}, arXiv:1908.09420v3. Quadratic mutual-divisibility classification and mixed-pair exclusion.\\
+\url{https://arxiv.org/html/1908.09420v3}
+\bibitem{kominers} S. D. Kominers, \emph{On the Number of Solutions of $k\sigma(k)=n$}, working paper.\\
+\url{https://www.scottkom.com/assets/articles/Kominers_ksigmak.pdf}
+\bibitem{np} P. Noppakaew and P. Pongsriiam, \emph{Product of Some Polynomials and Arithmetic Functions}, Journal of Integer Sequences 26 (2023), Article 23.9.1.\\
+\url{https://cs.uwaterloo.ca/journals/JIS/VOL26/Pongsriiam/pong43.pdf}
+\bibitem{pp} P. Pollack and C. Pomerance, \emph{Some problems of Erd\H{o}s on the sum-of-divisors function} (2016), especially Section 4.\\
+\url{https://math.dartmouth.edu/~carlp/btran10.pdf}
+\end{thebibliography}
+\end{document}

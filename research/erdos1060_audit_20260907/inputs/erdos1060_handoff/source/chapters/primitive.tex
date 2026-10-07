@@ -1,0 +1,128 @@
+\chapter{Primitive divisors and finite exponent lists}\label{ch:primitive}
+\sourcebox{erdos1060\_literature\_audit.tex}{Uses the classical Bang--Zsigmondy theorem. Distinctness of primitive-divisor labels is local to one input base, not global across all bases.}
+\section{A classical primitive-divisor input}
+A prime $q$ is a primitive prime divisor of $a^m-1$ if it divides $a^m-1$ but divides none of $a^j-1$ for $1\le j<m$. Equivalently, $\ord_q(a)=m$.
+
+We use the following classical form of the Bang--Zsigmondy theorem; it is stated in the introduction of Glasby--L\"ubeck--Niemeyer--Praeger~\cite{zsig}.
+
+\begin{theorem}[Bang--Zsigmondy, restricted form used here]\label{primitive:thm:bang}
+For integers $a\ge2$ and $m\ge3$, the number $a^m-1$ has a primitive prime divisor unless $(a,m)=(2,6)$.
+\end{theorem}
+
+The restriction $m\ge3$ is important. No assertion about the additional exceptions at index two is needed. For a primitive divisor $q$ at such an index, one has $q\ne a$ when $a$ is prime, and $m\mid q-1$. In particular, $q\ge5$.
+
+
+\section{Few possible higher exponents at each input prime}
+Let $N>1$, let $S=\{q:q\mid N\}$, and put $r=|S|$. For $p\in S$, define
+\[
+ B_p(N)=\{0\}\cup\{e\ge2:p^e\sigma(p^e)\mid N\}.
+\]
+The symbol zero in this set records absence of a higher prime-power block; it merges input exponents zero and one.
+
+\begin{lemma}\label{primitive:lem:listsize}
+For every $p\mid N$, one has $|B_p(N)|\le r$.
+\end{lemma}
+\begin{proof}
+Let $e\ge2$ be an admissible exponent, initially excluding $(p,e)=(2,5)$. Apply Theorem~\ref{primitive:thm:bang} to $p^{e+1}-1$. It supplies a prime $q$ with
+\[
+ \ord_q(p)=e+1.
+\]
+Since $e+1\ge3$, the prime $q$ does not divide $p-1$. Therefore
+\[
+ q\mid\frac{p^{e+1}-1}{p-1}=\sigma(p^e),
+\]
+so $q\in S\setminus\{p\}$. Choose, for example, the smallest possible such $q$ for each exponent.
+
+For a fixed input base $p$, two different exponents cannot have the same chosen prime: $\ord_q(p)$ has a unique value. Thus the nonexceptional higher-exponent choices inject into $S\setminus\{p\}$.
+
+If $p$ is odd there is no exception, proving that there are at most $r-1$ higher-exponent choices. Suppose $p=2$ and exponent five is admissible. Then
+\[
+ \sigma(2^5)=63=3^2\cdot7,
+\]
+so $3\in S$. No nonexceptional witness can equal $3$, because $\ord_3(2)=2$, whereas all their required orders are at least three. Assign the exceptional exponent five the label $3$. The injection into $S\setminus\{2\}$ is still valid. If exponent five is not admissible, no additional label is needed.
+
+In every case there are at most $r-1$ admissible exponents greater than one. Adding the symbol zero proves $|B_p(N)|\le r$.
+\end{proof}
+
+\textbf{Local, not global, distinctness.} The chosen witnesses are distinct only when the input base $p$ is fixed. They may be reused at different bases: for example,
+\[
+ \ord_7(2)=\ord_7(11)=3.
+\]
+No globally fresh-prime assertion is used or implied.
+
+
+\section{The multiplicity bound}
+We recall the elementary squarefree injectivity underlying the olympiad argument and Kominers's bound~\cite{kominers}.
+
+\begin{lemma}\label{primitive:lem:squarefree}
+If $u,v$ are squarefree positive integers and $h(u)=h(v)$, then $u=v$.
+\end{lemma}
+\begin{proof}
+Cancel the equal factors $p(p+1)$ from primes shared by $u$ and $v$. The remaining inputs have disjoint prime supports. If their largest remaining prime is $q\ge5$, assume it divides the first input. Every prime $p$ in the opposite input satisfies $p<q$ and $p+1<q$: equality $p+1=q$ would make the even integer $q-1\ge4$ prime. Thus $q$ divides none of the opposite factors $p(p+1)$, a contradiction. The only possible remaining primes are $2,3$. The values on their squarefree products are
+\[
+ h(1)=1,\quad h(2)=6,\quad h(3)=12,\quad h(6)=72,
+\]
+which are all distinct. Hence no unequal residual inputs remain.
+\end{proof}
+
+\begin{theorem}\label{primitive:thm:main}
+For $N>1$ and $r=\omega(N)$,
+\begin{equation}\label{primitive:eq:main}
+ \boxed{f(N)\le\prod_{p\mid N}|B_p(N)|\le r^r.}
+\end{equation}
+In fact, writing $\alpha_p=v_p(N)$,
+\[
+ f(N)\le\prod_{p\mid N}|B_p(N)|
+ \le\min\!\left\{\prod_{p\mid N}\alpha_p,\ r^r\right\}.
+\]
+\end{theorem}
+\begin{proof}
+For a preimage $k$, write
+\[
+ d(k)=\prod_{v_p(k)\ge2}p^{v_p(k)},\qquad k=d(k)s(k).
+\]
+The integer $s(k)$ is squarefree and coprime to $d(k)$. The function $h$ is multiplicative on coprime arguments, so
+\[
+ h(k)=h(d(k))h(s(k)).
+\]
+A fixed value of $d(k)$ determines $h(s(k))=N/h(d(k))$, and Lemma~\ref{primitive:lem:squarefree} gives at most one possible $s(k)$. Thus the map $k\mapsto d(k)$ is injective within the fiber.
+
+Every local block $p^e$ with $e\ge2$ satisfies $h(p^e)\mid N$. The number of possible powerful cores is therefore at most $\prod_{p\mid N}|B_p(N)|$. Lemma~\ref{primitive:lem:listsize} bounds each factor by $r$. Also $B_p(N)\subseteq\{0,2,3,\ldots,\alpha_p\}$, which has $\alpha_p$ elements. This proves both assertions.
+\end{proof}
+
+The case $N=1$ is separate and has $f(1)=1$. Theorem~\ref{primitive:thm:main} gives a bound depending only on the number of distinct target primes, uniformly over their values and target exponents. It is not claimed to improve the earlier unrestricted asymptotic estimate in the many-prime regime.
+
+
+\section{An exact finite candidate list, with no exponent scan}
+For a finite nonempty set of primes $S$ and $p\in S$, put
+\begin{align*}
+ \mathcal L_p(S)={}&\{0,1\}\cup
+ \{\ord_q(p)-1:q\in S\setminus\{p\},\ \ord_q(p)\ge3\}\
+ &{}\cup\begin{cases}\{5\},&p=2,\\\varnothing,&p\ne2.\end{cases}
+\end{align*}
+Theorem~\ref{primitive:thm:bang} proves that every exponent in any input with $\rad(h(k))$ supported on $S$ lies in this list. For a specified target $N$ with prime support $S$, the exact local domain is therefore
+\begin{equation}\label{primitive:eq:domains}
+ \boxed{D_p(N)=\{e\in\mathcal L_p(S):p^e\sigma(p^e)\mid N\}.}
+\end{equation}
+The divisibility test automatically enforces $e\le v_p(N)$. Formula~\eqref{primitive:eq:domains} is equality, not merely a necessary-condition subset.
+
+There are at most $r-1$ actual exponents greater than one at each base, with zero and one kept separately here. Thus every fully filtered local domain has at most $r+1$ members, even if a target exponent is enormous. Factoring $q-1$ and computing orders may still require substantial computational work; no polynomial-time complexity claim is made.
+
+The same proof gives a finite-support statement with no specified target:
+\begin{corollary}
+For any nonempty set $S$ of $r$ primes,
+\[
+ \#\{k\ge1:\text{every prime divisor of }h(k)\text{ belongs to }S\}
+ \le(r+1)^r.
+\]
+\end{corollary}
+\begin{proof}
+At each $p\in S$, apply the preceding primitive-witness argument to all exponents whose local divisor sum is supported on $S$. It gives at most $r-1$ higher-exponent options, in addition to zero and one. Any input satisfying the stated condition has all its prime factors in $S$. Counting the independent choices proves the assertion. Conversely, every combination of fully support-filtered local options has $h$ supported on $S$, by multiplicativity; thus the lists also give an exact enumeration in this fixed-support problem.
+\end{proof}
+
+For example, if $S=\{2,3\}$ the only inputs are $1,2,3,6$. If $S=\{2,3,7\}$ the allowed exponents are
+\[
+ e_2\in\{0,1,2,5\},\qquad e_3,e_7\in\{0,1\}.
+\]
+There are exactly 16 inputs, of arbitrary permitted size rather than under an imposed height cutoff; the largest fiber has size two, realized by $h(12)=h(14)=336$.
+

@@ -1,0 +1,35 @@
+\chapter{Forcing an attached large prime}\label{ch:attachment}
+\sourcebox{erdos1060\_branching\_cycles.tex}{A proved multiplicity-preserving operation for caps one, two and three. Arbitrary target enlargements need not have this property.}
+\section{A forcing lemma for a large attached prime}
+\begin{lemma}\label{attachment:lem:attachment}
+If $q>7$ is prime and $r\mid q+1$ is prime, then
+\[
+ q\nmid\sigma(r^j)\qquad(j=1,2,3).
+\]
+\end{lemma}
+\begin{proof}
+Here $r<q$. The linear case is immediate. If $q\mid r^2+r+1$, putting $c=(r^2+r+1)/q$ gives $c\equiv-1\pmod r$, hence $c\ge r-1$. Together with $q\ge2r-1$ this forces $r\le3$ as in Lemma~\ref{signed:lem:mixed}. Directly checking $r=2,3$ leaves only the possible quadratic pair $(r,q)=(2,7)$, excluded by $q>7$.
+
+For $j=3$, factor $\sigma(r^3)=(r+1)(r^2+1)$. The prime $q$ cannot divide $r+1$. If $q\mid r^2+1$, its quotient is again $-1$ modulo $r$, giving
+\[
+ 2r-1\le q\le\frac{r^2+1}{r-1}=r+1+\frac2{r-1}.
+\]
+This forces $r\le3$; checking $r=2,3$ gives only $q=5$. This is also excluded.
+\end{proof}
+
+\begin{theorem}\label{attachment:thm:lift}
+Let $M\ge1$, let $E\in\{1,2,3\}$, and let $q$ be a prime with
+\[
+ q>\max\bigl(\{7\}\cup\{\sigma(r^3):r\mid M,\ r\text{ prime}\}\bigr).
+\]
+Then multiplication by $q$ is a bijection between the cap-$E$ preimages of $M$ and those of $Mq(q+1)$. In particular,
+\[
+ \boxed{f_E(Mq(q+1))=f_E(M).}
+\]
+\end{theorem}
+\begin{proof}
+The inequality implies that $q$ divides neither $M$ nor $q+1$, so the new target has $q$-adic valuation one. Every other input base $r$ divides $M$ or $q+1$. If $r\mid M$, then $\sigma(r^e)\le\sigma(r^3)<q$. If $r\mid q+1$, Lemma~\ref{attachment:lem:attachment} excludes $q\mid\sigma(r^e)$. Thus the only possible contribution to the $q$-row is the input factor $q$ itself, forcing $v_q(k)=1$. Write $k=qv$, with $\gcd(q,v)=1$, and divide the equation by $q(q+1)$ to obtain $h(v)=M$. Conversely, any preimage of $M$ is coprime to $q$ and can be multiplied by $q$. The exponent cap is preserved in both directions.
+\end{proof}
+
+This theorem controls an infinite family of enlargements without adding any multiplicity. It does not assert that a general target can be reduced by such enlargements.
+

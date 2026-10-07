@@ -1,0 +1,14 @@
+{
+  "scope": "All cap-two exchanges on exactly three changed bases, each prime < 5000",
+  "complete_for_stated_scope": true,
+  "prime_count": 669,
+  "local_increment_count": 2007,
+  "distinct_base_pair_comparisons": 2011014,
+  "residual_pairs": [
+    [
+      12,
+      14
+    ]
+  ],
+  "warning": "Finite regression only; the unrestricted classification is proved separately in independent_exchange_review.md."
+}

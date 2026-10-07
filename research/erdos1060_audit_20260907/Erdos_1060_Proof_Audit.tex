@@ -1,0 +1,845 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=26mm]{geometry}
+\usepackage{booktabs,longtable,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\hypersetup{pdftitle={Proof audit and further partial results for Erdos Problem 1060},
+ pdfauthor={Codex with separate agent verification},
+ pdfsubject={Partial results and the unresolved uniform counting gap}}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt plus 1pt}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=3pt,topsep=4pt}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\PP}{\mathcal P}
+\newcommand{\F}{\mathcal F}
+\newcommand{\NN}{\mathbb N}
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\ord}{ord}
+\title{Proof audit and further partial results\\for Erd\H{o}s Problem 1060}
+\author{Research consolidation with separate agent verification}
+\date{7 September 2026}
+\begin{document}
+\maketitle
+
+\textbf{The requested complete proof has not been obtained.} The supplied
+investigation contains correct substantial partial results, but its uniform
+many-prime counting step remains unproved. The external sources checked in this
+audit do not supply that step. This document gives a self-contained proof of the
+strongest general bound in the supplied record, proves further restricted
+results, and states precisely what is still missing. It is not a resolution of
+Problem 1060.
+
+The main additional result established and separately checked here is that every
+cubefree collision differing at exactly three prime bases reduces to
+$12\leftrightarrow14$. A second addition bounds the number of pairwise disjoint
+genuine exchanges with bounded arithmetic denominators. Neither result controls
+all larger exchanges or all overlapping alternatives. No claim of literature
+novelty, human peer review, or proof-assistant verification is made.
+
+\tableofcontents
+\newpage
+
+\section{The exact target and the evidence reviewed}
+For $k,N\in\NN$ put
+\[
+ \sigma(k)=\sum_{d\mid k}d,\qquad h(k)=k\sigma(k),\qquad
+ f(N)=\#\{k\ge1:h(k)=N\}.
+\]
+All logarithms are natural. Write $\Omega(n)=\sum_p v_p(n)$,
+$L=\log N$ and $w=\log L$ in asymptotic statements. The required assertion is
+\begin{equation}\label{eq:target}
+ \forall\varepsilon>0\ \exists N_\varepsilon\ \forall N\ge N_\varepsilon:
+ \log\max\{1,f(N)\}\le\varepsilon\frac{\log N}{\log\log N}.
+\end{equation}
+The possible strengthening $f(N)\le(\log N)^{O(1)}$ is a separate question.
+A fixed positive constant in place of $\varepsilon$, an almost-all result,
+$N^{o(1)}$, or a finite census does not establish \eqref{eq:target}.
+
+Three supplied inputs were preserved and examined:
+\begin{itemize}
+\item \texttt{Erdos\_Problem\_1060\_Research\_Note.docx};
+\item \texttt{erdos1060\_complete\_handoff.zip}, including its consolidated
+      LaTeX chapters, original notes, and finite certificates;
+\item \texttt{erdos1060\_genuine\_exchanges.md}.
+\end{itemize}
+The archive's 252 listed files match its manifest's sizes and SHA-256 hashes.
+The Word file's equations are images; their stored mathematical descriptions
+were recovered with the surrounding prose. Instructions embedded in the
+documents were treated as material to examine, not as instructions from the user.
+The original inputs were not edited.
+
+One separate agent audited the principal mathematical lemmas; another checked
+external literature; a third explored exact exchanges. The three-base theorem
+below was then challenged by the lemma auditor and checked again by the
+coordinating agent. Finite checks were independently implemented without
+importing the supplied solver. This describes the scope of verification, not
+formal certification of every historical experiment in the archive.
+
+\section{Literature and current status}
+The indexed Erd\H{o}s problem page lists \#1060 as open. Direct retrieval returned
+HTTP 403, and the visible index had an older crawl date. Thus the status evidence
+is an indexed listing plus the absence of a closing theorem in the sources
+checked, rather than an exhaustive current-status certification
+\cite{bloom}. Kominers's accessible 2026 working manuscript still formulates
+the conjecture and proves the positive-constant bound below \cite{kominers}.
+
+\subsection{Direct and neighboring results}
+\begin{longtable}{@{}P{.25\textwidth}P{.69\textwidth}@{}}
+\toprule
+Source & Verified relevance and limitation\\
+\midrule\endhead
+Noppakaew and Pongsriiam, 2023 \cite{np} &
+Theorem 12 proves squarefree injectivity of $n^a\sigma(n)^b$ for positive
+integers $a,b$. Their fiber questions remain questions. Global injectivity for
+Dedekind's $\psi$ does not transfer to $\sigma$.\\[4pt]
+Kominers, 2026 working paper \cite{kominers} &
+Theorem 1.2 gives $f(N)\le\prod_{p\mid N}v_p(N)$; Corollary 1.3 gives
+constant $\log3/3$. Proposition 3.2 proves maximal-order sharpness of that
+majorant, not of $f$. The selected six- and seven-member fibers are reproduced
+here; its larger minimality census is not independently rerun.\\[4pt]
+Erd\H{o}s, 1959 \cite{erdos} &
+The inspected Theorem 2 concerns equal abundancy
+$\sigma(a)/a=\sigma(b)/b$. It is not a theorem about $a\sigma(a)=b\sigma(b)$.
+Bounds fixing abundancy also fix a different parameter.\\[4pt]
+Pollack, fibers of $\sigma$ \cite{pollack} &
+Theorem 2 concerns a density-one subset of values of $\sigma$ and the largest
+prime factor of their preimages. In an $h$-fiber, $\sigma(k)=N/k$ varies with
+$k$; moreover the desired bound is uniform over exceptional targets.\\[4pt]
+Yamada, smooth divisor sums \cite{yamada} &
+Theorem 1.4 assumes a prime cyclotomic index $q>(16/9)\mathrm e\,s^4$, where
+$s$ is the allowed support size. Fixed input cap means bounded indices while
+$s$ can grow. The hypothesis is in the opposite regime.\\[4pt]
+Wang and Xu, 2024 \cite{wx} &
+Their polynomial-product paucity theorem counts tuples in a growing box with
+fixed factor count. It is not a uniform bound for one exceptional product with
+a growing number of mixed local polynomials.\\[4pt]
+Evertse, Schlickewei and Schmidt \cite{ess} &
+For a fixed number of terms the general nondegenerate multiplicative-group
+bound is exponential in rank. Rank can be of order $L/w$ here, so this does
+not produce a little-$o$ exponent.\\[4pt]
+Mills; Bibby, Vyncke and Zelinsky \cite{mills,bibby} &
+The mutual quadratic divisibilities are classified by a recurrence, and some
+overlaps are restricted. This does not classify arbitrary cycles or prove a
+small common feedback set. A small part of the descent is proved directly in
+Section~\ref{sec:three}.\\[4pt]
+Graph and lattice methods \cite{richard,graver} &
+A valid feedback bound still needs a uniformly small common transversal.
+Conformal integer-kernel decomposition supplies actual exchanges but does not
+bound their count, overlaps, or arithmetic sizes uniformly.\\
+\bottomrule
+\end{longtable}
+
+\subsection{Two source corrections that matter}
+The printed Mersenne construction in Guy B11 and Noppakaew--Pongsriiam's
+Question 27 omits the needed powers of two. If $M_i=2^{r_i}-1$ are distinct
+Mersenne primes and $R=\sum_i r_i$, the correct inputs are
+\[
+ k_i=2^{r_i-1}\prod_{j\ne i}M_j,
+ \qquad h(k_i)=2^{R-1}\prod_jM_j.
+\]
+Indeed $\sigma(k_i)=M_i2^{R-r_i}$. The printed unweighted inputs already
+fail for $M_1=3,M_2=7$, since $h(3)=12\ne56=h(7)$. This is an algebraic
+correction, not an upper-bound result \cite{guy,np}.
+
+Guy's historical attribution of an asymptotic count for product collisions
+must also be handled cautiously: the inspected original Erd\H{o}s theorem
+states an equal-abundancy result. We do not use that theorem for product
+collisions. The main arguments below do not depend on either disputed
+attribution \cite{guy,erdos}.
+
+The source ledger supplied with this audit records additional nearby results,
+retrieval limits, and a caveat about the literal generality of an auxiliary
+lemma in Yamada's preprint. None is used as a premise of the proofs below.
+
+\section{What survives the mathematical audit}
+The following ledger summarizes the principal proved conclusions. Their
+complete historical arguments remain in the supplied handoff; the main
+general bound and the new additions are proved here.
+
+\begin{longtable}{@{}P{.31\textwidth}P{.63\textwidth}@{}}
+\toprule
+Conclusion & Scope after review\\
+\midrule\endhead
+Squarefree uniqueness and powerful-core injection &
+Valid. The squarefree completion condition must be retained.\\[3pt]
+Fixed-cap and rough-input reductions &
+Valid with the maximum over all residual targets and the correct order of
+quantifiers. Neither reduced uniform estimate has been proved.\\[3pt]
+Prime-index encoding and weighted bound &
+Valid; the weighted coefficient $\log3/2-\log2/3$ is superseded by the
+chain-packing bound.\\[3pt]
+Chain packing &
+Valid uniformly, with coefficient
+$C_1=\tfrac12\log(1+1/\sqrt2)=0.267399998369785\ldots$.\\[3pt]
+Cubefree chain packing &
+Valid with coefficient $\tfrac12\log\varphi=0.240605912529801\ldots$,
+where $\varphi=(1+\sqrt5)/2$.\\[3pt]
+Compatible subfamilies &
+Their logarithmic size is $O_E(w\log w)$ with fixed input cap $E$, and
+$O(w^{3/2})$ without a cap. Comparability of every pair of local indices
+is essential.\\[3pt]
+Restricted full fibers &
+The little-$o$ target holds for sixth-power-free targets, and for
+$N=2^a m$ with $m$ odd and fourth-power-free. These are restrictions on the
+target, not just the input.\\[3pt]
+Fixed two-prime support &
+The handoff's unrestricted-exponent injectivity proof survives review.
+Distinct preimages therefore differ at at least three bases. The pair of
+primes must be fixed.\\[3pt]
+Primitive-divisor option lists &
+The deduction from Bang--Zsigmondy, including exceptions, is valid.
+Distinct witnesses are guaranteed within one input base; they need not be
+private across different bases.\\[3pt]
+Signed cycles and exact integer models &
+The finite injections, rank and branching bounds are valid. Potential cycles,
+fractional dimension and graph ambiguity do not certify integer choices.\\[3pt]
+Exact exchange decomposition &
+Valid as a surjection from disjoint collections to the fiber. General
+uniqueness of decomposition and uniform packing bounds are not proved.\\[3pt]
+Word-file approximant and method barrier &
+The injective third-order rational approximant and the affine independent-chain
+optimality calculation check out. Generic rational spacing remains too weak;
+method optimality is not a lower bound for the true fiber.\\
+\bottomrule
+\end{longtable}
+
+\section{A self-contained proof of the strongest general bound}
+The proof in this section consolidates the supplied chain-packing argument.
+It proves a partial theorem, not \eqref{eq:target}.
+
+\subsection{Elementary structure}
+The functions $\sigma$ and $h$ are multiplicative on coprime arguments. For
+prime $p$ and $e\ge0$,
+\[
+ h(p^e)=p^e\frac{p^{e+1}-1}{p-1},\qquad p\nmid\sigma(p^e).
+\]
+Every preimage $k$ divides $N$ and satisfies $k^2\le N$, strictly if $k>1$.
+Only common full prime-power blocks may automatically be canceled using
+multiplicativity; cancellation through an arbitrary input gcd is unsafe.
+
+\begin{lemma}\label{lem:squarefree}
+The function $h$ is injective on squarefree positive integers.
+\end{lemma}
+\begin{proof}
+Cancel common prime blocks from a putative equality. The remaining supports
+are disjoint. If the largest remaining prime is $P\ge5$, an opposite base
+$q<P$ satisfies $q+1<P$: equality would require the even integer $P-1\ge4$
+to be prime. Thus $P$ cannot divide any opposite factor $q(q+1)$, a
+contradiction. The remaining possible squarefree inputs use only $2,3$;
+their $h$-values are $1,6,12,72$, all distinct.
+\end{proof}
+
+Fixing the powerful part $d=\prod_{v_p(k)\ge2}p^{v_p(k)}$ fixes at most one
+preimage, because $k=ds$ has a unique squarefree completion with $(d,s)=1$.
+If $\alpha_p=v_p(N)$, the possible core states at $p$ are
+$0,2,\ldots,\alpha_p$, giving
+\[
+ f(N)\le\prod_{p\mid N}\alpha_p.
+\]
+
+\subsection{The comparable-index obstruction}
+For a set $S$ of primes write $\PP(S)=\prod_{p\in S}p/(p-1)$.
+
+\begin{lemma}\label{lem:comparable}
+Suppose $\PP(S)\le4$, $u,v$ are supported on $S$, and $h(u)=h(v)$.
+If $v_p(u)+1$ and $v_p(v)+1$ are divisibility-comparable at every prime,
+then $u=v$.
+\end{lemma}
+\begin{proof}
+Cancel equal local blocks. At each changed base let $a_p>b_p$ be the two
+exponents and $d_p=a_p-b_p$. Comparability gives $b_p+1\mid a_p+1$, so
+\[
+ Q_p=\frac{p^{a_p+1}-1}{p^{b_p+1}-1}\in\NN,
+ \qquad 1<\frac{Q_p}{p^{d_p}}<\frac p{p-1}.
+\]
+Let $A,B$ be the products of $p^{d_p}$ on the two respective sides of the
+change, and $U,V$ the corresponding products of $Q_p$. The equality gives
+$AU=BV$, and $(A,B)=1$ gives $U=cB,V=cA$ for an integer $c\ge1$.
+If any base changed, then
+\[
+ 1<c^2=\frac{UV}{AB}<\PP(S)\le4,
+\]
+which is impossible for an integer $c$.
+\end{proof}
+
+\subsection{Random chains with explicit marginals}
+Put $t=1/\sqrt2$ and $A=\sqrt{t+t^2}>1$.
+
+\begin{lemma}\label{lem:chains}
+For every integer $a\ge0$ there is a distribution on divisibility chains
+$\mathcal C\subseteq\{1,\ldots,a+1\}$, each containing $1$, such that
+\[
+ \Pr(e+1\in\mathcal C)\ge A^{-a}t^e\qquad(0\le e\le a).
+\]
+\end{lemma}
+\begin{proof}
+The case $a=0$ is immediate. Give $n>1$ the parent $n/P^+(n)$, with
+$P^+(n)$ the largest prime factor. Every root path is a divisibility chain.
+Prescribe inclusion masses $q(1)=1$ and $q(n)=A^{-a}t^{n-1}$ for $n>1$.
+For a nonroot node $n$, every child is $np$ with $p\ge P^+(n)$ prime, so
+\[
+ \frac{\sum_{m\text{ child of }n}q(m)}{q(n)}
+ \le\sum_{r\ge2}t^{n(r-1)}=\frac{t^n}{1-t^n}\le1.
+\]
+At the root it remains to check $\sum_{p\le a+1}t^{p-1}\le A^a$.
+For $a=0,1$ this is immediate; for $a=2,3$ the sum is $t+t^2=A^2$;
+for $a=4,5$ it is $t+t^2+t^4=A^4$. For $a\ge6$ the sum is at most
+$t+\sum_{j\ge1}t^{2j}=1+t$, while
+\[
+ A^6-(1+t)=(t+1/2)^3-(1+t)=(2t-1)/8>0.
+\]
+Thus the terminal masses $q(n)-\sum_{m\text{ child}}q(m)$ are nonnegative
+and telescope to one. Choose a terminal node with these probabilities and
+use its root path. Subtree telescoping gives exactly the prescribed inclusion
+mass at every nonroot node; the root probability is one.
+\end{proof}
+
+\begin{theorem}\label{thm:general}
+Set $C_1=\tfrac12\log(1+1/\sqrt2)$. If $N\ge2$, $z\ge2$, and
+$\PP_z(N):=\prod_{p\mid N,p>z}p/(p-1)\le4$, then
+\begin{equation}\label{eq:finitegeneral}
+ \log\max\{1,f(N)\}\le
+ \sum_{p\mid N,p\le z}\log(\alpha_p+1)+C_1\frac{\log N}{\log z}.
+\end{equation}
+Consequently, uniformly as $N\to\infty$,
+\[
+ \log\max\{1,f(N)\}\le(C_1+o(1))\frac{L}{w}.
+\]
+\end{theorem}
+\begin{proof}
+Partition by the input exponents at primes at most $z$. In one part remove
+the common small-prime block $d$, leaving $u$ with $h(u)=N/h(d)$.
+Independently at every $p\mid N$, $p>z$, take Lemma~\ref{lem:chains} with
+$a=\alpha_p$. Attach to $u$ the event that every $v_p(u)+1$ lies in its
+chosen chain. Events for distinct inputs are disjoint by
+Lemma~\ref{lem:comparable}. Their probabilities are at least
+\[
+ A^{-\sum_{p>z}\alpha_p}t^{\Omega(u)}
+ \ge\exp\left[-\left(\log A-\tfrac12\log t\right)
+                   \frac{L}{\log z}\right],
+\]
+because $\sum_{p>z}\alpha_p\le L/\log z$ and
+$\Omega(u)\le\log u/\log z\le L/(2\log z)$. The constant is $C_1$.
+Summing disjoint-event probabilities and then the at most
+$\prod_{p\le z,p\mid N}(\alpha_p+1)$ parts proves \eqref{eq:finitegeneral}.
+
+Take $z=L/w^3$. The elementary Chebyshev estimate
+$\pi(x)=O(x/\log x)$ implies
+\[
+ \sum_{z<p\le L}\frac1p
+ =O\left(\frac1w+\log\frac{\log L}{\log z}\right)
+ =O\left(\frac{\log w}{w}\right).
+\]
+For clarity, Chebyshev's estimate follows by bounding the product of primes
+in $(n,2n]$ by $\binom{2n}{n}<4^n$, summing over dyadic intervals to get
+$\sum_{p\le x}\log p=O(x)$, and splitting at $\sqrt x$.
+There are at most $L/\log L$ target primes above $L$, whose reciprocal
+sum is at most $1/w$. Thus $\log\PP_z(N)=o(1)$ uniformly and the
+Euler-product hypothesis eventually holds. Finally,
+\[
+ \sum_{p\mid N,p\le z}\log(\alpha_p+1)
+ \le z\log(1+L/\log2)=O(L/w^2),\qquad \log z\sim w.
+\]
+Substitution proves the theorem; the total error may be written
+$O(L\log w/w^2)$.
+\end{proof}
+
+\begin{corollary}
+For cubefree preimages, $\log\max\{1,f_2(N)\}
+\le(\tfrac12\log\varphi+o(1))L/w$.
+\end{corollary}
+\begin{proof}
+Let $r=1/\varphi$, so $r+r^2=1$. Independently choose $\{1,2\}$ with
+probability $r$ and $\{1,3\}$ with probability $r^2$. The probabilities of
+the three exponent states are $1,r,r^2$. Each event now has probability
+$r^{\Omega(u)}\ge r^{L/(2\log z)}$. Use the same disjointness and cutoff;
+recording small exponents costs at most $3^{\pi(z)}=\exp(o(L/w))$.
+\end{proof}
+
+\section{The fixed-cap reduction is an equivalence}
+For fixed $E\ge1$ define
+\[
+ f_E(M)=\#\{k:h(k)=M,\ v_p(k)\le E\text{ for all }p\},\qquad
+ F_E(X)=\max_{1\le M\le X}\max\{1,f_E(M)\}.
+\]
+\begin{theorem}\label{thm:reduction}
+Problem \eqref{eq:target} is equivalent to the family of assertions
+\begin{equation}\label{eq:fixedcap}
+ \log F_E(X)=o_E\left(\frac{\log X}{\log\log X}\right)
+ \quad\text{for every fixed }E.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Split a preimage into coprime full blocks
+$k=D_EU_E$, where $D_E=\prod_{v_p(k)>E}p^{v_p(k)}$. The number of choices
+for $D_E$ is at most
+\[
+ G_E(N)=\prod_{p\mid N}\bigl(1+\max(\alpha_p-E,0)\bigr).
+\]
+For any actual choice $h(U_E)=N/h(D_E)\le N$, so
+$f(N)\le G_E(N)F_E(N)$.
+Put $c_E=\sup_{a\ge E+1}\log(a-E+1)/a$. Splitting at $L/w^3$ as above
+gives $\log G_E(N)\le(c_E+o_E(1))L/w$. For $E\ge2$, monotonicity of
+$\log a/a$ for $a\ge3$ gives
+$c_E\le\log(E+1)/(E+1)\to0$.
+Given $\varepsilon$, choose $E$ so $c_E<\varepsilon/3$, then the target
+threshold so the two remaining errors are below $\varepsilon/3$.
+This proves one direction. Conversely the full bound applies to all sufficiently
+large $M\le X$; bounded residual targets add only a fixed constant to the
+maximum. The function $\log X/\log\log X$ is eventually increasing, so
+\eqref{eq:fixedcap} follows.
+\end{proof}
+
+This theorem does not permit substituting an unproved moving cap $E=E(X)$.
+Nor does a result only for sixth-power-free targets prove the fixed-cap
+statement: even cubefree inputs may produce arbitrarily large target valuations
+at small primes through many divisor-sum factors.
+
+\section{The exact denominator obstruction}
+Let $h(u)=h(v)$ with $u\ne v$. Write $a_p=v_p(u)$, $b_p=v_p(v)$ and
+\[
+ G=\prod_p\gcd\bigl(\sigma(p^{a_p}),\sigma(p^{b_p})\bigr),\qquad
+ R=\frac{\sigma(\gcd(u,v))}{G},\qquad
+ T=\frac{\gcd(\sigma(u),\sigma(v))}{G}.
+\]
+\begin{lemma}\label{lem:denominator}
+These are positive integers, and with $S=\{p:a_p\ne b_p\}$,
+\begin{equation}\label{eq:denominator}
+ 1<(T/R)^2=
+ \prod_{p\in S}\frac{1-p^{-(\max(a_p,b_p)+1)}}
+                         {1-p^{-(\min(a_p,b_p)+1)}}<\PP(S).
+\end{equation}
+Also $R=1$ exactly when every pair of exponent indices is comparable.
+\end{lemma}
+\begin{proof}
+The identity $\gcd(p^i-1,p^j-1)=p^{\gcd(i,j)}-1$ gives
+\[
+ \gcd(\sigma(p^a),\sigma(p^b))
+ =\sigma(p^{\gcd(a+1,b+1)-1}).
+\]
+This divides $\sigma(p^{\min(a,b)})$, proving integrality of $R$;
+the local gcd product divides both full divisor sums, proving integrality
+of $T$. If $u=gx,v=gy$ with $(x,y)=1$, the equality gives
+$\sigma(u)=yt,\sigma(v)=xt$ with $t=\gcd(\sigma(u),\sigma(v))$.
+Consequently $(T/R)^2=t^2/\sigma(g)^2$. Expanding by prime powers gives
+\eqref{eq:denominator}; every changed local factor lies strictly between
+$1$ and $p/(p-1)$. Each local factor of $R$ equals one exactly when
+$\gcd(a+1,b+1)=\min(a+1,b+1)$, proving the last assertion.
+\end{proof}
+
+The small quantity is a rational ratio whose integrality is guaranteed in the
+comparable-index case; no integrality is guaranteed in general.
+At $12\leftrightarrow14$ it is $4/3$.
+The large odd cubefree pair in the supplied notes has
+\[
+ R=394214768640,\qquad T=436988805120,\qquad T/R=378/341.
+\]
+It changes 16 of the small-prime divisor-sum labels despite agreeing at the
+input primes $2,3$. The compatibility-free sparse-label bound would allow
+only two. The independent verifier reproduces this obstruction.
+
+\textbf{The Word file uses a different denominator.}
+Its $C=\prod_p p^{\min(a_p,b_p)+1-\gcd(a_p+1,b_p+1)}$ is not this $R$.
+The exact relation is
+\[
+ \frac RC=\prod_p
+ \frac{1-p^{-(\min(a_p,b_p)+1)}}{1-p^{-\gcd(a_p+1,b_p+1)}}.
+\]
+For $315\leftrightarrow351$, the Word-file pair is $(c,C)=(16,9)$ and
+the handoff pair is $(T,R)=(16,13)$. Both identities are correct. Combining
+them without changing definitions would create a false statement.
+
+\section{Further results on genuine exchanges}
+Fix $k_0$ with $h(k_0)=N$. An exchange specifies a nonempty set $S$ of changed
+bases and replacement exponents, with old and new whole blocks $u,v$ satisfying
+$h(u)=h(v)$. The complementary factor of $k_0$ is coprime to both blocks,
+so the replacement gives an actual preimage. An exchange is minimal if no
+proper nonempty subset with those same replacements is an exchange.
+
+Every endpoint decomposes into disjoint minimal exchanges: cancel unchanged
+blocks, take a minimal nonempty subequality, divide it out, and repeat.
+Conversely disjoint exchanges can be applied together. The map from such
+collections to endpoints is surjective; uniqueness is not proved in general.
+
+\subsection{A budget for bounded denominators}
+For an exchange $\gamma$ use the integers $R_\gamma,T_\gamma$ of
+Lemma~\ref{lem:denominator}, and put $H_\gamma=h(u_\gamma)=h(v_\gamma)$.
+
+\begin{theorem}\label{thm:budget}
+For a nonempty collection $I$ of exchanges with pairwise disjoint changed
+bases,
+\begin{equation}\label{eq:budget}
+ \sum_{\gamma\in I}\log(1+1/R_\gamma)<\frac12\log\PP(N),
+ \qquad \PP(N)=\prod_{p\mid N}\frac p{p-1}.
+\end{equation}
+In particular the number $\nu_B$ of its exchanges with $R_\gamma\le B$,
+where $B\ge1$, satisfies
+\[
+ \nu_B\le\frac{\log\PP(N)}{2\log(1+1/B)}.
+\]
+The inequality is strict if $\nu_B>0$. For fixed $B$ this is
+$O_B(\log\log\log N)$ uniformly as $N\to\infty$.
+\end{theorem}
+\begin{proof}
+Lemma~\ref{lem:denominator} gives $T_\gamma>R_\gamma$, so integrality gives
+$T_\gamma\ge R_\gamma+1$. Multiply
+$(1+1/R_\gamma)^2\le(T_\gamma/R_\gamma)^2<\PP(S_\gamma)$.
+Disjointness gives $\prod_\gamma\PP(S_\gamma)\le\PP(N)$, proving
+\eqref{eq:budget}. Apply it to the subcollection with $R_\gamma\le B$.
+For its empty case the non-strict statement is immediate.
+The Chebyshev estimate proved above and partial summation give
+$\sum_{p\le L}1/p=O(\log\log L)$. Since
+$-\log(1-1/p)\le2/p$, these primes contribute $O(\log w)$ to
+$\log\PP(N)$. There are at most $L/\log L$ target primes above $L$,
+whose additional logarithmic contribution is $O(1/w)$. Therefore
+$\log\PP(N)=O(\log w)$, as required.
+\end{proof}
+
+\begin{proposition}\label{prop:cost}
+Every nontrivial exchange has the exact support charge
+\[
+ \log H_\gamma>\sum_{p\in S_\gamma}(a_p+b_p)\log p
+ \ge\sum_{p\in S_\gamma}\log p
+     +2\sum_{p\in S_\gamma:a_pb_p>0}\log p.
+\]
+For disjoint exchanges, $\prod_\gamma H_\gamma\mid N$.
+\end{proposition}
+\begin{proof}
+Both old and new inputs exceed one, so $u^2<H$ and $v^2<H$, giving
+$uv<H$. Each changed base contributes at least one exponent in total, and
+a base positive on both sides has distinct positive exponents with sum at
+least three. The old blocks of disjoint exchanges are pairwise coprime
+unitary factors of $k_0$, proving the divisibility statement.
+\end{proof}
+
+\begin{proposition}\label{prop:pairwise}
+Suppose a subfamily $\F$ satisfies $R(k,m)\le B$ for every pair of its
+members. If $y\ge B$ and $\PP_y(N)\le4$, recording the input exponents at
+primes at most $y$ is injective on $\F$. With input cap $E$,
+\[
+ |\F|\le\prod_{p\mid N,p\le y}(\min(E,\alpha_p)+1).
+\]
+\end{proposition}
+\begin{proof}
+For local indices $i,j$ and $d=\gcd(i,j)$ the factor in $R$ is
+$(p^{\min(i,j)}-1)/(p^d-1)$. It is one for comparable indices; otherwise
+it is at least $1+p^d\ge p+1$. Two members agreeing at all bases at most
+$y$ therefore have no incomparable coordinate above $y$, since that alone
+would give $R>B$. The residual pair is comparable and
+Lemma~\ref{lem:comparable} forces equality.
+\end{proof}
+The pairwise hypothesis here is unproved for general fibers. A bound only
+against one reference is not that hypothesis: at a single base, states $1,2$
+both have $R=1$ against state $0$, but have $R=p+1$ against each other.
+
+\section{Classification of cubefree exchanges on three bases}\label{sec:three}
+This theorem was derived during this audit and checked independently by a
+second agent. Its mixed-divisibility ingredient is already present, for primes
+greater than three, in the supplied signed-feedback notes. The descent is
+classical in the mutual-quadratic literature. No originality claim is made.
+
+\begin{theorem}\label{thm:three}
+Suppose $h(a)=h(b)$, $a\ne b$, both inputs are cubefree, and they differ
+at exactly three prime bases. After cancellation of unchanged full blocks,
+their residual pair is $\{12,14\}$. Equivalently,
+\[
+ \{a,b\}=\{12d,14d\},\qquad (d,42)=1,
+\]
+where $d$ is cubefree.
+\end{theorem}
+
+\subsection{Two elementary divisibility lemmas}
+Write $\Phi(x)=x^2+x+1$.
+\begin{lemma}\label{lem:mixed}
+If $p<r$ are primes, $r\mid\Phi(p)$ and $p\mid r+1$, then
+$(p,r)=(2,7)$.
+\end{lemma}
+\begin{proof}
+Write $r=\ell p-1$, $\ell\ge2$, and $c=\Phi(p)/r$.
+Modulo $p$, $c\equiv-1$, so $c\ge p-1$. Hence
+\[
+ 2p-1\le r\le p+2+\frac3{p-1}.
+\]
+This is impossible for $p\ge5$. For $p=3$ the only possible $r$ is $13$
+and $3\nmid14$. For $p=2$ the only possible $r$ is $7$, which works.
+\end{proof}
+
+\begin{lemma}\label{lem:mutual}
+If distinct primes $a,b$ satisfy $a\mid\Phi(b)$ and $b\mid\Phi(a)$,
+then $a^2\nmid\Phi(b)$ and $b^2\nmid\Phi(a)$.
+\end{lemma}
+\begin{proof}
+We first establish, for every coprime positive pair $x,y$ with the mutual
+divisibilities, the identity
+\begin{equation}\label{eq:five}
+ x^2+y^2+x+y+1=5xy.
+\end{equation}
+For $1<x<y$ let $z=\Phi(x)/y$. Then $1\le z<x$: division by $y\ge x+1$
+gives $z<x+1$, and $z=x$ would give $x\mid1$. Since $yz\equiv1\pmod x$,
+the pair $(z,x)$ is coprime. Multiplying $y^2+y+1\equiv0\pmod x$ by
+$z^2$ gives $z^2+z+1\equiv0\pmod x$; the other divisibility is the
+definition of $z$. The value
+\[
+ \frac{x^2+y^2+x+y+1}{xy}=\frac{z+y+1}{x}
+\]
+is invariant under $(x,y)\mapsto(z,x)$. Descent reaches $(1,1)$ or $(1,3)$,
+because the companion of $1$ divides $3$. Both give the value five, proving
+\eqref{eq:five}.
+
+If $a^2\mid\Phi(b)$, then \eqref{eq:five} gives
+$\Phi(b)=a(5b-a-1)$ and $a\mid5b-1$. This rules out $a=5$; otherwise
+substituting $5b\equiv1\pmod a$ into $25\Phi(b)\equiv0\pmod a$
+gives $a\mid31$, hence $a=31$. But the quadratic for $b$ in
+\eqref{eq:five} has discriminant
+\[
+ 21\cdot31^2-14\cdot31-3=19744,
+ \qquad 140^2<19744<141^2,
+\]
+so has no integer solution. Symmetry proves the other assertion.
+\end{proof}
+
+\subsection{Exhausting the possible local transitions}
+Put
+\[
+ L_p=h(p)=p(p+1),\qquad S_p=h(p^2)=p^2\Phi(p),\qquad
+ J_p=\frac{S_p}{L_p}=p^2+\frac p{p+1}.
+\]
+The local increments for states $0\leftrightarrow1$, $0\leftrightarrow2$,
+and $1\leftrightarrow2$ are respectively $L_p,S_p,J_p$. All exceed one.
+Moreover $p^2<J_p<p^2+1$, $J_p$ increases strictly with $p$, and its
+reduced denominator is $p+1$, because $(p\Phi(p),p+1)=1$.
+
+After canceling unchanged blocks, an equality on three distinct bases
+equates one increment to the product of the other two. We sort by the number
+of $J$ increments.
+
+\textbf{Zero $J$ increments.} All indices are comparable. The Euler
+product on three bases is at most $2(3/2)(5/4)=15/4<4$, so
+Lemma~\ref{lem:comparable} excludes the equality.
+
+\textbf{Two $J$ increments.} In the shape $J_p I_r=J_q$, where $I_r$ is
+$L_r$ or $S_r$, denominators give $q+1\mid p+1$, hence $q\le p$.
+But $I_r>1$ forces $J_q>J_p$ and $q>p$, a contradiction.
+In the other shape $J_pJ_q=I_r$, both $p,q$ cannot be odd: the numerator
+would be odd and the denominator even. If $p=2$, integrality of
+\[
+ J_2J_q=\frac{14q\Phi(q)}{3(q+1)}
+\]
+requires $q+1\mid14$, so $q=13$. The product is $793=13\cdot61$,
+which is odd and squarefree; it is neither any $L_r$ nor any $S_r$.
+
+\textbf{Three $J$ increments.} Suppose $J_pJ_q=J_r$.
+Then $r+1\mid(p+1)(q+1)$. Also $r>pq$: for $r<pq$,
+$J_r<r^2+1\le(pq-1)^2+1<p^2q^2<J_pJ_q$, while $pq$ is composite.
+Since $(p-1)(q-1)\ge2$ for distinct primes,
+\[
+ (p+1)(q+1)\le2pq<2(r+1).
+\]
+The divisibility therefore forces $r+1=(p+1)(q+1)$, or $r=pq+p+q$.
+But $J_r>r^2>(p^2+1)(q^2+1)>J_pJ_q$, a contradiction.
+
+\textbf{One $J$ increment.} The noninteger $J_p$ cannot equal a product
+of two integer increments. Thus $J_pI_q=I_r$, giving four cases.
+
+\begin{enumerate}[label=\arabic*.]
+\item $J_pL_q=L_r$. Comparison at $r=pq$ gives
+$J_pq(q+1)>p^2q(q+1)>pq(pq+1)$, hence $r>pq$.
+The cleared equation is
+\[
+ p\Phi(p)q(q+1)=(p+1)r(r+1).
+\]
+As $r>p,q+1$, it follows that $r\mid\Phi(p)$; also $p\mid r+1$.
+Lemma~\ref{lem:mixed} gives $p=2,r=7$, then $q(q+1)=12$, so $q=3$.
+This is $h(12)=h(14)=336$.
+
+\item $J_pS_q=L_r$. Comparison at $r=pq^2$ gives
+\[
+ J_pq^2\Phi(q)>p^2q^2\Phi(q)>pq^2(pq^2+1),
+\]
+so $r>pq^2>\Phi(q)$ and $r>p$. The second strict inequality follows
+from $2q^2>q^2+q+1$ for $q\ge2$.
+The cleared equation again forces $r\mid\Phi(p)$ and $p\mid r+1$.
+The mixed lemma yields $p=2,r=7$, contradicting $r>2q^2\ge18$ since
+$q\ne2$.
+
+\item $J_pS_q=S_r$. If all bases are odd, the two sides have respectively
+negative and zero $2$-adic valuations. If $p=2$, the valuations are one
+and zero. If $r=2$, the left side exceeds $28$. The remaining possibility
+is $q=2$, giving $28J_p=S_r$ with $p,r$ odd. Its $2$-adic row requires
+$v_2(p+1)=2$, and integrality requires $p+1\mid28$. Together these force
+$p=3$, but $28J_3=273=3\cdot7\cdot13$ is squarefree and cannot be $S_r$.
+
+\item $J_pL_q=S_r$. The case $p=2$ is excluded by parity. If $q=2$,
+integrality requires $p+1\mid6$, so $p=5$; then $6J_5=155$ is squarefree.
+If $r=2$, the left side exceeds $28$. Thus all three primes are odd, and
+integrality gives $p+1\mid q(q+1)$.
+
+If $p<q$, monotonicity in $S_x=J_xL_x$ gives $p<r<q$. As $q>p+1$,
+we have the integer $c=(q+1)/(p+1)$ and
+\[
+ S_r=cpq\Phi(p),\qquad q\mid\Phi(r).
+\]
+If $r\mid c$, then $r\mid q+1$, contrary to the mixed lemma for the
+odd pair $r<q$. Thus $r\nmid c$ and $r^2\mid\Phi(p)$, impossible
+because $\Phi(p)<r^2$.
+
+If $p>q$, monotonicity gives $q<r<p$. The divisibility
+$p+1\mid q(q+1)$ and $p+1>q+1$ force $q\mid p+1$. Set
+$c=(p+1)/q$, an even integer, and $t=(q+1)/c\in\NN$. Then
+\[
+ S_r=tp\Phi(p),\qquad t\le(q+1)/2<r.
+\]
+Hence $r^2\mid\Phi(p)$ and $p\mid\Phi(r)$, contradicting
+Lemma~\ref{lem:mutual}.
+\end{enumerate}
+The cases exhaust all increments. Restoring the unchanged full blocks proves
+Theorem~\ref{thm:three}. \qed
+
+Combined with the separately audited fixed-two-prime theorem from the handoff,
+this implies that fixing the input exponent at $2$ makes distinct cubefree
+preimages differ at at least four bases. Minimum distance four still permits
+exponentially many abstract exponent patterns. No global injectivity on
+cubefree inputs follows.
+
+\section{Finite verification and the remaining obstruction}
+\subsection{Fresh exact checks}
+The new standard-library verifier uses complete divisor enumeration for the
+following unrestricted fibers; $k\mid h(k)$ makes each candidate list exhaustive.
+\begin{center}\small
+\begin{tabular}{@{}r r r@{}}
+\toprule Target & Divisors tested & Fiber size\\\midrule
+$106345074572730040320$ & $7424$ & $7$\\
+$7089671638182002688000$ & $12288$ & $6$\\
+$1826980530660612389572800675840$ & $23552$ & $9$\\
+\bottomrule
+\end{tabular}
+\end{center}
+An independent local-state enumeration also reproduces the cap-two fibers
+of the supplied large target $M$ and $336M$, of sizes two and four, and the
+singleton cap-two fiber of $504654433920$. Its pruning only removes states
+that violate necessary valuation-row bounds; every final row and returned
+input is checked exactly. Resource exhaustion raises an error rather than
+reporting completeness. These runs completed in 44, 51 and 9 search nodes.
+
+A separate verifier checks the large odd cubefree equality, both denominator
+normalizations, its 16-label obstruction, and all four minimal exchanges of
+the seven-member fiber, including proper subset tests. Another finite
+regression examines all three-base transition types on 669 primes below
+5000: 2,011,014 distinct-base increment-pair comparisons return only the
+residual pair $\{12,14\}$. This is a regression check of the proof, not its
+justification for primes outside the tested range.
+
+The full historical census through $10^{16}$ and every large stored
+certificate were not rerun in this audit. Their historical output is not
+being promoted to new independent verification. Exact inputs, output lists,
+and code are in the accompanying audit bundle.
+
+\subsection{Why the new packing statements still do not finish the proof}
+Let $\Gamma(k_0)$ be the minimal exchanges, $g=|\Gamma(k_0)|$, $\nu$ the
+largest disjoint collection, and $Z$ the number of disjoint collections.
+The proved decomposition yields only
+\[
+ \max\{g+1,2^\nu\}\le f_E(N)\le Z
+ \le\sum_{j=0}^{\nu}\binom gj.
+\]
+An upper bound on $\nu$ is not the estimate $f_E(N)\le2^\nu$. In the
+actual seven-member example, $\nu=2$ and $f(N)=7>4$. Many exchanges can
+overlap and still give many alternatives. The denominator budget controls
+bounded-denominator disjoint collections; it leaves both large denominators
+and the number of overlapping alternatives uncontrolled.
+
+Likewise the valid inequality, for $\theta>0$,
+\[
+ f_E(N)\le N^\theta
+ \prod_{\gamma\in\Gamma(k_0)}(1+H_\gamma^{-\theta})
+\]
+does not estimate its right-hand side at the required scale. Enumerating the
+entire fiber first to construct $\Gamma(k_0)$ cannot serve as a uniform
+upper-bound proof.
+
+\subsection{Further routes examined and what they would require}
+\begin{enumerate}
+\item \textbf{Denominator stratification.} The new budget makes the bounded
+denominator part of a disjoint collection small. A successful argument would
+also need to compress the large-denominator exchanges and control overlaps,
+using arithmetic properties not supplied by the decomposition.
+\item \textbf{Small-support classification.} Three changed bases at cap two
+are now settled. The next step would need control of larger minimal exchanges
+uniformly in support size and prime magnitude. A finite classification at
+each of a few support sizes does not give that control.
+\item \textbf{Pairwise reconstruction.} Proposition~\ref{prop:pairwise}
+is an exact sufficient criterion. A useful pairwise denominator bound for all
+fixed-cap fibers is unproved; estimates only against one reference do not
+establish it.
+\item \textbf{Cyclotomic and entropy methods.} Primitive divisors can be
+shared by many bases; a fixed-length average product theorem need not control
+one worst-case growing product. A uniformly small arithmetic encoding is
+still needed before chain, graph, or integer-kernel machinery can close the gap.
+\end{enumerate}
+
+The exact outstanding statement remains \eqref{eq:fixedcap} for every fixed
+$E$. The current work proves neither that statement nor a counterexample to it.
+Accordingly, the general coefficient remains $C_1>0$ in the reviewed record.
+The complete proofs of the additional restricted theorems above should not be
+presented as a complete proof of Erd\H{o}s 1060.
+
+\begin{thebibliography}{99}
+\small
+\bibitem{bloom} Thomas Bloom, Erd\H{o}s Problems, Problem 1060.
+Indexed listing inspected 7 September 2026; direct retrieval blocked.
+\url{https://www.erdosproblems.com/1060}.
+\bibitem{kominers} Scott Duke Kominers, \emph{On the Number of Solutions of
+$k\sigma(k)=n$}, working paper, 2026.
+\url{https://www.scottkom.com/assets/articles/Kominers_ksigmak.pdf}.
+\bibitem{np} Passawan Noppakaew and Prapanpong Pongsriiam,
+\emph{Product of Some Polynomials and Arithmetic Functions},
+Journal of Integer Sequences 26 (2023), Article 23.9.1.
+\url{https://cs.uwaterloo.ca/journals/JIS/VOL26/Pongsriiam/pong43.pdf}.
+\bibitem{guy} Richard K. Guy, \emph{Unsolved Problems in Number Theory},
+third edition, Springer, 2004, B11, pp. 96--97. The corresponding source
+pages were inspected in the available sample.
+\url{https://doi.org/10.1007/978-0-387-26677-0}.
+\bibitem{erdos} Paul Erd\H{o}s, \emph{Remarks on number theory II
+Some problems on the $\sigma$ function}, 1959, especially Theorem 2.
+\url{https://www.renyi.hu/~p_erdos/1959-21.pdf}.
+\bibitem{pollack} Paul Pollack, \emph{Remarks on fibers of the sum-of-divisors
+function}, especially Theorem 2.
+\url{https://www.pollack-math.net/preimages-maier3.pdf}.
+\bibitem{yamada} Tomohiro Yamada, \emph{Multiplicative structures of values of
+the sum-of-divisors function}, arXiv:math/0512175 (2005), Theorem 1.4.
+\url{https://arxiv.org/abs/math/0512175}.
+\bibitem{wx} Victor Y. Wang and Max Wenqiang Xu,
+\emph{Paucity phenomena for polynomial products},
+Bulletin of the London Mathematical Society 56 (2024), 2718--2726.
+\url{https://arxiv.org/abs/2211.02908}.
+\bibitem{ess} J.-H. Evertse, H. P. Schlickewei and W. M. Schmidt,
+\emph{Linear equations in variables which lie in a multiplicative group},
+Annals of Mathematics 155 (2002), 807--836.
+\url{https://annals.math.princeton.edu/2002/155-3/p04}.
+\bibitem{mills} W. H. Mills, \emph{A system of quadratic Diophantine equations},
+Pacific Journal of Mathematics 3 (1953), 209--220.
+\url{https://msp.org/pjm/1953/3-1/pjm-v3-n1-p15-p.pdf}.
+\bibitem{bibby} Sean Bibby, Pieter Vyncke and Joshua Zelinsky,
+\emph{On the Third Largest Prime Divisor of an Odd Perfect Number},
+INTEGERS 21 (2021), A115.
+\url{https://arxiv.org/abs/1908.09420}.
+\bibitem{richard} Adrien Richard, \emph{Positive circuits and maximal number
+of fixed points in discrete dynamical systems}, Discrete Applied Mathematics
+157 (2009), 3281--3288.
+\url{https://arxiv.org/abs/0807.4229}.
+\bibitem{graver} Dinh Van Le and Tim R\"omer, \emph{Equivariant lattice bases},
+arXiv:2309.07246, Definition 2.2 and Remark 2.3.
+\url{https://arxiv.org/abs/2309.07246}.
+\end{thebibliography}
+\end{document}

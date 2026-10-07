@@ -1,0 +1,151 @@
+\chapter{Signed feedback and reconstruction}\label{ch:signed}
+\sourcebox{erdos1060\_signed\_feedback.tex}{A specialization of an established positive-feedback principle. The graph gives sufficient counting certificates, not a uniform estimate for their cost.}
+\section{The arithmetic domains and signed graph}
+Let $h(k)=k\sigma(k)$, and let $f_E(N)$ count preimages of $N$ whose prime exponents are at most $E$. Factor $N=\prod_{p\in S}p^{\alpha_p}$. Start with
+\[
+ D_p=\{0\le e\le\min(E,\alpha_p):h(p^e)\mid N\}.
+\]
+The domains may subsequently be reduced by any sound necessary-condition test. Every actual preimage must remain represented. We assume that the remaining domains are nonempty; a proved empty domain certifies an empty fiber.
+
+For distinct primes $p,q\in S$, set
+\[
+ a_{qp}(e)=v_q(\sigma(p^e)).
+\]
+Because $p\nmid\sigma(p^e)$, every represented preimage satisfies
+\begin{equation}\label{signed:eq:rows}
+ e_q+\sum_{p\ne q}a_{qp}(e_p)=\alpha_q\qquad(q\in S).
+\end{equation}
+All target-prime rows must be retained, even when a prime has only exponent zero in its input domain.
+
+The graph has the primes whose domains contain at least two values as vertices. If $a<b$ are consecutive elements of the ordered domain $D_p$, and
+\[
+ a_{qp}(b)-a_{qp}(a)\ne0,
+\]
+put an edge $p\to q$ with sign
+\begin{equation}\label{signed:eq:edge}
+ -\sgn\bigl(a_{qp}(b)-a_{qp}(a)\bigr).
+\end{equation}
+An ordered pair of vertices can carry both signs, supported by different domain transitions. There are no loops.
+
+A circuit here is \emph{elementary}: its vertices are distinct except for the repetition needed to close it. It is positive if the product of its edge signs is $+1$. A negative circuit traversed twice is a positive closed walk, but is not a positive elementary circuit and must not be counted as one.
+
+Positive-circuit control of fixed points is established in the discrete dynamical-systems literature, notably Richard~\cite{richard2009}. The following direct argument applies to the arithmetic equations without needing to extend their right sides to a self-map of a box.
+
+
+\section{Every collision yields positive feedback}
+\begin{lemma}\label{signed:lem:positive}
+If two different exponent vectors satisfy \eqref{signed:eq:rows}, then the signed graph contains a positive elementary circuit all of whose vertices are coordinates at which the vectors differ.
+\end{lemma}
+\begin{proof}
+Let the two vectors be $e,f$. At a changed coordinate put $d_p=e_p-f_p\ne0$. Subtracting the equations at $q$ gives
+\[
+ d_q=-\sum_{p\ne q}\delta_{qp},\qquad
+ \delta_{qp}=a_{qp}(e_p)-a_{qp}(f_p).
+\]
+For every changed $q$, at least one summand satisfies
+\[
+ \delta_{qp}d_q<0.
+\]
+Such a $p$ is changed. Between $f_p$ and $e_p$, telescope through consecutive domain values. At least one increasing adjacent-domain increment has the sign of $\delta_{qp}/d_p$. Therefore the graph contains an edge $p\to q$ of sign
+\[
+ -\sgn(\delta_{qp}/d_p)=\sgn(d_q/d_p).
+\]
+Choose one such predecessor for every changed vertex. Following predecessors in the finite set of changed vertices produces an elementary directed circuit. On that circuit the product of the chosen signs telescopes:
+\[
+ \prod_{p\to q}\sgn(d_q/d_p)=+1.
+\]
+It is the required positive circuit.
+\end{proof}
+
+\begin{corollary}\label{signed:cor:fvs}
+If a set $I$ of variable primes meets every positive elementary circuit, then
+\[
+ \boxed{f_E(N)\le\prod_{p\in I}|D_p|.}
+\]
+In particular, absence of positive circuits implies at most one preimage.
+\end{corollary}
+\begin{proof}
+Fix the exponents at primes in $I$. Two different remaining solutions would yield, by Lemma~\ref{signed:lem:positive}, a positive circuit avoiding $I$, which is impossible. Count the assignments on $I$.
+\end{proof}
+
+\subsection*{Cutting domains rather than fixing exact exponents}
+Partition each ordered domain $D_p$ into $c_p$ nonempty consecutive blocks. Retain only signed edges supported by adjacent-domain transitions lying within a single block. Take the union of these edges over all blocks.
+
+\begin{corollary}\label{signed:cor:cuts}
+If this retained graph has no positive elementary circuit, then
+\[
+ \boxed{f_E(N)\le\prod_{p\in S}c_p.}
+\]
+\end{corollary}
+\begin{proof}
+Record the block containing the exponent at every prime. For two solutions with the same record, every telescoping step in the proof of Lemma~\ref{signed:lem:positive} stays inside a recorded block. They would give a positive circuit in the retained graph. Hence each block record permits at most one solution.
+\end{proof}
+
+This criterion does not demand an acyclic graph. Negative elementary circuits may remain. It also does not assume that the real relaxation of the integer system has small dimension.
+
+
+\section{A quantitative cubefree consequence}
+For this section, use the unpruned cap-two domains and restrict the signed graph to primes greater than $3$. Denote the resulting graph by $G_2^\pm(N)$. Define $\tau_+(N)$ to be the minimum cardinality of a vertex set meeting every positive elementary circuit of length at least three in this graph. An empty collection of such circuits has $\tau_+(N)=0$.
+
+Call $p\to q$ linear if $q\mid p+1$ and quadratic if $q\mid p^2+p+1$. These labels refer to arithmetic divisibility, not to the edge sign. A quadratic contribution has negative sign in $G_2^\pm(N)$. A linear contribution can have negative sign across $0\to1$ and positive sign across $1\to2$. In particular, the two notions must not be identified.
+
+\begin{lemma}\label{signed:lem:mixed}
+Every two-vertex directed circuit on primes greater than $3$ is a mutual quadratic-divisibility pair.
+\end{lemma}
+\begin{proof}
+A linear arrow strictly decreases its prime vertex. Suppose $3<p<q$ form a two-cycle. The upward arrow must have $q\mid p^2+p+1$. If the return were linear, $p\mid q+1$. Setting $c=(p^2+p+1)/q$, reduction modulo $p$ gives $c\equiv-1\pmod p$, so $c\ge p-1$. Also $q+1$ is a multiple of $p$ exceeding $p$, hence $q\ge2p-1$. Thus
+\[
+ 2p-1\le q\le\frac{p^2+p+1}{p-1}=p+2+\frac3{p-1},
+\]
+which is impossible for $p\ge5$. The return arrow is therefore quadratic.
+\end{proof}
+
+Let $r(N)$ be the number of unordered mutual quadratic pairs in the graph. They need not be separate strongly connected components.
+
+\begin{theorem}\label{signed:thm:graphbound}
+For all positive targets,
+\begin{equation}\label{signed:eq:finite}
+ \boxed{f_2(N)\le 9\,3^{\tau_+(N)}2^{r(N)}.}
+\end{equation}
+For $N\ge2$, consequently,
+\begin{equation}\label{signed:eq:asym}
+ \boxed{\log\max(1,f_2(N))\le
+ (\tau_+(N)+2)\log3+\sqrt{(\log2)\log N}.}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Fix the input exponents at $2,3$ in at most nine ways. Choose a set $I$ of $\tau_+(N)$ vertices meeting all the long positive circuits and fix its exponents in at most $3^{\tau_+(N)}$ ways.
+
+For each mutual quadratic pair $p<q$, partition the exponent domain at $q$ according to whether $e_q\le1$ or $e_q=2$. Ignore empty blocks. This costs at most two possibilities per distinct selected base, hence at most $2^{r(N)}$ altogether. The partition removes every outgoing quadratic contribution from that base: it is constant zero on exponents $0,1$, and there is no transition inside the singleton block $\{2\}$.
+
+No positive circuit of length at least three remains after fixing $I$, and every remaining two-cycle is broken by these cuts. There are no loops. Corollary~\ref{signed:cor:cuts} now gives at most one input for each record, proving \eqref{signed:eq:finite}.
+
+The classification in Bibby--Vyncke--Zelinsky~\cite[Lemma 5]{bibby} says that positive integers satisfying
+\[
+ p\mid q^2+q+1,\qquad q\mid p^2+p+1
+\]
+are consecutive terms of the sequence
+\[
+ t_1=t_2=1,\qquad
+ t_{j+2}=\frac{t_{j+1}^2+t_{j+1}+1}{t_j},
+\]
+whose first terms are $1,1,3,13,61,291,\ldots$, and $t_{j+1}>4t_j$ for $j>3$.
+The larger endpoints of distinct pairs are distinct. Order them as $q_1<\cdots<q_r$. Since both endpoints exceed $3$, one has
+\[
+ q_i\ge t_{i+4}>13\cdot4^i.
+\]
+Each $q_i$ divides $N$, and therefore, for $r>0$,
+\[
+ \log N\ge\sum_{i=1}^r\log q_i>
+ \frac{r(r+1)}2\log4=r(r+1)\log2.
+\]
+Thus $r\log2\le\sqrt{(\log2)\log N}$. The case $r=0$ is immediate. Taking logarithms of \eqref{signed:eq:finite} proves \eqref{signed:eq:asym}.
+\end{proof}
+
+In particular, if $G_2^\pm(N)$ has no positive elementary circuit of length at least three, then
+\[
+ \log\max(1,f_2(N))=O(\sqrt{\log N})
+ =o(\log N/\log\log N).
+\]
+Arbitrarily complicated negative circuits are allowed by this criterion. It is a graph-defined restricted result, not a conclusion for every target.
+

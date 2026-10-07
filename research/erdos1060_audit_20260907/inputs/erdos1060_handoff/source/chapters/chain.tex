@@ -1,0 +1,251 @@
+\chapter{The strongest unrestricted bound in this record}\label{ch:chain}
+\sourcebox{erdos1060\_chain\_packing\_proof.tex}{Complete working proof of the constant $C_1=\tfrac12\log(1+1/\sqrt2)$ and the stronger cubefree constant. Neither constant tends to zero.}
+\section{Statement}
+Write
+\[
+h(k)=k\sigma(k),\qquad f(N)=\#\{k\ge1:h(k)=N\},\qquad \alpha_p=v_p(N).
+\]
+All logarithms are natural, and $\Omega(k)=\sum_p v_p(k)$. The target conjecture, as formulated in \cite{kominers}, is
+\[
+\log\max\{1,f(N)\}=o\!\left(\frac{\log N}{\log\log N}\right).
+\]
+The result proved here is the following.
+
+\begin{theorem}\label{chain:thm:main}
+Put
+\[
+C_1=\frac12\log\left(1+\frac1{\sqrt2}\right).
+\]
+For $N\ge2$ and $z\ge2$, define
+\[
+\mathcal P_z(N)=\prod_{\substack{p\mid N\\p>z}}\frac{p}{p-1}.
+\]
+Whenever $\mathcal P_z(N)\le4$,
+\begin{equation}\label{chain:eq:finite}
+\boxed{\log\max\{1,f(N)\}\le
+\sum_{\substack{p\mid N\\p\le z}}\log(\alpha_p+1)
++C_1\frac{\log N}{\log z}.}
+\end{equation}
+Consequently, uniformly as $N\to\infty$,
+\begin{equation}\label{chain:eq:asymptotic}
+\boxed{\log\max\{1,f(N)\}\le
+(C_1+o(1))\frac{\log N}{\log\log N}.}
+\end{equation}
+\end{theorem}
+Kominers obtains the constant $\log3/3$ from a squarefree-based encoding \cite{kominers}. The preceding working note in this investigation obtained $\log3/2-\log2/3=0.318257\ldots$ from prime-index encodings. Neither result is needed as a premise below.
+
+
+\section{An integer obstruction to comparable exponent indices}
+Two positive integers are called divisibility-comparable when one divides the other.
+
+\begin{lemma}\label{chain:lem:incompatibility}
+Let $S$ be a finite set of primes such that
+\[
+\prod_{p\in S}\frac{p}{p-1}\le4.
+\]
+Suppose $u,v$ have all their prime factors in $S$, $h(u)=h(v)$, and, for every $p\in S$, the integers $v_p(u)+1$ and $v_p(v)+1$ are divisibility-comparable. Then $u=v$.
+\end{lemma}
+\begin{proof}
+The function $h$ is multiplicative. Cancel equal local factors in the equality $h(u)=h(v)$. At each remaining prime $p$, let $a_p>b_p\ge0$ be the larger and smaller exponents, and put $d_p=a_p-b_p$. Comparability gives $b_p+1\mid a_p+1$, so
+\[
+\frac{h(p^{a_p})}{h(p^{b_p})}=p^{d_p}Q_p,
+\qquad Q_p=\frac{p^{a_p+1}-1}{p^{b_p+1}-1}\in\NN.
+\]
+The geometric sum for $Q_p$ shows that
+\begin{equation}\label{chain:eq:local}
+1<\frac{Q_p}{p^{d_p}}
+=\frac{1-p^{-(a_p+1)}}{1-p^{-(b_p+1)}}
+<\frac1{1-p^{-(b_p+1)}}\le\frac{p}{p-1}.
+\end{equation}
+Let $P_+$ be the primes where $u$ has the larger exponent, and let $P_-$ be those where $v$ has the larger exponent. Set
+\[
+A=\prod_{p\in P_+}p^{d_p},\quad B=\prod_{p\in P_-}p^{d_p},
+\quad U=\prod_{p\in P_+}Q_p,\quad V=\prod_{p\in P_-}Q_p.
+\]
+Then $AU=BV$ and $\gcd(A,B)=1$. Hence $A\mid V$, $B\mid U$, and there is a positive integer $c$ with
+\[
+U=cB,\qquad V=cA.
+\]
+If any exponent differs, \eqref{chain:eq:local} yields
+\[
+1<c^2=\frac{UV}{AB}
+=\prod_{p\in P_+\cup P_-}\frac{Q_p}{p^{d_p}}
+<\prod_{p\in P_+\cup P_-}\frac{p}{p-1}\le4.
+\]
+There is no square of a positive integer strictly between $1$ and $4$. This contradiction proves $u=v$.
+\end{proof}
+
+\begin{remark}
+The assertion compares exponent indices at \emph{all} primes simultaneously. The quotient multipliers need not be powers of the same prime, and the direction of divisibility may vary from one input prime to another. This is stronger, in the stated small-Euler-product setting, than using one fixed prime-index encoding.
+\end{remark}
+
+
+\section{A finite probability distribution on divisibility chains}
+Set
+\[
+t=\frac1{\sqrt2},\qquad D=t+t^2,\qquad A=\sqrt D.
+\]
+Thus $0<t<1<A$.
+
+\begin{lemma}\label{chain:lem:chains}
+For each integer $a\ge0$, there is a probability distribution on chains $\mathcal C\subseteq\{1,\ldots,a+1\}$ under divisibility, all containing $1$, such that
+\begin{equation}\label{chain:eq:inclusion}
+\Prob(j+1\in\mathcal C)\ge A^{-a}t^j
+\qquad(0\le j\le a).
+\end{equation}
+\end{lemma}
+\begin{proof}
+For $a=0$, use the chain $\{1\}$. In general, make $\{1,\ldots,a+1\}$ into a rooted tree by assigning each $n>1$ the parent $n/P^+(n)$, where $P^+(n)$ is its largest prime factor. Every root-to-vertex path is a divisibility chain.
+
+Prescribe node-inclusion masses
+\[
+q(1)=1,\qquad q(n)=A^{-a}t^{n-1}\quad(2\le n\le a+1).
+\]
+We show that the sum of the child masses never exceeds the parent mass.
+For $n\ge2$, every child has the form $np$ with a prime $p\ge P^+(n)$. Therefore
+\[
+\frac{\sum_{m\text{ child of }n}q(m)}{q(n)}
+\le\sum_{r=2}^{\infty}t^{n(r-1)}
+=\frac{t^n}{1-t^n}\le1,
+\]
+since $t^n\le t^2=1/2$.
+
+The children of the root are the primes at most $a+1$. It remains to verify
+\begin{equation}\label{chain:eq:root}
+\sum_{\substack{p\le a+1\\p\text{ prime}}}t^{p-1}\le A^a.
+\end{equation}
+The cases $a=0,1$ are immediate. For $a=2,3$, the sum is $t+t^2=A^2$, at most $A^a$. For $a=4,5$, it is
+\[
+t+t^2+t^4=(t+t^2)^2=A^4\le A^a.
+\]
+For $a\ge6$, since every prime except $2$ is odd,
+\[
+\sum_{p\le a+1}t^{p-1}
+\le t+\sum_{r=1}^{\infty}t^{2r}
+=t+1.
+\]
+But
+\[
+A^6-(1+t)=(t+1/2)^3-(1+t)=\frac{2t-1}{8}>0,
+\]
+so \eqref{chain:eq:root} follows for all $a\ge6$ as well.
+
+Assign each vertex $n$ the terminal probability
+\[
+r(n)=q(n)-\sum_{m\text{ child of }n}q(m)\ge0.
+\]
+These probabilities sum to $q(1)=1$ by telescoping over the finite tree. Choose a terminal vertex according to $r$, and take its root-to-vertex path. Again by telescoping over the subtree of $n$, the probability that this path contains $n$ is exactly $q(n)$.
+
+For $j\ge1$, this is $A^{-a}t^j$; for $j=0$, the probability is $1\ge A^{-a}$. Thus \eqref{chain:eq:inclusion} holds.
+\end{proof}
+
+
+\section{Packing the preimages}
+\begin{proof}[Proof of the finite bound in Theorem~\ref{chain:thm:main}]
+The empty fiber is harmless. Partition the preimages of $N$ by their exact exponents at primes $p\le z$. There are at most
+\[
+T=\prod_{\substack{p\mid N\\p\le z}}(\alpha_p+1)
+\]
+parts. Fix a nonempty part $\FF$. Every $k\in\FF$ has a common small-prime part $d$, so $k=du$ with $\gcd(d,u)=1$, and
+\[
+h(u)=N/h(d).
+\]
+Let $S=\{p\mid N:p>z\}$. For every $p\in S$, independently choose a random chain $\mathcal C_p$ supplied by Lemma~\ref{chain:lem:chains} with cap $a=\alpha_p$.
+
+For $k=du\in\FF$, let $E_k$ be the event that
+\[
+v_p(u)+1\in\mathcal C_p\qquad\text{for every }p\in S.
+\]
+These events are pairwise disjoint. Indeed, if $E_k$ and $E_m$ both occur, the two exponent indices at each prime lie on the same divisibility chain. Lemma~\ref{chain:lem:incompatibility}, using $\mathcal P_z(N)\le4$, forces the two residual inputs, and hence $k,m$, to be equal.
+
+Independence and \eqref{chain:eq:inclusion} give
+\[
+\Prob(E_k)\ge A^{-\sum_{p\in S}\alpha_p}t^{\Omega(u)}.
+\]
+Because $u^2\le h(u)\le N$,
+\[
+\sum_{p\in S}\alpha_p\le\frac{\log N}{\log z},
+\qquad
+\Omega(u)\le\frac{\log u}{\log z}\le\frac{\log N}{2\log z}.
+\]
+Consequently,
+\[
+\Prob(E_k)\ge\exp\!\left[-\left(\log A-\frac12\log t\right)
+\frac{\log N}{\log z}\right].
+\]
+The constant simplifies to
+\[
+\log A-\frac12\log t
+=\frac12\log\frac{t+t^2}{t}
+=\frac12\log(1+t)=C_1.
+\]
+The disjointness of the events yields
+\[
+1\ge\sum_{k\in\FF}\Prob(E_k)
+\ge |\FF|\exp\!\left(-C_1\frac{\log N}{\log z}\right).
+\]
+Bounding the size of each of the at most $T$ parts proves \eqref{chain:eq:finite}.
+\end{proof}
+
+
+\section{Why the required Euler-product condition is uniform}
+\begin{lemma}\label{chain:lem:tail}
+Let $L=\log N$, $u=\log L$, and $z=L/u^3$. Then
+\[
+\log\mathcal P_z(N)=O\!\left(\frac{\log u}{u}\right)=o(1)
+\]
+uniformly as $N\to\infty$.
+\end{lemma}
+\begin{proof}
+We use only the elementary estimate $\pi(x)=O(x/\log x)$. For completeness, this follows from the binomial-coefficient proof of Chebyshev's bound: the product of primes in $(n,2n]$ divides $\binom{2n}{n}<4^n$; summing the resulting bounds over dyadic intervals gives $\vartheta(x)=O(x)$. Splitting primes at $\sqrt x$ then gives
+\[
+\pi(x)\le\sqrt x+\frac{2\vartheta(x)}{\log x}=O(x/\log x).
+\]
+Since $-\log(1-1/p)\le1/(p-1)\le2/p$, it is enough to bound $\sum_{p\mid N,p>z}1/p$.
+There are at most $L/\log L=L/u$ prime divisors of $N$ exceeding $L$, so their contribution is at most $1/u$.
+For the others, partial summation and the elementary prime-counting bound give
+\[
+\begin{aligned}
+\sum_{z<p\le L}\frac1p
+&=\frac{\pi(L)}{L}-\frac{\pi(z)}z+
+\int_z^L\frac{\pi(t)}{t^2}\,dt\\
+&=O\!\left(\frac1u+\log\frac{\log L}{\log z}\right)
+=O\!\left(\frac{\log u}{u}\right),
+\end{aligned}
+\]
+where $\log z=u-3\log u$. This proves the assertion.
+\end{proof}
+
+\begin{proof}[Completion of Theorem~\ref{chain:thm:main}]
+For sufficiently large $N$, Lemma~\ref{chain:lem:tail} gives $\mathcal P_z(N)<4$ and $z\ge2$, so the finite bound applies. Since $\alpha_p\le L/\log2$,
+\[
+\sum_{p\mid N,p\le z}\log(\alpha_p+1)
+\le z\log(1+L/\log2)=O(L/u^2)=o(L/u).
+\]
+Also $\log z\sim u$. Substitution proves \eqref{chain:eq:asymptotic}. More explicitly, the error may be written $O(L\log u/u^2)$.
+\end{proof}
+
+
+\section{A stronger constant for cubefree inputs}
+Let $f_2(N)$ count only the preimages whose prime exponents are at most $2$.
+\begin{corollary}
+Writing $\varphi=(1+\sqrt5)/2$,
+\[
+\boxed{\log\max\{1,f_2(N)\}\le
+\left(\frac12\log\varphi+o(1)\right)\frac{\log N}{\log\log N}.}
+\]
+The constant is $0.2406059125298017\ldots$.
+\end{corollary}
+\begin{proof}
+Put $r=1/\varphi$, so $r+r^2=1$. At each large input prime, choose the chain $\{1,2\}$ with probability $r$ and $\{1,3\}$ with probability $r^2$. The inclusion probabilities for exponent indices $1,2,3$ are $1,r,r^2$. Hence the event attached to a residual preimage $u$ has probability exactly $r^{\Omega(u)}$. Lemma~\ref{chain:lem:incompatibility} again makes the events disjoint, so the number in a fixed small-prime part is at most $r^{-L/(2\log z)}$. Fixing small exponents costs at most $3^{\pi(z)}=\exp(o(L/u))$. Use the same $z=L/u^3$.
+\end{proof}
+
+
+\section{A barrier to counting incomparable patterns alone}
+Take an even number $s$ of coordinates, each with target-exponent cap three.
+All vectors with exactly $s/2$ entries equal to one and $s/2$ equal to two have
+$\sum e_p=\tfrac12\sum\alpha_p$. Any two different vectors have the incomparable
+indices two and three at a changed coordinate. There are
+$\binom{s}{s/2}=\exp((\log2+o(1))s)$ such vectors. These are abstract vectors,
+not asserted arithmetic preimages. The incompatibility restriction and the
+aggregate size budget alone cannot force a zero constant.

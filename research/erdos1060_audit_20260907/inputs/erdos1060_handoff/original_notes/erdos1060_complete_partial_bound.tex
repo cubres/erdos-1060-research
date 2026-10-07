@@ -1,0 +1,385 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em}
+\setlength{\headheight}{15pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small A bound for the multiplicity of $k\sigma(k)$}
+\fancyhead[R]{\small Partial result}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newcommand{\NN}{\mathbb N}
+\newcommand{\CC}{\mathcal C}
+\newcommand{\FF}{\mathcal F}
+\newcommand{\vp}{v_p}
+\newcommand{\ellfree}[2]{(#1)_{#2'}}
+\DeclareMathOperator{\ord}{ord}
+\title{\vspace{-1.3em}A uniform bound for the multiplicity\\of $k\sigma(k)$}
+\author{Complete proof of a partial result toward Erd\H{o}s Problem 1060}
+\date{5 September 2026}
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+\begin{abstract}
+Let $f(N)=\#\{k\ge1:k\sigma(k)=N\}$. We prove the uniform upper bound
+\[
+\log\max\{1,f(N)\}\le
+\left(\frac{\log3}{2}-\frac{\log2}{3}+o(1)\right)
+\frac{\log N}{\log\log N}.
+\]
+The proof uses injective encodings indexed by primes and a weighted counting argument. All numerical comparisons needed by the proof are reduced to explicit rational inequalities. The positive constant in this estimate is \emph{not} the zero constant required by the weaker Erd\H{o}s conjecture. This document therefore does not claim a resolution of that conjecture. Originality relative to the full literature has not been established.
+\end{abstract}
+
+\section{Statement and relation to the conjecture}
+Throughout, $\sigma(k)=\sum_{d\mid k}d$, $h(k)=k\sigma(k)$, and $v_p(k)$ is the exponent of the prime $p$ in $k$. All logarithms are natural. We use empty products with value $1$.
+
+The weaker conjecture in the formulation of Erd\H{o}s Problem 1060 recorded in \cite{Kominers} is
+\begin{equation}\label{eq:conjecture}
+\log\max\{1,f(N)\}=o\!\left(\frac{\log N}{\log\log N}\right).
+\end{equation}
+In particular, it requires the following bound for \emph{every} $\varepsilon>0$, with a threshold allowed to depend on $\varepsilon$:
+\[
+f(N)\le\exp\!\left(\varepsilon\frac{\log N}{\log\log N}\right)
+\quad\text{for all sufficiently large }N.
+\]
+The stronger proposed bound is $f(N)\le(\log N)^{O(1)}$.
+
+The established result proved here is the following.
+\begin{theorem}\label{thm:main}
+Set
+\[
+C_0=\frac{\log3}{2}-\frac{\log2}{3}=0.3182570841474065\ldots.
+\]
+For every integer $N\ge2$ and every real $z\ge3$, writing $\alpha_p=v_p(N)$, we have
+\begin{equation}\label{eq:finite}
+\boxed{\log\max\{1,f(N)\}\le
+\sum_{\substack{p\mid N\\p\le z}}\log(\alpha_p+1)
++C_0\frac{\log N}{\log z}.}
+\end{equation}
+Consequently, uniformly as $N\to\infty$,
+\begin{equation}\label{eq:asymptotic}
+\boxed{\log\max\{1,f(N)\}\le
+(C_0+o(1))\frac{\log N}{\log\log N}.}
+\end{equation}
+\end{theorem}
+
+Kominers proves $f(N)\le\prod_{p\mid N}v_p(N)$ and its consequence with constant $\log3/3$ in place of $C_0$ \cite[Theorem 1.2 and Corollary 1.3]{Kominers}. We do not use that theorem as a premise. The argument below is a self-contained weighted-counting presentation of the prime-index bound in the preceding working note \cite{WorkingNote}.
+
+\section{An injective encoding for each prime index}
+For a prime $\ell$ and a positive integer $t$, define the $\ell$-free part
+\[
+t_{\ell'}=\frac{t}{\ell^{v_\ell(t)}}.
+\]
+
+\begin{lemma}\label{lem:encoding}
+Fix a prime $\ell$. Suppose that $h(k)=h(m)$, that $v_\ell(k)=v_\ell(m)$, and that
+\[
+(v_p(k)+1)_{\ell'}=(v_p(m)+1)_{\ell'}
+\qquad\text{for every prime }p\ne\ell.
+\]
+Then $k=m$.
+\end{lemma}
+
+\begin{proof}
+The function $h$ is multiplicative: if $\gcd(u,v)=1$, then $h(uv)=h(u)h(v)$. In the equality between the prime-power product formulas for $h(k)$ and $h(m)$, cancel the equal local factors.
+
+At any remaining prime $p$, denote the larger exponent by $a$, the smaller by $b$, and put $d=a-b>0$ and $t=b+1$. The equality of the labels gives
+\[
+a+1=t\ell^j\qquad\text{for some }j\ge1.
+\]
+Therefore
+\begin{equation}\label{eq:ratio}
+\frac{h(p^a)}{h(p^b)}=p^dQ_p,
+\qquad Q_p=\frac{p^{t\ell^j}-1}{p^t-1}
+=\sum_{i=0}^{\ell^j-1}p^{it}\in\NN.
+\end{equation}
+
+Every prime $q$ dividing $Q_p$ satisfies
+\begin{equation}\label{eq:congruence}
+q=\ell\quad\text{or}\quad q\equiv1\pmod\ell.
+\end{equation}
+To prove this, first note that $q\ne p$, since $Q_p\equiv1\pmod p$. If $p^t\equiv1\pmod q$, the sum in \eqref{eq:ratio} gives $0\equiv\ell^j\pmod q$, so $q=\ell$. Otherwise the order $r=\ord_q(p)$ divides $t\ell^j$ but does not divide $t$. All prime factors of $r$ other than $\ell$ occur to exponents at most their exponents in $t$. Thus $v_\ell(r)>v_\ell(t)$, so $\ell\mid r\mid q-1$. This proves \eqref{eq:congruence}.
+
+Let $P_+$ be the primes at which $k$ has the larger exponent and $P_-$ the primes at which $m$ has the larger exponent. Define
+\[
+A=\prod_{p\in P_+}p^{d_p},\qquad
+B=\prod_{p\in P_-}p^{d_p},\qquad
+U=\prod_{p\in P_+}Q_p,\qquad
+V=\prod_{p\in P_-}Q_p.
+\]
+Then $AU=BV$ and $\gcd(A,B)=1$. Hence $A\mid V$ and $B\mid U$. Every differing input prime divides an opposite-side factor $Q_q$. The exponent at $\ell$ was fixed, so \eqref{eq:congruence} implies
+\begin{equation}\label{eq:inputcongruence}
+p\equiv1\pmod\ell\qquad(p\in P_+\cup P_-).
+\end{equation}
+
+For each such $p$, the sum in \eqref{eq:ratio} shows that $\ell\mid Q_p$. Also
+\[
+Q_p=p^{d_p}\frac{1-p^{-(d_p+t)}}{1-p^{-t}}
+<\frac{p^{d_p}}{1-p^{-t}}
+\le\frac p{p-1}p^{d_p}.
+\]
+Since $p\ge\ell+1$,
+\[
+\frac{p}{\ell(p-1)}\le\frac{\ell+1}{\ell^2}<1.
+\]
+It follows that
+\begin{equation}\label{eq:strict}
+(Q_p)_{\ell'}\le\frac{Q_p}{\ell}<p^{d_p}.
+\end{equation}
+
+The integers $A,B$ are coprime to $\ell$. Taking $\ell$-free parts in $AU=BV$ and using $\gcd(A,B)=1$ gives
+\[
+A\mid\prod_{p\in P_-}(Q_p)_{\ell'},\qquad
+B\mid\prod_{p\in P_+}(Q_p)_{\ell'}.
+\]
+If any exponent differs, multiplication and \eqref{eq:strict} yield
+\[
+AB\le\prod_{p\in P_+\cup P_-}(Q_p)_{\ell'}
+<\prod_{p\in P_+\cup P_-}p^{d_p}=AB,
+\]
+a contradiction. Hence no exponent differs and $k=m$.
+\end{proof}
+
+\section{Local weights for the two encodings}
+For an integer $a\ge0$, put
+\[
+\CC_\ell(a)=\{r\in\NN:1\le r\le a+1,\ \ell\nmid r\}.
+\]
+This is exactly the set of labels $(e+1)_{\ell'}$ as $e$ ranges over $0,\ldots,a$. Write
+\[
+c=\frac12\log\frac32,\qquad \lambda=\frac13\log2.
+\]
+
+\begin{lemma}\label{lem:weights}
+For every $a\ge0$, there are positive weights $w_{\ell,a}(r)$, for $\ell=2,3$ and $r\in\CC_\ell(a)$, such that
+\begin{equation}\label{eq:normalized}
+\sum_{r\in\CC_\ell(a)}w_{\ell,a}(r)=1\qquad(\ell=2,3),
+\end{equation}
+and for every $e\in\{0,\ldots,a\}$,
+\begin{equation}\label{eq:local}
+\boxed{w_{2,a}((e+1)_{2'})^{2/3}
+       w_{3,a}((e+1)_{3'})^{1/3}
+       \ge e^{-ca-\lambda e}.}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+When $a=0$, assign weight $1$ to the sole label for each index.
+
+When $a=1$, set
+\[
+w_{2,1}(1)=1,\qquad w_{3,1}(1)=\frac23,\qquad w_{3,1}(2)=\frac13.
+\]
+The left side of \eqref{eq:local} equals $(2/3)^{1/3}2^{-e/3}$, which is at least $(2/3)^{1/2}2^{-e/3}=e^{-c-\lambda e}$.
+
+When $a=2$, set
+\[
+w_{2,2}(1)=\frac23,\quad w_{2,2}(3)=\frac13,
+\qquad
+w_{3,2}(1)=\frac23,\quad w_{3,2}(2)=\frac13.
+\]
+For $e=0,1,2$, respectively, the pair of labels is $(1,1)$, $(1,2)$, $(3,1)$. Direct substitution gives equality in \eqref{eq:local} in all three cases:
+\[
+w_{2,2}((e+1)_{2'})^{2/3}w_{3,2}((e+1)_{3'})^{1/3}
+=\frac23\,2^{-e/3}=e^{-2c-\lambda e}.
+\]
+
+Now let $a\ge3$. Put $t=2^{-1/3}$ and
+\[
+Z_\ell(a)=\sum_{r\in\CC_\ell(a)}t^{r-1},\qquad
+w_{\ell,a}(r)=\frac{t^{r-1}}{Z_\ell(a)}.
+\]
+The normalization \eqref{eq:normalized} is immediate. We will verify
+\begin{equation}\label{eq:partition}
+Z_2(a)^2Z_3(a)\le\left(\frac32\right)^{3a/2}.
+\end{equation}
+If $r_\ell=(e+1)_{\ell'}$, then $r_\ell-1\le e$. Since $0<t<1$, \eqref{eq:partition} gives
+\begin{align*}
+w_{2,a}(r_2)^{2/3}w_{3,a}(r_3)^{1/3}
+&=\frac{t^{\frac23(r_2-1)+\frac13(r_3-1)}}{Z_2(a)^{2/3}Z_3(a)^{1/3}}\\
+&\ge\frac{t^e}{(3/2)^{a/2}}
+=e^{-ca-\lambda e},
+\end{align*}
+as required.
+
+It remains to prove \eqref{eq:partition}. The elementary inequality $t<4/5$ follows from $(4/5)^3>1/2$. Also $t^3=1/2$.
+
+For $a=3$,
+\[
+Z_2=1+t^2<\frac{41}{25},\qquad
+Z_3=1+t+t^3<\frac{23}{10}.
+\]
+The exact rational comparison
+\begin{equation}\label{eq:check3}
+\left[\left(\frac{41}{25}\right)^2\frac{23}{10}\right]^2
+<\left(\frac32\right)^9
+\end{equation}
+proves \eqref{eq:partition}.
+
+For $a=4,5$,
+\[
+Z_2=1+t^2+t^4<\frac{1281}{625},\qquad
+Z_3=\frac32+t+t^4<\frac{3387}{1250}.
+\]
+Here
+\begin{equation}\label{eq:check45}
+\left(\frac{1281}{625}\right)^2\frac{3387}{1250}
+<\left(\frac32\right)^6,
+\end{equation}
+which proves \eqref{eq:partition} for $a=4$ and hence also for $a=5$.
+
+Finally, for $a\ge6$, summing infinite geometric series gives
+\[
+Z_2(a)\le\frac1{1-t^2}<\frac{25}{9},\qquad
+Z_3(a)\le\frac{1+t}{1-t^3}=2(1+t)<\frac{18}{5}.
+\]
+Thus
+\begin{equation}\label{eq:check6}
+Z_2(a)^2Z_3(a)<\left(\frac{25}{9}\right)^2\frac{18}{5}
+=\frac{250}{9}<\left(\frac32\right)^9
+\le\left(\frac32\right)^{3a/2}.
+\end{equation}
+For explicit verification of the rational checks, the right side minus the left side in \eqref{eq:check3} and \eqref{eq:check45}, respectively, is
+\[
+\frac{878868043}{5000000000}>0,
+\qquad
+\frac{124598601}{15625000000}>0.
+\]
+Also $(3/2)^9-250/9=49147/4608>0$. No numerical approximation is a premise of these inequalities.
+\end{proof}
+
+\section{Weighted counting and the global bound}
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+If $f(N)=0$, \eqref{eq:finite} is immediate. Otherwise partition all preimages of $N$ according to their exact exponents at the primes $p\le z$. Every preimage divides $N$, so the number of parts is at most
+\[
+T=\prod_{\substack{p\mid N\\p\le z}}(\alpha_p+1).
+\]
+Fix a nonempty part $\FF$. For $\ell=2,3$ and $k\in\FF$, define
+\[
+W_\ell(k)=\prod_{\substack{p\mid N\\p>z}}
+ w_{\ell,\alpha_p}\bigl((v_p(k)+1)_{\ell'}\bigr).
+\]
+The exponents at $2$ and $3$ are fixed because $z\ge3$. By Lemma~\ref{lem:encoding}, each large-prime label vector, for either index $\ell=2$ or $\ell=3$, is injective on $\FF$. Thus its values are distinct points in the Cartesian product of the corresponding label sets. Using \eqref{eq:normalized},
+\begin{equation}\label{eq:sumweights}
+\sum_{k\in\FF}W_\ell(k)
+\le\prod_{\substack{p\mid N\\p>z}}
+   \sum_{r\in\CC_\ell(\alpha_p)}w_{\ell,\alpha_p}(r)
+=1.
+\end{equation}
+
+By the weighted arithmetic--geometric mean inequality,
+\[
+W_2(k)^{2/3}W_3(k)^{1/3}
+\le\frac23W_2(k)+\frac13W_3(k).
+\]
+Summing and applying \eqref{eq:sumweights} gives
+\begin{equation}\label{eq:sumupper}
+\sum_{k\in\FF}W_2(k)^{2/3}W_3(k)^{1/3}\le1.
+\end{equation}
+On the other hand, multiplying \eqref{eq:local} over the large primes yields
+\[
+W_2(k)^{2/3}W_3(k)^{1/3}
+\ge\exp\!\left(-c\sum_{\substack{p\mid N\\p>z}}\alpha_p
+                 -\lambda\sum_{\substack{p\mid N\\p>z}}v_p(k)\right).
+\]
+We have
+\[
+\sum_{\substack{p\mid N\\p>z}}\alpha_p
+\le\frac{\log N}{\log z}.
+\]
+Also $\sigma(k)\ge k$, so $k^2\le h(k)=N$ and
+\[
+\sum_{\substack{p\mid N\\p>z}}v_p(k)
+\le\frac{\log k}{\log z}
+\le\frac{\log N}{2\log z}.
+\]
+Hence, uniformly for $k\in\FF$,
+\[
+W_2(k)^{2/3}W_3(k)^{1/3}
+\ge\exp\!\left(-\left(c+\frac\lambda2\right)
+                       \frac{\log N}{\log z}\right)
+=\exp\!\left(-C_0\frac{\log N}{\log z}\right).
+\]
+Together with \eqref{eq:sumupper}, this gives
+\[
+|\FF|\le\exp\!\left(C_0\frac{\log N}{\log z}\right).
+\]
+There are at most $T$ parts. Multiplying by $T$ and taking logarithms proves \eqref{eq:finite}.
+
+For \eqref{eq:asymptotic}, write $L=\log N$, $u=\log L$, and choose
+\[
+z=\frac{L}{u^3},
+\]
+which is at least $3$ for all sufficiently large $N$. Since $\alpha_p\le L/\log2$ and there are at most $z$ primes not exceeding $z$,
+\[
+\sum_{\substack{p\mid N\\p\le z}}\log(\alpha_p+1)
+\le z\log\!\left(\frac L{\log2}+1\right)
+=O\!\left(\frac L{u^2}\right)
+=o\!\left(\frac L u\right).
+\]
+Moreover,
+\[
+\log z=u-3\log u\sim u.
+\]
+Substitution into \eqref{eq:finite} gives
+\[
+\log\max\{1,f(N)\}
+\le(C_0+o(1))\frac L u
+=(C_0+o(1))\frac{\log N}{\log\log N},
+\]
+completing the proof. No prime number theorem is needed.
+\end{proof}
+
+\section{Exact scope of the conclusion}
+Theorem~\ref{thm:main} proves
+\[
+\limsup_{N\to\infty}
+\frac{\log\max\{1,f(N)\}\,\log\log N}{\log N}\le C_0.
+\]
+The weaker Erd\H{o}s conjecture \eqref{eq:conjecture} requires the same quantity to tend to $0$. Since $C_0>0$ is fixed, that implication has not been established. In particular, $f(N)\le N^{o(1)}$, which does follow, is a weaker statement than \eqref{eq:conjecture}.
+
+The preceding working note reduces \eqref{eq:conjecture} to a bounded-exponent, rough-input estimate. For fixed $E\ge1$ and $\delta>0$, define
+\[
+R_{E,\delta}(X)=\max_{1\le M\le X}
+\#\left\{u\ge1:\begin{array}{l}
+h(u)=M,\ v_p(u)\le E\text{ for every prime }p,\\
+\text{every prime factor of }u\text{ exceeds }\delta\log X
+\end{array}\right\}.
+\]
+The required estimate is
+\[
+\log R_{E,\delta}(X)=o_{E,\delta}\!\left(\frac{\log X}{\log\log X}\right)
+\quad\text{for every fixed }E,\delta.
+\]
+No proof of this estimate is supplied here or in the preceding note. It must not be inserted as an established lemma to turn the partial result into a claimed solution.
+
+\begin{thebibliography}{9}
+\bibitem{Kominers}
+Scott Duke Kominers,
+\emph{On the Number of Solutions of $k\sigma(k)=n$}, working paper, 2026.
+Theorem 1.2 and Corollary 1.3.
+\url{https://scottkom.com/assets/articles/Kominers_ksigmak.pdf}.
+Accessed 5 September 2026.
+
+\bibitem{WorkingNote}
+\emph{Erd\H{o}s 1060: prime-index encodings, an entropy bound, and exact finite certificates},
+unpublished working note from this investigation, 5 September 2026.
+Original conversation attachment: \texttt{erdos1060\_prime\_index\_entropy\_proof.md}.
+Sections 1--3 give the prime-index theorem and the constant $C_0$; Section 7 identifies the unproved asymptotic estimate.
+\end{thebibliography}
+\end{document}

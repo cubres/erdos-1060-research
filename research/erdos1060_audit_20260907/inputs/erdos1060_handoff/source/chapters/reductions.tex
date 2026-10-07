@@ -1,0 +1,103 @@
+\chapter{The uniform reductions and their quantifiers}\label{ch:reductions}
+\sourcebox{First helper prompt; rough-input and later proof notes}{These reductions are proved. The bounded-exponent or rough-input estimate to which they reduce the problem remains unproved for arbitrary targets.}
+
+\section{Removing high input exponents}
+Fix $E\ge1$. Split every preimage into coprime factors
+\[
+ k=D_EU_E,\qquad D_E=\prod_{v_p(k)>E}p^{v_p(k)}.
+\]
+The factor $U_E$ has all exponents at most $E$. Since $k\mid N$, the number
+of possible high-exponent parts is at most
+\[
+ G_E(N)=\prod_{p\mid N}\left(1+\max\{\alpha_p-E,0\}\right).
+\]
+For each actual $D_E$, multiplicativity gives $h(U_E)=N/h(D_E)$. Therefore
+\begin{equation}\label{red:fixedcap}
+ \boxed{f(N)\le G_E(N)F_E(N).}
+\end{equation}
+Define
+\[
+ c_E=\sup_{a\in\mathbb Z,\ a\ge E+1}\frac{\log(a-E+1)}a.
+\]
+For fixed $E$, the same small/large-prime split $z=L/w^3$ as before gives
+\begin{equation}\label{red:GE}
+ \log G_E(N)\le(c_E+o_E(1))L/w.
+\end{equation}
+Indeed, the small primes contribute $O(L/w^2)$; for the large primes,
+$\log(1+\max\{a-E,0\})\le c_Ea$ and $\sum_{p>z}\alpha_p\le L/\log z$.
+For $E\ge2$,
+\[
+ 0\le c_E\le\frac{\log(E+1)}{E+1}\longrightarrow0.
+\]
+
+\begin{theorem}\label{red:equivalence}
+The original conjecture is equivalent to
+$\log F_E(X)=o_E(\log X/\log\log X)$ for every fixed $E$.
+\end{theorem}
+\begin{proof}
+The forward implication is immediate for sufficiently large targets; finitely
+many smaller targets contribute a constant to the maximum. Conversely, given
+$\varepsilon>0$, first fix $E$ so that $c_E<\varepsilon/3$. Next take $N$
+large enough for the $o_E(1)$ in \eqref{red:GE} and the fixed-cap bound both
+to contribute less than $\varepsilon/3$. Equation~\eqref{red:fixedcap} proves
+the required inequality. There is no passage to $E=E(N)$ without additional
+uniform error control.
+\end{proof}
+For $E=1$, $F_1(X)=1$ by squarefree injectivity and
+$G_1(N)=\prod_{p\mid N}\alpha_p$. The framework recovers the starting bound.
+
+\section{Also removing small input primes}
+For fixed $E\ge1$ and $\delta>0$, define
+\[
+ R_{E,\delta}(X)=\max_{1\le M\le X}
+ \#\{u:h(u)=M,\ v_p(u)\le E,\ P^-(u)>\delta\log X\}.
+\]
+If needed replace its logarithm by $\log\max\{1,R_{E,\delta}(X)\}$.
+The cutoff is defined from the original $X$, not separately from each residual
+$M$. After selecting $D_E$, fix the remaining exponents at primes at most
+$\delta\log N$. This costs at most $(E+1)^{\pi(\delta\log N)}$ records.
+The residual is counted by $R_{E,\delta}(N)$, so
+\begin{equation}\label{red:rough}
+ \boxed{f(N)\le G_E(N)(E+1)^{\pi(\delta\log N)}
+ \max\{1,R_{E,\delta}(N)\}.}
+\end{equation}
+The prime number theorem gives
+\[
+ \pi(\delta\log N)\log(E+1)
+ =\bigl(\delta\log(E+1)+o_{E,\delta}(1)\bigr)L/w.
+\]
+Thus the following family of estimates would suffice:
+\begin{equation}\label{red:roughgap}
+ \boxed{\log\max\{1,R_{E,\delta}(X)\}
+ =o_{E,\delta}(\log X/\log\log X)
+ \quad\text{for every fixed }E,\delta.}
+\end{equation}
+Choose $E$ first, then $\delta$, then the large target threshold. Neither
+\eqref{red:roughgap} nor an unrestricted substitute is established in the record.
+
+\section{A short interval, with its exact limitation}
+If $h(u)=M\le X$ and $P^-(u)>y>1$, then
+\[
+ \log\frac{\sigma(u)}u
+ \le\sum_{p\mid u}\log\frac p{p-1}
+ \le\frac{\omega(u)}{y-1}
+ \le\frac{\log X}{2(y-1)\log y}.
+\]
+Consequently,
+\begin{equation}\label{red:interval}
+ \sqrt M\exp\!\left(-\frac{\log X}{4(y-1)\log y}\right)
+ \le u\le\sqrt M.
+\end{equation}
+For $y=\delta\log X$, this is relative width $O_\delta(1/\log\log X)$.
+It does not count the divisors of $M$ satisfying the equation in that interval.
+A separate arithmetic counting theorem is required. The nearby literature on
+fibers of $\sigma(n)-n$ warns that fixed-relative-width concentration alone can
+coexist with large fibers; it is not a theorem about this shrinking interval.
+
+\section{Asymptotic bookkeeping checklist}
+In any claimed completion, verify the maximum over all $M\le X$, including small
+residuals; the dependence of constants on $E$ and $\delta$; the original cutoff
+used in the roughness condition; and exact multiplicativity of the selected
+unitary blocks. A proof at one fixed exponent cap gives partial progress, not
+the all-cap implication. A numerical decrease of a fixed general constant does
+not by itself imply its limit can be made zero.

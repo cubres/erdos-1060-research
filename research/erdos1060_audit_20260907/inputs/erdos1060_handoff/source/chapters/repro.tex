@@ -1,0 +1,156 @@
+\chapter{Computational record and reproduction}\label{ch:repro}
+\section{What was rerun for this handoff}
+Fifteen supplied verifier programs were rerun successfully while compiling this
+dossier. One additional large-range checker was interrupted by the enclosing
+execution limit before returning a result. Its original certificate remains in
+the archive, but it is not marked as newly reproduced here. The run log includes
+script hashes, completion status and output logs. A successful verifier replays
+its exact finite claims; it is not an independent proof of any infinite theorem.
+
+The original archives are preserved byte-for-byte, and extracted working copies
+are provided separately. Rerun outputs are stored with the handoff checks rather
+than being presented as new discoveries. Some verifiers use Python assertions:
+run ordinary Python, not \texttt{python -O}. Selected original discovery scripts
+require third-party optimization or number-theory packages; the named exact
+checkers use the standard library unless their README says otherwise.
+
+\section{Reusable computational methods}
+\paragraph{Exact inverse enumeration.}
+Enumerate target primes and complete local exponent domains. Keep a residual
+valuation vector. Reject a local block only when it exceeds a residual capacity,
+a necessary row-support test fails, or even the maximum remaining contributions
+cannot fill a required row. A completed leaf must exhaust every valuation.
+These rules provide completeness; a resource-interrupted run does not.
+
+\paragraph{Difference-column search.}
+For one allowed base $p$ and a pair $a>b$, form
+$c_{p,a,b}=\nu(h(p^a))-\nu(h(p^b))$, including every factor row. A collision
+selects at most one signed column per base and has total sum zero. A row
+supported only at one base excludes all nonzero columns at that row. Iterated
+elimination is exact. Rational independence of all surviving columns also
+certifies no collision. A floating-point MILP status alone does not.
+
+\paragraph{Factor-row certificates.}
+Output factors can be certified prime by recursive Lucas certificates. In some
+larger computations, primality is unnecessary: checking that all row bases are
+integers greater than one and pairwise coprime certifies their multiplicative
+independence. Input bases must still be verified prime. Product/remainder trees
+make the pairwise-coprimality check efficient.
+
+\paragraph{Modular-root graph construction.}
+For each target vertex prime $q$, generate the permitted residue classes from
+multiplicative orders, then enumerate prime source values in those classes.
+This reconstructs the complete bounded prime graph without factoring every
+large divisor sum. The construction was separately compared with direct
+local-divisibility tests on smaller complete prime ranges.
+
+\section{Finite-prime noncollision results in the record}
+The following are prime-factor restrictions, not bounds on input size.
+\small
+\begin{longtable}{@{}p{0.29\textwidth}p{0.29\textwidth}p{0.34\textwidth}@{}}
+\toprule Allowed inputs & Exact finite certificate & Scope and packet\\\midrule\endhead
+Odd cubefree inputs with the same radical; primes $\le10^5$ & All 9,591 exponent-$1$ versus exponent-$2$ columns eliminated. & No two different such inputs collide; v3.\\
+Odd inputs with exponents $0,2,4$; primes $\le10^4$ & Three columns survive with determinant 18. & Injectivity on that class; v3.\\
+Odd inputs with exponents $0,2,4,6$; primes $\le10^3$ & Same three-column determinant certificate. & Injectivity on that class; v3.\\
+Cubefree inputs, primes in $[251,10^5]$ & 28,617 columns eliminated in 32 rounds. & 9,539 input primes; v5.\\
+Cap six, $7<p\le5000$, $\gcd(\sigma(k),2\cdot3\cdot5\cdot7)=1$ & 2,035 columns deleted in rounds 2003,30,2. & Injectivity on this restricted class; v6.\\
+Cap ten, $11<p\le1000$, $\gcd(\sigma(k),2\cdot3\cdot5\cdot7\cdot11)=1$ & 1,005 columns deleted in rounds 998,7. & Injectivity on this restricted class; v6.\\
+Cubefree inputs, primes in $[1001,10^6]$ & Archived certificate deletes 234,990 columns in 35 rounds. & 78,330 input primes; v9 large checker. Handoff rerun interrupted.\\
+\bottomrule
+\end{longtable}\normalsize
+The determinant in the two middle v3 cases uses rows $3,7,11$ and the columns
+$c_{3,4,0},c_{7,2,0},c_{11,2,0}$:
+\[
+ \det\begin{pmatrix}4&1&0\\0&2&1\\2&0&2\end{pmatrix}=18\ne0.
+\]
+No finite range proves an unbounded-prime classification. In particular, the
+large odd-cubefree collision disproves the earliest overly strong classification
+suggested by an input scan through five million.
+
+\section{Universal finite graph transversals}
+For the universal cubefree graph on primes $3<p\le x$, the recorded certified
+upper bounds on the number of vertices meeting longer positive cycles are
+\[
+\begin{array}{c|rrrr}
+x&10^3&10^4&10^5&10^6\\\hline
+\text{vertices}&166&1227&9590&78496\\
+\text{underlying edges}&396&3793&34536&314381\\
+T_2(x)\text{ upper bound}&2&7&12&29.
+\end{array}
+\]
+These are not certified minima. At $x=10^6$ one valid set is
+\begin{align*}
+ I=\{&17,31,41,43,53,71,73,89,97,101,127,131,139,151,157,\\
+ &193,197,199,227,271,353,367,421,601,683,907,1117,2011,2467\}.
+\end{align*}
+After deletion only the mutual pair $\{13,61\}$ remains nontrivial. At $10^4$
+the negative all-quadratic triangle $\{43,307,631\}$ also remains. Contracting
+these explicit residual blocks gives an acyclic graph, which certifies that
+there are no other cycles. The proof does not rely on a bounded cycle-length
+search.
+
+Fixing exponents at $2,3,I$ and splitting the exponent at $61$ into
+$\{0,1\}$ and $\{2\}$ yields
+\[
+ \#\{k:h(k)=N,\ k\text{ cubefree},\ P^+(k)\le10^6\}
+ \le18\cdot3^{29}\quad\text{for every }N.
+\]
+Unsigned all-cycle deletion sets were also checked at cap three with sizes
+$15,43,110$ at cutoffs $10^3,10^4,10^5$, and at cap four with sizes $19,65$
+at $10^3,10^4$. Those numbers include the small bases. They are finite heuristic
+upper bounds certified by acyclicity, not asymptotic estimates.
+
+\section{Complete target fibers and branch costs}
+The deterministic exact solver gives the following completed records:
+\[
+\begin{array}{c|c|c|c}
+\text{target}&\text{cap}&\text{multiplicity}&\max\prod_i d_i\\\hline
+M&2&2&2\\
+M&\text{unrestricted}&2&2\\
+336M&2&4&4\\
+336M&\text{unrestricted}&6&9\\
+N_7&\text{unrestricted}&7&8.
+\end{array}
+\]
+Here $d_i$ are the actual branch arities along a successful path. Fixing
+$v_{11}(k)=0$ or $2$ resolves $M$ completely. A selected 379-digit scaled
+target also has two cubefree preimages and requires one binary branch; its
+full factors are in the branch packet. Four smaller scaled cases and twelve
+seeded random represented targets were also completed. These are selected
+examples, not worst-case bounds.
+
+Five dense represented targets were generated at prime cutoffs
+$31,61,101,251,503$ by choosing exponent two when the entire quadratic divisor
+sum stayed below the cutoff and exponent one otherwise. Their targets have
+31,60,110,273,557 digits. Exact row propagation forces a unique cubefree input
+in each case. Five polynomial-pair targets in Chapter~\ref{ch:bh} similarly
+have unique cap-five preimages. These constructions stress the distinction
+between apparent graph cycles and surviving integer choices.
+
+\section{Archived inconclusive searches}
+At several allowed-prime cutoffs, exact elimination left a residual model and
+a subsequent optimizer found no witness before its time limit. Examples include
+cubefree bases in $[101,10^5]$ (537 residual columns) and $[251,10^6]$
+(1,412 residual columns on 602 bases). A further search beginning at 31 was
+externally interrupted. No existence, nonexistence, or asymptotic claim follows
+from these incomplete numerical searches. The residual columns are not labeled
+actual exchanges. Earlier finite prime-cycle and collision witnesses remain
+valid independently of an optimizer's status.
+
+\section{Archive layout and exact commands}
+The companion archive contains:
+\begin{quote}
+\texttt{erdos1060\_research\_handoff.pdf}: this dossier.\\
+\texttt{source/}: the consolidated editable LaTeX, chapters and bibliography.\\
+\texttt{original\_notes/}: all supplied working notes and prompts.\\
+\texttt{original\_packets/}: the 16 original ZIP packets, unchanged.\\
+\texttt{working\_packets/}: extracted usable working directories.\\
+\texttt{checks/}: handoff rerun logs and script hashes.\\
+\texttt{examples\_catalogue.json}: full targets, witnesses and exchange records.\\
+\texttt{MANIFEST.json}: file sizes and SHA-256 hashes.\\
+\texttt{START\_HERE.md}: concise navigation and exact reproduction commands.
+\end{quote}
+Do not execute all discovery searches merely to read the mathematics. Begin with
+the small exact checkers and use explicit resource limits for large graphs or
+optimization. The source build uses \texttt{pdflatex} or \texttt{latexmk}; no
+third-party font files are distributed.

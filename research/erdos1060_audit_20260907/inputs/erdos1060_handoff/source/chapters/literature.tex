@@ -1,0 +1,130 @@
+\chapter{Literature map and quantitative audit}\label{ch:literature}
+\section{How this bibliography should be used}
+The primary question is not whether a paper proves a subpolynomial count in
+some sense, but whether its bound is uniform over every target and is
+little-$o$ on the scale $\log N/\log\log N$. Distinguish a fixed polynomial
+system from a system whose number of prime coordinates grows with $N$.
+Also distinguish a theorem, an inspected preprint claim, a working report,
+and an OEIS data record.
+
+The bibliography contains clickable primary-source links. At compilation,
+the direct Kominers manuscript, the Noppakaew--Pongsriiam paper, the
+Bang--Zsigmondy source metadata, the Bibby--Vyncke--Zelinsky classification,
+the Bateman--Horn survey, Richard's positive-feedback paper, Pollack's sequel,
+and the Mertens notes were reaccessed. The other summaries below preserve the
+prior working-note audit and should be checked against the cited version before
+being imported. A failed retrieval of the main Erd\H{o}s-problem page gives no
+basis for asserting the status of all current public claims.
+
+\section{Direct sources}
+\paragraph{Kominers \cite{kominers}.}
+Read Theorem 1.2, Corollary 1.3, Proposition 3.2 and Remarks 4.1--4.3.
+They supply the powerful-core majorant, its constant $\log3/3$, and the limitation
+of that majorant. Its computational census is distinct from the elementary
+proof. The seven-member target is useful as a concrete test, but a particular
+fiber verification here does not reproduce a global least-target census.
+
+\paragraph{Noppakaew--Pongsriiam \cite{np}.}
+Theorem 12 proves injectivity of $n^a\sigma(n)^b$ on squarefree integers for
+positive integer $a,b$. Theorem 6 contains a related cross-divisibility and
+strict-size argument for another arithmetic function. Use those mechanisms,
+not an unsupported transfer of the conclusion to higher prime powers of $h$.
+Question 27's displayed Mersenne construction was flagged in the notes; use the
+directly verified formula in Chapter~\ref{ch:foundations} rather than copying
+an unverified display.
+
+\paragraph{Historical context and sequences.}
+Guy, \emph{Unsolved Problems in Number Theory}, third edition, Problem B11,
+is the historical entry cited by the direct paper. The book's complete content
+was not available for this compilation. The Erd\H{o}s-problem page and forum
+are navigation targets, not evidence of a proof without inspecting its argument.
+Relevant OEIS entries are A064987 ($h$), A327153 (multiplicity), A212490 (least
+specified multiplicities), A337873 (multiple representations), and A337875/A337876
+(collision data and related primitive constructions). Check definitions and
+conventions before treating ``primitive'' or ``least'' as interchangeable.
+
+\section{Primitive divisors and arithmetic dependence}
+\paragraph{Glasby--L\"ubeck--Niemeyer--Praeger \cite{zsig}.}
+The introduction states the restricted Bang theorem used here: for $a\ge2$
+and index $m\ge3$, a primitive divisor of $a^m-1$ exists except at $(a,m)=(2,6)$.
+The index-two exceptions are irrelevant to the higher-exponent list proof, but
+must not be silently omitted in any extension. The arXiv version note explicitly
+records a correction from $n>1$ to $n>2$ in that statement. This source supports
+Chapter~\ref{ch:primitive}; it does not make primitive witnesses globally distinct.
+
+\paragraph{Bibby--Vyncke--Zelinsky \cite{bibby}.}
+Lemma 5 classifies positive integer mutual quadratic-divisibility pairs by
+$5pq=p^2+q^2+p+q+1$ and the consecutive-term recurrence starting $1,1$.
+Its growth estimate makes two-cycle costs negligible in the cubefree graph.
+It is not a theorem about the number of arbitrary longer collision components.
+The related $\sigma_{m,n}$ pair lemmas are concrete sources of descent ideas.
+
+\paragraph{Ford--Konyagin--Luca \cite{pratt}.}
+Prime chains and Pratt trees suggest reconstruction and certificate techniques.
+Their usual divisibility relations are not identical to the graph
+$q\mid\sigma(p^e)$. Any claimed transfer needs a precise lemma, its direction
+of dependence, and uniformity in the exponent cap. No finishing estimate was
+obtained from this analogy.
+
+\section{Nearby divisor-sum counts: inspect the exponent}
+\begin{longtable}{@{}p{0.24\textwidth}p{0.35\textwidth}p{0.33\textwidth}@{}}
+\toprule Source and problem & Quantitative information inspected & Why it does not finish 1060\\\midrule\endhead
+Pollack sequel; Wirsing method \cite{pollack2023} & Uniform fixed-abundancy bound $x^{O(1/\log\log x)}$ and denominator-driven reconstruction. & Positive constant at the relevant scale; $\sigma(k)/k$ varies in our fiber. The source's status remarks are historical to that source, not a current global claim.\\
+Pollack, denominator-only fibers \cite{pollack2011} & Theorem 4.1 gives $\exp(C\log x/\sqrt{\log\log x})$ for prescribed $n/\gcd(n,\sigma(n))$. & Dividing by $\log x/\log\log x$ leaves $C\sqrt{\log\log x}$, not zero.\\
+Broughan--De Koninck--K\'atai--Luca \cite{bdkl} & For primitive solutions of $\sigma(n)=\operatorname{rad}(n)^2$, the inspected Theorem 6 proof gives $2^{6M}$ with $M=\lceil\log x/\log\log x\rceil$. & Still a positive constant; their unitary-divisor primitiveness is not our minimal-exchange notion.\\
+Pollack, typical fibers \cite{pollack2015} & For asymptotically all values of $\sigma$, all preimages share the largest prime factor. & Density-one information cannot discard exceptional targets in a uniform maximum.\\
+Pollack--Pomerance--Thompson \cite{fibers} & Theorem 1.4 gives large fibers for $s(n)=\sigma(n)-n$ in fixed-relative-width intervals. & A warning about interval arguments; different function and not our shrinking interval.\\
+Pollack--Pomerance \cite{pp} & Common unitary factors and primitive friendly pairs. & Their fixed-abundancy relation is different from $h(a)=h(b)$.\\
+\bottomrule
+\end{longtable}
+
+Erd\H{o}s' 1959 paper \cite{erdos1959} provides the older squarefree and
+fixed-abundancy context. A correct use must preserve the distinction between
+$\sigma(a)/a=\sigma(b)/b$ and $a\sigma(a)=b\sigma(b)$: together these equalities
+would force $a=b$.
+
+\section{Exact integer models and feedback}
+\paragraph{Richard \cite{richard2009,richard2022}.}
+Positive-feedback bounds for multiple fixed points are established discrete
+dynamical-systems results. Chapter~\ref{ch:signed} gives a direct proof for our
+valuation equations, avoiding the need to extend their right side to a box
+self-map. These results do not bound the sizes of arithmetic feedback sets.
+
+\paragraph{Le--R\"omer \cite{graver}.}
+Conformal decomposition in an integer kernel explains the genuine-exchange
+lemma. An equivariant finiteness theorem cannot simply be transferred to our
+prime-dependent matrix. Exact decomposition is not a bound on the exchange
+packing count.
+
+\paragraph{Young \cite{young}.}
+Proposition 1.7 and Theorem 1.8 concern multiplicatively dependent polynomial-value
+tuples. Their parameters involve the chosen polynomial tuple. No uniform
+maximum-fiber conclusion was extracted when the number of input primes grows.
+An application must track that dependence explicitly, rather than quote a
+fixed-dimension statement.
+
+\paragraph{Bateman--Horn survey \cite{bh}.}
+Section 3.6 states the prime-pattern conjecture used in Chapter~\ref{ch:bh}.
+The obstruction is conditional on the specific pair $t^2+1,t^2+t+1$.
+It is not an unconditional lower bound for feedback, and never a lower bound
+for $f(N)$. The exact finite graph construction is unconditional.
+
+\section{Secondary leads and relevance tests}
+Akande \cite{akande} studies inverse iterates of $\varphi$ and $\sigma$;
+Gabdullin--Iudelevich--Luca \cite{gil} study value-set questions for functions
+$kf(k)$. Both are secondary leads unless a particular lemma bridges their
+problem and a uniform fiber maximum here. Do not spend another literature pass
+on titles alone.
+
+An earlier note inspected Li's June 2026 preprint claim about Erd\H{o}s 1061
+\cite{li2026}, concerning $\sigma(a)+\sigma(b)=\sigma(a+b)$. It is a different
+equation and a lower-bound construction, not a verified solution of 1060.
+That preprint has not been independently refereed in this dossier.
+The unrefereed website report for 1060 is a lead only: its powerful-core relaxation
+must be tested against Chapter~\ref{ch:foundations}.
+
+For a proposed external theorem, record: the exact statement; all parameter
+dependences; whether it counts values, inputs, pairs, or a maximum fiber; whether
+it allows exceptional targets; the normalized logarithmic bound after division
+by $\log N/\log\log N$; and whether its coprimality assumptions match the selected
+prime-power blocks. An unexplained $o(1)$ is not enough.

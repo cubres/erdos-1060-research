@@ -1,0 +1,197 @@
+\chapter{Examples, counterexamples and failed shortcuts}\label{ch:examples}
+\section{Small exact collisions}
+The following identities are mandatory regression tests:
+\[
+ h(12)=h(14)=336,\qquad
+ h(315)=h(351)=196560,\qquad
+ h(160)=h(189)=60480.
+\]
+The first disproves cubefree injectivity and injectivity on the union of all
+two-prime supports; it does not contradict fixed-pair rigidity. The second
+uses odd inputs but an even target. The third has coprime inputs, so distinct
+preimages need not share a prime factor.
+
+\section{The 29-digit odd cubefree collision}\label{examples:M}
+Define
+\begin{align*}
+ a={}&11^2 13^2\cdot17\cdot19\cdot31\cdot61\cdot97\cdot127^2
+       \cdot271\cdot307^2\cdot331\cdot367,\\
+ b={}&13\cdot17^2 19^2\cdot23\cdot31^2\cdot43\cdot61^2
+       \cdot83\cdot127\cdot307\cdot733\cdot5419.
+\end{align*}
+Then
+\[
+ a=60629697601617236747379985403,\qquad
+ b=61655391632564660609643619057,
+\]
+\[
+ M=h(a)=h(b)=5276516179938729922490847708056660616574496169354744299520.
+\]
+Its factorization is
+\begin{align*}
+ M={}&2^{20}3^5\cdot5\cdot7^3\cdot11^2 13^2 17^2 19^2
+       \cdot23\cdot31^2\cdot43\cdot61^2\\
+    &{}\cdot83\cdot97\cdot127^2\cdot271\cdot307^2\cdot331\cdot367
+       \cdot733\cdot5419.
+\end{align*}
+Every input prime is at least $11$. No prime has the same positive exponent
+in both inputs. Their combined support has 17 bases. Each input has 20,736
+divisors; complete divisor summation gives
+\[
+ \sigma(a)=87028574917351791526375587840,\qquad
+ \sigma(b)=85580774693381738895491727360.
+\]
+The exact inverse programs give $f(M)=f_2(M)=2$.
+Because $\gcd(ab,42)=1$, the four numbers $12a,14a,12b,14b$ are distinct
+cubefree preimages of $336M$. Exact enumeration gives
+\[
+ f_2(336M)=4,\qquad f(336M)=6.
+\]
+The two additional unrestricted preimages are not cubefree. Their full values
+are preserved in the branch-solver results and consolidated machine-readable
+catalogue in the handoff archive.
+
+This example invalidates odd-cubefree injectivity, cubefree multiplicity bounds
+of two or three, and the conjecture that every cubefree collision is a
+common-unitary scaling of $(12,14)$. It does not disprove a larger absolute
+cubefree multiplicity bound. The earlier scan through input five million was
+consistent with those false guesses only because this witness lay far beyond
+that range. Its support was found by valuation constraints rather than by a
+consecutive-input scan.
+
+The exact denominator audit gives
+\[
+ R=2^{19}3^2\cdot5\cdot7^2\cdot11\cdot31,
+ \qquad T=2^{20}3^5\cdot5\cdot7^3,\qquad T/R=378/341.
+\]
+Sixteen small-prime labels change, even though the complete exact solver needs
+one binary branch at prime $11$. Changed coordinates and independent choices
+are not the same quantity.
+
+\section{The singleton fractional-obstruction target}
+\[
+ N_0=504654433920=2^7 3^3\cdot5\cdot7^2\cdot13\cdot19^2\cdot127,
+\]
+\[
+ h^{-1}(N_0)=\{492765\},\qquad
+ 492765=3\cdot5\cdot7\cdot13\cdot19^2.
+\]
+Its cap-two system after row-support propagation has 17 columns, rank 14,
+and a strictly positive fractional feasible point. The full parameterization
+and the three integer deductions forcing its unique solution appear in
+Chapter~\ref{ch:integer}. A complete unrestricted check evaluates all 2,304
+target divisors. This is the test to apply to any claim that zero-budget linear
+certificates always remove fractional freedom.
+
+\section{Other complete fibers}
+The exact six-, seven- and nine-preimage targets are
+\begin{align*}
+ N_6&=7089671638182002688000
+     =2^{31}3^2 5^3\cdot7\cdot13\cdot31\cdot127\cdot8191,\\
+ N_7&=106345074572730040320
+     =2^{28}3^3\cdot5\cdot7\cdot13\cdot31\cdot127\cdot8191,\\
+ N_9&=1826980530660612389572800675840\\
+    &=2^{45}3^3\cdot5\cdot7\cdot13\cdot31\cdot127\cdot8191\cdot131071.
+\end{align*}
+All inputs are listed in the machine-readable catalogue. The full seven-member
+fiber and its exchange dictionary are also in Chapter~\ref{ch:exchanges}.
+Their unrestricted verifiers examine 12,288, 7,424 and 23,552 divisors,
+respectively. These particular-fiber checks are not reproductions of a global
+minimality census in the external paper.
+
+The target $N_1=h(37^5 43^3)$ from Chapter~\ref{ch:bh} equals
+\[
+ 31984991189820195724150800.
+\]
+Its full fiber is the singleton $\{5513329989199\}$, verified by testing all
+33,600 target divisors. Five polynomial-pair target constructions, using the
+first $1,2,3,5,8$ pairs, have unique cap-five preimages, despite their unpruned
+positive cycles. Their targets have 26, 63, 105, 204 and 391 decimal digits.
+The larger four checks are cap-five only, not unrestricted censuses.
+
+\section{Local divisibility obstructions}
+The identities
+\[
+ \sigma(29^2)=13\cdot67,
+ \qquad \sigma(269^2)=13\cdot37\cdot151
+\]
+serve different purposes. In the first, $67\equiv1\pmod3$ but is $1$ modulo
+neither $5$ nor $7$, while $\sigma(67^4)$ and $\sigma(67^6)$ are coprime to
+$2\cdot3\cdot5\cdot7$. A third exponent-index type can therefore supply a
+prime involved in an incomparable exchange of the other two types. This
+blocks the direct extension of the two-index residue proof.
+In the second, every factor exceeds $7$ and is smaller than $269$.
+Rough divisor sums need not introduce a larger prime.
+
+Likewise, $7$ is primitive at index three for both bases $2$ and $11$.
+A primitive prime is not automatically new globally, and need not exceed its
+base. The valid local distinctness in Chapter~\ref{ch:primitive} must not be
+strengthened silently.
+
+\section{Long graph cycles are not arithmetic collisions}
+The following eight-prime cycle is entirely quadratic:
+\[
+ 193\to1783\to1279\to2383\to12541\to576151\to151009\to6067\to193.
+\]
+For consecutive vertices $(p,q)$, the integer quotients
+$(p^2+p+1)/q$ are, in order,
+\[
+ 21,\ 2487,\ 687,\ 453,\ 273,\ 2198217,\ 3758673,\ 190749.
+\]
+Its eight negative edges form a positive signed cycle. It does not by itself
+supply two solutions of the full valuation equations.
+The nine-vertex positive cycle in Chapter~\ref{ch:universal} has all vertices
+larger than the square root of its largest vertex. It refutes that particular
+small-vertex deletion rule, not an asymptotic bound for actual fibers.
+
+\section{Failure map: statements not to reintroduce}
+\begin{longtable}{@{}p{0.38\textwidth}p{0.55\textwidth}@{}}
+\toprule Proposed shortcut & Why it fails or remains unproved\\\midrule\endhead
+Count powerful $d$ with $h(d)\mid N$ & The odd represented family in Chapter~\ref{ch:foundations} has a positive-constant relaxed count. Exact squarefree completion matters.\\
+Optimize $\prod\alpha_p$ to constant zero & Its own maximal-order constant is $\log3/3$. This is not a lower bound for $f$.\\
+More prime-index entropy weights suffice & Uniform exponents on $\{0,1,2\}$ saturate the local relaxation at $C_0$. Cross-prime constraints are omitted.\\
+Comparable-index restriction alone suffices & Abstract exponentially large exponent families satisfy its incompatibility and aggregate size constraints.\\
+Drop compatibility in the small-multiplier theorem & The multiplier becomes $T/R$, with uncontrolled denominator; the 29-digit collision changes 16 labels.\\
+Odd inputs behave like odd targets & False; the large collision uses odd cubefree inputs and an even target.\\
+Real nullity measures genuine choices & A singleton fiber has a 3-dimensional positive real relaxation. Integer rounding is essential.\\
+Positive cycles automatically create collisions & The polynomial prime pairs have such cycles but fixed-pair injectivity holds for all exponents.\\
+Universal feedback cost is surely subpolynomial & Conditional Bateman--Horn lower bounds obstruct this for caps at least five. This is not an unconditional disproof.\\
+Finite graph transversals imply slow asymptotic growth & Cutoffs through $10^6$ are finite data, not an asymptotic estimate.\\
+Minimum Hamming distance three suffices & Abstract independent $000/111$ triples form exponentially many words. Actual arithmetic constraints are still required.\\
+Exchange decomposition already bounds multiplicity & It does not bound the number, packing, or arithmetic costs of exchanges. Extracting exchanges from a previously enumerated fiber is circular as a uniform bound.\\
+Fixed-abundancy counts transfer directly & $\sigma(k)/k=N/k^2$ varies throughout a fiber.\\
+A reported $x^{o(1)}$ theorem has the needed scale & Its exponent may still be a positive multiple of $\log x/\log\log x$, or even larger. Inspect the quantitative proof.\\
+\bottomrule
+\end{longtable}
+
+\section{A second large witness, specified without decimal ambiguity}
+The following table defines $a=\prod p^{e_p}$ and $b=\prod p^{f_p}$.
+They are odd cubefree integers with $h(a)=h(b)$, each input has 106 decimal
+digits, and the common target has 211. The 47-base support lies between 17 and
+9439. Exact geometric products and independently certified valuation products
+were checked; the full divisor sets were not enumerated. This is a witness,
+not a complete-fiber or minimality claim.
+\begin{center}\small
+\begin{tabular}{rrr@{\qquad}rrr@{\qquad}rrr}
+\toprule
+$p$&$e_p$&$f_p$&$p$&$e_p$&$f_p$&$p$&$e_p$&$f_p$\\\midrule
+17&1&0&103&1&2&431&0&1\\
+19&1&2&109&0&2&433&1&0\\
+23&0&1&127&2&1&499&2&1\\
+31&1&2&137&1&2&547&1&2\\
+37&1&2&139&1&2&571&2&1\\
+41&0&2&151&1&2&613&1&0\\
+47&2&1&157&0&1&733&2&1\\
+53&1&2&163&1&0&1009&1&0\\
+59&1&0&181&0&1&1093&1&0\\
+61&1&2&271&0&1&1723&1&0\\
+67&1&0&307&1&2&3169&0&1\\
+73&1&0&313&1&0&3463&0&1\\
+79&2&1&317&1&0&3571&2&1\\
+83&1&2&331&1&0&5419&1&2\\
+97&2&1&367&2&0&9439&0&1\\
+101&0&1&409&1&0&&&\\
+\bottomrule
+\end{tabular}
+\end{center}
+The exact decimal inputs, target, and signed-difference columns are in \texttt{general\_17\_10000\_1.json} in the v5 packet. They can also be reconstructed uniquely from this table.

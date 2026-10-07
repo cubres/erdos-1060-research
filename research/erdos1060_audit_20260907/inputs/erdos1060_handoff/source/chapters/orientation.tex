@@ -1,0 +1,126 @@
+\chapter{Research brief and navigation}\label{ch:orientation}
+\section{The exact problem}
+For positive integers define
+\[
+ h(k)=k\sigma(k),\qquad \sigma(k)=\sum_{d\mid k}d,\qquad
+ f(N)=\#\{k\ge1:h(k)=N\}.
+\]
+The primary question, recorded as Erd\H{o}s Problem 1060, is
+\begin{equation}\label{eq:EP}
+ \boxed{\forall\varepsilon>0\ \exists N_\varepsilon\ \forall N\ge N_\varepsilon:
+ f(N)\le\exp\!\left(\varepsilon\frac{\log N}{\log\log N}\right).}
+\end{equation}
+The stronger, optional question asks whether $f(N)\le(\log N)^{O(1)}$.
+All logarithms in this dossier are natural. We write $L=\log N$ and
+$w=\log L=\log\log N$; asymptotic formulas involving further logarithms are
+understood only above a sufficiently large absolute threshold.
+
+\begin{statusbox}{Proof status at handoff}
+The unrestricted estimate \eqref{eq:EP} has not been proved or refuted in this
+investigation. Several full proofs of partial results, exact finite certificates,
+and conditional reductions have been obtained. None of the unproved uniform
+counting estimates below may be inserted as a lemma in a claimed solution.
+There is no justified probability estimate that a completion is imminent.
+\end{statusbox}
+
+The equivalent target is
+\[
+ \log\max\{1,f(N)\}=o(L/w).
+\]
+An average estimate, a density-one result, $f(N)=N^{o(1)}$, or
+$\log f(N)\le(C+o(1))L/w$ with a fixed $C>0$ does not prove it.
+The maximum must include exceptional smooth targets and targets with very large
+small-prime valuations. A bound on input exponents is not a bound on target
+exponents: many local divisor sums can contribute to the same target prime.
+
+\section{How to use this dossier}
+This is an edited research handoff, not a transcript and not a submission-ready
+resolution. Full working proofs have been retypeset by topic; repeated historical
+claims of being close to a solution have been removed. Superseded bounds are
+retained only when their mechanism is reusable. Original notes, archived code
+packets, and check outputs are preserved in the accompanying handoff archive.
+
+A productive first reading is Chapters~\ref{ch:foundations}, \ref{ch:reductions},
+\ref{ch:twoprime}, \ref{ch:primitive}, \ref{ch:exchanges}, and
+\ref{ch:next}. The strongest general numerical bound is in
+Chapter~\ref{ch:chain}. Before adopting any graph or linear-relaxation route,
+read Chapters~\ref{ch:ratio}, \ref{ch:integer}, and \ref{ch:bh}.
+
+The working proofs have not received an independent human referee review or
+formal proof-assistant verification. Compilation involved source reconciliation,
+selected external-source checks, and reruns of the verifiers listed in
+Chapter~\ref{ch:repro}. These are not a substitute for independently auditing a
+proof before using it. No claim of novelty relative to the complete literature
+has been established.
+
+\section{Principal results and their limitations}
+\small
+\begin{longtable}{@{}p{0.17\textwidth}p{0.57\textwidth}p{0.18\textwidth}@{}}
+\toprule
+Result & Exact scope & Location\\\midrule\endhead
+Powerful core & $f(N)\le\prod_{p\mid N}v_p(N)$. Known direct majorant; maximal-order constant $\log3/3$. & Ch.~\ref{ch:foundations}\\
+Prime-index encoding & Fixing $v_\ell(k)$ and $(v_p(k)+1)_{\ell'}$ for $p\ne\ell$ determines a preimage. & Ch.~\ref{ch:weighted}\\
+Weighted bound & General constant $C_0=\tfrac12\log3-\tfrac13\log2\approx0.318257$. Numerically superseded; local entropy mechanism retained. & Ch.~\ref{ch:weighted}\\
+Chain packing & Strongest unrestricted bound in this record: $C_1=\tfrac12\log(1+1/\sqrt2)\approx0.267400$. Still positive. & Ch.~\ref{ch:chain}\\
+Cubefree bound & $\log f_2(N)\le(\tfrac12\log\varphi+o(1))L/w$, $\varphi=(1+\sqrt5)/2$. & Ch.~\ref{ch:chain}\\
+Compatible families & $\log|\mathcal F|=O_E(w\log w)$ with cap $E$; $O(w^{3/2})$ without a cap. Compatibility is essential. & Ch.~\ref{ch:sparse}\\
+Restricted targets & Full $f(N)$ has zero constant on sixth-power-free targets, and on $N=2^a m$ with $m$ odd fourth-power-free and arbitrary $a$. & Ch.~\ref{ch:sparse}\\
+Two-prime rigidity & For a fixed pair $p\ne q$, all $h(p^a q^b)$ are distinct, with unrestricted exponents. Different preimages differ on at least three bases. & Ch.~\ref{ch:twoprime}\\
+Primitive-divisor lists & $f(N)\le\omega(N)^{\omega(N)}$ and each input base has at most $\omega(N)-1$ admissible exponents $>1$. & Ch.~\ref{ch:primitive}\\
+Exact integer models & Complete finite domains, valuation rows, sound propagation, rational certificates, rank bounds and exact branching costs. Uniform costs unproved. & Ch.~\ref{ch:integer}\\
+Positive feedback & A collision forces a positive elementary signed cycle. Cutting all such cycles gives a valid counting bound. & Ch.~\ref{ch:signed}\\
+Graph obstruction & The universal subpolynomial-feedback criterion is conditionally incompatible with an explicit Bateman--Horn instance. Not a disproof of Erd\H{o}s 1060. & Ch.~\ref{ch:bh}\\
+Genuine exchanges & Exact decomposition into disjoint minimal arithmetic exchanges; valid packing and weighted bounds. Uniform exchange count unproved. & Ch.~\ref{ch:exchanges}\\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\section{What would actually complete the proof}
+For fixed $E\ge1$, let
+\[
+ f_E(M)=\#\{k:h(k)=M,\ v_p(k)\le E\ \forall p\},\qquad
+ F_E(X)=\max_{1\le M\le X}\max\{1,f_E(M)\}.
+\]
+The proved high-exponent reduction shows that it suffices to establish
+\begin{equation}\label{eq:BE-front}
+ \boxed{\log F_E(X)=o_E(\log X/\log\log X)
+ \quad\text{for every fixed }E.}
+\end{equation}
+Conversely the full conjecture implies these estimates, after absorbing finitely
+many small targets. Thus the all-cap statement is an equivalent reformulation,
+not an independent theorem that has already solved most of the difficulty.
+A proof only for $E=2$, or only under bounded small-prime target valuations, does
+not suffice. Chapter~\ref{ch:reductions} contains the exact reduction and the
+necessary order of quantifiers.
+
+\section{Notation and conventions}
+\begin{longtable}{@{}p{0.24\textwidth}p{0.7\textwidth}@{}}
+\toprule Symbol & Meaning\\\midrule\endhead
+$\alpha_p$ & $v_p(N)$, the target exponent, not necessarily an input exponent.\\
+$e_p$ & $v_p(k)$, an input exponent; $e_p+1$ is its exponent index.\\
+$\omega(n),\Omega(n)$ & Number of distinct prime factors; number with multiplicity.\\
+$P^+(n),P^-(n)$ & Largest and smallest prime factor, with $P^-(1)=\infty$ when roughness is used.\\
+$\mathcal P(N)$ & $\prod_{p\mid N}p/(p-1)$, which is $O(\log\log N)$.\\
+$t_{\ell'}$ & $t/\ell^{v_\ell(t)}$, the $\ell$-free part.\\
+$D_p$ & A domain of local input exponents, always required to preserve every genuine solution.\\
+$Y$-rough & No prime factor at most $Y$; $1$ is included. A rough input and a rough divisor sum are different assumptions.\\
+Compatible & At each base, every pair of exponent indices in the family is divisibility-comparable.\\
+Unitary factor & $d\mid k$ with $\gcd(d,k/d)=1$. Only full equal-exponent blocks can automatically be canceled through $h$.\\
+Positive cycle & An elementary directed signed cycle whose signs multiply to $+1$, not two traversals of a negative cycle.\\
+Minimal exchange & An exact equality of products of local $h$-blocks, minimal for its specified changes. Not every literature use of ``primitive collision.''\\
+\bottomrule
+\end{longtable}
+
+\section{Source and experiment labels}
+\textbf{Working proof:} a complete argument preserved from this investigation,
+with its hypotheses stated. \textbf{External theorem:} a result attributed to a
+specific primary source. \textbf{Finite certificate:} an exact computation with a
+specified scope and a checkable certificate. \textbf{Conditional:} a conclusion
+requiring an unproved hypothesis such as Bateman--Horn. \textbf{Heuristic or open
+route:} a proposal with no claimed proof.
+
+A resource-limited search without a witness is inconclusive. A census through
+input $K$ is not a census of every encountered larger target: it captures complete
+fibers for targets at most $K^2$, since $h(k)>k^2$ for $k>1$. A finite prime-factor
+range permits very large inputs but remains finite in allowed primes. The
+experimental tables identify which kind of bound was used.

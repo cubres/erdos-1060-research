@@ -1,0 +1,330 @@
+\chapter{Complete rigidity on a fixed two-prime support}\label{ch:twoprime}
+\sourcebox{erdos1060\_two\_prime\_rigidity.tex}{The latest working proof, with no exponent, closeness, or cross-valuation assumptions. It concerns one fixed pair of primes, not the union of all two-prime supports.}
+\section{Statement and exact scope}
+Write
+\[
+ h(k)=k\sigma(k),\qquad f(N)=\#\{k\ge1:h(k)=N\}.
+\]
+All logarithms are natural.
+\begin{theorem}\label{twoprime:thm:main}
+For any fixed distinct primes $p,q$,
+\[
+ \boxed{h(p^a q^b)=h(p^{a'}q^{b'})
+ \quad\Longrightarrow\quad a=a',\ b=b'}
+\]
+for arbitrary nonnegative integers $a,b,a',b'$.
+\end{theorem}
+The prime pair is fixed. This is not injectivity on the union of all two-prime supports: $h(12)=h(14)=336$ is a counterexample to that different assertion. The unrestricted target
+\[
+ \log\max\{1,f(N)\}=o(\log N/\log\log N)
+\]
+remains unproved in this chapter.
+
+Suppose, towards a contradiction to the theorem, that a collision exists. Take $p<q$. Strict monotonicity of each local factor shows that the exponent differences have opposite signs. Relabel the inputs so the equality has the form
+\begin{equation}\label{twoprime:eq:collision}
+ h(p^{A+d-1}q^{B-1})=h(p^{A-1}q^{B+f-1}),
+ \qquad A,B,d,f\ge1.
+\end{equation}
+For an integer base $v\ge2$, define the local increment
+\[
+ J_v(j,m)=\frac{h(v^{j+m})}{h(v^j)}
+ =v^{2m}+\frac{v^m(v^m-1)}{v^{j+1}-1}
+\]
+when $v$ is prime; the displayed rational expression will also be used algebraically. Put $P=p^d$ and $Q=q^f$. Equation \eqref{twoprime:eq:collision} says
+\begin{equation}\label{twoprime:eq:J}
+ J_p(A-1,d)=J_q(B-1,f)=:J.
+\end{equation}
+In particular,
+\begin{equation}\label{twoprime:eq:interval}
+ P^2<J<P^2\frac p{p-1},\qquad
+ Q^2<J<Q^2\frac q{q-1}.
+\end{equation}
+
+
+\section{Reduced denominators and the exponent gap}
+\begin{lemma}\label{twoprime:lem:den}
+The reduced denominators of the two increments in \eqref{twoprime:eq:J} are
+\[
+ D_p=\frac{p^A-1}{p^{\gcd(A,d)}-1},\qquad
+ D_q=\frac{q^B-1}{q^{\gcd(B,f)}-1}.
+\]
+For a collision they have a common value $D>1$.
+\end{lemma}
+\begin{proof}
+Write
+\[
+ J_p(A-1,d)=p^d\frac{p^{A+d}-1}{p^A-1}.
+\]
+The factor $p^d$ is coprime to the denominator, while
+\[
+ \gcd(p^{A+d}-1,p^A-1)=p^{\gcd(A,d)}-1.
+\]
+This proves the formula, and equality of the rational increments gives $D_p=D_q$.
+
+If $D=1$, the geometric quotients
+\[
+ U=\frac{p^{A+d}-1}{p^A-1},\qquad
+ V=\frac{q^{B+f}-1}{q^B-1}
+\]
+are integers and $PU=QV$. Since $\gcd(P,Q)=1$, there is an integer $c\ge1$ with $U=cQ$ and $V=cP$. But
+\[
+ 1<c^2=\frac{UV}{PQ}
+ <\frac p{p-1}\frac q{q-1}\le3<4,
+\]
+which is impossible. Thus $D>1$.
+\end{proof}
+
+\begin{lemma}\label{twoprime:lem:gap}
+Every hypothetical collision \eqref{twoprime:eq:collision} satisfies
+\[
+ \boxed{d>f\ge2,\qquad A<2d,\qquad B<2f.}
+\]
+In particular the larger exponent index at $q$ obeys $B+f<3f$.
+\end{lemma}
+\begin{proof}
+If $f\ge d$, then \eqref{twoprime:eq:interval} would imply
+\[
+ (p+1)^{2d}\le q^{2f}<p^{2d}\frac p{p-1}.
+\]
+This contradicts $(p+1)^2/p^2>p/(p-1)$, which holds for $p\ge2$ because $p^2-p-1>0$. Hence $d>f$.
+
+If both $A\ge d$ and $B\ge f$, the increment formula gives
+\[
+ P^2<J\le P^2+P,\qquad Q^2<J\le Q^2+Q.
+\]
+These intervals are disjoint for distinct positive integers $P,Q$: if $P<Q$, then $P^2+P<(P+1)^2\le Q^2$. Therefore $A<d$ or $B<f$.
+
+Assume $A<d$. Write $g=\gcd(A,d)$. Then
+\[
+ D_p<\frac{p^{A-g}}{1-p^{-g}}
+ \le\frac{p^{d-1}}{p-1}=\frac{P}{p(p-1)}.
+\]
+By \eqref{twoprime:eq:interval}, $P<Q\sqrt{q/(q-1)}$. Since $p\ge2$ and $q\ge3$, it follows that $D_p<Q$. On the other hand,
+\[
+ D_q\ge q^{B-\gcd(B,f)}\ge q^{B-f}.
+\]
+Equality of the denominators gives $B<2f$. We already have $A<d<2d$.
+
+If $B<f$, the same argument with the bases interchanged gives $D_q<P$ and then $A<2d$. The relevant constant satisfies $\sqrt{p/(p-1)}/(q(q-1))<1$ even when $p=2$.
+
+Finally, $f=1$ would give $B<2$, so $B=1$ and $D_q=1$, contradicting Lemma~\ref{twoprime:lem:den}. Thus $f\ge2$.
+\end{proof}
+
+
+\section{The small primes}
+We record the elementary lifting facts used below. For an odd prime $\ell$ and $\ell\mid z-1$,
+\begin{equation}\label{twoprime:eq:LTE}
+ v_\ell(z^n-1)=v_\ell(z-1)+v_\ell(n).
+\end{equation}
+For odd $z$,
+\begin{equation}\label{twoprime:eq:LTE2}
+ v_2(\sigma(z^{n-1}))=
+ \begin{cases}
+ 0,&n\text{ odd},\\
+ v_2(z+1)+v_2(n)-1,&n\text{ even}.
+ \end{cases}
+\end{equation}
+Here the second formula is used for prime $z$. For \eqref{twoprime:eq:LTE}, an exponent coprime to $\ell$ gives a geometric quotient congruent to that exponent modulo $\ell$; raising to the $\ell$th power increases the valuation by one by the binomial expansion. For \eqref{twoprime:eq:LTE2}, factor $z^{2^t u}-1$ with $u$ odd, and use $v_2(z^{2^j}+1)=1$ for $j\ge1$. These observations prove both formulas.
+
+\subsection*{The case $p=2$}
+Taking the $2$-adic valuation in \eqref{twoprime:eq:collision} gives
+\[
+ d=v_2(\sigma(q^{B+f-1}))-v_2(\sigma(q^{B-1})).
+\]
+Thus $n=B+f$ is even. Put $\delta=v_2(q+1)$. Formula \eqref{twoprime:eq:LTE2} implies
+\[
+ n\ge2^{d-\delta+1}\ge\frac{2P}{q+1}.
+\]
+By \eqref{twoprime:eq:interval}, $P>Q/\sqrt2$. Since $\sqrt2\,q>q+1$ for $q\ge3$,
+\begin{equation}\label{twoprime:eq:p2}
+ n>\frac{\sqrt2\,q^f}{q+1}>q^{f-1}.
+\end{equation}
+If $f=2$, Lemma~\ref{twoprime:lem:gap} gives $B\in\{1,2,3\}$. The parity of $B+f$ forces $B=2$, for which $D_q=1$, a contradiction. Hence $f\ge3$. For $q\ge3,f\ge3$, the elementary induction $q^{f-1}\ge3f$ contradicts \eqref{twoprime:eq:p2} and $n<3f$. This excludes every pair with $p=2$.
+
+\subsection*{First dispose of $q\equiv1\pmod p$ for odd $p$}
+In this case \eqref{twoprime:eq:LTE} gives $v_p(\sigma(q^{n-1}))=v_p(n)$. The $p$-adic equation implies $p^d\mid n$, where $n=B+f<3f$. But $d>f\ge2$ and
+\[
+ p^d\ge3^d>3(d-1)\ge3f.
+\]
+This is impossible. For the remainder, the order $s=\ord_p(q)$ is at least two.
+
+\begin{lemma}\label{twoprime:lem:cyclobound}
+For odd $p$, let $s=\ord_p(q)\ge2$. The hypothetical collision implies
+\[
+ \boxed{p^d\le\Phi_s(q)\frac{B+f}{s}
+ <(q+1)^{\varphi(s)}\frac{3f}{s},}
+\]
+where $\Phi_s$ is the $s$th cyclotomic polynomial.
+\end{lemma}
+\begin{proof}
+The $p$-adic equation gives $v_p(\sigma(q^{B+f-1}))\ge d$, so $s\mid B+f$. No proper cyclotomic factor of $q^s-1$ is divisible by $p$, by the definition of order. Formula \eqref{twoprime:eq:LTE} therefore gives
+\[
+ v_p(\sigma(q^{B+f-1}))
+ =v_p(\Phi_s(q))+v_p((B+f)/s).
+\]
+Consequently $p^d\le\Phi_s(q)(B+f)/s$. The complex-root product of $\Phi_s$ gives $0<\Phi_s(q)\le(q+1)^{\varphi(s)}$, and $B+f<3f$ gives the strict final bound.
+\end{proof}
+
+\subsection*{The case $p=3$}
+Here $s=2$ and $q\ge5$. Combining Lemma~\ref{twoprime:lem:cyclobound} with $P>Q\sqrt{2/3}$ gives
+\[
+ \frac{q^{f-1}}{f}
+ <\frac32\sqrt{\frac32}\left(1+\frac1q\right)
+ \le\frac95\sqrt{\frac32}<\frac52.
+\]
+But for $f\ge2$, the left side is at least $q/2\ge5/2$: the sequence $q^{f-1}/f$ is increasing in integral $f\ge2$. This contradiction excludes $p=3$.
+
+
+\section{Bounding the smaller change for \texorpdfstring{$p\ge5$}{p at least 5}}
+Assume now $5\le p<q$ and $s=\ord_p(q)\ge2$. Because $s\mid p-1$,
+\[
+ \varphi(s)\le\frac{p-1}{2}.
+\]
+For even $s$ use $\varphi(s)\le s/2$; for odd $s$, the divisibility $s\mid p-1$ gives $s\le(p-1)/2$.
+
+From Lemma~\ref{twoprime:lem:cyclobound} and \eqref{twoprime:eq:interval},
+\[
+ q^{f-(p-1)/2}
+ <\frac{3f}{2}\sqrt{\frac p{p-1}}
+ \left(1+\frac1q\right)^{(p-1)/2}<3f.
+\]
+For the last comparison, $p/(p-1)\le5/4$ and
+\[
+ \left(1+\frac1q\right)^{(p-1)/2}<\sqrt3;
+\]
+indeed $(1+1/q)^q<\sum_{j\ge0}1/j!<3$. The resulting constant is $3\sqrt{15}/4<3$.
+
+If $f\ge p-1$, then
+\[
+ \frac{q^{f-(p-1)/2}}{f}
+ \ge\frac{q^{(p-1)/2}}{p-1}
+ \ge\frac{(p+2)^2}{p-1}>3,
+\]
+since the ratio on the left is increasing in integral $f$ and $p,q$ are distinct odd primes. This contradiction proves
+\begin{equation}\label{twoprime:eq:fbound}
+ \boxed{2\le f\le p-2.}
+\end{equation}
+
+
+\section{An integer relation forced by two logarithmic comparisons}
+Set
+\[
+ g=\gcd(A,d),\quad h=\gcd(B,f),\quad
+ \alpha=A-g,\quad\beta=B-h.
+\]
+By $D>1$, both $\alpha,\beta$ are positive. Let $c_p=\log(p/(p-1))$ and $c_q=\log(q/(q-1))<c_p$.
+
+The increment and denominator formulas give
+\begin{align*}
+ \log J&=2d\log p+\varepsilon_p=2f\log q+\varepsilon_q,\\
+ \log D&=\alpha\log p+\eta_p=\beta\log q+\eta_q,
+\end{align*}
+where
+\[
+ 0<\varepsilon_p<c_p,\quad 0<\varepsilon_q<c_q,
+ \qquad 0\le\eta_p<c_p,\quad0\le\eta_q<c_q.
+\]
+Explicitly,
+\[
+ \varepsilon_p=\log\frac{1-p^{-(A+d)}}{1-p^{-A}},\qquad
+ \eta_p=\log\frac{1-p^{-A}}{1-p^{-g}},
+\]
+and similarly at $q$.
+
+Eliminating $\log q$ gives
+\[
+ (\alpha f-\beta d)\log p
+ =f(\eta_q-\eta_p)-\frac\beta2(\varepsilon_q-\varepsilon_p).
+\]
+Since $\beta<B<2f$, we obtain
+\begin{equation}\label{twoprime:eq:integer}
+ |\alpha f-\beta d|\log p<2f c_p
+ \le2(p-2)\log\frac p{p-1}<\log p.
+\end{equation}
+The last inequality holds for every real $p\ge5$. To check it, put
+\[
+ F(x)=\log x-2(x-2)\log\frac{x}{x-1}.
+\]
+Then $F(5)>0$, equivalently $4^6>5^5$, and using $\log(1+t)<t$ gives
+\[
+ F'(x)>\frac{x-5}{x(x-1)}\ge0\qquad(x\ge5).
+\]
+The coefficient on the left of \eqref{twoprime:eq:integer} is an integer. Therefore
+\begin{equation}\label{twoprime:eq:alignment}
+ \boxed{\alpha f=\beta d.}
+\end{equation}
+
+
+\section{Why the forced relation is incompatible with equality}
+Write
+\[
+ X=p^g,\quad Y=q^h,\quad
+ m=A/g,\quad n=B/h,\quad
+ u=d/g,\quad v=f/h.
+\]
+The common denominator is
+\[
+ D=1+X+\cdots+X^{m-1}=1+Y+\cdots+Y^{n-1}.
+\]
+Here $m,n\ge2$ because $D>1$. Relation \eqref{twoprime:eq:alignment} is
+\[
+ (m-1)v=(n-1)u,
+ \qquad c:=\frac{u}{m-1}=\frac{v}{n-1}>0.
+\]
+Put
+\[
+ z=X^{m-1}=p^\alpha,\qquad w=Y^{n-1}=q^\beta.
+\]
+They are distinct numbers greater than one. From $D=(Xz-1)/(X-1)$,
+\[
+ X=\frac{D-1}{D-z},\qquad X^u=z^c.
+\]
+Substitution into the increment formula expresses it as
+\[
+ J_p(A-1,d)=\mathcal F_{D,c}(z),\qquad
+ J_q(B-1,f)=\mathcal F_{D,c}(w),
+\]
+where
+\[
+ \mathcal F_{D,c}(t)
+ =t^c\left(1+\frac{D-1}{D}\frac{t(t^c-1)}{t-1}\right),\qquad t>1.
+\]
+This function is strictly increasing. Both $t^c$ and the bracket are positive, and
+\[
+ \frac{d}{dt}\left(\frac{t(t^c-1)}{t-1}\right)
+ =\frac{c t^{c+1}-(c+1)t^c+1}{(t-1)^2}>0.
+\]
+The numerator vanishes at one, and its derivative is
+\[
+ c(c+1)t^{c-1}(t-1)>0\qquad(t>1).
+\]
+Thus equal increments force $z=w$, contradicting $p^\alpha\ne q^\beta$. This excludes the remaining case $p\ge5$ and completes the proof of Theorem~\ref{twoprime:thm:main}. \qed
+
+
+\section{What this gives for a full fiber}
+\begin{corollary}\label{twoprime:cor:distance}
+Two distinct preimages of the same target differ at at least three prime bases. Equivalently, if $h(a)=h(b)$ and $v_p(a)=v_p(b)$ outside a set of at most two primes, then $a=b$.
+\end{corollary}
+\begin{proof}
+Cancel every common full prime-power block at an unchanged base, using multiplicativity on coprime factors. The residual equality is on one fixed set of at most two prime bases, so Theorem~\ref{twoprime:thm:main} applies.
+\end{proof}
+
+For any finite local domains $D_p$ preserving all preimages, put $m_p=|D_p|$. With nonempty domains, Corollary~\ref{twoprime:cor:distance} gives the finite bound
+\begin{equation}\label{twoprime:eq:hamming}
+ \boxed{f(N)\le\frac{\prod_p m_p}{1+\sum_p(m_p-1)}.}
+\end{equation}
+The same statement applies to a specified exponent cap. In the product of the local alphabets, radius-one Hamming balls around distinct solutions are disjoint, and every such ball has $1+\sum_p(m_p-1)$ points. This proves \eqref{twoprime:eq:hamming}. Fixing all but any two exponent coordinates also gives
+\[
+ f(N)\le\prod_{p\notin\{p_1,p_2\}}m_p.
+\]
+These finite bounds need not improve earlier powerful-core bounds, and no new unrestricted asymptotic constant is claimed.
+
+The minimum-distance restriction is insufficient by itself for the desired little-$o$ estimate. For example, with $r=3s$ coordinates, binary words obtained by independently choosing $000$ or $111$ on each triple have minimum distance three and number $2^s$. These are abstract words, not claimed arithmetic preimages. They show that the new local theorem does not automatically control a growing set of interacting bases.
+
+The exact unresolved statement remains, for every fixed $E$,
+\[
+ \log\max_{M\le X}\max\{1,f_E(M)\}
+ =o_E(\log X/\log\log X).
+\]
+The established high-exponent decomposition would imply the full conjecture from these estimates, but this chapter does not prove them. All genuine minimal exchanges now require at least three changed bases; the number, overlap, and cost of those larger exchanges are still uncontrolled at the required uniform scale.
+
